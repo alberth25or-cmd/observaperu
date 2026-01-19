@@ -23,10 +23,10 @@ const Navbar = () => {
             <Link href="/#inicio" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
               Inicio
             </Link>
-            <Link href="/#candidatos" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link href="/candidatos" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
               Candidatos
             </Link>
-            <Link href="/#mapa-ideologico" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link href="/mapa-ideologico" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
               Mapa ideológico
             </Link>
             <Link href="/#comparacion" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">

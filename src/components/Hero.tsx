@@ -1,4 +1,7 @@
+
+
 const Hero = () => {
+    
   return (
     <section id="inicio" className="relative isolate w-full text-white">
       {/* Fondo (imagen) */}
@@ -20,7 +23,7 @@ const Hero = () => {
 
           <div className="flex w-full max-w-[502px] flex-wrap justify-center gap-4">
             <a
-              href="#candidatos"
+              href="/candidatos"
               className="inline-flex h-[50px] w-[225px] items-center justify-center rounded-[12px] bg-white px-4 py-3 text-[18px] font-medium leading-[145%] tracking-[-0.005em] text-black transition-transform duration-150 hover:scale-[1.03] active:bg-[#6fb6ff]"
             >
               Conoce a tu candidato
