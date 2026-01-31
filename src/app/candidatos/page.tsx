@@ -3,6 +3,7 @@
 import { useMemo, useState, useEffect } from "react";
 import { ALL_CANDIDATES } from "@/data/candidatos"; // Importación centralizada
 import Image from "next/image";
+import Link from "next/link";
 
 /** Mini-hero reutilizable */
 const Banner = ({
@@ -212,9 +213,12 @@ export default function CandidatosPage() {
                     </div>
 
                     <div className="mt-6 flex justify-center">
-                      <button className="inline-flex h-[44px] items-center justify-center rounded-full bg-[#0b1b3b] px-7 text-[13px] font-semibold text-white transition-transform duration-150 hover:scale-[1.03]">
+                      <Link
+                        href={`/candidatos/${c.key}`}
+                        className="inline-flex h-[44px] items-center justify-center rounded-full bg-[#0b1b3b] px-7 text-[13px] font-semibold text-white transition-transform duration-150 hover:scale-[1.03]"
+                      >
                         Ver perfil
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </article>
