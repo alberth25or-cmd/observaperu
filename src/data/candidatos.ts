@@ -280,7 +280,7 @@ export const ALL_CANDIDATES: Candidate[] = [
     name: "Maria Soledad Perez Tello de Rodriguez",
     party: "Primero La Gente",
     sex: "F",
-    img: "/candidatos/maria-soledad-perez-tello-de-rodriguez.webp",
+    img: "/candidatos/marisol-tello.webp",
     imgHover: "/partidos/primero-la-gente.webp",
     econ: 0,
     social: -1,
