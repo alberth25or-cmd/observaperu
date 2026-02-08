@@ -21,17 +21,19 @@ const Hero = () => {
             Descubre quienes son los candidatos y qué ideas representan
           </h1>
 
-          <div className="flex w-full max-w-[502px] flex-wrap justify-center gap-4">
+          <div className="relative z-10 flex w-full max-w-[502px] flex-wrap justify-center gap-4">
             <a
               href="/candidatos"
-              className="inline-flex h-[50px] w-[225px] items-center justify-center rounded-[12px] bg-white px-4 py-3 text-[18px] font-medium leading-[145%] tracking-[-0.005em] text-black transition-transform duration-150 hover:scale-[1.03] active:bg-[#6fb6ff]"
+              className="relative z-10 inline-flex h-[50px] w-[225px] cursor-pointer items-center justify-center rounded-[12px] bg-white px-4 py-3 text-[18px] font-medium leading-[145%] tracking-[-0.005em] text-black transition-transform duration-150 hover:scale-[1.03] active:bg-[#6fb6ff]"
+              style={{ touchAction: "manipulation" }}
             >
               Conoce a tu candidato
             </a>
 
             <a
-              href="#mapa-ideologico"
-              className="inline-flex h-[50px] w-[261px] items-center justify-center rounded-[12px] border-2 border-white/20 px-4 py-3 text-[18px] font-medium leading-[145%] tracking-[-0.005em] text-white transition-transform duration-150 hover:scale-[1.03] active:border-[#6fb6ff] active:bg-[#6fb6ff] active:text-[#0b1b3b]"
+              href="/mapa-ideologico"
+              className="relative z-10 inline-flex h-[50px] w-[261px] cursor-pointer items-center justify-center rounded-[12px] border-2 border-white/20 px-4 py-3 text-[18px] font-medium leading-[145%] tracking-[-0.005em] text-white transition-transform duration-150 hover:scale-[1.03] active:border-[#6fb6ff] active:bg-[#6fb6ff] active:text-[#0b1b3b]"
+              style={{ touchAction: "manipulation" }}
             >
               Explora el mapa ideológico
             </a>

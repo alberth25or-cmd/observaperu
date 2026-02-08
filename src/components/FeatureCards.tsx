@@ -3,14 +3,17 @@ const FeatureCards = () => {
     {
       title: "Perfiles de candidatos",
       text: "Información detallada sobre cada candidato: biografía, políticas, trayectoria y más.",
+      href: "/candidatos",
     },
     {
       title: "Compara los perfiles",
       text: "Información organizada que te permite visualizar la información de los candidatos en paralelo.",
+      href: "/comparacion",
     },
     {
       title: "Revisa los Planes de Gobierno",
       text: "Repositorio de los Planes de Gobierno presentados ante las instituciones organizadoras.",
+      href: "/candidatos",
     },
   ];
 
@@ -67,7 +70,8 @@ const FeatureCards = () => {
                   {card.text}
                 </p>
 
-                <button
+                <a
+                  href={card.href}
                   className="
                     mt-6 inline-flex h-[50px] items-center justify-center
                     rounded-[12px] bg-white px-6 text-[18px] font-medium
@@ -78,7 +82,7 @@ const FeatureCards = () => {
                   "
                 >
                   Ver más
-                </button>
+                </a>
               </div>
             </article>
           ))}

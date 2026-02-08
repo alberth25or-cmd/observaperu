@@ -168,10 +168,6 @@ export default function ContactanosPage() {
                 </span>
               </div>
             </div>
-
-            <div className="mt-6 inline-flex rounded-full bg-[#0b1b3b] px-6 py-2 text-[12px] font-semibold text-white">
-              Luis Albert Ortiz Huamantalla
-            </div>
           </div>
 
           <p className="mx-auto mt-10 max-w-4xl text-[18px] font-extrabold leading-[140%] text-[#0b1b3b] sm:text-[22px]">
