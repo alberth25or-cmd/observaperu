@@ -61,13 +61,8 @@ export default function MapaIdeologicoPage() {
   const [q, setQ] = useState("");
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
 
-  // Estado inicial con candidatos sugeridos (usando la data real)
-  const [mapCandidates, setMapCandidates] = useState<Candidate[]>(() => {
-    return ALL_CANDIDATES.filter(c => 
-      c.key === "roberto-helbert-sanchez-palomino" || 
-      c.key === "alvaro-gonzalo-paz-de-la-barra-freigeiro"
-    );
-  });
+  // Estado inicial sin candidatos por defecto
+  const [mapCandidates, setMapCandidates] = useState<Candidate[]>([]);
 
   useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 700);
@@ -156,15 +151,24 @@ export default function MapaIdeologicoPage() {
       <section className="pb-14">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">
           <div className="rounded-3xl bg-white p-6 shadow-sm sm:p-8">
-            <div className="relative flex items-center justify-between">
-              <h2 className="absolute left-1/2 -translate-x-1/2 text-xl font-black text-[#0b1b3b] sm:text-2xl">
+            {/* Layout responsive: en móvil el título va arriba, en desktop se mantiene centrado */}
+            <div className="flex flex-col gap-4 sm:relative sm:flex-row sm:items-center sm:justify-between">
+              <h2 className="text-center text-xl font-black text-[#0b1b3b] sm:absolute sm:left-1/2 sm:-translate-x-1/2 sm:text-2xl">
                 Plano ideológico
               </h2>
-              <div className="ml-auto flex gap-3">
-                <button onClick={() => setOpen(true)} className="rounded-full bg-[#0b1b3b] px-6 py-2 text-xs font-bold text-white transition hover:scale-105">
+              <div className="flex justify-center gap-3 sm:ml-auto">
+                <button 
+                  onClick={() => setOpen(true)} 
+                  className="relative z-10 cursor-pointer rounded-full bg-[#0b1b3b] px-6 py-2 text-xs font-bold text-white transition hover:scale-105"
+                  style={{ touchAction: "manipulation" }}
+                >
                   Agregar
                 </button>
-                <button onClick={clearMap} className="rounded-full border border-slate-200 px-6 py-2 text-xs font-bold text-[#0b1b3b] transition hover:scale-105">
+                <button 
+                  onClick={clearMap} 
+                  className="relative z-10 cursor-pointer rounded-full border border-slate-200 px-6 py-2 text-xs font-bold text-[#0b1b3b] transition hover:scale-105"
+                  style={{ touchAction: "manipulation" }}
+                >
                   Limpiar
                 </button>
               </div>

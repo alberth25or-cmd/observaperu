@@ -388,12 +388,12 @@ export default function ComparacionPage() {
                     </p>
                   </div>
                 </div>
-                <div className="relative mb-4 h-[300px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[350px]">
+                <div className="relative mb-4 h-[200px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[250px]">
                   <Image
                     src={candidate1Detail.img}
                     alt={candidate1Detail.name}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <div className="flex-1 rounded-2xl bg-[#d9d9d9]/45 p-4 sm:p-6">
@@ -411,12 +411,12 @@ export default function ComparacionPage() {
                     </p>
                   </div>
                 </div>
-                <div className="relative mb-4 h-[300px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[350px]">
+                <div className="relative mb-4 h-[200px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[250px]">
                   <Image
                     src={candidate2Detail.img}
                     alt={candidate2Detail.name}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <div className="flex-1 rounded-2xl bg-[#d9d9d9]/45 p-4 sm:p-6">
@@ -430,4 +430,5 @@ export default function ComparacionPage() {
     </main>
   );
 }
+
 
