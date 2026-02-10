@@ -299,14 +299,17 @@ export default function CandidateDetailPage() {
 
                 {/* Botones */}
                 <div className="pt-4 space-y-3">
-                  <a
-                    href={candidateDetail.planGobiernoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-[50px] w-full items-center justify-center rounded-[12px] bg-[#0b1b3b] px-4 py-3 text-[16px] font-semibold text-white transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    Plan de Gobierno
-                  </a>
+                  {candidateDetail.planGobiernoUrl && 
+                    candidateDetail.planGobiernoUrl !== "https://drive.google.com/file/d/PLACEHOLDER/view" && (
+                    <a
+                      href={candidateDetail.planGobiernoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-[50px] w-full items-center justify-center rounded-[12px] bg-[#0b1b3b] px-4 py-3 text-[16px] font-semibold text-white transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98]"
+                    >
+                      Plan de Gobierno
+                    </a>
+                  )}
                   <a
                     href={candidateDetail.hojaVidaUrl}
                     target="_blank"

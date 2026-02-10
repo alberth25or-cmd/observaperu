@@ -8,7 +8,7 @@ export type CandidateDetail = {
   age: number;
   img: string;
   imgHover: string;
-  planGobiernoUrl: string; // URL a Google Drive
+  planGobiernoUrl: string | null; // URL a Google Drive o null si no existe
   hojaVidaUrl: string; // URL a Google Drive
   // Contenido de las pestañas
   biografia: string;
@@ -47,8 +47,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1950-07-17",
     img: "/candidatos/alfonso-lopez-chau-nava.webp",
     imgHover: "/partidos/ahora-nacion.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/alfonso-lopez-chau-nava.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/alfonso-lopez-chau-nava.pdf",
     biografia: "Pablo Alfonso López Chau Nava nació el 17 de julio de 1950 en la ciudad de Lima. Con 75 años de edad al momento de la elección, se presenta como el rostro principal de la organización política Ahora Nación. Su trayectoria profesional ha estado profundamente ligada a la academia y la gestión universitaria, destacando su rol como Rector de la Universidad Nacional de Ingeniería (UNI) entre los años 2021 y 2025. Su vida pública ha estado marcada por un perfil técnico-académico, habiendo desempeñado funciones de docencia principal desde 1990. Su carrera se ha concentrado en el sector público, específicamente en la educación superior. Es fundador de la organización política Ahora Nación y actualmente ejerce como su presidente.",
     historialAcademico: [
       "Pregrado: Es Licenciado en Economía y Bachiller en Ciencias Económicas por la Universidad Nacional del Callao, habiendo obtenido su título profesional en 1981",
@@ -108,8 +108,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1961-11-24",
     img: "/candidatos/alex-gonzalez-castillo.webp",
     imgHover: "/partidos/partido-democrata-verde.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/alex-gonzalez-castillo.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/alex-gonzalez-castillo.pdf",
     biografia: "Nacido el 24 de noviembre de 1961 en Lima, Alex Gonzales Castillo es un político con una trayectoria marcada por su vinculación al ecologismo y la gestión municipal. Actualmente reside en el distrito de La Victoria y lidera el Partido Demócrata Verde, organización con la que postula a la Presidencia de la República y simultáneamente al cargo de Senador. Su perfil se ha construido desde la sociedad civil a través de institutos especializados en ecología y derecho antes de saltar a la primera línea de la administración pública.",
     historialAcademico: [
       "Estudios Universitarios: Cursó la carrera de Administración en la Universidad Inca Garcilaso de la Vega, aunque registra dicho grado como no concluido",
@@ -155,8 +155,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1983-07-26",
     img: "/candidatos/alvaro-gonzalo-paz-de-la-barra-freigeiro.webp",
     imgHover: "/partidos/fe-en-el-peru.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/alvaro-gonzalo-paz-de-la-barra-freigeiro.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/alvaro-gonzalo-paz-de-la-barra-freigeiro.pdf",
     biografia: "Álvaro Gonzalo Paz de la Barra Freigeiro nació el 26 de julio de 1983 en el distrito de Miraflores, Lima. Es hijo de Vladimir Paz de la Barra, quien fue un reconocido abogado, juez y exdecano del Colegio de Abogados de Lima. Se ha desempeñado como abogado y empresario, y estuvo casado con la conductora de televisión Sofía Franco. Su carrera política ha estado marcada por un ascenso desde el ámbito municipal hacia la escena nacional, fundando su propia organización política tras su paso por otras filas partidarias.",
     historialAcademico: [
       "Título profesional de Abogado otorgado por la Universidad Nacional Mayor de San Marcos",
@@ -203,8 +203,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1955-05-10",
     img: "/candidatos/antonio-ortiz-villano.webp",
     imgHover: "/partidos/salvemos-al-peru.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/antonio-ortiz-villano.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/antonio-ortiz-villano.pdf",
     biografia: "Antonio Ortiz Villano nació el 10 de mayo de 1955 en el distrito de Talavera, provincia de Andahuaylas, departamento de Apurímac. Actualmente tiene 70 años y reside en el distrito de San Martín de Porres, en la provincia de Lima. Es de sexo masculino y posee el Documento Nacional de Identidad N° 08587486.",
     historialAcademico: [
       "En cuanto a su formación básica, realizó sus estudios primarios en la Institución Educativa 660 en Apurímac y culminó la secundaria en la Institución Educativa José María Arguedas, también en Apurímac",
@@ -248,8 +248,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1959-06-13",
     img: "/candidatos/armando-joaquin-masse-fernandez.webp",
     imgHover: "/partidos/partido-democrata-peru-federal.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: null,
+    hojaVidaUrl: "/pdfs/hojas-vida/armando-joaquin-masse-fernandez.pdf",
     biografia: "Armando Joaquín Massé Fernández nació en la ciudad de Lima, Perú, el 13 de junio de 1959. En la actualidad, a sus 66 años, se presenta como una figura que amalgama la experiencia técnica de la medicina con la visión estratégica del derecho y la sensibilidad de las artes. Proveniente de un entorno socioeconómico de clase media, su narrativa biográfica destaca el esfuerzo personal como motor de ascenso profesional. Su desarrollo vital ha estado intrínsecamente ligado a la capital peruana, aunque su ejercicio profesional temprano le permitió conocer las realidades sanitarias de diversas provincias del norte del país, un factor que posteriormente influiría en su discurso político descentralista. Massé ha mantenido una vida pública activa durante más de cuatro décadas, comenzando su notoriedad en la escena musical a principios de los años 80, para luego transicionar hacia roles de gestión corporativa y, finalmente, al activismo político y la comunicación social. Su transición de la gestión cultural a la política activa ha sido gradual, pero se ha acelerado significativamente en el último lustro. A finales de 2025, Armando Massé anunció su retiro de la conducción de Radio Exitosa para lanzar oficialmente su candidatura a la presidencia del Perú para el periodo 2026-2031.",
     historialAcademico: [
       "Médico Cirujano: Graduado en la Facultad de Medicina Humana «San Fernando» de la Universidad Nacional Mayor de San Marcos (UNMSM), la institución médica más antigua y prestigiosa del país. Graduarse en San Marcos implica no solo un rigor académico técnico, sino también una inmersión en la problemática de salud pública nacional",
@@ -314,8 +314,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1952-08-11",
     img: "/candidatos/cesar-acuna-peralta.webp",
     imgHover: "/partidos/alianza-para-el-progreso.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/cesar-acuna-peralta.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/cesar-acuna-peralta.pdf",
     biografia: "César Acuña Peralta nació el 11 de agosto de 1952 en el distrito de Tacabamba, provincia de Chota, departamento de Cajamarca. Es hijo de una familia dedicada a la agricultura en la sierra norte del Perú. A lo largo de su vida, se trasladó a la región de La Libertad, donde estableció su residencia principal en el distrito de Víctor Larco Herrera, Trujillo. Es reconocido principalmente como un empresario del sector educativo, habiendo fundado instituciones de alcance nacional que forman la base de su patrimonio.",
     historialAcademico: [
       "Pregrado: Su formación profesional se inició en la Universidad Nacional de Trujillo, donde obtuvo el grado de Bachiller en Ingeniería Química y, posteriormente, el título profesional de Ingeniero Químico en 1995",
@@ -364,8 +364,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1964-01-07",
     img: "/candidatos/carlos-gonzalo-alvarez-loayza.webp",
     imgHover: "/partidos/pais-para-todos.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/carlos-gonzalo-alvarez-loayza.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/carlos-gonzalo-alvarez-loayza.pdf",
     biografia: "Carlos Gonsalo Álvarez Loayza nació el 7 de enero de 1964 en el distrito, provincia y departamento de Lima. Actualmente reside en el distrito de San Isidro, Lima. Es ampliamente conocido en el ámbito público por su trayectoria en el mundo del entretenimiento y la televisión peruana antes de su incursión en la política activa para el proceso de las Elecciones Generales 2026.",
     historialAcademico: [
       "En cuanto a su formación académica, el candidato registra haber concluido satisfactoriamente los estudios de educación básica regular, tanto en el nivel primario como secundario",
@@ -404,8 +404,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1960-09-01",
     img: "/candidatos/carlos-espa-y-garces-alvear.webp",
     imgHover: "/partidos/si-creo.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/carlos-espa-y-garces-alvear.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/carlos-espa-y-garces-alvear.pdf",
     biografia: "Alfonso Carlos Espá Garcés-Alvear nació en Lima, en el distrito de Miraflores, el 1 de septiembre de 1960. Es una figura pública con una trayectoria multifacética que combina el derecho, el periodismo de investigación y la comunicación política. Es conocido por su etapa como conductor del programa dominical Cuarto Poder entre 2002 y 2004. Es el fundador y actual presidente del Partido SíCreo, organización que logró su inscripción oficial en 2024 tras el malestar social generado por la crisis política reciente.",
     historialAcademico: [
       "Se graduó como Bachiller en Derecho y posteriormente como Abogado por la Pontificia Universidad Católica del Perú (PUCP) en 1987",
@@ -452,8 +452,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1967-04-28",
     img: "/candidatos/carlos-ernesto-jaico-carranza.webp",
     imgHover: "/partidos/peru-moderno.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/carlos-ernesto-jaico-carranza.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/carlos-ernesto-jaico-carranza.pdf",
     biografia: "Carlos Ernesto Jaico Carranza nació el 28 de abril de 1967 en Chimbote, provincia del Santa, departamento de Áncash. Actualmente reside en el distrito de San Isidro, en la ciudad de Lima. Postula a la Presidencia de la República por la organización política Perú Moderno para las Elecciones Generales 2026. Además de su candidatura presidencial, también encabeza la lista para el Senado.",
     historialAcademico: [
       "Derecho: Es abogado titulado por la Universidad de San Martín de Porres (2021)",
@@ -494,8 +494,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1980-06-02",
     img: "/candidatos/charlie-carrasco-salazar.webp",
     imgHover: "/partidos/unido-peru.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/charlie-carrasco-salazar.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/charlie-carrasco-salazar.pdf",
     biografia: "Charlie Carrasco Salazar nació el 2 de junio de 1980 en el distrito de Huancarama, provincia de Andahuaylas, departamento de Apurímac. Actualmente reside en el distrito del Rímac, en Lima. Es un profesional del derecho con una trayectoria marcada por la actividad académica y la consultoría privada, además de ser el fundador del Partido Demócrata Unido Perú.",
     historialAcademico: [
       "Pregrado: Es Bachiller en Derecho (2007) y Abogado (2009) por la Universidad Tecnológica de los Andes",
@@ -536,8 +536,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1946-04-18",
     img: "/candidatos/francisco-ernesto-diez-canseco-tavara.webp",
     imgHover: "/partidos/peru-accion.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/francisco-ernesto-diez-canseco-tavara.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/francisco-ernesto-diez-canseco-tavara.pdf",
     biografia: "Francisco Ernesto Diez-Canseco Távara nació el 18 de abril de 1946 en el distrito de San Isidro, Lima. Proviene de una familia con tradición en la esfera pública, siendo hijo del exdiputado Ernesto Diez-Canseco Yáñez y nieto del ingeniero y político Ernesto Diez-Canseco Masías. Su trayectoria profesional combina el ejercicio del derecho, el periodismo y la actividad empresarial.",
     historialAcademico: [
       "Educación Superior: Se graduó como abogado en la Universidad Nacional Mayor de San Marcos en el año 1972",
@@ -581,8 +581,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1974-03-20",
     img: "/candidatos/fiorella-giannina-molinelli-aristondo.webp",
     imgHover: "/partidos/alianza-fuerza-y-libertad.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/fiorella-giannina-molinelli-aristondo.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/fiorella-giannina-molinelli-aristondo.pdf",
     biografia: "Fiorella Giannina Molinelli Aristondo nació en la ciudad de Lima el 20 de marzo de 1974. Es hija de Ángel Molinelli Valle y de Flor de María Aristondo Espinoza. Su formación inicial se desarrolló en el Colegio San Antonio de Mujeres del Callao, una institución educativa de tradición católica dirigida por las religiosas del Inmaculado Corazón de María. Este entorno formativo temprano es citado a menudo como el origen de sus valores de disciplina y vocación de servicio, elementos que posteriormente integrarían su discurso como funcionaria pública. Su identidad personal está fuertemente vinculada a su condición de economista y madre, aspectos que ha utilizado para construir una narrativa de \"mujer empoderada y luchona\" en contraposición a otras figuras políticas contemporáneas. Molinelli ha enfatizado que su incursión en la vida pública no es producto de la improvisación, sino de un proceso de preparación técnica que comenzó a los 22 años.",
     historialAcademico: [
       "Licenciatura en Economía: Pontificia Universidad Católica del Perú (PUCP), periodo 1992-1996 (Titulada). Durante su etapa de pregrado alcanzó el Quinto Superior, lo que facilitó su acceso a oportunidades de posgrado en el extranjero",
@@ -643,8 +643,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1982-06-20",
     img: "/candidatos/george-patrick-forsyth-sommer.webp",
     imgHover: "/partidos/somos-peru.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/george-patrick-forsyth-sommer.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/george-patrick-forsyth-sommer.pdf",
     biografia: "George Patrick Forsyth Sommer nació el 20 de junio de 1982 en Caracas, Venezuela. Es hijo del diplomático peruano Harold Forsyth y de la ciudadana alemana Veronica Sommer. Su trayectoria de vida ha estado marcada por una dualidad entre el deporte de alto rendimiento y la gestión pública. Se desempeñó durante años como futbolista profesional, principalmente en el Club Alianza Lima, donde también ejerció cargos administrativos relacionados con el crédito fiscal. Actualmente postula por el Partido Democrático Somos Perú para las Elecciones Generales 2026. Su plataforma se define por un enfoque en la eficiencia de la gestión pública, el fortalecimiento de la seguridad ciudadana y la formalización económica. Aunque ha transitado por diversas agrupaciones políticas (PPC, Victoria Nacional y ahora Somos Perú), su discurso mantiene una línea de pragmatismo institucional y modernización del Estado mediante tecnología.",
     historialAcademico: [
       "Bachiller en Administración de Empresas: Grado obtenido en la Universidad Peruana de Ciencias Aplicadas (UPC) en el año 2021",
@@ -695,8 +695,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1978-09-19",
     img: "/candidatos/herbert-caller-gutierrez.webp",
     imgHover: "/partidos/partido-patriotico-del-peru.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/herbert-caller-gutierrez.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/herbert-caller-gutierrez.pdf",
     biografia: "Herbert Caller Gutiérrez nació el 19 de septiembre de 1978 en el departamento de Cusco. Su trayectoria personal está marcada por una transición de la disciplina militar hacia el sector empresarial y educativo. Actualmente reside en el distrito de La Molina, Lima. Es el líder fundador del Partido Patriótico del Perú, organización inscrita oficialmente para el presente proceso electoral.",
     historialAcademico: [
       "Ingeniería: Es Bachiller en Ciencias por la Universidad Nacional de Ingeniería (UNI), grado obtenido en 2010",
@@ -741,8 +741,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1969-02-03",
     img: "/candidatos/roberto-helbert-sanchez-palomino.webp",
     imgHover: "/partidos/juntos-por-el-peru.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/roberto-helbert-sanchez-palomino.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/roberto-helbert-sanchez-palomino.pdf",
     biografia: "Roberto Helbert Sánchez Palomino nació el 3 de febrero de 1969 en el distrito y provincia de Huaral, departamento de Lima. Actualmente tiene fijado su domicilio en el distrito de San Borja, en la ciudad de Lima. Es un psicólogo y político peruano que ha desempeñado roles de alta dirección tanto en el Poder Ejecutivo como en el Legislativo.",
     historialAcademico: [
       "Pregrado: Es egresado y titulado en Psicología por la Universidad Nacional Mayor de San Marcos, obteniendo el grado de Bachiller en 1998 y el título profesional en el año 2000",
@@ -784,8 +784,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1945-08-29",
     img: "/candidatos/ricardo-pablo-belmont-cassinelli.webp",
     imgHover: "/partidos/partido-civico-obras.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/ricardo-pablo-belmont-cassinelli.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/ricardo-pablo-belmont-cassinelli.pdf",
     biografia: "Ricardo Pablo Belmont Cassinelli nació en Lima el 29 de agosto de 1945. Es hijo de Augusto Belmont Bar y Cristina Cassinelli de Belmont. A lo largo de su vida, ha consolidado una carrera multifacética como empresario de medios de comunicación, locutor de radio, conductor de televisión y político. Es reconocido por fundar RBC Televisión (Red Bicolor de Comunicaciones) en 1986 y por ser el principal promotor y conductor de la Teletón Perú entre 1981 y 2005.",
     historialAcademico: [
       "Educación básica: Realizó sus estudios primarios en el Colegio Inmaculado Corazón y la secundaria en el Colegio Santa María",
@@ -832,8 +832,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1949-07-15",
     img: "/candidatos/roberto-enrique-chiabra-leon.webp",
     imgHover: "/partidos/unidad-nacional.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/roberto-enrique-chiabra-leon.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/roberto-enrique-chiabra-leon.pdf",
     biografia: "Roberto Enrique Chiabra León nació el 15 de julio de 1949 en la Provincia Constitucional del Callao. De ascendencia vinculada al deporte y la disciplina, creció en un entorno familiar que le inculcó el valor del esfuerzo físico y la rectitud. Su vida ha estado marcada por una prolongada carrera en el Ejército del Perú, donde alcanzó los más altos grados de la jerarquía militar antes de incursionar en la escena política nacional. Actualmente, se desempeña como Congresista de la República para el periodo 2021-2026, integrando comisiones clave como Defensa Nacional, Inteligencia y Educación.",
     historialAcademico: [
       "Educación Básica: Concluyó sus estudios primarios y secundarios de manera satisfactoria",
@@ -888,8 +888,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1961-02-11",
     img: "/candidatos/rafael-bernardo-lopez-aliaga.webp",
     imgHover: "/partidos/renovacion-popular.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/rafael-bernardo-lopez-aliaga.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/rafael-bernardo-lopez-aliaga.pdf",
     biografia: "Rafael Bernardo López Aliaga Cazorla nació en Lima el 11 de febrero de 1961. Pasó gran parte de su infancia en los campos de Pomalca, Chiclayo, donde sus padres trabajaban como ingenieros químicos en la industria azucarera. Su formación temprana estuvo marcada por la disciplina científica de su entorno familiar y un interés precoz por las matemáticas y la cultura anglosajona. Es miembro del grupo católico Opus Dei y ha declarado públicamente su compromiso con el celibato y prácticas de religiosidad profunda.",
     historialAcademico: [
       "Ingeniería Industrial: Bachiller y título profesional obtenidos en la Universidad de Piura",
@@ -933,8 +933,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1974-12-26",
     img: "/candidatos/rafael-jorge-belaunde-llosa.webp",
     imgHover: "/partidos/libertad-popular.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/rafael-jorge-belaunde-llosa.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/rafael-jorge-belaunde-llosa.pdf",
     biografia: "Rafael Jorge Belaunde Llosa nació en Lima el 26 de diciembre de 1974. Proviene de una familia con un profundo arraigo en la política peruana: es nieto del dos veces presidente Fernando Belaunde Terry e hijo del exsenador Rafael Belaunde Aubry. Está casado y tiene tres hijos. A pesar de su linaje político, su trayectoria principal se ha desarrollado en el sector privado, especialmente en el ámbito empresarial inmobiliario y de saneamiento. Es el fundador y actual presidente del partido Libertad Popular, inscrito formalmente ante el Jurado Nacional de Elecciones en junio de 2023.",
     historialAcademico: [
       "Formación base: Su formación base es la de economista, grado obtenido en la Universidad de Lima",
@@ -983,8 +983,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1981-09-30",
     img: "/candidatos/ronald-darwin-atencio-sotomayor.webp",
     imgHover: "/partidos/alianza-electoral-venceremos.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/ronald-darwin-atencio-sotomayor.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/ronald-darwin-atencio-sotomayor.pdf",
     biografia: "Ronald Darwin Atencio Sotomayor nació el 30 de septiembre de 1981 en el departamento de Huánuco. Es abogado de profesión y reside actualmente en el distrito de San Martín de Porres, Lima. Su trayectoria ha ganado notoriedad pública principalmente por su rol en la defensa legal de figuras políticas de alto perfil. En el ámbito empresarial, fue fundador del Centro Jurídico Athena en el año 2010, entidad de la cual se desempeñó como gerente.",
     historialAcademico: [
       "Su formación profesional se centra en el ámbito jurídico, donde ostenta el grado de abogado",
@@ -1032,8 +1032,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1975-01-19",
     img: "/candidatos/rosario-del-pilar-fernandez-bazan.webp",
     imgHover: "/partidos/un-camino-diferente.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/rosario-del-pilar-fernandez-bazan.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/rosario-del-pilar-fernandez-bazan.pdf",
     biografia: "Rosario del Pilar Fernández Bazán nació el 19 de enero de 1975 en el distrito y provincia de Trujillo, departamento de La Libertad. Actualmente reside en su ciudad natal y es una figura clave dentro de la organización política que representa. Se identifica como fundadora del partido Un Camino Diferente, ocupando cargos de alta responsabilidad desde el año 2024, incluyendo la presidencia fundadora y el rol de personero legal alterno.",
     historialAcademico: [
       "Bachiller en Educación por la Universidad Privada César Vallejo, grado obtenido en el año 2001",
@@ -1073,8 +1073,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1958-07-26",
     img: "/candidatos/luis-fernando-olivera-vega.webp",
     imgHover: "/partidos/frente-de-la-esperanza.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/luis-fernando-olivera-vega.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/luis-fernando-olivera-vega.pdf",
     biografia: "Luis Fernando Olivera Vega nació en Lima el 26 de julio de 1958. Es un administrador de empresas de profesión, formado en la Universidad del Pacífico. Conocido popularmente como \"Popy\", su trayectoria se ha caracterizado por un estilo confrontacional y su constante discurso de fiscalización contra la corrupción. Inició su vida política en el Partido Popular Cristiano (PPC) antes de fundar sus propias agrupaciones.",
     historialAcademico: [
       "Pregrado: Bachiller en Ciencias con mención en Administración por la Universidad del Pacífico",
@@ -1116,8 +1116,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1975-05-25",
     img: "/candidatos/keiko-sofia-fujimori-higuchi.webp",
     imgHover: "/partidos/fuerza-popular.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/keiko-sofia-fujimori-higuchi.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/keiko-sofia-fujimori-higuchi.pdf",
     biografia: "Nacida en Lima el 25 de mayo de 1975, es la hija mayor del expresidente Alberto Fujimori y Susana Higuchi. Su ingreso a la esfera pública ocurrió a los 19 años, cuando asumió el rol de Primera Dama del Perú (1994-2000) tras la separación de sus padres, convirtiéndose en la persona más joven en el continente en ejercer tales funciones protocolares. Está casada con Mark Vito Villanella y es madre de dos hijas.",
     historialAcademico: [
       "Realizó sus estudios de pregrado en Estados Unidos, donde se graduó en Administración de Empresas por la Universidad de Boston en 1997",
@@ -1169,8 +1169,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1951-11-09",
     img: "/candidatos/jose-williams-zapata.webp",
     imgHover: "/partidos/avanza-pais.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/jose-williams-zapata.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/jose-williams-zapata.pdf",
     biografia: "José Daniel Williams Zapata nació en Lima el 9 de noviembre de 1951. Es un General de División en retiro del Ejército del Perú y actual congresista de la República. Su vida pública ha estado marcada por una carrera de 40 años en las Fuerzas Armadas, donde alcanzó los más altos grados de mando. Su figura cobró relevancia nacional e internacional en 1997, consolidándose años después como una figura política activa dentro del bloque de derecha en el Perú.",
     historialAcademico: [
       "Licenciatura y Bachillerato en Ciencias Militares: Obtenidos en la Escuela Militar de Chorrillos (2009)",
@@ -1212,8 +1212,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1951-10-29",
     img: "/candidatos/jorge-nieto-montesinos.webp",
     imgHover: "/partidos/partido-del-buen-gobierno.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/jorge-nieto-montesinos.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/jorge-nieto-montesinos.pdf",
     biografia: "Jorge Nieto Montesinos nació el 29 de octubre de 1951 en Arequipa, Perú. Desarrolló gran parte de su vida profesional en México, país donde consolidó su trayectoria intelectual y académica. Posteriormente retornó al Perú para asumir funciones públicas, participando activamente en el análisis y fortalecimiento de la vida democrática, así como en temas vinculados a la gobernabilidad y la ética política.",
     historialAcademico: [
       "Sociólogo por la Pontificia Universidad Católica del Perú (PUCP)",
@@ -1258,8 +1258,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1955-07-17",
     img: "/candidatos/jose-leon-luna-galvez.webp",
     imgHover: "/partidos/podemos-peru.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/jose-leon-luna-galvez.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/jose-leon-luna-galvez.pdf",
     biografia: "José León Luna Gálvez nació el 17 de julio de 1955 en el departamento de Lima. Es un empresario y político con una trayectoria de décadas en la esfera pública peruana. Actualmente reside en el distrito de San Isidro, Lima. Es el fundador de la organización política Podemos Perú, la cual preside desde el año 2021. Su trayectoria combina el sector público y privado, habiendo desempeñado funciones legislativas y empresariales a lo largo de su carrera.",
     historialAcademico: [
       "Bachiller en Ciencias Económicas (2000): Su formación profesional se ha desarrollado principalmente en la Universidad de San Martín de Porres",
@@ -1315,8 +1315,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1954-07-12",
     img: "/candidatos/mario-vizcarra.webp",
     imgHover: "/partidos/peru-primero.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/mario-enrique-vizcarra-cornejo.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/mario-enrique-vizcarra-cornejo.pdf",
     biografia: "Mario Enrique Vizcarra Cornejo nació el 12 de julio de 1954 en la provincia de Mariscal Nieto, Moquegua. Hermano mayor del expresidente Martín Vizcarra, su figura ha cobrado relevancia política nacional tras la inhabilitación de este último. Reside actualmente en su ciudad natal y es identificado en el ámbito político como el \"Plan B\" o sucesor natural del liderazgo de su hermano dentro de la organización Perú Primero.",
     historialAcademico: [
       "Pregrado: Ingeniero Industrial por la Universidad Nacional de Ingeniería (UNI), graduado en 1978",
@@ -1357,8 +1357,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1969-04-11",
     img: "/candidatos/marisol-tello.webp",
     imgHover: "/partidos/primero-la-gente.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/maria-soledad-perez-tello-de-rodriguez.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/maria-soledad-perez-tello-de-rodriguez.pdf",
     biografia: "María Soledad Pérez Tello nació el 11 de abril de 1969 en el distrito de Ilabaya, provincia de Jorge Basadre, departamento de Tacna. Actualmente reside en el distrito de Santiago de Surco, en Lima. Se identifica con el Partido Político Primero La Gente, organización bajo la cual postula a la Presidencia de la República y al Senado.",
     historialAcademico: [
       "Grados académicos: Es abogada de profesión",
@@ -1402,8 +1402,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1964-04-11",
     img: "/candidatos/napoleon-becerra-garcia.webp",
     imgHover: "/partidos/partido-de-los-trabajadores-y-emprendedores.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/napoleon-becerra-garcia.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/napoleon-becerra-garcia.pdf",
     biografia: "Napoleón Becerra García nació el 11 de abril de 1964 en la provincia y departamento de Cajamarca. Actualmente reside en el distrito de San Juan de Lurigancho, en Lima. Se presenta como el líder y presidente del Partido de los Trabajadores y Emprendedores (PTE-PERÚ), organización con la que postula a la Presidencia de la República para el periodo 2026-2031. Su perfil se define como el de un ciudadano proveniente del \"mundo del trabajo y el esfuerzo\", con un enfoque orientado al emprendedurismo y la reivindicación de sectores postergados. Su trayectoria se ha centrado principalmente en el sector educativo y la gestión administrativa.",
     historialAcademico: [
       "Bachiller y Título Profesional en Educación: Con especialidad en Lengua y Literatura, otorgado por la Universidad Nacional Federico Villarreal en el año 1993",
@@ -1454,8 +1454,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1963-06-13",
     img: "/candidatos/mesias-antonio-guevara-amasifuen.webp",
     imgHover: "/partidos/partido-morado.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/mesias-antonio-guevara-amasifuen.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/mesias-antonio-guevara-amasifuen.pdf",
     biografia: "Mesías Antonio Guevara Amasifuen nació el 13 de junio de 1963 en el distrito de Eten, provincia de Chiclayo, Lambayeque. Su formación técnica se inició en la ESEP Militar Elías Aguirre de Chiclayo, donde estudió Mecánica de Producción. Posteriormente, se trasladó al ámbito universitario, graduándose como Bachiller en Ingeniería Electrónica en 1988 y titulándose como Ingeniero Electrónico en 1990 por la Universidad Ricardo Palma. Complementó su formación con estudios de posgrado, obteniendo el grado de Maestro en Administración de Empresas por la Universidad Peruana de Ciencias Aplicadas (UPC) en el año 2001.",
     historialAcademico: [
       "Formación técnica: Estudió Mecánica de Producción en la ESEP Militar Elías Aguirre de Chiclayo",
@@ -1503,8 +1503,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1979-02-02",
     img: "/candidatos/paul-davis-jaimes-blanco.webp",
     imgHover: "/partidos/partido-progresemos.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/paul-davis-jaimes-blanco.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/paul-davis-jaimes-blanco.pdf",
     biografia: "Paul Davis Jaimes Blanco nació el 2 de febrero de 1979 en el distrito de Jesús María, Lima. Actualmente reside en el distrito del Rímac. Es el fundador y actual presidente del partido político Progresemos, organización con la cual postula a la presidencia de la República para el periodo 2026-2031.",
     historialAcademico: [
       "Bachillerato y Licenciatura: Se graduó como Bachiller en Derecho y Ciencia Política en el año 2004 y obtuvo el título profesional de Abogado en 2009, ambos por la Universidad de San Martín de Porres",
@@ -1547,8 +1547,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1986-04-14",
     img: "/candidatos/pitter-enrique-valderrama-pena.webp",
     imgHover: "/partidos/partido-aprista-peruano.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/pitter-enrique-valderrama-pena.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/pitter-enrique-valderrama-pena.pdf",
     biografia: "Pitter Enrique Valderrama Peña nació el 14 de abril de 1986 en la ciudad de Lima. Actualmente cuenta con 39 años y reside en el distrito de Lima. Es un profesional del derecho cuya trayectoria se ha desarrollado principalmente en el ámbito corporativo y legal de la capital peruana. El candidato está adscrito al Partido Aprista Peruano, organización en la que ocupa el cargo de Miembro de la Comisión Política y de la cual es socio fundador en su etapa de reinscripción actual.",
     historialAcademico: [
       "Bachiller en Derecho (2022): Su formación profesional se concentra en la Universidad de San Martín de Porres, donde obtuvo el grado de Bachiller en Derecho en el año 2022",
@@ -1599,8 +1599,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1959-02-15",
     img: "/candidatos/yonhy-lescano-ancieta.webp",
     imgHover: "/partidos/cooperacion-popular.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/yonhy-lescano-ancieta.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/yonhy-lescano-ancieta.pdf",
     biografia: "Yonhy Lescano Ancieta nació el 15 de febrero de 1959 en la ciudad de Puno. Es hijo de Pablo Lescano Marín y Teresa Ancieta Hurtado. Su formación primaria se desarrolló en un núcleo educativo campesino en Ccota, distrito de Platería. Actualmente reside en el distrito de Santiago de Surco, en Lima.",
     historialAcademico: [
       "Pregrado: Se graduó como Bachiller en Derecho en 1999 y obtuvo el título de Abogado en el mismo año, ambos grados otorgados por la Universidad Católica de Santa María",
@@ -1640,8 +1640,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1970-12-16",
     img: "/candidatos/vladimir-roy-cerron-rojas.webp",
     imgHover: "/partidos/peru-libre.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/vladimir-roy-cerron-rojas.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/vladimir-roy-cerron-rojas.pdf",
     biografia: "Vladimir Roy Cerrón Rojas nació el 16 de diciembre de 1970 en el distrito de Chupaca, provincia de Chupaca, departamento de Junín. Con 55 años de edad a la fecha de la elección, se presenta como la figura central y fundador de Perú Libre. Su trayectoria combina el ejercicio de la medicina con una activa y persistente carrera política en su región natal y, posteriormente, a nivel nacional.",
     historialAcademico: [
       "Médico neurocirujano asistente en el Hospital Nacional Essalud de Huancayo desde el año 2003 hasta el 2019",
@@ -1685,8 +1685,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1968-06-27",
     img: "/candidatos/walter-gilmer-chirinos-purizaga.webp",
     imgHover: "/partidos/partido-regionalista-de-integracion-nacional.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/walter-gilmer-chirinos-purizaga.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/walter-gilmer-chirinos-purizaga.pdf",
     biografia: "Walter Gilmer Chirinos Purizaga nació el 27 de junio de 1968 en Paiján, Ascope, en el departamento de La Libertad. Actualmente registra su domicilio en el distrito de La Molina, en Lima. Es el fundador de su actual organización política y se presenta como la figura principal de este movimiento de alcance nacional.",
     historialAcademico: [
       "Estudios Técnicos: Es egresado de la carrera de Mercadotecnia por el instituto Computron",
@@ -1728,8 +1728,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     birthDate: "1967-09-21",
     img: "/candidatos/wolfgang-mario-grozo-costa.webp",
     imgHover: "/partidos/integridad-democratica.webp",
-    planGobiernoUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
-    hojaVidaUrl: "https://drive.google.com/file/d/PLACEHOLDER/view",
+    planGobiernoUrl: "/pdfs/planes-gobierno/wolfgang-mario-grozo-costa.pdf",
+    hojaVidaUrl: "/pdfs/hojas-vida/wolfgang-mario-grozo-costa.pdf",
     biografia: "Wolfgang Mario Grozo Costa nació el 21 de septiembre de 1967 en el distrito de Jesús María, Lima. Actualmente reside en el distrito de San Borja. Se presenta como fundador y representante legal del Partido Político Integridad Democrática, organización con la que postula a la presidencia de la República y al Senado en el proceso electoral de 2026. Es un ciudadano peruano con una trayectoria marcada por la formación en el sector aeroespacial y de defensa nacional.",
     historialAcademico: [
       "Grados Universitarios: Es Bachiller (2010) y Licenciado (2012) en Ciencias de la Administración Aeroespacial por la Escuela de Oficiales de la Fuerza Aérea del Perú",
