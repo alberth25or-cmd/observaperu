@@ -44,6 +44,6 @@ ENV/
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Data outputs (opcional - puedes comentar si quieres versionar los datos)
+# Data outputs - CSV ignorados, pero JSON necesarios para producción
 public/data/*.csv
-public/data/*.json
+# public/data/*.json  # Comentado: los JSON son necesarios para la app en producción

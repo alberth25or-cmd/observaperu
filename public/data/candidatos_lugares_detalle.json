@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "alex-gonzalez-castillo",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LA VICTORIA"
+  },
+  {
+    "slug": "alfonso-lopez-chau-nava",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "No se encontró"
+  },
+  {
+    "slug": "alvaro-gonzalo-paz-de-la-barra-freigeiro",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "MIRAFLORES",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LA MOLINA"
+  },
+  {
+    "slug": "antonio-ortiz-villano",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "APURIMAC",
+    "nacimiento_provincia": "ANDAHUAYLAS",
+    "nacimiento_distrito": "TALAVERA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN MARTIN DE PORRES"
+  },
+  {
+    "slug": "armando-joaquin-masse-fernandez",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SANTIAGO DE SURCO"
+  },
+  {
+    "slug": "carlos-ernesto-jaico-carranza",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "ANCASH",
+    "nacimiento_provincia": "SANTA",
+    "nacimiento_distrito": "CHIMBOTE",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN ISIDRO"
+  },
+  {
+    "slug": "carlos-espa-y-garces-alvear",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "MIRAFLORES",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN ISIDRO"
+  },
+  {
+    "slug": "carlos-gonzalo-alvarez-loayza",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN ISIDRO"
+  },
+  {
+    "slug": "cesar-acuna-peralta",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "CAJAMARCA",
+    "nacimiento_provincia": "CHOTA",
+    "nacimiento_distrito": "TACABAMBA",
+    "domicilio_departamento": "LA LIBERTAD",
+    "domicilio_provincia": "TRUJILLO",
+    "domicilio_distrito": "VICTOR LARCO HERRERA"
+  },
+  {
+    "slug": "charlie-carrasco-salazar",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "APURIMAC",
+    "nacimiento_provincia": "ANDAHUAYLAS",
+    "nacimiento_distrito": "HUANCARAMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "RIMAC"
+  },
+  {
+    "slug": "fiorella-giannina-molinelli-aristondo",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "SAN ISIDRO",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LA MOLINA"
+  },
+  {
+    "slug": "francisco-ernesto-diez-canseco-tavara",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "SAN ISIDRO",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN ISIDRO"
+  },
+  {
+    "slug": "george-patrick-forsyth-sommer",
+    "nacimiento_pais": "VENEZUELA",
+    "nacimiento_departamento": "CARACAS",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "No se encontró",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LA VICTORIA"
+  },
+  {
+    "slug": "herbert-caller-gutierrez",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "CUSCO",
+    "nacimiento_provincia": "CUSCO",
+    "nacimiento_distrito": "CUSCO",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LA MOLINA"
+  },
+  {
+    "slug": "jorge-nieto-montesinos",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "AREQUIPA",
+    "nacimiento_provincia": "AREQUIPA",
+    "nacimiento_distrito": "AREQUIPA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "JESUS MARIA"
+  },
+  {
+    "slug": "jose-leon-luna-galvez",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "No se encontró"
+  },
+  {
+    "slug": "jose-williams-zapata",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "No se encontró"
+  },
+  {
+    "slug": "keiko-sofia-fujimori-higuchi",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "JESUS MARIA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LIMA"
+  },
+  {
+    "slug": "luis-fernando-olivera-vega",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN ISIDRO"
+  },
+  {
+    "slug": "maria-soledad-perez-tello-de-rodriguez",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "TACNA",
+    "nacimiento_provincia": "JORGE BASADRE",
+    "nacimiento_distrito": "ILABAYA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SANTIAGO DE SURCO"
+  },
+  {
+    "slug": "mario-enrique-vizcarra-cornejo",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "MOQUEGUA",
+    "nacimiento_provincia": "MARISCAL NIETO",
+    "nacimiento_distrito": "MOQUEGUA",
+    "domicilio_departamento": "MOQUEGUA",
+    "domicilio_provincia": "MARISCAL NIETO",
+    "domicilio_distrito": "MOQUEGUA"
+  },
+  {
+    "slug": "mesias-antonio-guevara-amasifuen",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LAMBAYEQUE",
+    "nacimiento_provincia": "CHICLAYO",
+    "nacimiento_distrito": "ETEN",
+    "domicilio_departamento": "CAJAMARCA",
+    "domicilio_provincia": "JAEN",
+    "domicilio_distrito": "JAEN"
+  },
+  {
+    "slug": "napoleon-becerra-garcia",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "CAJAMARCA",
+    "nacimiento_provincia": "CAJAMARCA",
+    "nacimiento_distrito": "CAJAMARCA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN JUAN DE LURIGANCHO"
+  },
+  {
+    "slug": "paul-davis-jaimes-blanco",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "JESUS MARIA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "RIMAC"
+  },
+  {
+    "slug": "pitter-enrique-valderrama-pena",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LIMA"
+  },
+  {
+    "slug": "rafael-bernardo-lopez-aliaga",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN ISIDRO"
+  },
+  {
+    "slug": "rafael-jorge-belaunde-llosa",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "MIRAFLORES",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN ISIDRO"
+  },
+  {
+    "slug": "ricardo-pablo-belmont-cassinelli",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "LIMA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "CHORRILLOS"
+  },
+  {
+    "slug": "roberto-enrique-chiabra-leon",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "CALLAO",
+    "nacimiento_provincia": "CALLAO",
+    "nacimiento_distrito": "BELLAVISTA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SANTIAGO DE SURCO"
+  },
+  {
+    "slug": "roberto-helbert-sanchez-palomino",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "HUARAL",
+    "nacimiento_distrito": "HUARAL",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN BORJA"
+  },
+  {
+    "slug": "ronald-darwin-atencio-sotomayor",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "HUANUCO",
+    "nacimiento_provincia": "HUANUCO",
+    "nacimiento_distrito": "HUANUCO",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN MARTIN DE PORRES"
+  },
+  {
+    "slug": "rosario-del-pilar-fernandez-bazan",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LA LIBERTAD",
+    "nacimiento_provincia": "TRUJILLO",
+    "nacimiento_distrito": "TRUJILLO",
+    "domicilio_departamento": "LA LIBERTAD",
+    "domicilio_provincia": "TRUJILLO",
+    "domicilio_distrito": "TRUJILLO"
+  },
+  {
+    "slug": "vladimir-roy-cerron-rojas",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "JUNIN",
+    "nacimiento_provincia": "CHUPACA",
+    "nacimiento_distrito": "CHUPACA",
+    "domicilio_departamento": "JUNIN",
+    "domicilio_provincia": "HUANCAYO",
+    "domicilio_distrito": "HUANCAYO"
+  },
+  {
+    "slug": "walter-gilmer-chirinos-purizaga",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LA LIBERTAD",
+    "nacimiento_provincia": "ASCOPE",
+    "nacimiento_distrito": "PAIJAN",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "LA MOLINA"
+  },
+  {
+    "slug": "wolfgang-mario-grozo-costa",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "LIMA",
+    "nacimiento_provincia": "LIMA",
+    "nacimiento_distrito": "JESUS MARIA",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SAN BORJA"
+  },
+  {
+    "slug": "yonhy-lescano-ancieta",
+    "nacimiento_pais": "PERÚ",
+    "nacimiento_departamento": "PUNO",
+    "nacimiento_provincia": "PUNO",
+    "nacimiento_distrito": "PUNO",
+    "domicilio_departamento": "LIMA",
+    "domicilio_provincia": "LIMA",
+    "domicilio_distrito": "SANTIAGO DE SURCO"
+  }
+]

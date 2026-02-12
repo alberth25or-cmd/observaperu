@@ -41,21 +41,52 @@ export default function EstadisticasPage() {
   const [edadesData, setEdadesData] = useState<CandidatoEdad[]>([]);
   const [lugaresData, setLugaresData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    Promise.all([
-      fetch("/data/candidatos_edades.json").then((res) => res.json()),
-      fetch("/data/candidatos_lugares_detalle.json").then((res) => res.json()),
-    ])
-      .then(([edades, lugares]) => {
+    const loadData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+
+        // Intentar cargar los datos con mejor manejo de errores
+        const [edadesResponse, lugaresResponse] = await Promise.all([
+          fetch("/data/candidatos_edades.json"),
+          fetch("/data/candidatos_lugares_detalle.json"),
+        ]);
+
+        // Verificar que las respuestas sean exitosas
+        if (!edadesResponse.ok) {
+          throw new Error(`Error al cargar edades: ${edadesResponse.status} ${edadesResponse.statusText}`);
+        }
+        if (!lugaresResponse.ok) {
+          throw new Error(`Error al cargar lugares: ${lugaresResponse.status} ${lugaresResponse.statusText}`);
+        }
+
+        const [edades, lugares] = await Promise.all([
+          edadesResponse.json(),
+          lugaresResponse.json(),
+        ]);
+
+        // Validar que los datos sean arrays
+        if (!Array.isArray(edades)) {
+          throw new Error("Los datos de edades no son un array válido");
+        }
+        if (!Array.isArray(lugares)) {
+          throw new Error("Los datos de lugares no son un array válido");
+        }
+
         setEdadesData(edades);
         setLugaresData(lugares);
         setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         console.error("Error cargando datos:", err);
+        setError(err instanceof Error ? err.message : "Error desconocido al cargar los datos");
         setLoading(false);
-      });
+      }
+    };
+
+    loadData();
   }, []);
 
   return (
@@ -69,6 +100,14 @@ export default function EstadisticasPage() {
           {loading ? (
             <div className="text-center py-20">
               <p className="text-slate-600">Cargando datos...</p>
+            </div>
+          ) : error ? (
+            <div className="text-center py-20">
+              <p className="text-red-600 font-semibold mb-2">Error al cargar los datos</p>
+              <p className="text-sm text-slate-600 mb-4">{error}</p>
+              <p className="text-xs text-slate-500">
+                Verifica que los archivos JSON estén en /public/data/
+              </p>
             </div>
           ) : (
             <div className="space-y-8 sm:space-y-12">
