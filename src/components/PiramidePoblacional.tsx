@@ -65,35 +65,36 @@ export default function PiramidePoblacional({ data }: PiramidePoblacionalProps) 
   }, [data]);
 
   return (
-    <div className="w-full bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+    <div className="w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-100">
       {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-3xl font-extrabold text-[#0b1b3b] mb-2">
+      <div className="mb-6 sm:mb-8">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0b1b3b] mb-2">
           Distribución por rangos de edad
         </h2>
-        <p className="text-base text-slate-600">
+        <p className="text-sm sm:text-base text-slate-600">
           Pirámide poblacional invertida - Estilo INEI
         </p>
       </div>
 
       {/* Gráfico */}
-      <div className="w-full">
-        <ResponsiveContainer width="100%" height={400}>
+      <div className="w-full overflow-x-auto">
+        <div className="h-[300px] sm:h-[400px]">
+          <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
             layout="vertical"
-            margin={{ top: 20, right: 30, left: 80, bottom: 20 }}
+            margin={{ top: 20, right: 20, bottom: 20, left: 60 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis
               type="number"
-              tick={{ fill: "#64748b", fontSize: 12, fontWeight: 500 }}
+              tick={{ fill: "#64748b", fontSize: 11, fontWeight: 500 }}
               label={{
                 value: "Número de candidatos",
                 position: "insideBottom",
                 offset: -10,
                 fill: "#475569",
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: 600,
               }}
               stroke="#e2e8f0"
@@ -101,9 +102,9 @@ export default function PiramidePoblacional({ data }: PiramidePoblacionalProps) 
             <YAxis
               type="category"
               dataKey="rango"
-              tick={{ fill: "#64748b", fontSize: 12, fontWeight: 500 }}
+              tick={{ fill: "#64748b", fontSize: 11, fontWeight: 500 }}
               stroke="#e2e8f0"
-              width={60}
+              width={55}
             />
             <Tooltip content={<CustomTooltip />} />
             <Bar dataKey="count" radius={[0, 8, 8, 0]}>
@@ -113,18 +114,19 @@ export default function PiramidePoblacional({ data }: PiramidePoblacionalProps) 
             </Bar>
           </BarChart>
         </ResponsiveContainer>
+        </div>
       </div>
 
       {/* Leyenda */}
-      <div className="mt-6 pt-6 border-t border-slate-200">
-        <div className="flex flex-wrap gap-4 justify-center">
+      <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-200">
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
           {RANGOS.map((rango) => (
             <div key={rango.label} className="flex items-center gap-2">
               <div
                 className="w-3 h-3 rounded-full"
                 style={{ backgroundColor: rango.color }}
               />
-              <span className="text-sm text-slate-600">
+              <span className="text-xs sm:text-sm text-slate-600">
                 {rango.label} ({rango.min}-{rango.max === 100 ? "+" : rango.max} años)
               </span>
             </div>

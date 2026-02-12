@@ -130,37 +130,37 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
   ];
 
   return (
-    <div className="w-full bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+    <div className="w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-100">
       {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-3xl font-extrabold text-[#0b1b3b] mb-2">
+      <div className="mb-6 sm:mb-8">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0b1b3b] mb-2">
           ¿De qué generaciones vienen?
         </h2>
-        <p className="text-base text-slate-600">
+        <p className="text-sm sm:text-base text-slate-600">
           Distribución de candidatos por año de nacimiento. Cada punto representa un candidato.
         </p>
       </div>
 
       {/* Estadísticas por generación */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
         {stats.map((stat) => (
           <div
             key={stat.generacion}
-            className="bg-gradient-to-br from-slate-50 to-white p-5 rounded-xl border border-slate-200 hover:shadow-md transition-shadow"
+            className="bg-gradient-to-br from-slate-50 to-white p-4 sm:p-5 rounded-xl border border-slate-200 hover:shadow-md transition-shadow"
           >
-            <div className="flex items-center gap-3 mb-2">
+            <div className="flex items-center gap-2 sm:gap-3 mb-2">
               <div
-                className="w-4 h-4 rounded-full"
+                className="w-3 sm:w-4 h-3 sm:h-4 rounded-full"
                 style={{ backgroundColor: stat.color }}
               />
-              <span className="text-sm font-semibold text-slate-700">
+              <span className="text-xs sm:text-sm font-semibold text-slate-700">
                 {stat.generacion}
               </span>
             </div>
-            <div className="text-4xl font-bold mb-1" style={{ color: stat.color }}>
+            <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-1" style={{ color: stat.color }}>
               {stat.count}
             </div>
-            <div className="text-sm text-slate-500">
+            <div className="text-xs sm:text-sm text-slate-500">
               {stat.percentage}% del total
             </div>
           </div>
@@ -168,10 +168,11 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
       </div>
 
       {/* Gráfico */}
-      <div className="w-full">
-        <ResponsiveContainer width="100%" height={500}>
+      <div className="w-full overflow-x-auto">
+        <div className="h-[350px] sm:h-[450px] lg:h-[500px]">
+          <ResponsiveContainer width="100%" height="100%">
           <ScatterChart
-            margin={{ top: 20, right: 20, bottom: 60, left: 20 }}
+            margin={{ top: 20, right: 10, bottom: 50, left: 10 }}
           >
             {/* Líneas de referencia para generaciones */}
             {referenceLines.map((line, idx) => (
@@ -195,14 +196,14 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
               type="number"
               dataKey="year"
               domain={[1940, 1990]}
-              tick={{ fill: "#64748b", fontSize: 12, fontWeight: 500 }}
+              tick={{ fill: "#64748b", fontSize: 10, fontWeight: 500 }}
               tickFormatter={(value) => value.toString()}
               label={{
                 value: "Año de nacimiento",
                 position: "insideBottom",
                 offset: -10,
                 fill: "#475569",
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: 600,
               }}
               stroke="#e2e8f0"
@@ -240,22 +241,23 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
             </Scatter>
           </ScatterChart>
         </ResponsiveContainer>
+        </div>
       </div>
 
       {/* Leyenda y nota */}
-      <div className="mt-6 pt-6 border-t border-slate-200">
-        <div className="flex flex-wrap gap-4 justify-center mb-4">
+      <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-200">
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center mb-3 sm:mb-4">
           {Object.entries(GENERATIONS).map(([name, config]) => (
             <div key={name} className="flex items-center gap-2">
               <div
                 className="w-3 h-3 rounded-full"
                 style={{ backgroundColor: config.color }}
               />
-              <span className="text-sm text-slate-600">{name}</span>
+              <span className="text-xs sm:text-sm text-slate-600">{name}</span>
             </div>
           ))}
         </div>
-        <p className="text-xs text-center text-slate-500">
+        <p className="text-xs text-center text-slate-500 px-2">
           Haz clic en un punto para ver el perfil completo del candidato
         </p>
       </div>

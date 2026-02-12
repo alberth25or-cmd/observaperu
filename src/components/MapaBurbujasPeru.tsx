@@ -118,20 +118,20 @@ export default function MapaBurbujasPeru({ data }: MapaBurbujasPeruProps) {
   const geoUrl = "/maps/peru_departamentos.geojson";
 
   return (
-    <div className="w-full bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
+    <div className="w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-100">
       {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-3xl font-extrabold text-[#0b1b3b] mb-2">
+      <div className="mb-6 sm:mb-8">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0b1b3b] mb-2">
           Distribución geográfica de candidatos
         </h2>
-        <p className="text-base text-slate-600">
+        <p className="text-sm sm:text-base text-slate-600">
           Mapa de burbujas por departamento de nacimiento
         </p>
       </div>
 
       {/* Mapa */}
       <div className="w-full relative">
-        <div className="relative w-full bg-slate-50 rounded-xl overflow-hidden" style={{ height: "600px" }}>
+        <div className="relative w-full bg-slate-50 rounded-xl overflow-hidden h-[400px] sm:h-[500px] lg:h-[600px]">
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{
@@ -213,14 +213,14 @@ export default function MapaBurbujasPeru({ data }: MapaBurbujasPeruProps) {
           
           {/* Tooltip flotante */}
           {hoveredDept && (
-            <div className="absolute top-4 right-4 z-50 bg-white p-4 border border-slate-200 rounded-lg shadow-xl">
-              <p className="font-bold text-[#0b1b3b] text-base mb-1">
+            <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-50 bg-white p-3 sm:p-4 border border-slate-200 rounded-lg shadow-xl max-w-[150px] sm:max-w-none">
+              <p className="font-bold text-[#0b1b3b] text-sm sm:text-base mb-1">
                 {statsPorDepartamento.find((d) => d.departamento === hoveredDept)?.departamento || hoveredDept}
               </p>
-              <p className="text-sm text-slate-600">
+              <p className="text-xs sm:text-sm text-slate-600">
                 {statsPorDepartamento.find((d) => d.departamento === hoveredDept)?.count || 0} candidatos
               </p>
-              <p className="text-xs text-slate-500 mt-1">
+              <p className="text-[10px] sm:text-xs text-slate-500 mt-1">
                 {statsPorDepartamento.find((d) => d.departamento === hoveredDept)?.percentage || "0"}% del total
               </p>
             </div>
@@ -229,9 +229,9 @@ export default function MapaBurbujasPeru({ data }: MapaBurbujasPeruProps) {
       </div>
 
       {/* Lista de departamentos */}
-      <div className="mt-8 pt-6 border-t border-slate-200">
-        <h3 className="text-lg font-bold text-[#0b1b3b] mb-4">Candidatos por departamento</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-200">
+        <h3 className="text-base sm:text-lg font-bold text-[#0b1b3b] mb-3 sm:mb-4">Candidatos por departamento</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
           {statsPorDepartamento.map((dept) => {
             const isLima = dept.departamento === "LIMA";
             const isCallao = dept.departamento === "CALLAO";

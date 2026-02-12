@@ -71,7 +71,7 @@ export default function EstadisticasPage() {
               <p className="text-slate-600">Cargando datos...</p>
             </div>
           ) : (
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               {/* KPI Cards */}
               <KPICards data={edadesData} />
 
