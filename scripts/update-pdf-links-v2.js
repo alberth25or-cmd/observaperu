@@ -54,3 +54,4 @@ Object.entries(pdfMapping).forEach(([key, urls]) => {
 fs.writeFileSync(detailFile, content, 'utf8');
 console.log('\n✓ Archivo candidatos-detalle.ts actualizado correctamente');
 
+

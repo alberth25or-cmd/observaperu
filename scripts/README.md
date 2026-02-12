@@ -44,3 +44,4 @@ python scripts/generar_metricas.py
 - Normalización truncada con máximos teóricos fijos
 - Manejo robusto de archivos faltantes
 
+

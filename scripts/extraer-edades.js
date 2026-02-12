@@ -85,3 +85,4 @@ console.log(`  Promedio: ${promedio} años`);
 console.log(`  Mínima: ${min} años`);
 console.log(`  Máxima: ${max} años`);
 
+
