@@ -61,18 +61,26 @@ export default function KPICards({ data }: KPICardsProps) {
     },
   ];
 
+  if (!data || data.length === 0) {
+    return (
+      <div className="text-center py-8 text-slate-500">
+        <p className="text-sm">No hay datos disponibles</p>
+      </div>
+    );
+  }
+
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-6 sm:mb-8">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="bg-white rounded-xl p-4 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200"
+          className="bg-white rounded-xl p-3 sm:p-4 lg:p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200"
         >
-          <div className="text-xs sm:text-sm font-semibold text-slate-600 mb-2">
+          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">
             {card.label}
           </div>
           <div
-            className="text-xl sm:text-2xl lg:text-3xl font-extrabold"
+            className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-extrabold leading-tight"
             style={{ color: card.color }}
           >
             {card.value}

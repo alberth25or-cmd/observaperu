@@ -117,6 +117,16 @@ export default function MapaBurbujasPeru({ data }: MapaBurbujasPeruProps) {
   // GeoJSON local
   const geoUrl = "/maps/peru_departamentos.geojson";
 
+  if (!data || data.length === 0 || statsPorDepartamento.length === 0) {
+    return (
+      <div className="w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-100">
+        <div className="text-center py-8 text-slate-500">
+          <p className="text-sm">No hay datos disponibles</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-100">
       {/* Header */}
@@ -131,7 +141,7 @@ export default function MapaBurbujasPeru({ data }: MapaBurbujasPeruProps) {
 
       {/* Mapa */}
       <div className="w-full relative">
-        <div className="relative w-full bg-slate-50 rounded-xl overflow-hidden h-[400px] sm:h-[500px] lg:h-[600px]">
+        <div className="relative w-full bg-slate-50 rounded-xl overflow-hidden h-[350px] sm:h-[450px] lg:h-[600px]">
           <ComposableMap
             projection="geoMercator"
             projectionConfig={{
