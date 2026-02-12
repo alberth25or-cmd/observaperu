@@ -37,6 +37,9 @@ const Navbar = () => {
             <Link href="/comparacion" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
               Comparación
             </Link>
+            <Link href="/estadisticas" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+              Estadísticas
+            </Link>
             <Link href="/conocenos" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
               Conócenos
             </Link>
@@ -101,6 +104,13 @@ const Navbar = () => {
               className="py-3 text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
             >
               Comparación
+            </Link>
+            <Link
+              href="/estadisticas"
+              onClick={() => setIsMenuOpen(false)}
+              className="py-3 text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
+              Estadísticas
             </Link>
             <Link
               href="/conocenos"
