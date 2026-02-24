@@ -116,6 +116,10 @@ function FlowArcs({
   onFlowLeave: () => void;
 }) {
   const { projection } = useMapContext();
+  const project = (pos: [number, number]): [number, number] => {
+    const p = projection(pos);
+    return p ?? [0, 0];
+  };
 
   return (
     <g>
@@ -135,7 +139,7 @@ function FlowArcs({
         return (
           <path
             key={`${f.origen}-${f.destino}`}
-            d={curvedPath(projection, from, to)}
+            d={curvedPath(project, from, to)}
             fill="none"
             stroke={color}
             strokeWidth={STROKE_WIDTH}

@@ -1,4 +1,5 @@
-import { defineConfig, globalIgnores } from "eslint";
+import pkg from "eslint";
+const { defineConfig, globalIgnores } = pkg;
 import nextVitals from "eslint-config-next/core-web-vitals.js";
 import nextTs from "eslint-config-next/typescript.js";
 
