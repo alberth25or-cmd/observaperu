@@ -160,7 +160,9 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     biografia: "Álvaro Gonzalo Paz de la Barra Freigeiro nació el 26 de julio de 1983 en el distrito de Miraflores, Lima. Es hijo de Vladimir Paz de la Barra, quien fue un reconocido abogado, juez y exdecano del Colegio de Abogados de Lima. Se ha desempeñado como abogado y empresario, y estuvo casado con la conductora de televisión Sofía Franco. Su carrera política ha estado marcada por un ascenso desde el ámbito municipal hacia la escena nacional, fundando su propia organización política tras su paso por otras filas partidarias.",
     historialAcademico: [
       "Título profesional de Abogado otorgado por la Universidad Nacional Mayor de San Marcos",
+      "Bachiller en Derecho otorgado por la Universidad de San Martín de Porres. Obtenido en el año 2007",
       "Estudios de posgrado en EUCIM Business School en España",
+      "Maestría en derecho constitucional y derechos humanos realizado en la Universidad Nacional Mayor de San Marcos",
     ],
     controversias: [
       "Denuncias cruzadas de violencia familiar con su expareja Sofía Franco en 2021, incidente que incluyó la detención de ambos y declaraciones polémicas del candidato sobre la protección legal al hombre",
@@ -169,7 +171,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su pensamiento político se articula bajo la bandera de \"Fe en el Perú\", organización que él preside. Los pilares de su ideario incluyen: defensa de una economía de libre mercado con responsabilidad social; enfoque en la descentralización efectiva, otorgando mayor poder y autonomía a los gobiernos locales y regionales; postura de \"insurgencia\" frente a lo que denomina un sistema estatal ineficiente y corrupto; rechazo a los monopolios y promoción de la eficiencia en la gestión pública orientada a resultados medibles.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 341,465.00",
       sources: [
         "Paz de la Barra ha declarado participaciones en diversas sociedades, lo que constituye parte de su patrimonio personal y base económica: acciones y participaciones en empresas como FBF Abogados SAC, Paz de la Barra Abogados SAC y FBF Obras SAC",
         "Como fundador del partido Fe en el Perú, la organización se financia mediante aportes de afiliados y simpatizantes conforme a la normativa vigente, aunque su campaña presidencial ha sido cuestionada por la procedencia de fondos para su amplia difusión",
@@ -208,14 +210,14 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     biografia: "Antonio Ortiz Villano nació el 10 de mayo de 1955 en el distrito de Talavera, provincia de Andahuaylas, departamento de Apurímac. Actualmente tiene 70 años y reside en el distrito de San Martín de Porres, en la provincia de Lima. Es de sexo masculino y posee el Documento Nacional de Identidad N° 08587486.",
     historialAcademico: [
       "En cuanto a su formación básica, realizó sus estudios primarios en la Institución Educativa 660 en Apurímac y culminó la secundaria en la Institución Educativa José María Arguedas, también en Apurímac",
-      "A nivel de educación superior, Antonio Ortiz Villano registra estudios universitarios en la carrera de Administración en la Universidad Particular Inca Garcilaso de la Vega, donde obtuvo el grado de Bachiller y, posteriormente, el Título Profesional de Licenciado en Administración",
+      "No registra estudios universitarios",
     ],
     controversias: [
       "Tras la revisión exhaustiva de la Declaración Jurada de Hoja de Vida presentada ante el Jurado Nacional de Elecciones, no se registran sentencias condenatorias impuestas por delitos dolosos que hayan quedado firmes. Asimismo, el candidato declara no tener sentencias que declaren fundadas demandas por incumplimiento de obligaciones familiares, alimentarias, contractuales, laborales o de violencia familiar",
     ],
     ideologiaPolitica: "Si bien el plan de gobierno no define una etiqueta ideológica única, su enfoque se centra en la \"Dimensión Social\" y el fortalecimiento de la familia como núcleo formativo de la sociedad. El partido promueve una gestión basada en la transparencia, con compromisos de rendición de cuentas cada seis meses. Sus pilares parecen orientarse hacia un modelo de desarrollo humano integral, con énfasis en la educación de calidad, la salud pública descentralizada y la lucha contra la pobreza multidimensional.",
     financiamiento: {
-      total: "S/ 215,000.00 (ingresos anuales) + patrimonio inmobiliario y acciones",
+      total: "S/ 221,634.00",
       sources: [
         "Ingresos anuales: Reporta una remuneración bruta anual de S/ 215,000.00 proveniente del sector privado",
         "Bienes inmuebles: Declara la propiedad de tres inmuebles, incluyendo una casa en San Martín de Porres y terrenos en Andahuaylas, con un valor total de autovalúo que supera los S/ 300,000.00",
@@ -256,6 +258,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
       "Internado Médico y Especialización en Nefrología (1992-1993): Realizó su internado médico y estudios enfocados en nefrología en el Hospital Nacional Guillermo Almenara Irigoyen, centro de alta complejidad perteneciente al sistema de seguridad social (EsSalud)",
       "Abogado (2010): Obtuvo el título de abogado por la Universidad Inca Garcilaso de la Vega. Esta segunda carrera profesional le permitió ejercer una defensa técnica más robusta de los intereses de la Asociación Peruana de Autores y Compositores (APDAYC) ante organismos reguladores como el INDECOPI",
       "Magíster en Propiedad Intelectual: Cursó una maestría en Propiedad Intelectual en la Pontificia Universidad Católica del Perú (PUCP), consolidando su perfil como un experto en el marco legal de la gestión colectiva de derechos",
+      "Magíster derecho digital tecnológico en la Universidad Europea de Madrid",
     ],
     controversias: [
       "Desinformación durante la Pandemia de COVID-19: Uno de los episodios más controvertidos ocurrió durante la emergencia sanitaria global. Massé fue señalado por diversos medios de verificación de datos (fact-checking) y organizaciones de salud por difundir información falsa o sin respaldo científico sobre tratamientos contra el virus. En junio de 2020, promovió activamente el uso de dióxido de cloro como medida preventiva y terapéutica contra el COVID-19, a pesar de las advertencias de la DIGEMID y la OMS sobre su toxicidad. Promovió el uso masivo de ivermectina, azitromicina e hidroxicloroquina como parte de un \"kit de tratamiento\" temprano, minimizando la necesidad de evidencia clínica rigurosa. Sugirió que los médicos jóvenes no corrían peligro frente al virus debido a su edad, afirmación que fue desmentida por las estadísticas de mortalidad del propio Colegio Médico del Perú. Como resultado de estas acciones, el Colegio Médico del Perú inició una investigación disciplinaria en 2020 contra Massé y otros siete médicos por poner en riesgo la salud pública mediante la recomendación de sustancias peligrosas",
@@ -265,7 +268,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La plataforma política de Massé se centra en el concepto de federalismo como solución a los problemas de centralismo, ineficiencia y corrupción que afectan al país. Propone transformar la división política del Perú para que las regiones tengan autonomía legislativa y presupuestaria real, similar a los modelos de Suiza o Canadá. Argumenta que el actual proceso de descentralización iniciado en 2002 ha sido \"amañado\" por el gobierno central para mantener el control de los recursos. Su vehículo político es el Partido Democrático Federal (PDF), una organización que promueve un cambio estructural en el modelo de Estado. Bajo el modelo federal, cada estado regional gestionaría sus propios sistemas de salud y educación, permitiendo una respuesta más rápida a las necesidades locales sin esperar la aprobación de los ministerios en Lima.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 682,626.00",
       sources: [
         "Gestión en APDAYC: Bajo su mando, APDAYC pasó de ser una entidad con dificultades operativas a una poderosa organización de gestión colectiva con una capacidad de recaudación que se incrementó en varios órdenes de magnitud. Massé implementó sistemas modernos de cobranza basados en el Artículo 147 de la Ley de Derechos de Autor, que establece la legitimación activa de la asociación para cobrar por el uso de música nacional e internacional en cualquier establecimiento público",
         "Red de Empresas Familiares: Se identificaron múltiples empresas vinculadas a su círculo familiar directo que mantenían nexos comerciales con APDAYC, incluyendo IEMPSA (catálogos musicales históricos), Trauni (producción física de discos), ET Music Perú (editora musical y representación), Fundación Autor (administración de frecuencias radiales) y Musz&K Perú (sello discográfico)",
@@ -376,7 +379,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato postula por la organización política Partido País para Todos. Según su plan de gobierno, su postura se alinea con una reforma institucional profunda del Estado, con un fuerte énfasis en el orden, la seguridad ciudadana y la eficiencia en la gestión social para reducir brechas de pobreza y salud mediante un enfoque técnico y resultados medibles.",
     financiamiento: {
-      total: "S/ 144,000.00 (ingresos anuales)",
+      total: "S/ 207,543.00",
       sources: [
         "La documentación analizada no especifica los montos de financiamiento de campaña ni las fuentes de aportes privados para este proceso electoral",
         "En su declaración de bienes y rentas, registra ingresos anuales por su actividad independiente de S/ 144,000.00, además de poseer propiedades inmuebles en San Isidro y un vehículo deportivo valorizado en S/ 102,000.00",
@@ -419,7 +422,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se define como un liberal clásico y representa una visión de derecha moderna. Su pensamiento político se centra en: defensa de las libertades individuales y reducción de la intervención estatal; un enfoque de \"mano dura\" contra el crimen organizado, diferenciándolo del trato al ciudadano trabajador; conservadurismo en valores sociales, reconociendo a la familia tradicional y el derecho a la vida desde la concepción; oposición frontal a modelos de izquierda autoritaria o antidemocrática.",
     financiamiento: {
-      total: "S/ 252,000.00 (ingresos anuales)",
+      total: "S/ 105,103.00",
       sources: [
         "En su declaración jurada, el candidato reporta ingresos anuales por un total de S/ 252,000.00 provenientes del sector privado",
         "Además, declara poseer acciones y participaciones en fondos de inversión extranjeros y empresas locales, como Janlis-Global HY Bond Fund y EGA Empresarial S.A.C.",
@@ -550,7 +553,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se autodefine como un político de principios claros, orientado hacia lo que denomina una revolución pacífica para ordenar el Estado. Su postura ideológica se caracteriza por: Liberalismo Económico: Defiende los principios de libre mercado y libre comercio, oponiéndose a los monopolios y oligopolios, tanto estatales como privados. Postura Anti-corrupción y Conservadora: Propone una lucha frontal contra la delincuencia bajo el lema Mano de Hierro y se presenta como una alternativa opuesta a sectores que él denomina caviares.",
     financiamiento: {
-      total: "S/ 1,699,247.11",
+      total: "S/ 45,000.00",
       sources: [
         "Franja Electoral: El partido Perú Acción tiene asignado un monto total de S/ 1,699,247.11 para publicidad en medios y redes sociales dentro de la franja electoral reglamentada",
         "Mecanismos Internos: Reportes periodísticos de 2023 señalaron que los estatutos del partido incluían la obligatoriedad de aportes del 10% del salario para aquellos militantes o invitados que accedieran a cargos públicos a través de la organización",
@@ -598,7 +601,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Molinelli se perfila como una candidata que intenta romper la dicotomía entre el técnico de escritorio y el político de masas. Su propuesta para el 2026 se fundamenta en la recuperación de la autoridad presidencial, la meritocracia en el servicio civil y una descentralización basada en la eficiencia presupuestaria. El partido Fuerza Moderna se presenta como una opción de centro, con un fuerte componente técnico y meritocrático, buscando atraer a profesionales de la salud y la gestión pública. Su propuesta se centra en cuatro pilares fundamentales que buscan abordar los problemas estructurales del Perú mediante una gestión orientada a resultados y libre de ideologías extremas.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 123,865.13",
       sources: [
         "Molinelli ha declarado que su campaña se apoya en recursos propios acumulados durante su carrera profesional y en aportes voluntarios de simpatizantes que son registrados conforme a ley",
         "Ha sido categórica al señalar que no aceptará financiamiento proveniente de la minería ilegal o empresas involucradas en procesos por lavado de activos, marcando una distancia ética con otras agrupaciones políticas",
@@ -656,7 +659,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Actualmente postula por el Partido Democrático Somos Perú para las Elecciones Generales 2026. Su plataforma se define por un enfoque en la eficiencia de la gestión pública, el fortalecimiento de la seguridad ciudadana y la formalización económica. Aunque ha transitado por diversas agrupaciones políticas (PPC, Victoria Nacional y ahora Somos Perú), su discurso mantiene una línea de pragmatismo institucional y modernización del Estado mediante tecnología. Su plan de gobierno se estructura en dimensiones sociales, institucionales y económicas con metas específicas al 2031, priorizando la seguridad ciudadana, economía y formalización, salud y nutrición, educación tecnológica y lucha contra la corrupción.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 244,000.00",
       sources: [
         "Bienes Muebles: En su declaración jurada, el candidato reporta vehículos valorados en un total de 42,000 soles, incluyendo una camioneta y una motocicleta",
         "Participaciones accionarias: Es titular de 500 acciones en Alhambra Inversiones S.R.L.",
@@ -709,7 +712,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato se identifica con el \"Patriotismo\", una postura que prioriza la soberanía nacional y la identidad peruana. Su propuesta ideológica se centra en la industrialización de la patria, el fortalecimiento de la seguridad nacional y la meritocracia técnica. El partido que lidera promueve una visión de Estado eficiente y productivo, distanciándose de las etiquetas tradicionales de izquierda o derecha para enfocarse en lo que denominan \"desarrollo nacional\".",
     financiamiento: {
-      total: "S/ 861,259.32",
+      total: "S/ 186,259.32",
       sources: [
         "Ingresos anuales (2024): Reportó un total de 186,259.32 soles, provenientes tanto del sector público (remuneración bruta) como del sector privado (ejercicio individual de profesión)",
         "Patrimonio empresarial: Posee acciones en sus empresas educativas (Caller Language Center y Caller Colegio Internacional) con un valor nominal total de 75,000 soles",
@@ -753,7 +756,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su postura política se define por una crítica estructural al sistema vigente y la búsqueda de un cambio constitucional. Propugna el retorno a la democracia mediante una Nueva Constitución redactada a través de una Asamblea Constituyente que sea fruto de la voluntad popular. Su visión de Estado es la de un ente garante de derechos, plurinacional y descentralizado, que recupere la soberanía sobre los recursos estratégicos del país.",
     financiamiento: {
-      total: "S/ 35,000.00",
+      total: "S/ 224,945.83",
       sources: [
         "En su declaración jurada de hoja de vida, el candidato declara la posesión de un predio rural en la Casa Hacienda Huando (Huaral) bajo sociedad conyugal, valorizado en S/ 35,000.00",
         "No se registran aportes de campaña específicos en los documentos del plan de gobierno analizados, los cuales se rigen bajo las normas de transparencia del Jurado Nacional de Elecciones",
@@ -799,7 +802,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su pensamiento político se articula a través del Partido Cívico OBRAS, el cual define como una organización nacionalista que promueve valores como la libertad, honestidad, transparencia y solidaridad. Su enfoque se centra en la \"política de las obras\" frente a las ideologías tradicionales, priorizando la ejecución técnica y la descentralización administrativa y económica del Estado. En años recientes, ha mostrado posturas críticas hacia el sistema político establecido y los medios de comunicación tradicionales.",
     financiamiento: {
-      total: "S/ 1,043,710.80",
+      total: "S/ 301,514.00",
       sources: [
         "Ingresos personales: Declaró ingresos por S/ 742,196.80 durante el año 2024",
         "Aportes recibidos: Informó un aporte de S/ 168,500 enviado por su hermano desde el exterior (España) y aportes voluntarios de personas naturales vía Yape y PayPal que suman aproximadamente S/ 133,014.00",
@@ -847,7 +850,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su postura se define como humanista y de centroderecha, centrada en los conceptos de \"Orden y Unidad\". Propone un modelo de Economía Social de Mercado y considera que la democracia debe sustentarse en el respeto estricto a la autoridad y la ley. Su visión estratégica busca posicionar al Perú como un país hegemónico en el Pacífico Sur mediante el fortalecimiento del Estado-Nación y la integridad territorial. El plan de gobierno se estructura en metas específicas en seguridad ciudadana, economía y minería, salud social, infraestructura, y educación y juventud.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 320,676.00",
       sources: [
         "Para el proceso electoral 2026, el candidato lidera la Alianza Unidad Nacional (integrada por el Partido Popular Cristiano, Unidad y Paz, y Peruanos Unidos Somos Libros)",
         "El financiamiento de su campaña se gestiona bajo las normativas de la ONPE, la cual ha asignado presupuestos para la franja electoral a los partidos participantes",
@@ -903,7 +906,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se autodefine como socialcristiano, aunque analistas políticos clasifican su postura como de derecha conservadora o ultraconservadora. Su ideología se centra en la defensa de la vida desde la concepción, el fortalecimiento de la familia tradicional, el libre mercado con enfoque nacionalista y una postura frontal contra el comunismo y lo que denomina \"mafia caviar\". Propugna un Estado eficiente pero reducido, con fuerte énfasis en la meritocracia y la transparencia.",
     financiamiento: {
-      total: "S/ 170,000+ (multas por uso indebido de fondos públicos)",
+      total: "S/ 1,897,374.00",
       sources: [
         "Su partido, Renovación Popular, recibe financiamiento público directo conforme a la normativa electoral peruana. Sin embargo, el partido ha sido sancionado con multas superiores a los 170,000 soles por el uso indebido de estos fondos públicos en gastos no permitidos por la Ley de Organizaciones Políticas",
         "Adicionalmente, durante sus campañas previas, ha declarado que gran parte del soporte económico provino de sus propios recursos como empresario y aportes voluntarios de simpatizantes",
@@ -947,7 +950,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Belaunde Llosa se define como liberal. Su partido, Libertad Popular, se identifica con la derecha liberal, defendiendo la economía social de mercado como la herramienta principal para la superación de la pobreza. Su ideario sostiene que la persona es anterior y superior al Estado, y promueve la competencia, la meritocracia y la reducción de la intervención estatal innecesaria en la vida económica de los ciudadanos. El plan de gobierno de Libertad Popular para el periodo 2026-2031 se estructura en torno a pilares de seguridad y reforma del Estado: seguridad y lucha contra el crimen, gestión pública y rendición de cuentas, reforma económica, y minería.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 2,134,800.00",
       sources: [
         "Reportes periodísticos han señalado una inversión visible en paneles y publicidad exterior en diversas regiones, lo cual ha generado debates sobre la opacidad y los costos de campaña, aunque el candidato ha sostenido que actúa dentro del marco legal",
         "El financiamiento se gestiona bajo las normativas de la ONPE y el Jurado Nacional de Elecciones",
@@ -987,7 +990,9 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     hojaVidaUrl: "/pdfs/hojas-vida/ronald-darwin-atencio-sotomayor.pdf",
     biografia: "Ronald Darwin Atencio Sotomayor nació el 30 de septiembre de 1981 en el departamento de Huánuco. Es abogado de profesión y reside actualmente en el distrito de San Martín de Porres, Lima. Su trayectoria ha ganado notoriedad pública principalmente por su rol en la defensa legal de figuras políticas de alto perfil. En el ámbito empresarial, fue fundador del Centro Jurídico Athena en el año 2010, entidad de la cual se desempeñó como gerente.",
     historialAcademico: [
-      "Su formación profesional se centra en el ámbito jurídico, donde ostenta el grado de abogado",
+      "Abogado en la Universidad de San Martín de Porres, obtenido en el año 2006",
+      "Bachiller en derecho y ciencia política en la Universidad de San Martín de Porres, obtenido en el año 2006",
+      "Maestro en derecho penal en la Pontificia Universidad Católica del Peru, obtenido en el año 2024",
       "Ha complementado su carrera con la docencia universitaria, registrando experiencia en instituciones como la Universidad Privada del Norte entre los años 2022 y 2025",
       "Asimismo, ha brindado asesorías académicas a estudiantes de derecho que buscaban obtener títulos profesionales",
     ],
@@ -998,7 +1003,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Atencio postula a la presidencia por la Alianza Electoral Venceremos, una coalición que agrupa movimientos como Voces del Pueblo. Su postura política se enmarca en el socialismo democrático y el progresismo. Entre sus planteamientos ideológicos fundamentales destaca la propuesta de convocar a un referéndum para una Asamblea Constituyente que redacte una nueva Constitución Política para el Perú.",
     financiamiento: {
-      total: "S/ 204,290.00",
+      total: "S/ 290,119.82",
       sources: [
         "De acuerdo con su declaración de bienes y rentas, registra un total de bienes muebles valorizados en S/ 204,290.00, que incluye vehículos de las marcas Honda y Kia",
         "Asimismo, declara poseer el 95% de acciones en la empresa Grupo Jurídico Athena S.A.C. y ser propietario de una marca registrada ante Indecopi",
@@ -1045,7 +1050,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La candidata lidera una organización que se define formalmente como un partido de centro. Su doctrina se fundamenta en la defensa de la igualdad, la libertad y el estado de derecho. Promueven una economía social de mercado con justicia social y una visión de Estado gestor que garantice servicios básicos de calidad en salud, educación y justicia. Aunque se asocia al partido con posturas populistas en algunos análisis externos, su estatuto oficial enfatiza el fortalecimiento de la democracia y la lucha contra la corrupción.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 36,520.00",
       sources: [
         "Respecto a su patrimonio personal declarado ante el sistema electoral, la candidata registra bienes inmuebles por un valor de autovaluo que supera los 100,000 soles, incluyendo predios en la urbanización Santa María en Trujillo. Asimismo, declara la propiedad de un vehículo valorado en 35,000 soles.",
         "El financiamiento de la organización política, de acuerdo con sus estatutos, debe regirse por un sistema de control interno conforme a la Ley de Organizaciones Políticas para garantizar la transparencia en el uso de recursos.",
@@ -1078,7 +1083,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     biografia: "Luis Fernando Olivera Vega nació en Lima el 26 de julio de 1958. Es un administrador de empresas de profesión, formado en la Universidad del Pacífico. Conocido popularmente como \"Popy\", su trayectoria se ha caracterizado por un estilo confrontacional y su constante discurso de fiscalización contra la corrupción. Inició su vida política en el Partido Popular Cristiano (PPC) antes de fundar sus propias agrupaciones.",
     historialAcademico: [
       "Pregrado: Bachiller en Ciencias con mención en Administración por la Universidad del Pacífico",
-      "Posgrado: Cuenta con un Máster Oficial en Relaciones Internacionales por la Universidad Complutense de Madrid (2008), aunque el título no figura registrado en la SUNEDU según su declaración jurada",
+      "Posgrado: No figura en la SUNEDU ni en su hoja de vida",
     ],
     controversias: [
       "Caso Interoceánica: Se le imputa el presunto delito de colusión agravada relacionado con la concesión de la carretera Interoceánica durante el gobierno de Toledo. El Poder Judicial ha rechazado en repetidas ocasiones sus pedidos para archivar esta investigación",
@@ -1087,7 +1092,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su pensamiento se enmarca en una postura reformista con énfasis en la moralización pública. Actualmente lidera el Partido Frente de la Esperanza 2021, cuyo ideario promueve una \"Economía Social de Mercado\" dentro de un Estado de Bienestar. Defiende el rol subsidiario del Estado, pero sostiene que este debe actuar como un árbitro social decidido para garantizar la igualdad de oportunidades en salud, educación y justicia.",
     financiamiento: {
-      total: "S/ 225,000.00",
+      total: "No se especifica monto exacto en la información proporcionada",
       sources: [
         "En sus declaraciones recientes, figura una participación en la consultora Yorkshire & Benel Asesores y Consultores por un valor de 225,000 soles (2024)",
         "En cuanto a sus bienes, declara un vehículo Volvo del año 2004 valorizado en 15,000 soles y un mutuo hipotecario sobre un departamento en San Isidro",
@@ -1130,7 +1135,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se define bajo la doctrina del fujimorismo, caracterizada por un conservadurismo social y un modelo económico neoliberal. Su ideario promueve la defensa de la vida desde la concepción, la familia como célula fundamental de la sociedad y el derecho de los padres a dirigir la educación de sus hijos. En lo económico, defiende la economía social de mercado con una participación subsidiaria del Estado y la protección de la inversión privada como motor de empleo.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 271,853.45",
       sources: [
         "Su carrera ha estado marcada por investigaciones judiciales complejas relacionadas con presuntos aportes ilícitos de la constructora Odebrecht y otros grupos empresariales para sus campañas de 2011 y 2016",
         "Enfrenta investigaciones por presunto financiamiento ilegal y uso indebido de fondos en la campaña de 2021",
@@ -1182,7 +1187,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Postula por el partido Avanza País - Partido de Integración Social. Su postura se alinea con el liberalismo económico y el conservadurismo institucional. Defiende el libre mercado, la propiedad privada y la inversión extranjera como motores de desarrollo. En el aspecto social, promueve el principio de \"orden y seguridad\", favoreciendo el fortalecimiento de las fuerzas del orden y una lucha frontal contra la criminalidad y los remanentes subversivos.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 351,600.00",
       sources: [
         "El financiamiento de su campaña y de su partido, Avanza País, proviene principalmente de aportes declarados ante la ONPE por parte de simpatizantes, militantes y recursos propios del partido",
         "En sus declaraciones juradas, registra bienes inmuebles (propiedades y copropiedades) y vehículos que respaldan su patrimonio personal, acumulado tras cuatro décadas de servicio público y pensiones militares",
@@ -1227,7 +1232,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Nieto define su propuesta como un equilibrio entre la justicia social y la eficiencia institucional. Si bien su origen es de izquierda, su visión actual defiende la economía de mercado con una regulación fuerte que evite los monopolios y la corrupción. Aboga por un Estado profesional y meritocrático, distanciándose de los extremos y promoviendo lo que denomina el \"buen gobierno\", centrado en la recuperación de lo público y la integridad ética en el ejercicio del poder.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 180,000.00",
       sources: [
         "Para el actual proceso electoral, el financiamiento se rige por las normas del Jurado Nacional de Elecciones (JNE) y la ONPE para partidos inscritos",
         "Como presidente y fundador del Partido del Buen Gobierno, la organización política es la encargada de canalizar los aportes de militantes y simpatizantes, sujetos a la fiscalización de las autoridades electorales correspondientes",
@@ -1328,7 +1333,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato representa al partido Perú Primero, cuya base ideológica se define bajo los siguientes pilares: Humanismo y Democracia: Se posicionan como una organización con vocación democrática representativa, centrada en el servicio al pueblo y el respeto al Estado de derecho. Economía Social de Mercado: Defienden la propiedad privada y la inversión como motores de desarrollo, pero con una regulación estatal que busque reducir las desigualdades. Posturas Progresistas: En declaraciones públicas, Mario Vizcarra ha manifestado estar a favor de la legalización del aborto, el matrimonio LGBT y, en términos de política de drogas, ha mencionado posturas abiertas sobre la regulación de la cocaína.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 117,684.00",
       sources: [
         "Recursos Propios y Aportes: De acuerdo con los estatutos del partido, el financiamiento se basa en cuotas de afiliados y aportaciones permitidas por la ONPE. Sin embargo, la organización ha enfrentado cuestionamientos por la procedencia de fondos vinculados a las redes políticas previas de su fundador.",
       ],
@@ -1363,14 +1368,14 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     historialAcademico: [
       "Grados académicos: Es abogada de profesión",
       "Posgrados: Cuenta con el grado de Doctora en Derecho por la Universidad San Martín de Porres",
-      "Maestrías: Posee dos maestrías; una en Derecho Constitucional otorgada por la Universidad Católica de Santa María y otra en Derecho Registral y Notarial por la Universidad San Martín de Porres",
+      "Maestrías: Posee dos maestrías; una en Derecho Constitucional otorgada por la Pontificia Universidad Católica del Perú y otra en Derecho Registral y Notarial por la Universidad San Martín de Porres",
     ],
     controversias: [
       "En la documentación oficial presentada ante los organismos electorales, no se registran sentencias condenatorias firmes ni procesos disciplinarios que inhabiliten su postulación. Su historial se mantiene dentro del marco de la declaración jurada de hoja de vida estándar para procesos electorales nacionales",
     ],
     ideologiaPolitica: "La postura política de la candidata y su partido se define bajo los pilares de comunidad, ecología, libertad y progreso. Su propuesta promueve un Estado social activo con enfoque de derechos, igualdad de género e interculturalidad. Defiende la democracia como sistema fundamental y busca el fortalecimiento de la cohesión social mediante la reducción de brechas territoriales.",
     financiamiento: {
-      total: "S/ 312,000.00+ (ingresos anuales)",
+      total: "S/ 4,500,000.00",
       sources: [
         "Ingresos anuales: Declara ingresos totales que superan los S/ 312,000.00, provenientes principalmente de su ejercicio profesional independiente y participaciones",
         "Participaciones empresariales: Posee acciones y participaciones en diversas entidades, compartidas bajo régimen de sociedad conyugal, entre las que figuran Rodríguez & Asociados Abogados SRL, Página 11 SAC, Nativas Explorer, Mgmagro SAC y Estrategia & Táctica SAC",
@@ -1406,7 +1411,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     hojaVidaUrl: "/pdfs/hojas-vida/napoleon-becerra-garcia.pdf",
     biografia: "Napoleón Becerra García nació el 11 de abril de 1964 en la provincia y departamento de Cajamarca. Actualmente reside en el distrito de San Juan de Lurigancho, en Lima. Se presenta como el líder y presidente del Partido de los Trabajadores y Emprendedores (PTE-PERÚ), organización con la que postula a la Presidencia de la República para el periodo 2026-2031. Su perfil se define como el de un ciudadano proveniente del \"mundo del trabajo y el esfuerzo\", con un enfoque orientado al emprendedurismo y la reivindicación de sectores postergados. Su trayectoria se ha centrado principalmente en el sector educativo y la gestión administrativa.",
     historialAcademico: [
-      "Bachiller y Título Profesional en Educación: Con especialidad en Lengua y Literatura, otorgado por la Universidad Nacional Federico Villarreal en el año 1993",
+      "Licenciado en administración cursado en la Universidad Inca Garcilaso de la Vega Asociación Civil obtenido en el año 2009. Así mismo cuenta con un bachiller en Ciencias administrativas",
       "Posgrado: Maestría en Educación, con mención en Gestión Educativa, realizados en la Universidad Nacional Federico Villarreal",
     ],
     controversias: [
@@ -1415,7 +1420,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La postura del PTE-PERÚ se define como una alternativa al modelo neoliberal actual, al cual califican de estar en crisis. Su ideario abraza el desarrollo de un \"pensamiento autóctono social andino amazónico costeño\", inspirado en la visión de José Carlos Mariátegui y José María Arguedas. Buscan la \"refundación de la República\" mediante un Estado democrático, social, plurinacional y descentralizado que recupere un rol dirigente en la economía para salir de la dependencia de los recursos naturales. Sus principios fundamentales son la justicia social, la soberanía, la equidad y la solidaridad. El plan de gobierno 2026-2031 prioriza acciones en seguridad ciudadana, lucha contra la corrupción, reforma constitucional, economía y emprendimiento, salud y educación, vivienda e infraestructura, y medio ambiente.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 72,000.00",
       sources: [
         "En cuanto al financiamiento de su campaña y partido, los documentos presentados indican que se rigen por las normas de transparencia y rendición de cuentas establecidas por la Ley de Organizaciones Políticas",
         "El partido propone mecanismos de control ciudadano y publicación semestral de sus avances financieros y de gestión a través de plataformas digitales oficiales",
@@ -1612,7 +1617,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Lescano se define políticamente dentro del espectro de la centro-izquierda. Tras una extensa militancia en el partido Acción Popular (2000-2023), del cual fue Secretario General, actualmente postula por el Partido Político Cooperación Popular. Su postura se centra en lo que denomina la recuperación de valores éticos en el gobierno y el fortalecimiento de la justicia social.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 120,000.00",
       sources: [
         "Para las elecciones generales de 2026, el financiamiento de las organizaciones políticas incluye la asignación de fondos por parte del Estado para la franja electoral. El candidato promueve en su plan la transparencia total mediante la fiscalización ciudadana a través de datos abiertos para verificar el uso de recursos.",
       ],
@@ -1646,6 +1651,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     historialAcademico: [
       "Médico neurocirujano asistente en el Hospital Nacional Essalud de Huancayo desde el año 2003 hasta el 2019",
       "Profesor auxiliar nombrado en la Universidad Nacional del Centro del Perú",
+      "Magíster en Neurociencias cursado en la Universidad Nacional Mayor de San Marcos, obtenido en el año 2009",
+      "Doctor en Medicina cursado en la Universidad Nacional Mayor de San Marcos, obtenido en el año 2010",
     ],
     controversias: [
       "Credenciales Revocadas: Mediante la Resolución N.° 4165-2022-JNE, el Jurado Nacional de Elecciones dejó sin efecto de modo definitivo su credencial como Gobernador Regional de Junín en diciembre de 2022",
@@ -1653,7 +1660,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La ideología de Cerrón y Perú Libre se define por un rechazo frontal al modelo económico actual, calificándolo de \"neoliberal\" y \"mercantilista\". Su propuesta se basa en: Estado de Bienestar y Justicia Social: Busca que el Estado asuma la responsabilidad directa y gratuita de servicios básicos como salud y educación. Plurinacionalismo: Propone reconocer constitucionalmente al Perú como un Estado plurinacional, integrando formalmente la justicia y los derechos de los pueblos originarios. Soberanía y Nacionalización: Aboga por la recuperación de la capacidad estatal para intervenir y nacionalizar sectores estratégicos de la economía.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 24,000.00",
       sources: [
         "[Información de financiamiento no especificada en los datos proporcionados]",
       ],
@@ -1698,7 +1705,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La postura del candidato y su partido se fundamenta en un regionalismo integrador que busca descentralizar el poder y los recursos del Estado. Su enfoque combina la eficiencia de la gestión privada con el fortalecimiento institucional, promoviendo la meritocracia en la administración pública y la defensa de la inversión privada como motor económico.",
     financiamiento: {
-      total: "No se especifica monto exacto en la información proporcionada",
+      total: "S/ 24,000.00",
       sources: [
         "Ingresos Anuales: Según su última declaración jurada (correspondiente al año fiscal 2024), reportó un ingreso total de 24,000 soles, provenientes exclusivamente del sector privado bajo la modalidad de ejercicio individual de su profesión (rentas de cuarta categoría)",
         "Patrimonio Inmueble: Registra una propiedad (casa habitación) en Trujillo valorizada en 200,000 soles",
