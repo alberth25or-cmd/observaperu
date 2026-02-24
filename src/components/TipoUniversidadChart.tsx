@@ -61,7 +61,7 @@ export default function TipoUniversidadChart({ data }: TipoUniversidadChartProps
             innerRadius={56}
             outerRadius={88}
             paddingAngle={2}
-            label={({ name, pct }) => `${name} ${pct.toFixed(0)}%`}
+            label={({ name, payload }) => `${name} ${(payload as Item).pct.toFixed(0)}%`}
           >
             {filtered.map((entry, i) => (
               <Cell key={i} fill={COLORS[entry.name] ?? "#94a3b8"} />
