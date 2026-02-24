@@ -6,6 +6,8 @@ import KPICards from "@/components/KPICards";
 import PiramidePoblacional from "@/components/PiramidePoblacional";
 import RatioLimaRegiones from "@/components/RatioLimaRegiones";
 import MapaBurbujasPeru from "@/components/MapaBurbujasPeru";
+import TerritorialDashboardSection from "@/components/TerritorialDashboardSection";
+import PerfilAcademicoSection from "@/components/PerfilAcademicoSection";
 
 const Banner = ({
   title,
@@ -40,6 +42,7 @@ interface CandidatoEdad {
 export default function EstadisticasPage() {
   const [edadesData, setEdadesData] = useState<CandidatoEdad[]>([]);
   const [lugaresData, setLugaresData] = useState<any[]>([]);
+  const [estudiosData, setEstudiosData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -49,13 +52,12 @@ export default function EstadisticasPage() {
         setLoading(true);
         setError(null);
 
-        // Intentar cargar los datos con mejor manejo de errores
-        const [edadesResponse, lugaresResponse] = await Promise.all([
+        const [edadesResponse, lugaresResponse, estudiosResponse] = await Promise.all([
           fetch("/data/candidatos_edades.json"),
           fetch("/data/candidatos_lugares_detalle.json"),
+          fetch("/data/candidatos_estudios_universitarios.json"),
         ]);
 
-        // Verificar que las respuestas sean exitosas
         if (!edadesResponse.ok) {
           throw new Error(`Error al cargar edades: ${edadesResponse.status} ${edadesResponse.statusText}`);
         }
@@ -68,7 +70,6 @@ export default function EstadisticasPage() {
           lugaresResponse.json(),
         ]);
 
-        // Validar que los datos sean arrays
         if (!Array.isArray(edades)) {
           throw new Error("Los datos de edades no son un array válido");
         }
@@ -78,6 +79,13 @@ export default function EstadisticasPage() {
 
         setEdadesData(edades);
         setLugaresData(lugares);
+
+        if (estudiosResponse.ok) {
+          const estudios = await estudiosResponse.json();
+          setEstudiosData(Array.isArray(estudios) ? estudios : []);
+        } else {
+          setEstudiosData([]);
+        }
         setLoading(false);
       } catch (err) {
         console.error("Error cargando datos:", err);
@@ -122,9 +130,15 @@ export default function EstadisticasPage() {
               
               {/* Ratio Lima vs Regiones */}
               <RatioLimaRegiones data={lugaresData} />
-              
+
+              {/* Geografía de la oferta electoral: KPIs, comparativo, flujos, insights */}
+              <TerritorialDashboardSection data={lugaresData} />
+
               {/* Mapa de burbujas */}
               <MapaBurbujasPeru data={lugaresData} />
+
+              {/* Perfil académico: estudios universitarios, KPIs, concentración */}
+              <PerfilAcademicoSection data={estudiosData} />
             </div>
           )}
         </div>
