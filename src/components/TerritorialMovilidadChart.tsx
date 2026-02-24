@@ -4,6 +4,28 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recha
 
 const COLORS = ["#2E7D8F", "#4A90E2"];
 
+interface Item {
+  name: string;
+  value: number;
+}
+
+function CustomTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean;
+  payload?: Array<{ name: string; payload: Item }>;
+}) {
+  if (!active || !payload?.[0]) return null;
+  const p = payload[0].payload;
+  return (
+    <div className="bg-white p-2 sm:p-3 border border-slate-200 rounded-lg shadow-lg">
+      <p className="font-semibold text-[#0b1b3b] text-sm">{p.name}</p>
+      <p className="text-xs text-slate-600">{p.value} candidatos</p>
+    </div>
+  );
+}
+
 interface TerritorialMovilidadChartProps {
   mismoDepartamento: number;
   migraron: number;
@@ -46,15 +68,7 @@ export default function TerritorialMovilidadChart({
               <Cell key={i} fill={COLORS[i]} />
             ))}
           </Pie>
-          <Tooltip
-            formatter={(value: number) => [`${value} candidatos`, ""]}
-            contentStyle={{
-              backgroundColor: "white",
-              border: "1px solid #e2e8f0",
-              borderRadius: "8px",
-              boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
-            }}
-          />
+          <Tooltip content={<CustomTooltip />} />
           <Legend
             formatter={(value) => (
               <span className="text-xs sm:text-sm text-slate-700">{value}</span>
