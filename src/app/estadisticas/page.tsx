@@ -8,6 +8,7 @@ import RatioLimaRegiones from "@/components/RatioLimaRegiones";
 import MapaBurbujasPeru from "@/components/MapaBurbujasPeru";
 import TerritorialDashboardSection from "@/components/TerritorialDashboardSection";
 import PerfilAcademicoSection from "@/components/PerfilAcademicoSection";
+import AntecedentesElectoralesSection from "@/components/antecedentes/AntecedentesElectoralesSection";
 import Footer from "@/components/Footer";
 
 const Banner = ({
@@ -44,6 +45,7 @@ export default function EstadisticasPage() {
   const [edadesData, setEdadesData] = useState<CandidatoEdad[]>([]);
   const [lugaresData, setLugaresData] = useState<any[]>([]);
   const [estudiosData, setEstudiosData] = useState<any[]>([]);
+  const [antecedentesData, setAntecedentesData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -53,10 +55,11 @@ export default function EstadisticasPage() {
         setLoading(true);
         setError(null);
 
-        const [edadesResponse, lugaresResponse, estudiosResponse] = await Promise.all([
+        const [edadesResponse, lugaresResponse, estudiosResponse, antecedentesResponse] = await Promise.all([
           fetch("/data/candidatos_edades.json"),
           fetch("/data/candidatos_lugares_detalle.json"),
           fetch("/data/candidatos_estudios_universitarios.json"),
+          fetch("/data/candidatos_antecedentes_electorales.json"),
         ]);
 
         if (!edadesResponse.ok) {
@@ -86,6 +89,13 @@ export default function EstadisticasPage() {
           setEstudiosData(Array.isArray(estudios) ? estudios : []);
         } else {
           setEstudiosData([]);
+        }
+        if (antecedentesResponse.ok) {
+          const antecedentes = await antecedentesResponse.json();
+          const list = antecedentes?.candidatos;
+          setAntecedentesData(Array.isArray(list) ? list : []);
+        } else {
+          setAntecedentesData([]);
         }
         setLoading(false);
       } catch (err) {
@@ -141,6 +151,9 @@ export default function EstadisticasPage() {
 
                 {/* Perfil académico: estudios universitarios, KPIs, concentración */}
                 <PerfilAcademicoSection data={estudiosData} />
+
+                {/* Antecedentes electorales: multipostulación, tipo de postulación */}
+                <AntecedentesElectoralesSection data={antecedentesData} />
               </div>
             )}
           </div>
