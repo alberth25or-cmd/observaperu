@@ -160,12 +160,15 @@ export default function ContactanosPage() {
               Realiza tu donativo
             </h3>
 
-            {/* Placeholder QR */}
+            {/* QR de Yape */}
             <div className="mt-6 flex justify-center">
-              <div className="relative flex h-[320px] w-[320px] items-center justify-center rounded-xl bg-white/70">
-                <span className="text-[12px] font-medium text-slate-500">
-                  Coloca tu QR en /public/qr-yape.png
-                </span>
+              <div className="relative h-[320px] w-[320px] overflow-hidden rounded-xl">
+                <Image
+                  src="/yape.webp"
+                  alt="QR Yape para donaciones"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
