@@ -11,9 +11,9 @@ const FeatureCards = () => {
       href: "/comparacion",
     },
     {
-      title: "Revisa los Planes de Gobierno",
-      text: "Repositorio de los Planes de Gobierno presentados ante las instituciones organizadoras.",
-      href: "/candidatos",
+      title: "Estadísticas",
+      text: "Visualizaciones y análisis sobre edad, origen territorial y perfil académico de los candidatos.",
+      href: "/estadisticas",
     },
   ];
 
