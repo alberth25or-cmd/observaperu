@@ -1,10 +1,10 @@
 {
   "resumen": {
-    "presidencia": { "SI": 35, "NO": 0 },
-    "diputado": { "SI": 5, "NO": 30 },
-    "senador": { "SI": 26, "NO": 9 }
+    "presidencia": { "SI": 36, "NO": 0 },
+    "diputado": { "SI": 6, "NO": 30 },
+    "senador": { "SI": 22, "NO": 14 }
   },
-  "totalCandidatos": 35,
+  "totalCandidatos": 36,
   "candidatos": [
     { "candidato": "Alex Gonzales Castillo", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
     { "candidato": "Alfonso López Chau Nava", "presidencia": "SI", "diputado": "NO", "senador": "SI" },

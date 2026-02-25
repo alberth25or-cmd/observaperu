@@ -104,7 +104,7 @@ export default function AntecedentesElectoralesSection({
         </h3>
         <AntecedentesHeatmap
           filas={kpis?.filas ?? []}
-          maxRows={15}
+          maxRows={kpis?.filas?.length ?? 50}
           nombreToSlug={nombreToSlug}
         />
       </div>
