@@ -24,14 +24,14 @@ const Banner = ({ title, bg = "/hero-bg1.jpg" }: { title: string; bg?: string })
   );
 };
 
-type TabType = "biografia" | "historial-academico" | "controversias" | "ideologia-politica" | "financiamiento" | "experiencia" | "logros" | "propuestas";
+type TabType = "biografia" | "historial-academico" | "controversias" | "ideologia-politica" | "ingresos" | "experiencia" | "logros" | "propuestas";
 
 const TABS: { key: TabType; label: string }[] = [
   { key: "biografia", label: "Biografía" },
   { key: "historial-academico", label: "Historial académico" },
   { key: "controversias", label: "Controversias" },
   { key: "ideologia-politica", label: "Ideología política" },
-  { key: "financiamiento", label: "Financiamiento" },
+  { key: "ingresos", label: "Ingresos" },
   { key: "experiencia", label: "Experiencia" },
   { key: "logros", label: "Logros" },
   { key: "propuestas", label: "Algunas propuestas" },
@@ -142,11 +142,11 @@ export default function CandidateDetailPage() {
           </div>
         );
 
-      case "financiamiento":
+      case "ingresos":
         return (
           <div className="space-y-4">
             <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
-              Financiamiento
+              Ingresos
             </h3>
             <div className="rounded-2xl bg-[#eef2fb] p-6">
               <div className="mb-4">
