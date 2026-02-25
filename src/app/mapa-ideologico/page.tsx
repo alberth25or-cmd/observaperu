@@ -128,27 +128,45 @@ export default function MapaIdeologicoPage() {
     <main className="min-h-screen bg-[#eef2fb]">
       <Banner title="Mapa Ideológico" />
 
-      <section className="py-10 sm:py-12">
+      {/* ¿Cómo leer el mapa? (final) */}
+      <section className="bg-white py-10 sm:py-16">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">
-          <div className="relative overflow-hidden rounded-3xl">
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/congreso.jpg')" }} />
-            <div className="absolute inset-0 bg-[#0b1b3b]/65" />
-            <div className="relative px-6 py-10 text-center text-white/90">
-              <p className="mx-auto max-w-4xl text-sm leading-[175%] sm:text-base">
-                Explora la posición de cada figura en dimensiones económicas y sociales.
-                Agrega candidatos para comparar su orientación y elimina los que no necesites.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <a href="/candidatos" className="rounded-full bg-white px-7 py-3 text-xs font-bold text-[#0b1b3b] transition hover:scale-105">
-                  Revisar perfiles
-                </a>
-              </div>
-            </div>
+          <h2 className="text-center text-[30px] font-black leading-[110%] tracking-[-0.03em] text-[#0b1b3b] sm:text-[40px]">
+            ¿Cómo leer el mapa?
+          </h2>
+
+          <div className="mx-auto mt-8 max-w-4xl text-left">
+            <p className="mx-auto max-w-4xl text-sm leading-[175%] sm:text-base mb-5">
+              Explora la posición de cada figura en dimensiones económicas y sociales.
+              Agrega candidatos para comparar su orientación y elimina los que no necesites.
+            </p>
+            <ul className="list-disc space-y-3 pl-6 text-[15px] leading-[175%] text-[#0b1b3b] sm:text-[16px]">
+              <li>
+                <span className="font-extrabold">Izquierda Económica:</span> Representa propuestas donde
+                el Estado tiene un rol activo en la economía: regulación de mercados, programas sociales,
+                redistribución del ingreso y mayor presencia pública en sectores estratégicos.
+              </li>
+              <li>
+                <span className="font-extrabold">Derecha Económica:</span> Agrupa posturas que priorizan el
+                libre mercado, la iniciativa privada, la reducción de impuestos y un Estado con intervención
+                limitada en la economía.
+              </li>
+              <li>
+                <span className="font-extrabold">Progresista (Social):</span> Incluye posiciones que promueven
+                derechos civiles, libertades individuales, igualdad de género, diversidad y una sociedad más
+                abierta al cambio.
+              </li>
+              <li>
+                <span className="font-extrabold">Conservador (Social):</span> Refleja posturas orientadas a
+                preservar tradiciones, valores culturales y religiosos, y un enfoque más restrictivo frente a
+                cambios sociales.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="pb-14">
+      <section className="p-10">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">
           <div className="rounded-3xl bg-white p-6 shadow-sm sm:p-8">
             {/* Layout responsive: en móvil el título va arriba, en desktop se mantiene centrado */}
@@ -223,46 +241,14 @@ export default function MapaIdeologicoPage() {
         </div>
       </section>
 
-      {/* ¿Cómo leer el mapa? (final) */}
       <section className="bg-white py-14 sm:py-16">
-        <div className="mx-auto max-w-6xl px-4 lg:px-16">
-          <h2 className="text-center text-[30px] font-black leading-[110%] tracking-[-0.03em] text-[#0b1b3b] sm:text-[40px]">
-            ¿Cómo leer el mapa?
-          </h2>
-
-          <div className="mx-auto mt-8 max-w-4xl text-left">
-            <ul className="list-disc space-y-3 pl-6 text-[15px] leading-[175%] text-[#0b1b3b] sm:text-[16px]">
-              <li>
-                <span className="font-extrabold">Izquierda Económica:</span> Representa propuestas donde
-                el Estado tiene un rol activo en la economía: regulación de mercados, programas sociales,
-                redistribución del ingreso y mayor presencia pública en sectores estratégicos.
-              </li>
-              <li>
-                <span className="font-extrabold">Derecha Económica:</span> Agrupa posturas que priorizan el
-                libre mercado, la iniciativa privada, la reducción de impuestos y un Estado con intervención
-                limitada en la economía.
-              </li>
-              <li>
-                <span className="font-extrabold">Progresista (Social):</span> Incluye posiciones que promueven
-                derechos civiles, libertades individuales, igualdad de género, diversidad y una sociedad más
-                abierta al cambio.
-              </li>
-              <li>
-                <span className="font-extrabold">Conservador (Social):</span> Refleja posturas orientadas a
-                preservar tradiciones, valores culturales y religiosos, y un enfoque más restrictivo frente a
-                cambios sociales.
-              </li>
-            </ul>
-
-            <p className="mx-auto mt-10 max-w-4xl text-center text-[18px] font-extrabold leading-[140%] text-[#0b1b3b] sm:text-[22px]">
-              Las posiciones no representan afinidad política, sino una herramienta visual para comprender la
-              orientación ideológica de cada candidatura.
-            </p>
-          </div>
-        </div>
+        <p className="mx-auto max-w-3xl text-center text-[16px] font-extrabold leading-[140%] text-[#0b1b3b] sm:text-[22px]">
+          Las posiciones no representan afinidad política, sino una herramienta visual para comprender la
+          orientación ideológica de cada candidatura.
+        </p>
       </section>
 
-      {/* Modal de Selección */}
+    {/* Modal de Selección */}
       {open && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
