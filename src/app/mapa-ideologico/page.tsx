@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { ALL_CANDIDATES, Candidate } from "@/data/candidatos"; // Importación unificada
+import Footer from "@/components/Footer";
 
 /** Mini-hero reutilizable */
 const Banner = ({
@@ -303,6 +304,7 @@ export default function MapaIdeologicoPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
       </button>
+      <Footer />
     </main>
   );
 }

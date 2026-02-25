@@ -1,6 +1,7 @@
 // app/conocenos/page.tsx
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 const Banner = ({
   title,
@@ -273,6 +274,7 @@ export default function ConocenosPage() {
           </p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

@@ -8,6 +8,7 @@ import RatioLimaRegiones from "@/components/RatioLimaRegiones";
 import MapaBurbujasPeru from "@/components/MapaBurbujasPeru";
 import TerritorialDashboardSection from "@/components/TerritorialDashboardSection";
 import PerfilAcademicoSection from "@/components/PerfilAcademicoSection";
+import Footer from "@/components/Footer";
 
 const Banner = ({
   title,
@@ -98,52 +99,55 @@ export default function EstadisticasPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#eef2fb]">
-      {/* Banner */}
-      <Banner title="Estadísticas" bg="/hero-bg1.jpg" />
+    <div>
+      <main className="min-h-screen bg-[#eef2fb]">
+        {/* Banner */}
+        <Banner title="Estadísticas" bg="/hero-bg1.jpg" />
 
-      {/* Contenido principal */}
-      <section className="bg-white py-14 sm:py-16">
-        <div className="mx-auto max-w-7xl px-4 lg:px-16">
-          {loading ? (
-            <div className="text-center py-20">
-              <p className="text-slate-600">Cargando datos...</p>
-            </div>
-          ) : error ? (
-            <div className="text-center py-20">
-              <p className="text-red-600 font-semibold mb-2">Error al cargar los datos</p>
-              <p className="text-sm text-slate-600 mb-4">{error}</p>
-              <p className="text-xs text-slate-500">
-                Verifica que los archivos JSON estén en /public/data/
-              </p>
-            </div>
-          ) : (
-            <div className="space-y-8 sm:space-y-12">
-              {/* KPI Cards */}
-              <KPICards data={edadesData} />
+        {/* Contenido principal */}
+        <section className="bg-white py-14 sm:py-16">
+          <div className="mx-auto max-w-7xl px-4 lg:px-16">
+            {loading ? (
+              <div className="text-center py-20">
+                <p className="text-slate-600">Cargando datos...</p>
+              </div>
+            ) : error ? (
+              <div className="text-center py-20">
+                <p className="text-red-600 font-semibold mb-2">Error al cargar los datos</p>
+                <p className="text-sm text-slate-600 mb-4">{error}</p>
+                <p className="text-xs text-slate-500">
+                  Verifica que los archivos JSON estén en /public/data/
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-8 sm:space-y-12">
+                {/* KPI Cards */}
+                <KPICards data={edadesData} />
 
-              {/* Pirámide poblacional */}
-              <PiramidePoblacional data={edadesData} />
+                {/* Pirámide poblacional */}
+                <PiramidePoblacional data={edadesData} />
 
-              {/* Línea de tiempo generacional */}
-              <TimelineGeneracional data={edadesData} />
-              
-              {/* Ratio Lima vs Regiones */}
-              <RatioLimaRegiones data={lugaresData} />
+                {/* Línea de tiempo generacional */}
+                <TimelineGeneracional data={edadesData} />
+                
+                {/* Ratio Lima vs Regiones */}
+                <RatioLimaRegiones data={lugaresData} />
 
-              {/* Geografía de la oferta electoral: KPIs, comparativo, flujos, insights */}
-              <TerritorialDashboardSection data={lugaresData} />
+                {/* Geografía de la oferta electoral: KPIs, comparativo, flujos, insights */}
+                <TerritorialDashboardSection data={lugaresData} />
 
-              {/* Mapa de burbujas */}
-              <MapaBurbujasPeru data={lugaresData} />
+                {/* Mapa de burbujas */}
+                <MapaBurbujasPeru data={lugaresData} />
 
-              {/* Perfil académico: estudios universitarios, KPIs, concentración */}
-              <PerfilAcademicoSection data={estudiosData} />
-            </div>
-          )}
-        </div>
-      </section>
-    </main>
+                {/* Perfil académico: estudios universitarios, KPIs, concentración */}
+                <PerfilAcademicoSection data={estudiosData} />
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

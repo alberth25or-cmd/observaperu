@@ -4,6 +4,7 @@ import { useMemo, useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { ALL_CANDIDATES, Candidate } from "@/data/candidatos";
 import { getCandidateDetail, CandidateDetail } from "@/data/candidatos-detalle";
+import Footer from "@/components/Footer";
 
 const Banner = ({ title, bg = "/hero-bg1.jpg" }: { title: string; bg?: string }) => {
   return (
@@ -318,116 +319,119 @@ export default function ComparacionPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#eef2fb]">
-      <Banner title="Comparar candidatos" />
+    <div>
+      <main className="min-h-screen bg-[#eef2fb]">
+        <Banner title="Comparar candidatos" />
 
-      {/* Sección de selección */}
-      <section className="bg-white py-14">
-        <div className="mx-auto max-w-6xl px-4 lg:px-16">
-          <p className="mb-8 text-center text-[18px] font-semibold text-[#0b1b3b] sm:text-[20px]">
-            Selecciona dos candidatos para ver una comparación lado a lado de su información clave.
-          </p>
+        {/* Sección de selección */}
+        <section className="bg-white py-14">
+          <div className="mx-auto max-w-6xl px-4 lg:px-16">
+            <p className="mb-8 text-center text-[18px] font-semibold text-[#0b1b3b] sm:text-[20px]">
+              Selecciona dos candidatos para ver una comparación lado a lado de su información clave.
+            </p>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            <CandidateSelector
-              label="Candidato 1"
-              value={candidate1}
-              onChange={setCandidate1}
-              excludeKey={candidate2?.key}
-            />
-            <CandidateSelector
-              label="Candidato 2"
-              value={candidate2}
-              onChange={setCandidate2}
-              excludeKey={candidate1?.key}
-            />
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={handleCompare}
-              disabled={!candidate1 || !candidate2}
-              className="inline-flex h-[50px] items-center justify-center rounded-[12px] bg-[#0b1b3b] px-8 text-[18px] font-bold text-white transition-transform duration-150 hover:scale-[1.03] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
-            >
-              Comparar
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Sección de comparación */}
-      {isComparing && candidate1Detail && candidate2Detail && (
-        <section id="comparison-results" className="bg-[#eef2fb] py-14">
-          <div className="mx-auto max-w-[1600px] px-4 lg:px-16">
-            {/* Pestañas compartidas */}
-            <div className="mb-6 flex flex-wrap justify-center gap-2">
-              {TABS.map((tab) => (
-                <button
-                  key={tab.key}
-                  onClick={() => setActiveTab(tab.key)}
-                  className={`rounded-lg px-4 py-2 text-[12px] font-semibold transition-all duration-200 sm:px-6 sm:py-3 sm:text-[14px] ${
-                    activeTab === tab.key
-                      ? "bg-[#0b1b3b] text-white shadow-md"
-                      : "bg-white text-[#0b1b3b] hover:bg-[#eef2fb]"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+            <div className="grid gap-6 md:grid-cols-2">
+              <CandidateSelector
+                label="Candidato 1"
+                value={candidate1}
+                onChange={setCandidate1}
+                excludeKey={candidate2?.key}
+              />
+              <CandidateSelector
+                label="Candidato 2"
+                value={candidate2}
+                onChange={setCandidate2}
+                excludeKey={candidate1?.key}
+              />
             </div>
 
-            {/* Comparación lado a lado */}
-            <div className="grid gap-6 lg:grid-cols-2">
-              {/* Candidato 1 */}
-              <div className="flex flex-col">
-                <div className="mb-4">
-                  <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">Candidato 1</h3>
-                  <div className="rounded-[12px] bg-[#0b1b3b] px-4 py-2">
-                    <p className="text-[16px] font-bold uppercase text-white">
-                      {candidate1Detail.name}
-                    </p>
-                  </div>
-                </div>
-                <div className="relative mb-4 h-[200px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[250px]">
-                  <Image
-                    src={candidate1Detail.img}
-                    alt={candidate1Detail.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div className="flex-1 rounded-2xl bg-[#d9d9d9]/45 p-4 sm:p-6">
-                  {renderTabContent(candidate1Detail, activeTab)}
-                </div>
-              </div>
-
-              {/* Candidato 2 */}
-              <div className="flex flex-col">
-                <div className="mb-4">
-                  <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">Candidato 2</h3>
-                  <div className="rounded-[12px] bg-[#0b1b3b] px-4 py-2">
-                    <p className="text-[16px] font-bold uppercase text-white">
-                      {candidate2Detail.name}
-                    </p>
-                  </div>
-                </div>
-                <div className="relative mb-4 h-[200px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[250px]">
-                  <Image
-                    src={candidate2Detail.img}
-                    alt={candidate2Detail.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <div className="flex-1 rounded-2xl bg-[#d9d9d9]/45 p-4 sm:p-6">
-                  {renderTabContent(candidate2Detail, activeTab)}
-                </div>
-              </div>
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={handleCompare}
+                disabled={!candidate1 || !candidate2}
+                className="inline-flex h-[50px] items-center justify-center rounded-[12px] bg-[#0b1b3b] px-8 text-[18px] font-bold text-white transition-transform duration-150 hover:scale-[1.03] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100"
+              >
+                Comparar
+              </button>
             </div>
           </div>
         </section>
-      )}
-    </main>
+
+        {/* Sección de comparación */}
+        {isComparing && candidate1Detail && candidate2Detail && (
+          <section id="comparison-results" className="bg-[#eef2fb] py-14">
+            <div className="mx-auto max-w-[1600px] px-4 lg:px-16">
+              {/* Pestañas compartidas */}
+              <div className="mb-6 flex flex-wrap justify-center gap-2">
+                {TABS.map((tab) => (
+                  <button
+                    key={tab.key}
+                    onClick={() => setActiveTab(tab.key)}
+                    className={`rounded-lg px-4 py-2 text-[12px] font-semibold transition-all duration-200 sm:px-6 sm:py-3 sm:text-[14px] ${
+                      activeTab === tab.key
+                        ? "bg-[#0b1b3b] text-white shadow-md"
+                        : "bg-white text-[#0b1b3b] hover:bg-[#eef2fb]"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Comparación lado a lado */}
+              <div className="grid gap-6 lg:grid-cols-2">
+                {/* Candidato 1 */}
+                <div className="flex flex-col">
+                  <div className="mb-4">
+                    <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">Candidato 1</h3>
+                    <div className="rounded-[12px] bg-[#0b1b3b] px-4 py-2">
+                      <p className="text-[16px] font-bold uppercase text-white">
+                        {candidate1Detail.name}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative mb-4 h-[200px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[250px]">
+                    <Image
+                      src={candidate1Detail.img}
+                      alt={candidate1Detail.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex-1 rounded-2xl bg-[#d9d9d9]/45 p-4 sm:p-6">
+                    {renderTabContent(candidate1Detail, activeTab)}
+                  </div>
+                </div>
+
+                {/* Candidato 2 */}
+                <div className="flex flex-col">
+                  <div className="mb-4">
+                    <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">Candidato 2</h3>
+                    <div className="rounded-[12px] bg-[#0b1b3b] px-4 py-2">
+                      <p className="text-[16px] font-bold uppercase text-white">
+                        {candidate2Detail.name}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative mb-4 h-[200px] w-full overflow-hidden rounded-2xl bg-slate-100 sm:h-[250px]">
+                    <Image
+                      src={candidate2Detail.img}
+                      alt={candidate2Detail.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex-1 rounded-2xl bg-[#d9d9d9]/45 p-4 sm:p-6">
+                    {renderTabContent(candidate2Detail, activeTab)}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+      </main>
+      <Footer />
+    </div>
   );
 }
 

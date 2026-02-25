@@ -4,6 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { ALL_CANDIDATES } from "@/data/candidatos"; // Importación centralizada
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 /** Mini-hero reutilizable */
 const Banner = ({
@@ -237,6 +238,7 @@ export default function CandidatosPage() {
       >
         ↑
       </button>
+      <Footer />
     </main>
   );
 }

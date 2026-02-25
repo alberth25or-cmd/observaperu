@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ALL_CANDIDATES, Candidate } from "@/data/candidatos";
 import { getCandidateDetail } from "@/data/candidatos-detalle";
+import Footer from "@/components/Footer";
 
 const Banner = ({ title, bg = "/hero-bg1.jpg" }: { title: string; bg?: string }) => {
   return (
@@ -349,6 +350,7 @@ export default function CandidateDetailPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

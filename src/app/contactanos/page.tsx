@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Image from "next/image";
 
 const Banner = ({
@@ -179,6 +180,7 @@ export default function ContactanosPage() {
           </p>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
