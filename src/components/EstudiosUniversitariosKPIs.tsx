@@ -18,7 +18,7 @@ export default function EstudiosUniversitariosKPIs({ kpis }: EstudiosUniversitar
   if (!kpis) {
     return (
       <div className="text-center py-6 text-slate-500 text-sm">
-        No hay datos de estudios disponibles
+        No hay datos de estudios disponibles.
       </div>
     );
   }
@@ -41,7 +41,7 @@ export default function EstudiosUniversitariosKPIs({ kpis }: EstudiosUniversitar
       color: COLORS[2],
     },
     {
-      label: "Diversidad áreas",
+      label: "Diversidad de áreas",
       value: kpis.entropiaAreas.toFixed(2),
       sub: "bits",
       color: COLORS[3],

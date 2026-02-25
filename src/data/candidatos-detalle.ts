@@ -62,7 +62,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "López Chau lidera un proyecto que se define bajo la denominación de Ahora Nación (AN). Su postura actual se inclina hacia un enfoque de fortalecimiento de la institucionalidad estatal, con énfasis en la descentralización y la meritocracia dentro del aparato público. El plan de gobierno de Ahora Nación se estructura en dimensiones sociales, institucionales y económicas, con metas específicas para el periodo 2026-2031, priorizando la seguridad, justicia, economía, desarrollo regional, educación, salud, protección social y vivienda.",
     financiamiento: {
-      total: "S/ 350,000 (remuneración bruta anual 2024)",
+      total: "S/ 350,000 (remuneración bruta anual del año 2024)",
       sources: [
         "Ingresos: Según su declaración jurada de ingresos y bienes correspondiente al año fiscal 2024, reportó una remuneración bruta anual de 350,000 soles proveniente exclusivamente del sector público",
         "Bienes Inmuebles: Declara la propiedad de un departamento y una cochera en el distrito de Miraflores, Lima, con un valor total autovaluado de 295,000 soles",
@@ -123,7 +123,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su plataforma se define por un enfoque ecologista y social-demócrata, bajo la denominación de \"Demócrata Verde\". El plan de gobierno prioriza la sostenibilidad ambiental, la lucha contra la desigualdad territorial y la reforma de la gobernanza estatal mediante la reducción de la fragmentación del Estado (el llamado \"Estado mosaico\").",
     financiamiento: {
-      total: "S/ 36,000.00 (ingresos anuales 2024) + patrimonio inmobiliario y acciones",
+      total: "S/ 36,000.00 (ingresos anuales del año 2024) + patrimonio inmobiliario y acciones",
       sources: [
         "Ingresos: Declaró ingresos brutos anuales por S/ 36,000.00 provenientes del sector privado durante el año fiscal 2024",
         "Bienes Inmuebles: Reporta siete propiedades, incluyendo inmuebles en San Isidro, La Victoria, Comas y Villa María del Triunfo en Lima, además de un predio en La Libertad. Cabe precisar que el candidato declara no reconocer como propias cuatro de las propiedades que figuran en registros públicos a su nombre",
@@ -207,7 +207,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     imgHover: "/partidos/salvemos-al-peru.webp",
     planGobiernoUrl: "/pdfs/planes-gobierno/antonio-ortiz-villano.pdf",
     hojaVidaUrl: "/pdfs/hojas-vida/antonio-ortiz-villano.pdf",
-    biografia: "Antonio Ortiz Villano nació el 10 de mayo de 1955 en el distrito de Talavera, provincia de Andahuaylas, departamento de Apurímac. Actualmente tiene 70 años y reside en el distrito de San Martín de Porres, en la provincia de Lima. Es de sexo masculino y posee el Documento Nacional de Identidad N° 08587486.",
+    biografia: "Antonio Ortiz Villano nació el 10 de mayo de 1955 en el distrito de Talavera, provincia de Andahuaylas, departamento de Apurímac. Actualmente tiene 70 años y reside en el distrito de San Martín de Porres, en la provincia de Lima.",
     historialAcademico: [
       "En cuanto a su formación básica, realizó sus estudios primarios en la Institución Educativa 660 en Apurímac y culminó la secundaria en la Institución Educativa José María Arguedas, también en Apurímac",
       "No registra estudios universitarios",
@@ -228,7 +228,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     experiencia: [
       "Su trayectoria es predominantemente empresarial en el sector privado, ocupando cargos de alta dirección durante más de dos décadas",
       "Gerente General en Importadora y Distribuidora de Retenes Rodamientos y Afines (IDRE) S.A. desde 1999 hasta la actualidad",
-      "Gerente General en KMK Hidráulica y Servicios S.A. desde 2005 hasta la actualidad",
+      "Gerente General en KMK Hidráulica y Servicios S.A. Desde 2005 hasta la actualidad",
       "Gerente General en Tonsan del Perú S.A.",
     ],
     logros: [
@@ -236,7 +236,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
       "En el ámbito político, ha liderado la inscripción de la fórmula presidencial de \"Salvemos al Perú\", estableciendo compromisos de transparencia inéditos, como informes de avance semestrales ante la ciudadanía",
     ],
     propuestas: [
-      "Educación: Reducir la deserción escolar permanente en un 50% para el 2031 y lograr que el 90% de los jóvenes con carrera técnica se inserten en el mercado laboral ejerciendo su profesión. También propone implementar laboratorios STEAM y el uso de Inteligencia Artificial en las escuelas",
+      "Educación: Reducir la deserción escolar permanente en un 50% para el año 2031 y lograr que el 90% de los jóvenes con carrera técnica se inserten en el mercado laboral ejerciendo su profesión. También propone implementar laboratorios STEAM y el uso de Inteligencia Artificial en las escuelas",
       "Salud: Alcanzar un 95% de disponibilidad de medicamentos esenciales en los centros de salud para 2031. Implementar la Historia Clínica Electrónica interoperable para el 40% de la población",
       "Seguridad Ciudadana: Lograr que al menos el 80% de los distritos priorizados presenten una reducción sostenida de delitos y aumentar en un 50% el promedio de años de cárcel efectiva por delitos violentos",
       "Desarrollo Infantil: Reducir la desnutrición crónica infantil a menos del 6% para el año 2031 y asegurar que el 90% de las gestantes reciban controles prenatales completos",
@@ -252,7 +252,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     imgHover: "/partidos/partido-democrata-peru-federal.webp",
     planGobiernoUrl: null,
     hojaVidaUrl: "/pdfs/hojas-vida/armando-joaquin-masse-fernandez.pdf",
-    biografia: "Armando Joaquín Massé Fernández nació en la ciudad de Lima, Perú, el 13 de junio de 1959. En la actualidad, a sus 66 años, se presenta como una figura que amalgama la experiencia técnica de la medicina con la visión estratégica del derecho y la sensibilidad de las artes. Proveniente de un entorno socioeconómico de clase media, su narrativa biográfica destaca el esfuerzo personal como motor de ascenso profesional. Su desarrollo vital ha estado intrínsecamente ligado a la capital peruana, aunque su ejercicio profesional temprano le permitió conocer las realidades sanitarias de diversas provincias del norte del país, un factor que posteriormente influiría en su discurso político descentralista. Massé ha mantenido una vida pública activa durante más de cuatro décadas, comenzando su notoriedad en la escena musical a principios de los años 80, para luego transicionar hacia roles de gestión corporativa y, finalmente, al activismo político y la comunicación social. Su transición de la gestión cultural a la política activa ha sido gradual, pero se ha acelerado significativamente en el último lustro. A finales de 2025, Armando Massé anunció su retiro de la conducción de Radio Exitosa para lanzar oficialmente su candidatura a la presidencia del Perú para el periodo 2026-2031.",
+    biografia: "Armando Joaquín Massé Fernández nació en la ciudad de Lima, Perú, el 13 de junio de 1959. En la actualidad, a sus 66 años, se presenta como una figura que amalgama la experiencia técnica de la medicina con la visión estratégica del derecho y la sensibilidad de las artes. Proveniente de un entorno socioeconómico de clase media, su narrativa biográfica destaca el esfuerzo personal como motor de ascenso profesional. Su desarrollo vital ha estado intrínsecamente ligado a la capital peruana, aunque su ejercicio profesional temprano le permitió conocer las realidades sanitarias de diversas provincias del norte del país, un factor que posteriormente influiría en su discurso político descentralista. Massé ha mantenido una vida pública activa durante más de cuatro décadas, comenzando su notoriedad en la escena musical a principios de los años 80, para luego transicionar hacia roles de gestión corporativa y, finalmente, al activismo político y la comunicación social. Su transición de la gestión cultural a la política activa ha sido gradual, pero se ha acelerado significativamente en el último lustro. A finales del año 2025, Armando Massé anunció su retiro de la conducción de Radio Exitosa para lanzar oficialmente su candidatura a la presidencia del Perú para el periodo 2026-2031.",
     historialAcademico: [
       "Médico Cirujano: Graduado en la Facultad de Medicina Humana «San Fernando» de la Universidad Nacional Mayor de San Marcos (UNMSM), la institución médica más antigua y prestigiosa del país. Graduarse en San Marcos implica no solo un rigor académico técnico, sino también una inmersión en la problemática de salud pública nacional",
       "Internado Médico y Especialización en Nefrología (1992-1993): Realizó su internado médico y estudios enfocados en nefrología en el Hospital Nacional Guillermo Almenara Irigoyen, centro de alta complejidad perteneciente al sistema de seguridad social (EsSalud)",
@@ -286,7 +286,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
       "Presencia Mediática y Comunicación Social: El capital político de Armando Massé se ha construido mayoritariamente a través de su programa Médicos en acción, el cual se mantuvo al aire por más de 15 años. El programa inició sus emisiones en Radio Nacional, la emisora del Estado, pero alcanzó su pico de popularidad tras migrar a Radio Exitosa y Exitosa TV. El formato permitía a la audiencia realizar consultas médicas gratuitas vía telefónica, lo que posicionó a Massé como una autoridad sanitaria cercana a los sectores populares",
       "Producción Intelectual y Divulgación: En 2021 publicó Buenos tiempos, un libro de memorias y anécdotas bajo el sello de la editorial El Virrey. En 2022, lanzó la Guía para comprender y prevenir enfermedades con la editorial Mesa Redonda, texto que sintetiza sus principales recomendaciones de salud preventiva emitidas durante su carrera comunicacional",
       "Antecedentes Electorales: Somos Perú 2020: Su primera incursión formal en la política electoral ocurrió en las elecciones congresales extraordinarias de 2020, donde postuló al Parlamento por la organización política Somos Perú. A pesar de contar con una alta recordación de marca por su programa radial, la candidatura no logró el respaldo necesario para obtener un escaño",
-      "Candidatura Presidencial 2026 y el Partido Democrático Federal: A finales de 2025, Armando Massé anunció su retiro de la conducción de Radio Exitosa para lanzar oficialmente su candidatura a la presidencia del Perú para el periodo 2026-2031. Su vehículo político es el Partido Democrático Federal (PDF), una organización que promueve un cambio estructural en el modelo de Estado. Massé encabeza una plancha presidencial que integra a Virgilio Acuña Peralta como Primer Vicepresidente y Lilia Díaz como Segunda Vicepresidenta",
+      "Candidatura Presidencial 2026 y el Partido Democrático Federal: A finales del año 2025, Armando Massé anunció su retiro de la conducción de Radio Exitosa para lanzar oficialmente su candidatura a la presidencia del Perú para el periodo 2026-2031. Su vehículo político es el Partido Democrático Federal (PDF), una organización que promueve un cambio estructural en el modelo de Estado. Massé encabeza una plancha presidencial que integra a Virgilio Acuña Peralta como Primer Vicepresidente y Lilia Díaz como Segunda Vicepresidenta",
     ],
     logros: [
       "Graduación en la Facultad de Medicina Humana «San Fernando» de la Universidad Nacional Mayor de San Marcos (UNMSM), la institución médica más antigua y prestigiosa del país",
@@ -332,7 +332,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Acuña es el fundador y líder histórico del partido Alianza Para el Progreso (APP), organización que preside formalmente desde el año 2023. Su postura política se define generalmente como de centro o centro-derecha, con un fuerte énfasis en el \"gobierno de gestión\" y la descentralización. Su propuesta institucional para 2026 plantea una reforma radical del Estado, que incluye la reducción de los ministerios actuales de 19 a solo 10, buscando eliminar duplicidades de funciones y fortalecer la rectoría del Poder Ejecutivo.",
     financiamiento: {
-      total: "S/ 9,836,766.00 (ingresos anuales 2024)",
+      total: "S/ 9,836,766.00 (ingresos anuales del año 2024)",
       sources: [
         "Ingresos anuales (2024): Declaró un total de S/ 9,836,766.00. De esta cifra, S/ 2,885,101.00 provienen del sector privado por remuneración bruta y S/ 6,798,264.00 corresponden a \"otros ingresos\", específicamente intereses generados por sus acciones",
         "Bienes inmuebles: Reporta 24 propiedades en Perú y el extranjero, incluyendo predios rurales en Cajamarca y La Libertad, así como residencias de alto valor en distritos limeños como La Molina, Miraflores, San Isidro y Santiago de Surco. Destacan un inmueble en Madrid (España) valorado en más de 3 millones de soles y una propiedad en Miraflores valorada en más de 27 millones de soles",
@@ -396,7 +396,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
       "Seguridad Ciudadana y Lucha contra el Crimen: Propone una reforma integral de la Policía Nacional del Perú, buscando que el 70% de sus componentes operativos sean modernizados. Plantea reducir la tasa de homicidios a 6 por cada 100 mil habitantes y alcanzar el 100% de identificación y desarticulación de organizaciones criminales nacionales y extranjeras",
       "Control Penitenciario: Propone neutralizar el mando criminal desde las cárceles mediante el aislamiento físico y comunicacional efectivo del 100% de los líderes de alta peligrosidad, además de inhabilitar totalmente la señal de telefonía en los penales",
       "Salud y Lucha contra la Anemia: Su meta es \"Cero tolerancia a la anemia\", buscando reducir este indicador en niños de 6 a 35 meses en al menos 5 puntos porcentuales por año. En salud, pretende que el 80% de los centros de primer nivel cuenten con un abastecimiento de medicamentos superior al 85%",
-      "Reforma Social y Pobreza: Plantea una focalización dinámica para reducir la pobreza entre 8 y 10 puntos porcentuales al 2031. Esto incluye duplicar la cobertura del programa JUNTOS y triplicar la de CONTIGO, incrementando gradualmente las subvenciones económicas",
+      "Reforma Social y Pobreza: Plantea una focalización dinámica para reducir la pobreza entre 8 y 10 puntos porcentuales al año 2031. Esto incluye duplicar la cobertura del programa JUNTOS y triplicar la de CONTIGO, incrementando gradualmente las subvenciones económicas",
       "Justicia y Tecnología: Implementar el uso de inteligencia artificial y tecnología para acelerar los procesos judiciales, reduciendo el tiempo de tramitación en un 30% y convirtiendo los órganos fiscales transitorios en permanentes para eliminar la carga procesal",
     ],
   },
@@ -599,7 +599,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
       "El Club de las Farmacéuticas: Compras en Pandemia: En julio de 2021, una investigación fiscal vinculó a Molinelli con una presunta organización criminal denominada \"El Club de las Farmacéuticas\". Se le acusa de liderar una red que direccionó contratos directos durante la pandemia para la compra de implementos médicos sobrevalorados, como lentes de seguridad y tomógrafos. La fiscalía detectó sobrevaloraciones de hasta siete veces el precio de mercado en lentes antisalpicaduras y coordinaciones para el ingreso de productos defectuosos a los almacenes de EsSalud. En febrero de 2022, se dictó una orden de impedimento de salida del país por 12 meses contra la exfuncionaria. Molinelli ha calificado esta denuncia como una \"represalia política\" orquestada por sectores cercanos a Vladimir Cerrón tras los conflictos por el control administrativo de EsSalud",
       "Proceso por difamación contra Edgar Alarcón: Molinelli ha tenido éxito legal en su defensa contra acusaciones de soborno. El excontralor Edgar Alarcón afirmó públicamente que ella le ofreció dos millones de soles para aprobar la adenda de Chinchero. Ante esto, Molinelli inició un juicio por difamación que culminó con una sentencia condenatoria contra Alarcón (un año de prisión suspendida y reparación civil), lo que ella presenta como una prueba de su integridad frente a ataques de adversarios políticos",
     ],
-    ideologiaPolitica: "Molinelli se perfila como una candidata que intenta romper la dicotomía entre el técnico de escritorio y el político de masas. Su propuesta para el 2026 se fundamenta en la recuperación de la autoridad presidencial, la meritocracia en el servicio civil y una descentralización basada en la eficiencia presupuestaria. El partido Fuerza Moderna se presenta como una opción de centro, con un fuerte componente técnico y meritocrático, buscando atraer a profesionales de la salud y la gestión pública. Su propuesta se centra en cuatro pilares fundamentales que buscan abordar los problemas estructurales del Perú mediante una gestión orientada a resultados y libre de ideologías extremas.",
+    ideologiaPolitica: "Molinelli se perfila como una candidata que intenta romper la dicotomía entre el técnico de escritorio y el político de masas. Su propuesta para el año 2026 se fundamenta en la recuperación de la autoridad presidencial, la meritocracia en el servicio civil y una descentralización basada en la eficiencia presupuestaria. El partido Fuerza Moderna se presenta como una opción de centro, con un fuerte componente técnico y meritocrático, buscando atraer a profesionales de la salud y la gestión pública. Su propuesta se centra en cuatro pilares fundamentales que buscan abordar los problemas estructurales del Perú mediante una gestión orientada a resultados y libre de ideologías extremas.",
     financiamiento: {
       total: "S/ 123,865.13",
       sources: [
@@ -657,7 +657,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     controversias: [
       "En su declaración jurada, el candidato no declara sentencias condenatorias firmes por delitos dolosos ni fallos por incumplimiento de obligaciones familiares, alimentarias o laborales",
     ],
-    ideologiaPolitica: "Actualmente postula por el Partido Democrático Somos Perú para las Elecciones Generales 2026. Su plataforma se define por un enfoque en la eficiencia de la gestión pública, el fortalecimiento de la seguridad ciudadana y la formalización económica. Aunque ha transitado por diversas agrupaciones políticas (PPC, Victoria Nacional y ahora Somos Perú), su discurso mantiene una línea de pragmatismo institucional y modernización del Estado mediante tecnología. Su plan de gobierno se estructura en dimensiones sociales, institucionales y económicas con metas específicas al 2031, priorizando la seguridad ciudadana, economía y formalización, salud y nutrición, educación tecnológica y lucha contra la corrupción.",
+    ideologiaPolitica: "Actualmente postula por el Partido Democrático Somos Perú para las Elecciones Generales 2026. Su plataforma se define por un enfoque en la eficiencia de la gestión pública, el fortalecimiento de la seguridad ciudadana y la formalización económica. Aunque ha transitado por diversas agrupaciones políticas (PPC, Victoria Nacional y ahora Somos Perú), su discurso mantiene una línea de pragmatismo institucional y modernización del Estado mediante tecnología. Su plan de gobierno se estructura en dimensiones sociales, institucionales y económicas con metas específicas al año 2031, priorizando la seguridad ciudadana, economía y formalización, salud y nutrición, educación tecnológica y lucha contra la corrupción.",
     financiamiento: {
       total: "S/ 244,000.00",
       sources: [
@@ -731,10 +731,10 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     propuestas: [
       "Seguridad Ciudadana: Propone el uso de inteligencia avanzada para desarticular bandas de extorsión y recuperar el control territorial mediante el binomio policía-comunidad, con el apoyo de licenciados de las Fuerzas Armadas",
-      "Reforma Educativa: Implementación masiva de metodologías de \"super aprendizaje\" en el 100% de colegios para el 2031. Plantea descentralizar facultades de la UNI, San Marcos y la Agraria hacia las 25 regiones del país",
+      "Reforma Educativa: Implementación masiva de metodologías de \"super aprendizaje\" en el 100% de colegios para el año 2031. Plantea descentralizar facultades de la UNI, San Marcos y la Agraria hacia las 25 regiones del país",
       "Cárceles Productivas: Transformar el 100% de los penales en centros de trabajo donde los internos produzcan bienes para autosostenerse y resocializarse",
       "Infraestructura y Soberanía: Impulsar la creación de una línea aérea de bandera nacional, la construcción del mega puerto de Corio y el desarrollo de la red dorsal de fibra óptica en todo el país",
-      "Economía e Industria: Meta de lograr que el sector industrial represente más del 20% del PBI para el 2031, junto con un control estricto sobre la transferencia de tierras agrícolas a capitales extranjeros para garantizar la soberanía alimentaria",
+      "Economía e Industria: Meta de lograr que el sector industrial represente más del 20% del PBI para el año 2031, junto con un control estricto sobre la transferencia de tierras agrícolas a capitales extranjeros para garantizar la soberanía alimentaria",
     ],
   },
   "roberto-helbert-sanchez-palomino": {
@@ -1251,7 +1251,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     propuestas: [
       "Salud Unificada: Implementar un sistema de salud único e integrado que unifique el MINSA, EsSalud y las sanidades de las fuerzas del orden, con la meta de que el 90% de la población acceda a servicios de calidad solo con su DNI para el año 2031",
       "Seguridad y Defensa: Instalación de un gabinete de lucha contra la criminalidad liderado diariamente por el Presidente a las 7:00 a.m.. Además, propone profesionalizar a la policía y reenfocar sus funciones hacia la prevención y sanción del crimen organizado",
-      "Reforma del Estado y Meritocracia: Lograr que para el 2031 el 70% de los cargos directivos del sector público sean ocupados exclusivamente por mérito mediante el servicio civil profesional",
+      "Reforma del Estado y Meritocracia: Lograr que para el año 2031 el 70% de los cargos directivos del sector público sean ocupados exclusivamente por mérito mediante el servicio civil profesional",
       "Educación y Juventud: Garantizar trayectorias educativas completas, apuntando a que el 95% de los jóvenes culminen la educación secundaria para el fin del quinquenio",
       "Medio Ambiente y Sostenibilidad: Fomentar una transición energética hacia fuentes renovables y asegurar la certificación ambiental en el 90% de los proyectos de transporte nacional",
     ],
@@ -1277,7 +1277,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La propuesta de Podemos Perú se enmarca en una gestión que busca el ordenamiento del Estado y la eficiencia económica. Su plan de gobierno enfatiza la recuperación de la autoridad estatal, la formalización económica y un enfoque en resultados medibles para la ciudadanía. Se plantea una modernización de la estructura del Ejecutivo mediante la fusión o desactivación de ministerios y programas que dupliquen funciones. El plan estratégico de Podemos Perú para el periodo 2026-2031 se centra en ejes de seguridad ciudadana, salud, economía y empleo, vivienda y saneamiento, educación y reforma del Estado.",
     financiamiento: {
-      total: "S/ 11,409,038.64 (ingresos anuales 2024)",
+      total: "S/ 11,409,038.64 (ingresos anuales del año 2024)",
       sources: [
         "Ingresos anuales (2024): Reportó un total de 11,409,038.64 soles, provenientes tanto del sector público como de rentas de acciones en el sector privado",
         "Bienes inmuebles: Posee 15 propiedades registradas, incluyendo predios en San Isidro, Cercado de Lima, San Juan de Lurigancho y San Miguel. Destaca una propiedad en la Av. 28 de Julio valorada en 14,881,500 soles",
@@ -1564,7 +1564,7 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato está adscrito al Partido Aprista Peruano, organización en la que ocupa el cargo de Miembro de la Comisión Política y de la cual es socio fundador en su etapa de reinscripción actual. Su postura se alinea con la doctrina histórica de su partido, promoviendo una economía social de mercado con un fuerte énfasis en la formalización y el fortalecimiento de la institucionalidad del Estado. El plan de gobierno que respalda su candidatura presenta metas específicas para el periodo 2026-2031 en seguridad y justicia, salud, economía, reforma del Estado, educación, y conectividad y ambiente.",
     financiamiento: {
-      total: "S/ 33,600 (ingresos anuales 2024)",
+      total: "S/ 33,600 (ingresos anuales del año 2024)",
       sources: [
         "Ingresos anuales (2024): Para el año fiscal 2024, Valderrama reportó ingresos totales por 33,600 soles, provenientes exclusivamente del ejercicio individual de su profesión en el sector privado. No registra ingresos por planillas ni rentas de fuente pública",
         "Acciones: En cuanto a activos, declara poseer 600 acciones en la empresa PS Innova SAC, con un valor nominal de 600 soles",

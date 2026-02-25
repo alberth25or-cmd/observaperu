@@ -9,7 +9,7 @@ const Footer = () => {
               Observa Perú
             </h3>
             <p className="mt-2 text-[14px] text-white/70">
-              Información clara y verificable sobre el proceso electoral
+              Información clara y verificable sobre el proceso electoral.
             </p>
           </div>
 

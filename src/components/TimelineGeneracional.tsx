@@ -69,7 +69,7 @@ const CustomTooltip = ({ active, payload }: any) => {
     return (
       <div className="bg-white p-2 sm:p-3 lg:p-4 border border-slate-200 rounded-lg shadow-xl z-50">
         <p className="font-bold text-[#0b1b3b] text-xs sm:text-sm lg:text-base mb-1">{data.nombre}</p>
-        <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600">Nacido en {data.year}</p>
+        <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600">Nacido en el año {data.year}</p>
         <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600">{data.edad} años</p>
         <p className="text-[10px] sm:text-xs lg:text-sm font-semibold mt-1" style={{ color: GENERATIONS[data.generacion as keyof typeof GENERATIONS]?.color }}>
           {data.generacion}

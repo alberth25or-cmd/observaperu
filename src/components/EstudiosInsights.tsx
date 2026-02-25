@@ -48,7 +48,7 @@ export default function EstudiosInsights({ kpis }: EstudiosInsightsProps) {
         </li>
         <li>
           <strong>Transparencia:</strong>{" "}
-          {kpis.pctSinInfo}% de los candidatos no tiene información pública de estudios universitarios.
+          {kpis.pctSinInfo}% de los candidatos no tienen información pública de estudios universitarios.
         </li>
       </ul>
     </div>

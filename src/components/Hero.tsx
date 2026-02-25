@@ -18,7 +18,7 @@ const Hero = () => {
         {/* Bloque texto */}
         <div className="flex w-full flex-col items-center gap-12 text-center">
           <h1 className="max-w-[740px] text-[40px] font-bold leading-[110%] tracking-[-0.02em] sm:text-[52px] lg:text-[64px]">
-            Descubre quienes son los candidatos y qué ideas representan
+            Descubre quiénes son los candidatos y qué ideas representan
           </h1>
 
           <div className="relative z-10 flex w-full max-w-[502px] flex-wrap justify-center gap-4">

@@ -38,6 +38,13 @@ const TABS: { key: TabType; label: string }[] = [
   { key: "propuestas", label: "Algunas propuestas" },
 ];
 
+function conPuntoFinal(s: string | undefined): string {
+  if (s == null || typeof s !== "string") return "";
+  const t = s.trim();
+  if (!t) return t;
+  return /[.!?]$/.test(t) ? t : t + ".";
+}
+
 export default function CandidateDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -86,7 +93,7 @@ export default function CandidateDetailPage() {
               Biografía de {candidateDetail.name}
             </h3>
             <p className="text-[16px] leading-[175%] text-slate-700 sm:text-[18px]">
-              {candidateDetail.biografia}
+              {conPuntoFinal(candidateDetail.biografia)}
             </p>
           </div>
         );
@@ -104,7 +111,7 @@ export default function CandidateDetailPage() {
                   className="flex items-start gap-3 text-[16px] leading-[175%] text-slate-700"
                 >
                   <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#0b1b3b]" />
-                  <span>{item}</span>
+                  <span>{conPuntoFinal(item)}</span>
                 </li>
               ))}
             </ul>
@@ -124,7 +131,7 @@ export default function CandidateDetailPage() {
                   className="flex items-start gap-3 text-[16px] leading-[175%] text-slate-700"
                 >
                   <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#c61b1b]" />
-                  <span>{item}</span>
+                  <span>{conPuntoFinal(item)}</span>
                 </li>
               ))}
             </ul>
@@ -138,7 +145,7 @@ export default function CandidateDetailPage() {
               Ideología política
             </h3>
             <p className="text-[16px] leading-[175%] text-slate-700 sm:text-[18px]">
-              {candidateDetail.ideologiaPolitica}
+              {conPuntoFinal(candidateDetail.ideologiaPolitica)}
             </p>
           </div>
         );
@@ -161,7 +168,7 @@ export default function CandidateDetailPage() {
                 <ul className="space-y-2">
                   {candidateDetail.financiamiento.sources.map((source, idx) => (
                     <li key={idx} className="text-[15px] text-slate-700">
-                      • {source}
+                      • {conPuntoFinal(source)}
                     </li>
                   ))}
                 </ul>
@@ -183,7 +190,7 @@ export default function CandidateDetailPage() {
                   className="flex items-start gap-3 text-[16px] leading-[175%] text-slate-700"
                 >
                   <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#0b1b3b]" />
-                  <span>{item}</span>
+                  <span>{conPuntoFinal(item)}</span>
                 </li>
               ))}
             </ul>
@@ -203,7 +210,7 @@ export default function CandidateDetailPage() {
                   className="rounded-xl bg-[#eef2fb] p-5"
                 >
                   <p className="text-[15px] leading-[170%] text-slate-700">
-                    {item}
+                    {conPuntoFinal(item)}
                   </p>
                 </div>
               ))}
@@ -224,7 +231,7 @@ export default function CandidateDetailPage() {
                   className="flex items-start gap-3 text-[16px] leading-[175%] text-slate-700"
                 >
                   <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#0b1b3b]" />
-                  <span>{propuesta}</span>
+                  <span>{conPuntoFinal(propuesta)}</span>
                 </li>
               ))}
             </ul>

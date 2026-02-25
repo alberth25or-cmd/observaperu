@@ -41,7 +41,7 @@ export default function TerritorialInsights({ kpis }: TerritorialInsightsProps) 
         )}
         {kpis.sinDomicilio > 0 && (
           <li>
-            <strong>Datos faltantes:</strong> {kpis.pctSinDomicilio}% de los candidatos no tiene
+            <strong>Datos faltantes:</strong> {kpis.pctSinDomicilio}% de los candidatos no tienen
             domicilio declarado en la fuente.
           </li>
         )}
