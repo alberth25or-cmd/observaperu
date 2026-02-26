@@ -62,11 +62,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "López Chau lidera un proyecto que se define bajo la denominación de Ahora Nación (AN). Su postura actual se inclina hacia un enfoque de fortalecimiento de la institucionalidad estatal, con énfasis en la descentralización y la meritocracia dentro del aparato público. El plan de gobierno de Ahora Nación se estructura en dimensiones sociales, institucionales y económicas, con metas específicas para el periodo 2026-2031, priorizando la seguridad, justicia, economía, desarrollo regional, educación, salud, protección social y vivienda.",
     financiamiento: {
-      total: "S/ 350,000 (remuneración bruta anual del año 2024)",
+      total: "S/350,000 (ingresos anuales declarados)",
       sources: [
-        "Ingresos: Según su declaración jurada de ingresos y bienes correspondiente al año fiscal 2024, reportó una remuneración bruta anual de 350,000 soles proveniente exclusivamente del sector público",
-        "Bienes Inmuebles: Declara la propiedad de un departamento y una cochera en el distrito de Miraflores, Lima, con un valor total autovaluado de 295,000 soles",
-        "Financiamiento Partidario: El financiamiento de sus actividades políticas se gestiona a través de la organización política Ahora Nación",
+        "Ingresos: Según su declaración jurada de ingresos y bienes correspondiente al año fiscal 2024, reportó una remuneración bruta anual de 350,000 soles proveniente exclusivamente del sector público.",
+        "Financiamiento Partidario: El financiamiento de sus actividades políticas se gestiona a través de la organización política Ahora Nación.",
+        "Total de bienes muebles: no registra.",
+        "Bienes inmuebles: registra 2 bienes inmuebles que sumados ascienden a S/295,000.",
       ],
     },
     experiencia: [
@@ -123,11 +124,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su plataforma se define por un enfoque ecologista y social-demócrata, bajo la denominación de \"Demócrata Verde\". El plan de gobierno prioriza la sostenibilidad ambiental, la lucha contra la desigualdad territorial y la reforma de la gobernanza estatal mediante la reducción de la fragmentación del Estado (el llamado \"Estado mosaico\").",
     financiamiento: {
-      total: "S/ 36,000.00 (ingresos anuales del año 2024) + patrimonio inmobiliario y acciones",
+      total: "S/ 36,000.00 (ingresos anuales declarados) + patrimonio inmobiliario y acciones",
       sources: [
-        "Ingresos: Declaró ingresos brutos anuales por S/ 36,000.00 provenientes del sector privado durante el año fiscal 2024",
-        "Bienes Inmuebles: Reporta siete propiedades, incluyendo inmuebles en San Isidro, La Victoria, Comas y Villa María del Triunfo en Lima, además de un predio en La Libertad. Cabe precisar que el candidato declara no reconocer como propias cuatro de las propiedades que figuran en registros públicos a su nombre",
-        "Acciones: Posee titularidad en cuatro empresas: Alex Express Courier SA, Empresa de Comunicaciones y Publicidad Estratégica EIRL, Estratégica Constructora del Sur EIRL y AGC Motors EIRL",
+        "Ingresos: declaró ingresos brutos anuales por S/ 36,000.00 provenientes del sector privado durante el año fiscal 2024",
+        "Acciones: posee titularidad en cuatro empresas: Alex Express Courier SA, Empresa de Comunicaciones y Publicidad Estratégica EIRL, Estratégica Constructora del Sur EIRL y AGC Motors EIRL",
+        "Total de bienes muebles: no registra.",
+        "Bienes inmuebles: registra 7 bienes inmuebles que sumados ascienden a S/211,293.44.",
       ],
     },
     experiencia: [
@@ -171,10 +173,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su pensamiento político se articula bajo la bandera de \"Fe en el Perú\", organización que él preside. Los pilares de su ideario incluyen: defensa de una economía de libre mercado con responsabilidad social; enfoque en la descentralización efectiva, otorgando mayor poder y autonomía a los gobiernos locales y regionales; postura de \"insurgencia\" frente a lo que denomina un sistema estatal ineficiente y corrupto; rechazo a los monopolios y promoción de la eficiencia en la gestión pública orientada a resultados medibles.",
     financiamiento: {
-      total: "S/ 341,465.00",
+      total: "S/341,465.00 (ingresos anuales declarados)",
       sources: [
-        "Paz de la Barra ha declarado participaciones en diversas sociedades, lo que constituye parte de su patrimonio personal y base económica: acciones y participaciones en empresas como FBF Abogados SAC, Paz de la Barra Abogados SAC y FBF Obras SAC",
-        "Como fundador del partido Fe en el Perú, la organización se financia mediante aportes de afiliados y simpatizantes conforme a la normativa vigente, aunque su campaña presidencial ha sido cuestionada por la procedencia de fondos para su amplia difusión",
+        "Paz de la Barra ha declarado participaciones en diversas sociedades, lo que constituye parte de su patrimonio personal y base económica: acciones y participaciones en empresas como FBF Abogados SAC, Paz de la Barra Abogados SAC y FBF Obras SAC.",
+        "Como fundador del partido Fe en el Perú, la organización se financia mediante aportes de afiliados y simpatizantes conforme a la normativa vigente, aunque su campaña presidencial ha sido cuestionada por la procedencia de fondos para su amplia difusión.",
+        "Total de bienes muebles: S/216,000.00.",
+        "Bienes inmuebles: registra 20 bienes inmuebles que sumados ascienden a S/13,760,000,36.",
       ],
     },
     experiencia: [
@@ -217,12 +221,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Si bien el plan de gobierno no define una etiqueta ideológica única, su enfoque se centra en la \"Dimensión Social\" y el fortalecimiento de la familia como núcleo formativo de la sociedad. El partido promueve una gestión basada en la transparencia, con compromisos de rendición de cuentas cada seis meses. Sus pilares parecen orientarse hacia un modelo de desarrollo humano integral, con énfasis en la educación de calidad, la salud pública descentralizada y la lucha contra la pobreza multidimensional.",
     financiamiento: {
-      total: "S/ 221,634.00",
+      total: "S/221,634.00 (ingresos anuales declarados)",
       sources: [
-        "Ingresos anuales: Reporta una remuneración bruta anual de S/ 215,000.00 proveniente del sector privado",
-        "Bienes inmuebles: Declara la propiedad de tres inmuebles, incluyendo una casa en San Martín de Porres y terrenos en Andahuaylas, con un valor total de autovalúo que supera los S/ 300,000.00",
-        "Bienes muebles: Registra un vehículo Volkswagen valorado en S/ 10,000.00",
-        "Acciones y participaciones: Es titular de acciones en diversas empresas, entre las que destacan Importadora y Distribuidora de Retenes Rodamientos y Afines (IDRE) S.A., con participaciones valoradas en S/ 2,544,000.00",
+        "Ingresos anuales: reporta una remuneración bruta anual de S/ 215,000.00 proveniente del sector privado.",
+        "Bienes inmuebles: declara la propiedad de tres inmuebles, incluyendo una casa en San Martín de Porres y terrenos en Andahuaylas, con un valor total de autovalúo que supera los S/ 300,000.00.",
+        "Bienes muebles: registra un vehículo Volkswagen valorado en S/ 10,000.00.",
+        "Acciones y participaciones: es titular de acciones en diversas empresas, entre las que destacan Importadora y Distribuidora de Retenes Rodamientos y Afines (IDRE) S.A., con participaciones valoradas en S/ 2,544,000.00.",
       ],
     },
     experiencia: [
@@ -268,12 +272,13 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La plataforma política de Massé se centra en el concepto de federalismo como solución a los problemas de centralismo, ineficiencia y corrupción que afectan al país. Propone transformar la división política del Perú para que las regiones tengan autonomía legislativa y presupuestaria real, similar a los modelos de Suiza o Canadá. Argumenta que el actual proceso de descentralización iniciado en 2002 ha sido \"amañado\" por el gobierno central para mantener el control de los recursos. Su vehículo político es el Partido Democrático Federal (PDF), una organización que promueve un cambio estructural en el modelo de Estado. Bajo el modelo federal, cada estado regional gestionaría sus propios sistemas de salud y educación, permitiendo una respuesta más rápida a las necesidades locales sin esperar la aprobación de los ministerios en Lima.",
     financiamiento: {
-      total: "S/ 682,626.00",
+      total: "S/682,626.00 (ingresos anuales declarados)",
       sources: [
-        "Gestión en APDAYC: Bajo su mando, APDAYC pasó de ser una entidad con dificultades operativas a una poderosa organización de gestión colectiva con una capacidad de recaudación que se incrementó en varios órdenes de magnitud. Massé implementó sistemas modernos de cobranza basados en el Artículo 147 de la Ley de Derechos de Autor, que establece la legitimación activa de la asociación para cobrar por el uso de música nacional e internacional en cualquier establecimiento público",
-        "Red de Empresas Familiares: Se identificaron múltiples empresas vinculadas a su círculo familiar directo que mantenían nexos comerciales con APDAYC, incluyendo IEMPSA (catálogos musicales históricos), Trauni (producción física de discos), ET Music Perú (editora musical y representación), Fundación Autor (administración de frecuencias radiales) y Musz&K Perú (sello discográfico)",
-        "Actividad Comunicacional: Su programa \"Médicos en Acción\" se mantuvo al aire por más de 15 años, primero en Radio Nacional y luego en Radio Exitosa y Exitosa TV, lo que le brindó una plataforma única para construir capital político y confianza social",
-        "Candidatura Presidencial 2026: Su vehículo político es el Partido Democrático Federal (PDF), encabezando una plancha presidencial que integra a figuras con experiencia previa en el legislativo y el sector privado",
+        "Gestión en APDAYC: Bajo su mando, APDAYC pasó de ser una entidad con dificultades operativas a una poderosa organización de gestión colectiva con una capacidad de recaudación que se incrementó en varios órdenes de magnitud. Massé implementó sistemas modernos de cobranza basados en el Artículo 147 de la Ley de Derechos de Autor, que establece la legitimación activa de la asociación para cobrar por el uso de música nacional e internacional en cualquier establecimiento público.",
+        "Red de empresas familiares: Se identificaron múltiples empresas vinculadas a su círculo familiar directo que mantenían nexos comerciales con APDAYC, incluyendo IEMPSA (catálogos musicales históricos), Trauni (producción física de discos), ET Music Perú (editora musical y representación), Fundación Autor (administración de frecuencias radiales) y Musz&K Perú (sello discográfico).",
+        "Actividad comunicacional: Su programa \"Médicos en Acción\" se mantuvo al aire por más de 15 años, primero en Radio Nacional y luego en Radio Exitosa y Exitosa TV, lo que le brindó una plataforma única para construir capital político y confianza social.",
+        "Total de bienes muebles: S/91,500.00.",
+        "Bienes inmuebles: registra 15 bienes inmuebles que sumados ascienden a S/1,177,163.51.",
       ],
     },
     experiencia: [
@@ -332,11 +337,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Acuña es el fundador y líder histórico del partido Alianza Para el Progreso (APP), organización que preside formalmente desde el año 2023. Su postura política se define generalmente como de centro o centro-derecha, con un fuerte énfasis en el \"gobierno de gestión\" y la descentralización. Su propuesta institucional para 2026 plantea una reforma radical del Estado, que incluye la reducción de los ministerios actuales de 19 a solo 10, buscando eliminar duplicidades de funciones y fortalecer la rectoría del Poder Ejecutivo.",
     financiamiento: {
-      total: "S/ 9,836,766.00 (ingresos anuales del año 2024)",
+      total: "S/9,836,766.00 (ingresos anuales declarados)",
       sources: [
-        "Ingresos anuales (2024): Declaró un total de S/ 9,836,766.00. De esta cifra, S/ 2,885,101.00 provienen del sector privado por remuneración bruta y S/ 6,798,264.00 corresponden a \"otros ingresos\", específicamente intereses generados por sus acciones",
-        "Bienes inmuebles: Reporta 24 propiedades en Perú y el extranjero, incluyendo predios rurales en Cajamarca y La Libertad, así como residencias de alto valor en distritos limeños como La Molina, Miraflores, San Isidro y Santiago de Surco. Destacan un inmueble en Madrid (España) valorado en más de 3 millones de soles y una propiedad en Miraflores valorada en más de 27 millones de soles",
-        "Bienes muebles: Registra una flota de más de 30 vehículos a su nombre, que incluye camionetas de alta gama y vehículos de trabajo",
+        "Ingresos anuales (2024): declaró un total de S/ 9,836,766.00. De esta cifra, S/ 2,885,101.00 provienen del sector privado por remuneración bruta y S/ 6,798,264.00 corresponden a \"otros ingresos\", específicamente intereses generados por sus acciones",
+        "Total de bienes muebles: S/15,113,167.06.",
+        "Bienes inmuebles: registra 24 bienes inmuebles que sumados ascienden a S/58,257,047.79.",
       ],
     },
     experiencia: [
@@ -379,10 +384,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato postula por la organización política Partido País para Todos. Según su plan de gobierno, su postura se alinea con una reforma institucional profunda del Estado, con un fuerte énfasis en el orden, la seguridad ciudadana y la eficiencia en la gestión social para reducir brechas de pobreza y salud mediante un enfoque técnico y resultados medibles.",
     financiamiento: {
-      total: "S/ 207,543.00",
+      total: "S/207,543.00 (ingresos anuales declarados)",
       sources: [
-        "La documentación analizada no especifica los montos de financiamiento de campaña ni las fuentes de aportes privados para este proceso electoral",
-        "En su declaración de bienes y rentas, registra ingresos anuales por su actividad independiente de S/ 144,000.00, además de poseer propiedades inmuebles en San Isidro y un vehículo deportivo valorizado en S/ 102,000.00",
+        "La documentación analizada no especifica los montos de financiamiento de campaña ni las fuentes de aportes privados para este proceso electoral.",
+        "Total de bienes muebles: S/102,000.00.",
+        "Bienes inmuebles: registra 6 bienes inmuebles que sumados ascienden a S/506,000.",
       ],
     },
     experiencia: [
@@ -422,11 +428,13 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se define como un liberal clásico y representa una visión de derecha moderna. Su pensamiento político se centra en: defensa de las libertades individuales y reducción de la intervención estatal; un enfoque de \"mano dura\" contra el crimen organizado, diferenciándolo del trato al ciudadano trabajador; conservadurismo en valores sociales, reconociendo a la familia tradicional y el derecho a la vida desde la concepción; oposición frontal a modelos de izquierda autoritaria o antidemocrática.",
     financiamiento: {
-      total: "S/ 105,103.00",
+      total: "S/105,103.00 (ingresos anuales declarados)",
       sources: [
-        "En su declaración jurada, el candidato reporta ingresos anuales por un total de S/ 252,000.00 provenientes del sector privado",
+        "En su declaración jurada, el candidato reporta ingresos anuales por un total de S/ 252,000.00 provenientes del sector privado.",
         "Además, declara poseer acciones y participaciones en fondos de inversión extranjeros y empresas locales, como Janlis-Global HY Bond Fund y EGA Empresarial S.A.C.",
-        "Se ha manifestado públicamente en contra del financiamiento público a los partidos políticos y de las exoneraciones tributarias para estas organizaciones",
+        "Se ha manifestado públicamente en contra del financiamiento público a los partidos políticos y de las exoneraciones tributarias para estas organizaciones.",
+        "Total de bienes muebles: S/45,000.00.",
+        "Bienes inmuebles: registra 5 bienes inmuebles que sumados ascienden a S/639,105.60.",
       ],
     },
     experiencia: [
@@ -468,10 +476,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Aunque el plan de gobierno no define una etiqueta ideológica cerrada, su plataforma se alinea con la modernización del Estado, la formalización económica y el fortalecimiento institucional. En cuanto a su historial político, Jaico Carranza registra renuncias previas a dos organizaciones: Alianza para el Progreso (renuncia registrada en 2023) y Todos por el Perú (renuncia registrada en 2019).",
     financiamiento: {
-      total: "S/ 47,158.00 (año fiscal 2024)",
+      total: "S/47,158.00 (ingresos anuales declarados)",
       sources: [
-        "Según su declaración jurada de hoja de vida correspondiente al año fiscal 2024, el candidato reportó ingresos totales de S/ 47,158.00. Desglose: S/ 23,408.00 por remuneración bruta anual (sector privado) y S/ 23,750.00 por ejercicio individual de su profesión (rentas de cuarta categoría)",
-        "Patrimonio: Posee el 20% de acciones y derechos de un predio en San Juan de Miraflores y mantiene acciones en las empresas Centrum Iustitia Abogados S.A.C. y Alpaxor S.A.C.",
+        "Según su declaración jurada de hoja de vida correspondiente al año fiscal 2024, el candidato reportó ingresos totales de S/ 47,158.00. Desglose: S/ 23,408.00 por remuneración bruta anual (sector privado) y S/ 23,750.00 por ejercicio individual de su profesión (rentas de cuarta categoría).",
+        "Patrimonio: posee el 20% de acciones y derechos de un predio en San Juan de Miraflores y mantiene acciones en las empresas Centrum Iustitia Abogados S.A.C. y Alpaxor S.A.C.",
+        "Total de bienes muebles: no registra.",
+        "Bienes inmuebles: registra 1 bien inmueble valorizado en S/45,426.58.",
       ],
     },
     experiencia: [
@@ -510,10 +520,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Carrasco Salazar lidera el Partido Demócrata Unido Perú. Su plataforma política se caracteriza por un enfoque de reforma estructural del Estado y medidas de corte radical en seguridad y justicia. Propone una reorganización total bajo principios de austeridad extrema, eficiencia administrativa y una postura de \"mano dura\" frente a la criminalidad y la corrupción, alineándose con una visión reformista y de soberanía nacional.",
     financiamiento: {
-      total: "S/ 74,118.00 (año fiscal 2024)",
+      total: "S/74,118.00 (ingresos anuales declarados)",
       sources: [
         "Para el año fiscal 2024, el candidato declaró ingresos totales por S/ 74,118.00. Estos se desglosan en: Sector Público: S/ 57,878.00 correspondientes a su labor como catedrático; Sector Privado: S/ 16,240.00 por ejercicio individual de su profesión",
         "Además, declara ser titular o accionista en 8 empresas, principalmente vinculadas a la consultoría jurídica y gestión empresarial",
+        "Total de bienes muebles: S/82,000.00.",
+        "Bienes inmuebles: registra 8 bienes inmuebles que sumados ascienden a S/348,544.94.",
       ],
     },
     experiencia: [
@@ -553,10 +565,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se autodefine como un político de principios claros, orientado hacia lo que denomina una revolución pacífica para ordenar el Estado. Su postura ideológica se caracteriza por: Liberalismo Económico: Defiende los principios de libre mercado y libre comercio, oponiéndose a los monopolios y oligopolios, tanto estatales como privados. Postura Anti-corrupción y Conservadora: Propone una lucha frontal contra la delincuencia bajo el lema Mano de Hierro y se presenta como una alternativa opuesta a sectores que él denomina caviares.",
     financiamiento: {
-      total: "S/ 45,000.00",
+      total: "S/45,000.00 (ingresos anuales declarados)",
       sources: [
-        "Franja Electoral: El partido Perú Acción tiene asignado un monto total de S/ 1,699,247.11 para publicidad en medios y redes sociales dentro de la franja electoral reglamentada",
-        "Mecanismos Internos: Reportes periodísticos de 2023 señalaron que los estatutos del partido incluían la obligatoriedad de aportes del 10% del salario para aquellos militantes o invitados que accedieran a cargos públicos a través de la organización",
+        "Franja Electoral: el partido Perú Acción tiene asignado un monto total de S/ 1,699,247.11 para publicidad en medios y redes sociales dentro de la franja electoral reglamentada.",
+        "Mecanismos Internos: reportes periodísticos de 2023 señalaron que los estatutos del partido incluían la obligatoriedad de aportes del 10% del salario para aquellos militantes o invitados que accedieran a cargos públicos a través de la organización.",
+        "Total de bienes muebles: no declarado.",
+        "Bienes inmuebles: no registra.",
       ],
     },
     experiencia: [
@@ -601,12 +615,13 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Molinelli se perfila como una candidata que intenta romper la dicotomía entre el técnico de escritorio y el político de masas. Su propuesta para el año 2026 se fundamenta en la recuperación de la autoridad presidencial, la meritocracia en el servicio civil y una descentralización basada en la eficiencia presupuestaria. El partido Fuerza Moderna se presenta como una opción de centro, con un fuerte componente técnico y meritocrático, buscando atraer a profesionales de la salud y la gestión pública. Su propuesta se centra en cuatro pilares fundamentales que buscan abordar los problemas estructurales del Perú mediante una gestión orientada a resultados y libre de ideologías extremas.",
     financiamiento: {
-      total: "S/ 123,865.13",
+      total: "S/123,865.13 (ingresos anuales declarados)",
       sources: [
-        "Molinelli ha declarado que su campaña se apoya en recursos propios acumulados durante su carrera profesional y en aportes voluntarios de simpatizantes que son registrados conforme a ley",
-        "Ha sido categórica al señalar que no aceptará financiamiento proveniente de la minería ilegal o empresas involucradas en procesos por lavado de activos, marcando una distancia ética con otras agrupaciones políticas",
-        "La información financiera de su partido está sujeta a auditorías semanales y mensuales publicadas por la ONPE, asegurando que cada sol invertido en publicidad o desplazamientos nacionales sea trazable",
-        "En sus declaraciones juradas de intereses y rentas, Molinelli ha reportado su patrimonio de manera detallada ante la Contraloría, sosteniendo que sus bienes son el resultado de veinticinco años de trabajo ininterrumpido en el sector público y privado",
+        "Molinelli ha declarado que su campaña se apoya en recursos propios acumulados durante su carrera profesional y en aportes voluntarios de simpatizantes que son registrados conforme a ley.",
+        "Ha sido categórica al señalar que no aceptará financiamiento proveniente de la minería ilegal o empresas involucradas en procesos por lavado de activos, marcando una distancia ética con otras agrupaciones políticas.",
+        "La información financiera de su partido está sujeta a auditorías semanales y mensuales publicadas por la ONPE, asegurando que cada sol invertido en publicidad o desplazamientos nacionales sea trazable.",
+        "Total de bienes muebles: no declarado.",
+        "Bienes inmuebles: registra 2 bienes inmuebles que sumados ascienden a S/139,768.28.",
       ],
     },
     experiencia: [
@@ -659,11 +674,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Actualmente postula por el Partido Democrático Somos Perú para las Elecciones Generales 2026. Su plataforma se define por un enfoque en la eficiencia de la gestión pública, el fortalecimiento de la seguridad ciudadana y la formalización económica. Aunque ha transitado por diversas agrupaciones políticas (PPC, Victoria Nacional y ahora Somos Perú), su discurso mantiene una línea de pragmatismo institucional y modernización del Estado mediante tecnología. Su plan de gobierno se estructura en dimensiones sociales, institucionales y económicas con metas específicas al año 2031, priorizando la seguridad ciudadana, economía y formalización, salud y nutrición, educación tecnológica y lucha contra la corrupción.",
     financiamiento: {
-      total: "S/ 244,000.00",
+      total: "S/244,000.00 (ingresos anuales declarados)",
       sources: [
-        "Bienes Muebles: En su declaración jurada, el candidato reporta vehículos valorados en un total de 42,000 soles, incluyendo una camioneta y una motocicleta",
-        "Participaciones accionarias: Es titular de 500 acciones en Alhambra Inversiones S.R.L.",
-        "Financiamiento Partidario: El financiamiento de sus actividades políticas se gestiona a través del Partido Democrático Somos Perú",
+        "Participaciones accionarias: es titular de 500 acciones en Alhambra Inversiones S.R.L.",
+        "Financiamiento partidario: El financiamiento de sus actividades políticas se gestiona a través del Partido Democrático Somos Perú",
+        "Total de bienes muebles: S/42,000.00.",
+        "Bienes inmuebles: no registra.",
       ],
     },
     experiencia: [
@@ -712,11 +728,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato se identifica con el \"Patriotismo\", una postura que prioriza la soberanía nacional y la identidad peruana. Su propuesta ideológica se centra en la industrialización de la patria, el fortalecimiento de la seguridad nacional y la meritocracia técnica. El partido que lidera promueve una visión de Estado eficiente y productivo, distanciándose de las etiquetas tradicionales de izquierda o derecha para enfocarse en lo que denominan \"desarrollo nacional\".",
     financiamiento: {
-      total: "S/ 186,259.32",
+      total: "S/186,259.32 (ingresos anuales declarados)",
       sources: [
-        "Ingresos anuales (2024): Reportó un total de 186,259.32 soles, provenientes tanto del sector público (remuneración bruta) como del sector privado (ejercicio individual de profesión)",
-        "Patrimonio empresarial: Posee acciones en sus empresas educativas (Caller Language Center y Caller Colegio Internacional) con un valor nominal total de 75,000 soles",
-        "Propiedades: Registra bienes inmuebles en Lima (Pachacámac) y Ucayali (Coronel Portillo) con un valor comercial declarado superior a los 600,000 soles",
+        "Ingresos anuales (2024): reportó un total de 186,259.32 soles, provenientes tanto del sector público (remuneración bruta) como del sector privado (ejercicio individual de profesión)",
+        "Patrimonio empresarial: posee acciones en sus empresas educativas (Caller Language Center y Caller Colegio Internacional) con un valor nominal total de 75,000 soles",
+        "Total de bienes muebles: S/2,800.00.",
+        "Bienes inmuebles; Registra 2 bienes inmuebles que sumados ascienden a S/93,269.",
       ],
     },
     experiencia: [
@@ -756,10 +773,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su postura política se define por una crítica estructural al sistema vigente y la búsqueda de un cambio constitucional. Propugna el retorno a la democracia mediante una Nueva Constitución redactada a través de una Asamblea Constituyente que sea fruto de la voluntad popular. Su visión de Estado es la de un ente garante de derechos, plurinacional y descentralizado, que recupere la soberanía sobre los recursos estratégicos del país.",
     financiamiento: {
-      total: "S/ 224,945.83",
+      total: "S/224,945.83 (ingresos anuales declarados)",
       sources: [
-        "En su declaración jurada de hoja de vida, el candidato declara la posesión de un predio rural en la Casa Hacienda Huando (Huaral) bajo sociedad conyugal, valorizado en S/ 35,000.00",
-        "No se registran aportes de campaña específicos en los documentos del plan de gobierno analizados, los cuales se rigen bajo las normas de transparencia del Jurado Nacional de Elecciones",
+        "No se registran aportes de campaña específicos en los documentos del plan de gobierno analizados, los cuales se rigen bajo las normas de transparencia del Jurado Nacional de Elecciones.",
+        "Total de bienes muebles: no declarado.",
+        "Bienes inmuebles: registra 1 bien inmueble valorizado en S/35,000.",
       ],
     },
     experiencia: [
@@ -802,10 +820,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su pensamiento político se articula a través del Partido Cívico OBRAS, el cual define como una organización nacionalista que promueve valores como la libertad, honestidad, transparencia y solidaridad. Su enfoque se centra en la \"política de las obras\" frente a las ideologías tradicionales, priorizando la ejecución técnica y la descentralización administrativa y económica del Estado. En años recientes, ha mostrado posturas críticas hacia el sistema político establecido y los medios de comunicación tradicionales.",
     financiamiento: {
-      total: "S/ 301,514.00",
+      total: "S/301,514.00 (ingresos anuales declarados)",
       sources: [
-        "Ingresos personales: Declaró ingresos por S/ 742,196.80 durante el año 2024",
-        "Aportes recibidos: Informó un aporte de S/ 168,500 enviado por su hermano desde el exterior (España) y aportes voluntarios de personas naturales vía Yape y PayPal que suman aproximadamente S/ 133,014.00",
+        "Ingresos: declaró ingresos por S/ 742,196.80 durante el año 2024.",
+        "Aportes recibidos: informó un aporte de S/ 168,500 enviado por su hermano desde el exterior (España) y aportes voluntarios de personas naturales vía Yape y PayPal que suman aproximadamente S/ 133,014.00.",
+        "Total de bienes muebles: no declarado.",
+        "Bienes inmuebles: no registra bienes inmuebles.",
       ],
     },
     experiencia: [
@@ -850,11 +870,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su postura se define como humanista y de centroderecha, centrada en los conceptos de \"Orden y Unidad\". Propone un modelo de Economía Social de Mercado y considera que la democracia debe sustentarse en el respeto estricto a la autoridad y la ley. Su visión estratégica busca posicionar al Perú como un país hegemónico en el Pacífico Sur mediante el fortalecimiento del Estado-Nación y la integridad territorial. El plan de gobierno se estructura en metas específicas en seguridad ciudadana, economía y minería, salud social, infraestructura, y educación y juventud.",
     financiamiento: {
-      total: "S/ 320,676.00",
+      total: "S/320,676.00 (ingresos anuales declarados)",
       sources: [
-        "Para el proceso electoral 2026, el candidato lidera la Alianza Unidad Nacional (integrada por el Partido Popular Cristiano, Unidad y Paz, y Peruanos Unidos Somos Libros)",
-        "El financiamiento de su campaña se gestiona bajo las normativas de la ONPE, la cual ha asignado presupuestos para la franja electoral a los partidos participantes",
-        "Los detalles específicos de aportaciones privadas se actualizan periódicamente en el portal de transparencia de dicha institución",
+        "El financiamiento de su campaña se gestiona bajo las normativas de la ONPE, la cual ha asignado presupuestos para la franja electoral a los partidos participantes.",
+        "Los detalles específicos de aportaciones privadas se actualizan periódicamente en el portal de transparencia de dicha institución.",
+        "Total de bienes muebles: S/93,573.00.",
+        "Bienes inmuebles: registra 2 bienes inmuebles que sumados ascienden a S/351,467.82.",
       ],
     },
     experiencia: [
@@ -906,10 +927,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se autodefine como socialcristiano, aunque analistas políticos clasifican su postura como de derecha conservadora o ultraconservadora. Su ideología se centra en la defensa de la vida desde la concepción, el fortalecimiento de la familia tradicional, el libre mercado con enfoque nacionalista y una postura frontal contra el comunismo y lo que denomina \"mafia caviar\". Propugna un Estado eficiente pero reducido, con fuerte énfasis en la meritocracia y la transparencia.",
     financiamiento: {
-      total: "S/ 1,897,374.00",
+      total: "S/1,897,374.00 (ingresos anuales declarados)",
       sources: [
-        "Su partido, Renovación Popular, recibe financiamiento público directo conforme a la normativa electoral peruana. Sin embargo, el partido ha sido sancionado con multas superiores a los 170,000 soles por el uso indebido de estos fondos públicos en gastos no permitidos por la Ley de Organizaciones Políticas",
+        "Su partido, Renovación Popular, recibe financiamiento público directo conforme a la normativa electoral peruana. Sin embargo, el partido ha sido sancionado con multas superiores a los 170,000 soles por el uso indebido de estos fondos públicos en gastos no permitidos por la Ley de Organizaciones Políticas.",
         "Adicionalmente, durante sus campañas previas, ha declarado que gran parte del soporte económico provino de sus propios recursos como empresario y aportes voluntarios de simpatizantes",
+        "Total de bienes muebles: no declarado.",
+        "Bienes inmuebles: no registra.",
       ],
     },
     experiencia: [
@@ -950,10 +973,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Belaunde Llosa se define como liberal. Su partido, Libertad Popular, se identifica con la derecha liberal, defendiendo la economía social de mercado como la herramienta principal para la superación de la pobreza. Su ideario sostiene que la persona es anterior y superior al Estado, y promueve la competencia, la meritocracia y la reducción de la intervención estatal innecesaria en la vida económica de los ciudadanos. El plan de gobierno de Libertad Popular para el periodo 2026-2031 se estructura en torno a pilares de seguridad y reforma del Estado: seguridad y lucha contra el crimen, gestión pública y rendición de cuentas, reforma económica, y minería.",
     financiamiento: {
-      total: "S/ 2,134,800.00",
+      total: "S/2,134,800.00 (ingresos anuales declarados)",
       sources: [
-        "Reportes periodísticos han señalado una inversión visible en paneles y publicidad exterior en diversas regiones, lo cual ha generado debates sobre la opacidad y los costos de campaña, aunque el candidato ha sostenido que actúa dentro del marco legal",
-        "El financiamiento se gestiona bajo las normativas de la ONPE y el Jurado Nacional de Elecciones",
+        "Reportes periodísticos han señalado una inversión visible en paneles y publicidad exterior en diversas regiones, lo cual ha generado debates sobre la opacidad y los costos de campaña, aunque el candidato ha sostenido que actúa dentro del marco legal.",
+        "Total de bienes muebles: S/269,600.00.",
+        "Bienes inmuebles: registra 3 bienes inmuebles que sumados ascienden a S/494,150.99.",
       ],
     },
     experiencia: [
@@ -1003,10 +1027,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Atencio postula a la presidencia por la Alianza Electoral Venceremos, una coalición que agrupa movimientos como Voces del Pueblo. Su postura política se enmarca en el socialismo democrático y el progresismo. Entre sus planteamientos ideológicos fundamentales destaca la propuesta de convocar a un referéndum para una Asamblea Constituyente que redacte una nueva Constitución Política para el Perú.",
     financiamiento: {
-      total: "S/ 290,119.82",
+      total: "S/290,119.82 (ingresos anuales declarados)",
       sources: [
-        "De acuerdo con su declaración de bienes y rentas, registra un total de bienes muebles valorizados en S/ 204,290.00, que incluye vehículos de las marcas Honda y Kia",
-        "Asimismo, declara poseer el 95% de acciones en la empresa Grupo Jurídico Athena S.A.C. y ser propietario de una marca registrada ante Indecopi",
+        "Declara poseer el 95% de acciones en la empresa Grupo Jurídico Athena S.A.C. y ser propietario de una marca registrada ante Indecopi.",
+        "Total de bienes muebles: S/204,290.00.",
+        "Bienes inmuebles: registra 4 bienes inmuebles que sumados ascienden a S/90,444.11.",
       ],
     },
     experiencia: [
@@ -1050,10 +1075,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La candidata lidera una organización que se define formalmente como un partido de centro. Su doctrina se fundamenta en la defensa de la igualdad, la libertad y el estado de derecho. Promueven una economía social de mercado con justicia social y una visión de Estado gestor que garantice servicios básicos de calidad en salud, educación y justicia. Aunque se asocia al partido con posturas populistas en algunos análisis externos, su estatuto oficial enfatiza el fortalecimiento de la democracia y la lucha contra la corrupción.",
     financiamiento: {
-      total: "S/ 36,520.00",
+      total: "S/36,520.00 (ingresos anuales declarados)",
       sources: [
-        "Respecto a su patrimonio personal declarado ante el sistema electoral, la candidata registra bienes inmuebles por un valor de autovaluo que supera los 100,000 soles, incluyendo predios en la urbanización Santa María en Trujillo. Asimismo, declara la propiedad de un vehículo valorado en 35,000 soles.",
         "El financiamiento de la organización política, de acuerdo con sus estatutos, debe regirse por un sistema de control interno conforme a la Ley de Organizaciones Políticas para garantizar la transparencia en el uso de recursos.",
+        "Total de bienes muebles: S/35,000.00.",
+        "Bienes inmuebles: registra 2 bienes inmuebles que sumados ascienden a S/109,149.35.",
       ],
     },
     experiencia: [
@@ -1095,7 +1121,8 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
       total: "No se especifica monto exacto en la información proporcionada",
       sources: [
         "En sus declaraciones recientes, figura una participación en la consultora Yorkshire & Benel Asesores y Consultores por un valor de 225,000 soles (2024)",
-        "En cuanto a sus bienes, declara un vehículo Volvo del año 2004 valorizado en 15,000 soles y un mutuo hipotecario sobre un departamento en San Isidro",
+        "Total de bienes muebles: S/15,000.00.",
+        "Bienes inmuebles: registra 3 bienes inmuebles que sumados ascienden a S/398,469.94.",
       ],
     },
     experiencia: [
@@ -1135,11 +1162,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Se define bajo la doctrina del fujimorismo, caracterizada por un conservadurismo social y un modelo económico neoliberal. Su ideario promueve la defensa de la vida desde la concepción, la familia como célula fundamental de la sociedad y el derecho de los padres a dirigir la educación de sus hijos. En lo económico, defiende la economía social de mercado con una participación subsidiaria del Estado y la protección de la inversión privada como motor de empleo.",
     financiamiento: {
-      total: "S/ 271,853.45",
+      total: "S/271,853.45 (ingresos anuales declarados)",
       sources: [
-        "Su carrera ha estado marcada por investigaciones judiciales complejas relacionadas con presuntos aportes ilícitos de la constructora Odebrecht y otros grupos empresariales para sus campañas de 2011 y 2016",
-        "Enfrenta investigaciones por presunto financiamiento ilegal y uso indebido de fondos en la campaña de 2021",
-        "Controversia persistente gira en torno al origen de los fondos utilizados para financiar sus estudios en el extranjero durante la década de los 90",
+        "Su carrera ha estado marcada por investigaciones judiciales complejas relacionadas con presuntos aportes ilícitos de la constructora Odebrecht y otros grupos empresariales para sus campañas de 2011 y 2016.",
+        "Enfrenta investigaciones por presunto financiamiento ilegal y uso indebido de fondos en la campaña de 2021.",
+        "Total de bienes muebles: S/115,998.00.",
+        "Bienes inmuebles: no registra.",
       ],
     },
     experiencia: [
@@ -1187,10 +1215,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Postula por el partido Avanza País - Partido de Integración Social. Su postura se alinea con el liberalismo económico y el conservadurismo institucional. Defiende el libre mercado, la propiedad privada y la inversión extranjera como motores de desarrollo. En el aspecto social, promueve el principio de \"orden y seguridad\", favoreciendo el fortalecimiento de las fuerzas del orden y una lucha frontal contra la criminalidad y los remanentes subversivos.",
     financiamiento: {
-      total: "S/ 351,600.00",
+      total: "S/351,600.00 (ingresos anuales declarados)",
       sources: [
-        "El financiamiento de su campaña y de su partido, Avanza País, proviene principalmente de aportes declarados ante la ONPE por parte de simpatizantes, militantes y recursos propios del partido",
-        "En sus declaraciones juradas, registra bienes inmuebles (propiedades y copropiedades) y vehículos que respaldan su patrimonio personal, acumulado tras cuatro décadas de servicio público y pensiones militares",
+        "El financiamiento de su campaña y de su partido, Avanza País, proviene principalmente de aportes declarados ante la ONPE por parte de simpatizantes, militantes y recursos propios del partido.",
+        "Total de bienes muebles: S/54,750.00.",
+        "Bienes inmuebles: registra 2 bienes inmuebles que sumados ascienden a S/102,968.17.",
       ],
     },
     experiencia: [
@@ -1232,10 +1261,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Nieto define su propuesta como un equilibrio entre la justicia social y la eficiencia institucional. Si bien su origen es de izquierda, su visión actual defiende la economía de mercado con una regulación fuerte que evite los monopolios y la corrupción. Aboga por un Estado profesional y meritocrático, distanciándose de los extremos y promoviendo lo que denomina el \"buen gobierno\", centrado en la recuperación de lo público y la integridad ética en el ejercicio del poder.",
     financiamiento: {
-      total: "S/ 180,000.00",
+      total: "S/180,000.00 (ingresos anuales declarados)",
       sources: [
-        "Para el actual proceso electoral, el financiamiento se rige por las normas del Jurado Nacional de Elecciones (JNE) y la ONPE para partidos inscritos",
-        "Como presidente y fundador del Partido del Buen Gobierno, la organización política es la encargada de canalizar los aportes de militantes y simpatizantes, sujetos a la fiscalización de las autoridades electorales correspondientes",
+        "Como presidente y fundador del Partido del Buen Gobierno, la organización política es la encargada de canalizar los aportes de militantes y simpatizantes, sujetos a la fiscalización de las autoridades electorales correspondientes.",
+        "Total de bienes muebles: S/50,000.00.",
+        "Bienes inmuebles: registra 5 bienes inmuebles que sumados ascienden a S/487,672.67.",
       ],
     },
     experiencia: [
@@ -1277,12 +1307,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La propuesta de Podemos Perú se enmarca en una gestión que busca el ordenamiento del Estado y la eficiencia económica. Su plan de gobierno enfatiza la recuperación de la autoridad estatal, la formalización económica y un enfoque en resultados medibles para la ciudadanía. Se plantea una modernización de la estructura del Ejecutivo mediante la fusión o desactivación de ministerios y programas que dupliquen funciones. El plan estratégico de Podemos Perú para el periodo 2026-2031 se centra en ejes de seguridad ciudadana, salud, economía y empleo, vivienda y saneamiento, educación y reforma del Estado.",
     financiamiento: {
-      total: "S/ 11,409,038.64 (ingresos anuales del año 2024)",
+      total: "S/11,409,038.64 (ingresos anuales declarados)",
       sources: [
-        "Ingresos anuales (2024): Reportó un total de 11,409,038.64 soles, provenientes tanto del sector público como de rentas de acciones en el sector privado",
-        "Bienes inmuebles: Posee 15 propiedades registradas, incluyendo predios en San Isidro, Cercado de Lima, San Juan de Lurigancho y San Miguel. Destaca una propiedad en la Av. 28 de Julio valorada en 14,881,500 soles",
-        "Bienes muebles: Declara 12 vehículos, entre los que se encuentran camionetas Nissan Patrol y camiones Hyundai, con un valor total de 601,014.20 soles",
-        "Titularidad de acciones y participaciones: La declaración jurada presentada detalla la titularidad de acciones y participaciones en empresas del sector educación y servicios, como el Instituto Superior Tecnológico Privado INTUR Perú e Instituto Internacional de Turismo E.I.R.L.. Sus ingresos principales declarados provienen de rentas de capital (acciones) y su remuneración como funcionario público",
+        "Ingresos anuales (2024): reportó un total de 11,409,038.64 soles, provenientes tanto del sector público como de rentas de acciones en el sector privado.",
+        "Titularidad de acciones y participaciones: la declaración jurada presentada detalla la titularidad de acciones y participaciones en empresas del sector educación y servicios, como el Instituto Superior Tecnológico Privado INTUR Perú e Instituto Internacional de Turismo E.I.R.L.. Sus ingresos principales declarados provienen de rentas de capital (acciones) y su remuneración como funcionario público.",
+        "Total de bienes muebles: S/601,014.20.",
+        "Bienes inmuebles: registra 15 bienes inmuebles que sumados ascienden a S/30,415,324,50.",
       ],
     },
     experiencia: [
@@ -1333,9 +1363,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato representa al partido Perú Primero, cuya base ideológica se define bajo los siguientes pilares: Humanismo y Democracia: Se posicionan como una organización con vocación democrática representativa, centrada en el servicio al pueblo y el respeto al Estado de derecho. Economía Social de Mercado: Defienden la propiedad privada y la inversión como motores de desarrollo, pero con una regulación estatal que busque reducir las desigualdades. Posturas Progresistas: En declaraciones públicas, Mario Vizcarra ha manifestado estar a favor de la legalización del aborto, el matrimonio LGBT y, en términos de política de drogas, ha mencionado posturas abiertas sobre la regulación de la cocaína.",
     financiamiento: {
-      total: "S/ 117,684.00",
+      total: "S/117,684.00 (ingresos anuales declarados)",
       sources: [
-        "Recursos Propios y Aportes: De acuerdo con los estatutos del partido, el financiamiento se basa en cuotas de afiliados y aportaciones permitidas por la ONPE. Sin embargo, la organización ha enfrentado cuestionamientos por la procedencia de fondos vinculados a las redes políticas previas de su fundador.",
+        "Recursos Propios y Aportes: de acuerdo con los estatutos del partido, el financiamiento se basa en cuotas de afiliados y aportaciones permitidas por la ONPE. Sin embargo, la organización ha enfrentado cuestionamientos por la procedencia de fondos vinculados a las redes políticas previas de su fundador.",
+        "Total de bienes muebles: S/10,000.00.",
+        "Bienes inmuebles: registra 6 bienes inmuebles que sumados ascienden a S/441,894.96.",
       ],
     },
     experiencia: [
@@ -1375,10 +1407,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La postura política de la candidata y su partido se define bajo los pilares de comunidad, ecología, libertad y progreso. Su propuesta promueve un Estado social activo con enfoque de derechos, igualdad de género e interculturalidad. Defiende la democracia como sistema fundamental y busca el fortalecimiento de la cohesión social mediante la reducción de brechas territoriales.",
     financiamiento: {
-      total: "S/ 4,500,000.00",
+      total: "S/4,500,000.00 (ingresos anuales declarados)",
       sources: [
-        "Ingresos anuales: Declara ingresos totales que superan los S/ 312,000.00, provenientes principalmente de su ejercicio profesional independiente y participaciones",
-        "Participaciones empresariales: Posee acciones y participaciones en diversas entidades, compartidas bajo régimen de sociedad conyugal, entre las que figuran Rodríguez & Asociados Abogados SRL, Página 11 SAC, Nativas Explorer, Mgmagro SAC y Estrategia & Táctica SAC",
+        "Ingresos: declara ingresos totales que superan los S/ 312,000.00, provenientes principalmente de su ejercicio profesional independiente y participaciones",
+        "Participaciones empresariales: posee acciones y participaciones en diversas entidades, compartidas bajo régimen de sociedad conyugal, entre las que figuran Rodríguez & Asociados Abogados SRL, Página 11 SAC, Nativas Explorer, Mgmagro SAC y Estrategia & Táctica SAC.",
+        "Total de bienes muebles: S/312,000.00.",
+        "Bienes inmuebles: no registrado.",
       ],
     },
     experiencia: [
@@ -1420,10 +1454,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La postura del PTE-PERÚ se define como una alternativa al modelo neoliberal actual, al cual califican de estar en crisis. Su ideario abraza el desarrollo de un \"pensamiento autóctono social andino amazónico costeño\", inspirado en la visión de José Carlos Mariátegui y José María Arguedas. Buscan la \"refundación de la República\" mediante un Estado democrático, social, plurinacional y descentralizado que recupere un rol dirigente en la economía para salir de la dependencia de los recursos naturales. Sus principios fundamentales son la justicia social, la soberanía, la equidad y la solidaridad. El plan de gobierno 2026-2031 prioriza acciones en seguridad ciudadana, lucha contra la corrupción, reforma constitucional, economía y emprendimiento, salud y educación, vivienda e infraestructura, y medio ambiente.",
     financiamiento: {
-      total: "S/ 72,000.00",
+      total: "S/72,000.00 (ingresos anuales declarados)",
       sources: [
-        "En cuanto al financiamiento de su campaña y partido, los documentos presentados indican que se rigen por las normas de transparencia y rendición de cuentas establecidas por la Ley de Organizaciones Políticas",
-        "El partido propone mecanismos de control ciudadano y publicación semestral de sus avances financieros y de gestión a través de plataformas digitales oficiales",
+        "En cuanto al financiamiento de su campaña y partido, los documentos presentados indican que se rigen por las normas de transparencia y rendición de cuentas establecidas por la Ley de Organizaciones Políticas.",
+        "Total de bienes muebles: S/20,000.00.",
+        "Bienes inmuebles: no registra bienes inmuebles.",
       ],
     },
     experiencia: [
@@ -1472,11 +1507,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Aunque los documentos no definen una etiqueta ideológica cerrada, su postulación por el Partido Morado sugiere una línea de centro-republicano, enfocada en la institucionalidad, la meritocracia y la modernización del Estado mediante la tecnología.",
     financiamiento: {
-      total: "S/ 154,941.00",
+      total: "S/154,941.00 (ingresos anuales declarados)",
       sources: [
-        "En su declaración jurada de 2024, Guevara reportó ingresos totales por S/ 154,941.00. Estos provienen principalmente de su ejercicio individual en el sector privado (S/ 118,941.00) y dietas u otros conceptos (S/ 36,000.00)",
-        "Declaró poseer cuatro inmuebles con un valor total aproximado de S/ 1,530,560.00, ubicados en Cajamarca y Lima",
-        "Asimismo, posee dos vehículos valorados en S/ 25,000.00, uno de los cuales figura con una denuncia por robo",
+        "En su declaración jurada de 2024, Guevara reportó ingresos totales por S/ 154,941.00. Estos provienen principalmente de su ejercicio individual en el sector privado (S/ 118,941.00) y dietas u otros conceptos (S/ 36,000.00).",
+        "Total de bienes muebles: S/25,000.00.",
+        "Bienes inmuebles: registra 4 bienes inmuebles que sumados ascienden a S/221,994.79.",
       ],
     },
     experiencia: [
@@ -1522,10 +1557,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El partido Progresemos define su identidad como humanista, animalista y ambientalista. Su ideario se sustenta en el respeto a la dignidad humana, la defensa de los derechos de los animales y la protección del ecosistema. Se autodefine como una organización de centro que busca la inclusión de las \"clases olvidadas\" y promueve la meritocracia en la administración pública.",
     financiamiento: {
-      total: "S/ 168,161.99",
+      total: "S/168,161.99 (ingresos anuales declarados)",
       sources: [
-        "En su declaración jurada de ingresos y bienes, Jaimes Blanco registró bienes muebles por un valor total de S/ 168,161.99, incluyendo vehículos y acciones en diversas empresas como Full Logística del Perú SAC y Bioandina Perú SAC",
-        "Respecto al financiamiento partidario, el plan de gobierno menciona la meta de reducir un 20% el gasto en asesorías externas del Estado para redirigir recursos a la inversión social",
+        "Respecto al financiamiento partidario, el plan de gobierno menciona la meta de reducir un 20% el gasto en asesorías externas del Estado para redirigir recursos a la inversión social.",
+        "Total de bienes muebles: S/168,161.99.",
+        "Bienes inmuebles: registra 4 bienes inmuebles que sumados ascienden a S/1,172,396.1.",
       ],
     },
     experiencia: [
@@ -1564,11 +1600,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "El candidato está adscrito al Partido Aprista Peruano, organización en la que ocupa el cargo de Miembro de la Comisión Política y de la cual es socio fundador en su etapa de reinscripción actual. Su postura se alinea con la doctrina histórica de su partido, promoviendo una economía social de mercado con un fuerte énfasis en la formalización y el fortalecimiento de la institucionalidad del Estado. El plan de gobierno que respalda su candidatura presenta metas específicas para el periodo 2026-2031 en seguridad y justicia, salud, economía, reforma del Estado, educación, y conectividad y ambiente.",
     financiamiento: {
-      total: "S/ 33,600 (ingresos anuales del año 2024)",
+      total: "S/33,600 (ingresos anuales declarados)",
       sources: [
-        "Ingresos anuales (2024): Para el año fiscal 2024, Valderrama reportó ingresos totales por 33,600 soles, provenientes exclusivamente del ejercicio individual de su profesión en el sector privado. No registra ingresos por planillas ni rentas de fuente pública",
-        "Acciones: En cuanto a activos, declara poseer 600 acciones en la empresa PS Innova SAC, con un valor nominal de 600 soles",
-        "Propiedades: No reporta propiedades inmuebles ni vehículos a su nombre en la declaración oficial",
+        "Ingresos anuales (2024): para el año fiscal 2024, Valderrama reportó ingresos totales por 33,600 soles, provenientes exclusivamente del ejercicio individual de su profesión en el sector privado. No registra ingresos por planillas ni rentas de fuente pública.",
+        "Acciones: En cuanto a activos, declara poseer 600 acciones en la empresa PS Innova SAC, con un valor nominal de 600 soles.",
+        "Total de bienes muebles: no registra.",
+        "Bienes inmuebles: no registra.",
       ],
     },
     experiencia: [
@@ -1617,9 +1654,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Lescano se define políticamente dentro del espectro de la centro-izquierda. Tras una extensa militancia en el partido Acción Popular (2000-2023), del cual fue Secretario General, actualmente postula por el Partido Político Cooperación Popular. Su postura se centra en lo que denomina la recuperación de valores éticos en el gobierno y el fortalecimiento de la justicia social.",
     financiamiento: {
-      total: "S/ 120,000.00",
+      total: "S/120,000.00 (ingresos anuales declarados)",
       sources: [
         "Para las elecciones generales de 2026, el financiamiento de las organizaciones políticas incluye la asignación de fondos por parte del Estado para la franja electoral. El candidato promueve en su plan la transparencia total mediante la fiscalización ciudadana a través de datos abiertos para verificar el uso de recursos.",
+        "Total de bienes muebles: S/102,000.00",
+        "Bienes inmuebles: registra 6 bienes inmuebles que sumados ascienden a S/1,006,599.",
       ],
     },
     experiencia: [
@@ -1660,9 +1699,10 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La ideología de Cerrón y Perú Libre se define por un rechazo frontal al modelo económico actual, calificándolo de \"neoliberal\" y \"mercantilista\". Su propuesta se basa en: Estado de Bienestar y Justicia Social: Busca que el Estado asuma la responsabilidad directa y gratuita de servicios básicos como salud y educación. Plurinacionalismo: Propone reconocer constitucionalmente al Perú como un Estado plurinacional, integrando formalmente la justicia y los derechos de los pueblos originarios. Soberanía y Nacionalización: Aboga por la recuperación de la capacidad estatal para intervenir y nacionalizar sectores estratégicos de la economía.",
     financiamiento: {
-      total: "S/ 24,000.00",
+      total: "S/24,000.00 (ingresos anuales declarados)",
       sources: [
-        "[Información de financiamiento no especificada en los datos proporcionados]",
+        "Total de bienes muebles: no registra información.",
+        "Bienes inmuebles: registra en total 1 bien inmueble valorizado en S/396,811.03.",
       ],
     },
     experiencia: [
@@ -1705,11 +1745,11 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "La postura del candidato y su partido se fundamenta en un regionalismo integrador que busca descentralizar el poder y los recursos del Estado. Su enfoque combina la eficiencia de la gestión privada con el fortalecimiento institucional, promoviendo la meritocracia en la administración pública y la defensa de la inversión privada como motor económico.",
     financiamiento: {
-      total: "S/ 24,000.00",
+      total: "S/24,000.00 (ingresos anuales declarados)",
       sources: [
-        "Ingresos Anuales: Según su última declaración jurada (correspondiente al año fiscal 2024), reportó un ingreso total de 24,000 soles, provenientes exclusivamente del sector privado bajo la modalidad de ejercicio individual de su profesión (rentas de cuarta categoría)",
-        "Patrimonio Inmueble: Registra una propiedad (casa habitación) en Trujillo valorizada en 200,000 soles",
-        "Patrimonio Mueble: Declaró la posesión de un vehículo valorizado en 45,000 soles",
+        "Ingresos: según su última declaración jurada (correspondiente al año fiscal 2024), reportó un ingreso total de 24,000 soles, provenientes exclusivamente del sector privado bajo la modalidad de ejercicio individual de su profesión (rentas de cuarta categoría).",
+        "Total de bienes muebles: S/45,000.00.",
+        "Bienes inmuebles: registra en total 1 bien inmueble valorizado en S/200,000.",
       ],
     },
     experiencia: [
@@ -1749,13 +1789,13 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Aunque el documento no etiqueta la ideología en una sola palabra, el plan de gobierno del Partido Político Integridad Democrática se centra en el \"restablecimiento del principio de autoridad\" y la \"conducción firme del Estado\". Su enfoque prioriza la seguridad nacional, la lucha frontal contra el crimen organizado y la minería ilegal, así como una política económica basada en la estabilidad monetaria, la autonomía del BCRP y el fomento de la inversión privada como motor del crecimiento. El plan de gobierno se estructura en metas cuantificables hacia el 2031 en seguridad ciudadana, sistema penitenciario, lucha contra la corrupción, control migratorio, salud y educación, y economía.",
     financiamiento: {
-      total: "S/ 277,827,000 (ingresos brutos anuales 2024)",
+      total: "S/277,827,000 (ingresos anuales declarados)",
       sources: [
         "Ingresos brutos anuales (2024): El candidato declaró ingresos brutos anuales correspondientes al año fiscal 2024 por un total de 277,827,000 soles",
         "Remuneración bruta anual sector público: 122,220,000 soles",
         "Remuneración bruta anual sector privado: 155,607,000 soles",
-        "Bienes inmuebles: Además, registra bienes inmuebles (predios, garajes y viviendas) con valores autovalúos diversos",
-        "Vehículo: Un vehículo marca Jeep modelo Grand Cherokee Laredo valorizado en 67,400 soles",
+        "Total de bienes muebles: S/67,400.00.",
+        "Bienes inmuebles: Registra 4 bienes inmuebles que sumados ascienden a S/758,250.",
       ],
     },
     experiencia: [
