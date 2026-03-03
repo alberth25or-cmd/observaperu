@@ -1,16 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import type { AntecedentesRowTransformada } from "@/lib/antecedentesElectorales";
 
 interface AntecedentesHeatmapProps {
   filas: AntecedentesRowTransformada[];
-  maxRows?: number;
+  /** Cuántas filas mostrar inicialmente (desplegable) */
+  initialRows?: number;
   /** Mapa nombre del candidato (tal como en los datos) → slug para /candidatos/[slug] */
   nombreToSlug?: Record<string, string>;
 }
 
 const CARGO_LABELS = ["Presidencia", "Diputado", "Senado"];
+const DEFAULT_INITIAL_ROWS = 8;
 
 function getCargoKeys(row: AntecedentesRowTransformada): number[] {
   return [row.presidencia, row.diputado, row.senador];
@@ -18,12 +21,15 @@ function getCargoKeys(row: AntecedentesRowTransformada): number[] {
 
 export default function AntecedentesHeatmap({
   filas,
-  maxRows = 15,
+  initialRows = DEFAULT_INITIAL_ROWS,
   nombreToSlug = {},
 }: AntecedentesHeatmapProps) {
-  const visible = filas.slice(0, maxRows);
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? filas : filas.slice(0, initialRows);
+  const hasMore = filas.length > initialRows;
+  const hiddenCount = filas.length - initialRows;
 
-  if (!visible.length) {
+  if (!filas.length) {
     return (
       <div className="py-8 text-center text-slate-500 text-sm">
         No hay datos para mostrar.
@@ -85,10 +91,18 @@ export default function AntecedentesHeatmap({
           })}
         </tbody>
       </table>
-      {filas.length > maxRows && (
-        <p className="text-xs text-slate-500 mt-2 text-center">
-          Mostrando los primeros {maxRows} de {filas.length} candidatos.
-        </p>
+      {hasMore && (
+        <div className="mt-3 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((e) => !e)}
+            className="text-sm font-medium text-[#0b1b3b] hover:text-[#1b2b5a] underline decoration-[#0b1b3b]/40 underline-offset-2 hover:decoration-[#0b1b3b] transition-colors py-1 px-3 rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#0b1b3b]/20"
+          >
+            {expanded
+              ? "Ver menos"
+              : `Ver más (${hiddenCount} candidato${hiddenCount !== 1 ? "s" : ""} más)`}
+          </button>
+        </div>
       )}
     </div>
   );

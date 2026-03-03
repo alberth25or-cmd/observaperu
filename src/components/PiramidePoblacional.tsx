@@ -94,7 +94,7 @@ export default function PiramidePoblacional({ data }: PiramidePoblacionalProps) 
           Distribución por rangos de edad
         </h2>
         <p className="text-[11px] sm:text-sm lg:text-base text-slate-600">
-          Pirámide poblacional invertida - Estilo INEI
+          Pirámide poblacional invertida
         </p>
       </div>
 

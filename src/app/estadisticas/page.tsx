@@ -9,6 +9,7 @@ import MapaBurbujasPeru from "@/components/MapaBurbujasPeru";
 import TerritorialDashboardSection from "@/components/TerritorialDashboardSection";
 import PerfilAcademicoSection from "@/components/PerfilAcademicoSection";
 import AntecedentesElectoralesSection from "@/components/antecedentes/AntecedentesElectoralesSection";
+import PostulacionesSection from "@/components/postulaciones/PostulacionesSection";
 import Footer from "@/components/Footer";
 
 const Banner = ({
@@ -46,6 +47,7 @@ export default function EstadisticasPage() {
   const [lugaresData, setLugaresData] = useState<any[]>([]);
   const [estudiosData, setEstudiosData] = useState<any[]>([]);
   const [antecedentesData, setAntecedentesData] = useState<any[]>([]);
+  const [postulacionesData, setPostulacionesData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -55,11 +57,12 @@ export default function EstadisticasPage() {
         setLoading(true);
         setError(null);
 
-        const [edadesResponse, lugaresResponse, estudiosResponse, antecedentesResponse] = await Promise.all([
+        const [edadesResponse, lugaresResponse, estudiosResponse, antecedentesResponse, postulacionesResponse] = await Promise.all([
           fetch("/data/candidatos_edades.json"),
           fetch("/data/candidatos_lugares_detalle.json"),
           fetch("/data/candidatos_estudios_universitarios.json"),
           fetch("/data/candidatos_antecedentes_electorales.json"),
+          fetch("/data/numerode_postulaciones.json"),
         ]);
 
         if (!edadesResponse.ok) {
@@ -96,6 +99,13 @@ export default function EstadisticasPage() {
           setAntecedentesData(Array.isArray(list) ? list : []);
         } else {
           setAntecedentesData([]);
+        }
+        if (postulacionesResponse.ok) {
+          const postulaciones = await postulacionesResponse.json();
+          const list = postulaciones?.candidatos;
+          setPostulacionesData(Array.isArray(list) ? list : []);
+        } else {
+          setPostulacionesData([]);
         }
         setLoading(false);
       } catch (err) {
@@ -154,6 +164,9 @@ export default function EstadisticasPage() {
 
                 {/* Antecedentes electorales: multipostulación, tipo de postulación */}
                 <AntecedentesElectoralesSection data={antecedentesData} />
+
+                {/* Persistencia política: KPIs, ranking, Pareto, histogramas, scatter, boxplot, índices */}
+                <PostulacionesSection data={postulacionesData} />
               </div>
             )}
           </div>

@@ -124,12 +124,12 @@ export const CANDIDATES_DETAIL: Record<string, Omit<CandidateDetail, "age">> = {
     ],
     ideologiaPolitica: "Su plataforma se define por un enfoque ecologista y social-demócrata, bajo la denominación de \"Demócrata Verde\". El plan de gobierno prioriza la sostenibilidad ambiental, la lucha contra la desigualdad territorial y la reforma de la gobernanza estatal mediante la reducción de la fragmentación del Estado (el llamado \"Estado mosaico\").",
     financiamiento: {
-      total: "S/ 36,000.00 (ingresos anuales declarados) + patrimonio inmobiliario y acciones",
+      total: "S/ 36,000.00 (ingresos anuales declarados)",
       sources: [
-        "Ingresos: declaró ingresos brutos anuales por S/ 36,000.00 provenientes del sector privado durante el año fiscal 2024",
-        "Acciones: posee titularidad en cuatro empresas: Alex Express Courier SA, Empresa de Comunicaciones y Publicidad Estratégica EIRL, Estratégica Constructora del Sur EIRL y AGC Motors EIRL",
-        "Total de bienes muebles: no registra.",
-        "Bienes inmuebles: registra 7 bienes inmuebles que sumados ascienden a S/211,293.44.",
+        "Ingresos: Declaró ingresos brutos anuales por S/ 36,000.00 provenientes del sector privado durante el año fiscal 2024.",
+        "Acciones: Posee titularidad en cuatro empresas: Alex Express Courier SA, Empresa de Comunicaciones y Publicidad Estratégica EIRL, Estratégica Constructora del Sur EIRL y AGC Motors EIRL.",
+        "Total de bienes muebles: No registra.",
+        "Bienes inmuebles: Registra 7 inmuebles que sumados dan una cifra de 1,260,600.00.",
       ],
     },
     experiencia: [
