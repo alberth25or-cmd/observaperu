@@ -47,14 +47,16 @@ function CustomTickAvatar({
   postulanteToImageUrl = {},
   postulanteToImageUrlByNormal = {},
 }: {
-  x: number;
-  y: number;
+  x?: number | string;
+  y?: number | string;
   payload?: { value?: string } | string;
   index?: number;
   data?: Item[];
   postulanteToImageUrl?: Record<string, string>;
   postulanteToImageUrlByNormal?: Record<string, string>;
 }) {
+  const xNum = typeof x === "number" ? x : Number(x) || 0;
+  const yNum = typeof y === "number" ? y : Number(y) || 0;
   const nameFromPayload =
     typeof payload === "string"
       ? payload
@@ -80,7 +82,7 @@ function CustomTickAvatar({
   const clipId = `pareto-clip-${tickIndex}`;
 
   return (
-    <g transform={`translate(${x},${y})`}>
+    <g transform={`translate(${xNum},${yNum})`}>
       <defs>
         <clipPath id={clipId}>
           <circle cx={0} cy={half} r={half} />

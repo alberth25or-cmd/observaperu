@@ -1,19 +1,7 @@
-import pkg from "eslint";
-const { defineConfig, globalIgnores } = pkg;
 import nextVitals from "eslint-config-next/core-web-vitals.js";
 import nextTs from "eslint-config-next/typescript.js";
 
-const eslintConfig = defineConfig([
-  ...(Array.isArray(nextVitals) ? nextVitals : [nextVitals]),
-  ...(Array.isArray(nextTs) ? nextTs : [nextTs]),
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
-]);
+const nextVitalsArr = Array.isArray(nextVitals) ? nextVitals : [nextVitals];
+const nextTsArr = Array.isArray(nextTs) ? nextTs : [nextTs];
 
-export default eslintConfig;
+export default [...nextVitalsArr, ...nextTsArr];
