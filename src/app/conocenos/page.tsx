@@ -38,38 +38,30 @@ export default function ConocenosPage() {
       last: "Ortiz Huamantalla",
       linkedin: "https://www.linkedin.com/in/luis-alberth-ortiz-huamantalla-b1236b275",
       key: "team-1",
+      img: "/team/luisalberthortiz.jpg",
     },
     {
       name: "Loreley Yesel Audrey",
       last: "Rojas Berrios",
       linkedin: "https://www.linkedin.com/in/loreley-yesel-audrey-rojas-berrios-985372274",
       key: "team-2",
+      img: "/team/Loreley%20Yesel%20Audrey%20Rojas%20Berrios%20.png",
     },
     {
       name: "Patrick Paolo",
       last: "Santa Cruz Moncada",
       linkedin: "https://www.linkedin.com/in/patrick-paolo-santa-cruz-moncada-ba3a86396",
       key: "team-3",
+      img: "/team/Santa%20Cruz%20Moncada%20Patrick%20Paolo%20.png",
     },
     {
       name: "Gabriela Alessandra",
       last: "Azaña Quispe",
       linkedin: "https://www.linkedin.com/in/gabriela-aza%C3%B1a-quispe-32b304379",
       key: "team-4",
+      img: "/team/Gabriela-Alessandra-Aza%C3%B1a.PNG",
     },
-    {
-      name: "Sofia Abiel",
-      last: "Riojas Concha",
-      linkedin: "https://www.linkedin.com/in/sofiariojasc",
-      key: "team-5",
-    },
-    {
-      name: "Bryan Daniel",
-      last: "Reyna Rodríguez",
-      linkedin: "https://www.linkedin.com/in/bryan-reyna-252201275",
-      key: "team-6",
-    },
-  ];
+      ];
 
   const services = [
     {
@@ -204,11 +196,21 @@ export default function ConocenosPage() {
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {team.map((p) => (
               <article key={p.key} className="text-center">
-                {/* Avatar con iniciales */}
-                <div className="mx-auto aspect-[3/4] w-full max-w-[170px] overflow-hidden rounded-md bg-gradient-to-br from-[#1b2b5a] to-[#4A90E2] shadow-sm flex items-center justify-center">
-                  <span className="text-4xl font-bold text-white">
-                    {p.name.charAt(0)}{p.last.charAt(0)}
-                  </span>
+                {/* Avatar: foto si existe, si no iniciales */}
+                <div className="mx-auto aspect-[3/4] w-full max-w-[170px] overflow-hidden rounded-md bg-gradient-to-br from-[#1b2b5a] to-[#4A90E2] shadow-sm flex items-center justify-center relative">
+                  {"img" in p && p.img ? (
+                    <Image
+                      src={p.img}
+                      alt={`${p.name} ${p.last}`}
+                      fill
+                      className="object-cover"
+                      sizes="170px"
+                    />
+                  ) : (
+                    <span className="text-4xl font-bold text-white">
+                      {p.name.charAt(0)}{p.last.charAt(0)}
+                    </span>
+                  )}
                 </div>
 
                 <div className="mt-3 text-[14px] font-semibold text-[#0b1b3b]">

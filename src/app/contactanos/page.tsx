@@ -127,9 +127,6 @@ export default function ContactanosPage() {
         </div>
       </section>
 
-      {/* Mini-hero: Donativo */}
-      <Banner title="Donativo" bg="/hero-bg1.jpg" />
-
       {/* Donación */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4 text-center lg:px-16">
@@ -153,31 +150,8 @@ export default function ContactanosPage() {
             <li>Una iniciativa independiente impulsada por estudiantes.</li>
             <li>No recibimos financiamiento de partidos políticos, instituciones públicas ni organizaciones privadas.</li>
             <li>El proyecto se sostiene gracias al tiempo, trabajo y compromiso de quienes creemos en el acceso libre a información electoral clara y verificable.</li>
-            <li>Tu apoyo nos permite mantener la plataforma activa, actualizada y accesible para todos.</li>
+            <li>Síguenos en nuestras redes.</li>
         </ul>
-
-          <div className="mx-auto mt-10 max-w-[520px] rounded-2xl bg-[#d9d9d9]/70 p-8">
-            <h3 className="text-[18px] font-extrabold text-[#0b1b3b]">
-              Realiza tu donativo
-            </h3>
-
-            {/* QR de Yape */}
-            <div className="mt-6 flex justify-center">
-              <div className="relative h-[320px] w-[320px] overflow-hidden rounded-xl">
-                <Image
-                  src="/yape.webp"
-                  alt="QR Yape para donaciones"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <p className="mx-auto mt-10 max-w-4xl text-[18px] font-extrabold leading-[140%] text-[#0b1b3b] sm:text-[22px]">
-            ¿No puedes donar? También puedes apoyar compartiendo el proyecto o
-            colaborando con contenido verificado.
-          </p>
         </div>
       </section>
       <Footer />
