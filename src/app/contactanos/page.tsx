@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Contáctanos",
+  description:
+    "Contacta al equipo de Observa Perú. Envía tus consultas o sugerencias sobre la plataforma de candidatos y elecciones.",
+  openGraph: { url: "https://www.observaperu.com/contactanos" },
+  alternates: { canonical: "https://www.observaperu.com/contactanos" },
+};
 
 const Banner = ({
   title,

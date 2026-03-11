@@ -89,9 +89,9 @@ export default function CandidateDetailPage() {
       case "biografia":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
-              Biografía de {candidateDetail.name}
-            </h3>
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
+              Quién es {candidateDetail.name}
+            </h2>
             <p className="text-[16px] leading-[175%] text-slate-700 sm:text-[18px]">
               {conPuntoFinal(candidateDetail.biografia)}
             </p>
@@ -101,9 +101,9 @@ export default function CandidateDetailPage() {
       case "historial-academico":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
-              Historial académico
-            </h3>
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
+              Edad y biografía
+            </h2>
             <ul className="space-y-3">
               {candidateDetail.historialAcademico.map((item, idx) => (
                 <li
@@ -121,9 +121,9 @@ export default function CandidateDetailPage() {
       case "controversias":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
               Controversias
-            </h3>
+            </h2>
             <ul className="space-y-3">
               {candidateDetail.controversias.map((item, idx) => (
                 <li
@@ -141,9 +141,9 @@ export default function CandidateDetailPage() {
       case "ideologia-politica":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
               Ideología política
-            </h3>
+            </h2>
             <p className="text-[16px] leading-[175%] text-slate-700 sm:text-[18px]">
               {conPuntoFinal(candidateDetail.ideologiaPolitica)}
             </p>
@@ -153,9 +153,9 @@ export default function CandidateDetailPage() {
       case "ingresos":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
-              Ingresos
-            </h3>
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
+              Ingresos y financiamiento
+            </h2>
             <div className="rounded-2xl bg-[#eef2fb] p-6">
               <div className="mb-4">
                 <p className="text-[14px] font-semibold text-slate-600">Total</p>
@@ -180,9 +180,9 @@ export default function CandidateDetailPage() {
       case "experiencia":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
-              Experiencia
-            </h3>
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
+              Trayectoria política
+            </h2>
             <ul className="space-y-3">
               {candidateDetail.experiencia.map((item, idx) => (
                 <li
@@ -200,9 +200,9 @@ export default function CandidateDetailPage() {
       case "logros":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
               Logros
-            </h3>
+            </h2>
             <div className="grid gap-4 md:grid-cols-2">
               {candidateDetail.logros.map((item, idx) => (
                 <div
@@ -221,9 +221,9 @@ export default function CandidateDetailPage() {
       case "propuestas":
         return (
           <div className="space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0b1b3b]">
-              Algunas propuestas
-            </h3>
+            <h2 className="text-[20px] font-extrabold text-[#0b1b3b]">
+              Propuestas principales
+            </h2>
             <ul className="space-y-3">
               {candidateDetail.propuestas.map((propuesta, idx) => (
                 <li
@@ -245,7 +245,7 @@ export default function CandidateDetailPage() {
 
   return (
     <main className="min-h-screen bg-[#eef2fb]">
-      <Banner title="Conoce los perfiles de los candidatos" />
+      <Banner title={candidateDetail.name} />
 
       {/* Botón volver */}
       <section className="bg-white py-6">
@@ -357,6 +357,78 @@ export default function CandidateDetailPage() {
           </div>
         </div>
       </section>
+
+      {/* Enlaces internos */}
+      <section className="border-t border-slate-200 bg-white py-10">
+        <div className="mx-auto max-w-6xl px-4 lg:px-16">
+          <h2 className="mb-6 text-[18px] font-bold text-[#0b1b3b]">
+            Explora más
+          </h2>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/comparacion"
+              className="rounded-lg bg-[#eef2fb] px-4 py-2 text-[14px] font-semibold text-[#0b1b3b] transition-colors hover:bg-[#d9d9d9]"
+            >
+              Comparar candidatos
+            </Link>
+            <Link
+              href="/mapa-ideologico"
+              className="rounded-lg bg-[#eef2fb] px-4 py-2 text-[14px] font-semibold text-[#0b1b3b] transition-colors hover:bg-[#d9d9d9]"
+            >
+              Mapa ideológico
+            </Link>
+            <Link
+              href="/estadisticas"
+              className="rounded-lg bg-[#eef2fb] px-4 py-2 text-[14px] font-semibold text-[#0b1b3b] transition-colors hover:bg-[#d9d9d9]"
+            >
+              Estadísticas
+            </Link>
+            <Link
+              href="/candidatos"
+              className="rounded-lg bg-[#eef2fb] px-4 py-2 text-[14px] font-semibold text-[#0b1b3b] transition-colors hover:bg-[#d9d9d9]"
+            >
+              Ver todos los candidatos
+            </Link>
+          </div>
+          <p className="mt-4 text-[13px] font-semibold text-slate-600">
+            Otros candidatos
+          </p>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {ALL_CANDIDATES.filter((c) => c.key !== slug).slice(0, 8).map((c) => (
+              <li key={c.key}>
+                <Link
+                  href={`/candidatos/${c.key}`}
+                  className="text-[14px] font-medium text-[#0b1b3b] underline decoration-[#0b1b3b]/40 underline-offset-2 hover:decoration-[#0b1b3b]"
+                >
+                  {c.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Fuentes y referencias (E-E-A-T) */}
+      <section className="border-t border-slate-200 bg-slate-50 py-8">
+        <div className="mx-auto max-w-6xl px-4 lg:px-16">
+          <h2 className="mb-3 text-[18px] font-bold text-[#0b1b3b]">
+            Fuentes
+          </h2>
+          <p className="text-[14px] leading-relaxed text-slate-700">
+            Toda la información de esta página (biografía, historial académico, declaraciones juradas, experiencia, propuestas y plan de gobierno) fue extraída de la plataforma oficial del{" "}
+            <a
+              href="https://www.jne.gob.pe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#0b1b3b] underline decoration-[#0b1b3b]/50 underline-offset-2 hover:decoration-[#0b1b3b]"
+            >
+              Jurado Nacional de Elecciones (JNE)
+            </a>
+            , organismo constitucional autónomo encargado de la transparencia y supervisión de los procesos electorales en el Perú.
+          </p>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );

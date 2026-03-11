@@ -1,7 +1,16 @@
 // app/conocenos/page.tsx
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Conócenos",
+  description:
+    "Conoce al equipo y la misión de Observa Perú: información independiente sobre candidatos presidenciales y elecciones.",
+  openGraph: { url: "https://www.observaperu.com/conocenos" },
+  alternates: { canonical: "https://www.observaperu.com/conocenos" },
+};
 
 const Banner = ({
   title,
