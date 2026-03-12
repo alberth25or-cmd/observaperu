@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { ALL_CANDIDATES } from "@/data/candidatos";
+import { getAllAnalisisSlugs } from "@/data/articulos-analisis";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.observaperu.com";
@@ -9,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mapa-ideologico",
     "/candidatos",
     "/estadisticas",
+    "/analisis",
+    "/noticias",
     "/conocenos",
     "/contactanos",
   ];
@@ -24,5 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
-  return [...staticUrls, ...candidateUrls];
+  const analisisUrls = getAllAnalisisSlugs().map((slug) => ({
+    url: `${baseUrl}/analisis/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+  return [...staticUrls, ...candidateUrls, ...analisisUrls];
 }

@@ -40,6 +40,12 @@ const Navbar = () => {
             <Link href="/estadisticas" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
               Estadísticas
             </Link>
+            <Link href="/analisis" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+              Análisis
+            </Link>
+            <Link href="/noticias" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+              Noticias
+            </Link>
             <Link href="/conocenos" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
               Conócenos
             </Link>
@@ -111,6 +117,20 @@ const Navbar = () => {
               className="py-3 text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
             >
               Estadísticas
+            </Link>
+            <Link
+              href="/analisis"
+              onClick={() => setIsMenuOpen(false)}
+              className="py-3 text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
+              Análisis
+            </Link>
+            <Link
+              href="/noticias"
+              onClick={() => setIsMenuOpen(false)}
+              className="py-3 text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
+              Noticias
             </Link>
             <Link
               href="/conocenos"
