@@ -44,11 +44,18 @@ export default async function NoticiasSlugPage({
       <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-3xl px-4 lg:px-16">
           <article className="prose prose-slate max-w-none">
+            {noticia.bajada && (
+              <p className="mb-8 text-[18px] font-medium leading-relaxed text-slate-600 sm:text-[19px]">
+                {noticia.bajada}
+              </p>
+            )}
             {noticia.sections.map((section, idx) => (
               <div key={idx} className="mb-10">
-                <h2 className="mb-4 text-[22px] font-extrabold leading-tight text-[#0b1b3b] sm:text-[24px]">
-                  {section.h2}
-                </h2>
+                {section.h2 ? (
+                  <h2 className="mb-4 text-[22px] font-extrabold leading-tight text-[#0b1b3b] sm:text-[24px]">
+                    {section.h2}
+                  </h2>
+                ) : null}
                 <div className="space-y-4">
                   {section.content.map((block, blockIdx) => {
                     if (block.type === "p") {

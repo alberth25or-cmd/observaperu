@@ -1,6 +1,8 @@
 export type ArticuloNoticia = {
   slug: string;
   title: string;
+  /** Bajada o subtítulo del artículo (opcional). Se muestra debajo del H1. */
+  bajada?: string;
   metaDescription: string;
   keywords: string[];
   sections: {
@@ -22,7 +24,9 @@ const SLUG_DNI_VENCIDO = "votar-dni-vencido-elecciones-2026-peru";
 export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
   [SLUG_DNI_VENCIDO]: {
     slug: SLUG_DNI_VENCIDO,
-    title: "Elecciones 2026 ¿Podrás votar si tu DNI está vencido?",
+    title: "¿Se puede votar con DNI vencido en las Elecciones 2026 en Perú?",
+    bajada:
+      "Lo que debes saber si tu DNI está vencido antes de acudir a votar en las elecciones del 12 de abril.",
     metaDescription:
       "¿Tu DNI está vencido? Conoce si podrás votar en las Elecciones Generales 2026 en Perú, qué documentos serán válidos y hasta cuándo aplica la medida del Reniec.",
     keywords: [
@@ -35,7 +39,7 @@ export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
     ],
     sections: [
       {
-        h2: "Lo que debes saber si tu DNI está vencido antes de votar",
+        h2: "",
         content: [
           {
             type: "p",
@@ -95,7 +99,7 @@ export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
         ],
       },
       {
-        h2: "Qué DNI serán válidos para votar",
+        h2: "Qué documentos serán válidos para votar",
         content: [
           {
             type: "ul",
