@@ -115,16 +115,6 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
     });
   }, [data]);
 
-  if (!data || data.length === 0) {
-    return (
-      <div className="w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-100">
-        <div className="text-center py-8 text-slate-500">
-          <p className="text-sm">No hay datos disponibles</p>
-        </div>
-      </div>
-    );
-  }
-
   const stats = useMemo(() => {
     const counts: Record<string, number> = {};
     processedData.forEach((d) => {
@@ -138,6 +128,16 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
       color: GENERATIONS[gen as keyof typeof GENERATIONS]?.color || "#1b2b5a",
     }));
   }, [processedData]);
+
+  if (!data || data.length === 0) {
+    return (
+      <div className="w-full bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-slate-100">
+        <div className="text-center py-8 text-slate-500">
+          <p className="text-sm">No hay datos disponibles</p>
+        </div>
+      </div>
+    );
+  }
 
   const handlePointClick = (data: TimelineData) => {
     router.push(`/candidatos/${data.slug}`);
