@@ -3,6 +3,10 @@ import { notFound } from "next/navigation";
 import { getNoticiaBySlug } from "@/data/articulos-noticias";
 import Footer from "@/components/Footer";
 import Electorado2026Chart from "@/components/noticias/Electorado2026Chart";
+import Multas2026Chart from "@/components/noticias/Multas2026Chart";
+import Padron2026Chart from "@/components/noticias/Padron2026Chart";
+
+const BASE_URL = "https://www.observaperu.com";
 
 const Banner = ({
   title,
@@ -37,13 +41,46 @@ export default async function NoticiasSlugPage({
     notFound();
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: noticia.title,
+    description: noticia.metaDescription,
+    url: `${BASE_URL}/noticias/${slug}`,
+    ...(noticia.datePublished && { datePublished: noticia.datePublished }),
+    publisher: {
+      "@type": "Organization",
+      name: "Observa Perú",
+      url: BASE_URL,
+    },
+  };
+
+  function formatDate(iso: string): string {
+    const [y, m, d] = iso.split("-");
+    const months = [
+      "enero", "febrero", "marzo", "abril", "mayo", "junio",
+      "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+    ];
+    const month = months[parseInt(m!, 10) - 1];
+    return `${parseInt(d!, 10)} de ${month} de ${y}`;
+  }
+
   return (
     <main className="min-h-screen bg-[#eef2fb]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Banner title={noticia.title} bg="/hero-bg1.jpg" />
 
       <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-3xl px-4 lg:px-16">
           <article className="prose prose-slate max-w-none">
+            {noticia.datePublished && (
+              <p className={`text-[14px] text-slate-500 ${noticia.bajada ? "mb-2" : "mb-6"}`}>
+                Publicado el {formatDate(noticia.datePublished)}
+              </p>
+            )}
             {noticia.bajada && (
               <p className="mb-8 text-[18px] font-medium leading-relaxed text-slate-600 sm:text-[19px]">
                 {noticia.bajada}
@@ -92,6 +129,58 @@ export default async function NoticiasSlugPage({
                     }
                     if (block.type === "chart" && block.chartId === "electorado-2026") {
                       return <Electorado2026Chart key={blockIdx} />;
+                    }
+                    if (block.type === "chart" && block.chartId === "multas-2026") {
+                      return <Multas2026Chart key={blockIdx} />;
+                    }
+                    if (block.type === "chart" && block.chartId === "padron-2026") {
+                      return <Padron2026Chart key={blockIdx} />;
+                    }
+                    if (block.type === "table") {
+                      return (
+                        <div key={blockIdx} className="my-6 overflow-x-auto">
+                          <table className="w-full min-w-[280px] border-collapse text-left text-[15px] text-slate-700">
+                            <thead>
+                              <tr className="border-b-2 border-[#0b1b3b]">
+                                {block.headers.map((h, i) => (
+                                  <th
+                                    key={i}
+                                    className="bg-[#f5f7fb] px-3 py-3 font-semibold text-[#0b1b3b] sm:px-4"
+                                  >
+                                    {h}
+                                  </th>
+                                ))}
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {block.rows.map((row, ri) => (
+                                <tr
+                                  key={ri}
+                                  className="border-b border-slate-200 hover:bg-slate-50"
+                                >
+                                  {row.map((cell, ci) => (
+                                    <td key={ci} className="px-3 py-3 sm:px-4">
+                                      {cell}
+                                    </td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      );
+                    }
+                    if (block.type === "internalLink") {
+                      return (
+                        <p key={blockIdx}>
+                          <Link
+                            href={block.href}
+                            className="inline-flex items-center gap-2 rounded-lg bg-[#eef2fb] px-4 py-2.5 text-[15px] font-semibold text-[#0b1b3b] transition-colors hover:bg-[#d9d9d9]"
+                          >
+                            👉 {block.label}
+                          </Link>
+                        </p>
+                      );
                     }
                     if (block.type === "link") {
                       return (
