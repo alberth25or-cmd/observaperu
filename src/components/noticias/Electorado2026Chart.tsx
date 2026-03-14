@@ -71,14 +71,15 @@ export default function Electorado2026Chart() {
               </Pie>
               <Tooltip content={<CustomTooltip />} />
               <Legend
-                formatter={(value, entry: { payload?: Item }) => (
-                  <span className="text-sm text-slate-700">
-                    {value}:{" "}
-                    <strong>
-                      {(entry.payload?.value ?? 0).toLocaleString("es-PE")}
-                    </strong>
-                  </span>
-                )}
+                formatter={(value) => {
+                  const item = data.find((d) => d.name === value);
+                  const num = item?.value ?? 0;
+                  return (
+                    <span className="text-sm text-slate-700">
+                      {value}: <strong>{num.toLocaleString("es-PE")}</strong>
+                    </span>
+                  );
+                }}
               />
             </PieChart>
           </ResponsiveContainer>
