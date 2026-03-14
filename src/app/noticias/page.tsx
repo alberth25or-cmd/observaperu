@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getAllNoticiasSlugs, getNoticiaBySlug } from "@/data/articulos-noticias";
 import Footer from "@/components/Footer";
 
 const Banner = ({
@@ -23,6 +24,11 @@ const Banner = ({
 );
 
 export default function NoticiasPage() {
+  const slugs = getAllNoticiasSlugs();
+  const noticias = slugs
+    .map((slug) => getNoticiaBySlug(slug))
+    .filter((n): n is NonNullable<typeof n> => n != null);
+
   return (
     <main className="min-h-screen bg-[#eef2fb]">
       <Banner title="Noticias" bg="/hero-bg1.jpg" />
@@ -30,10 +36,40 @@ export default function NoticiasPage() {
       <section className="py-10 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">
           <p className="mx-auto max-w-2xl text-center text-[16px] leading-relaxed text-slate-700 sm:text-[18px]">
-            Noticias y coyuntura electoral con contexto: candidatos, partidos, JNE y elecciones presidenciales. Próximamente.
+            Noticias y coyuntura electoral con contexto: candidatos, partidos, JNE, ONPE y elecciones presidenciales.
           </p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {noticias.length > 0 && (
+            <div className="mt-12">
+              <h2 className="mb-6 text-[20px] font-bold text-[#0b1b3b]">
+                Últimas noticias
+              </h2>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {noticias.map((n) => (
+                  <Link
+                    key={n.slug}
+                    href={`/noticias/${n.slug}`}
+                    className="rounded-2xl bg-white p-6 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+                  >
+                    <h3 className="text-[18px] font-bold text-[#0b1b3b]">
+                      {n.title}
+                    </h3>
+                    <p className="mt-2 line-clamp-3 text-[14px] text-slate-600">
+                      {n.metaDescription}
+                    </p>
+                    <span className="mt-4 inline-block text-[14px] font-semibold text-[#0b1b3b]">
+                      Leer noticia →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <h2 className="mb-6 mt-12 text-[20px] font-bold text-[#0b1b3b]">
+            Explora más
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/candidatos"
               className="rounded-2xl bg-white p-6 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
