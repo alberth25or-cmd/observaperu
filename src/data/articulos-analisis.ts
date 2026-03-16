@@ -3,13 +3,17 @@ export type ArticuloAnalisis = {
   title: string;
   metaDescription: string;
   keywords: string[];
+  publishedAt?: string;
   sections: {
     h2: string;
     content: Array<
       | { type: "p"; text: string }
       | { type: "h3"; text: string }
       | { type: "ul"; items: string[] }
-  >;
+      | { type: "table"; headers: string[]; rows: string[][] }
+      | { type: "chart"; chartId: "candidatos-presidenciales-evolucion" }
+      | { type: "relatedLinks"; links: { href: string; label: string }[] }
+    >;
 }[];
   references: string[];
 };
@@ -200,6 +204,216 @@ export const ARTICULOS_ANALISIS: Record<string, ArticuloAnalisis> = {
       "OjoPúblico. (2025, 14 de septiembre). Congreso: Más de S/23 millones en comisiones investigadoras y especiales sin impacto.",
       "Quinto Poder. (2024, 26 de diciembre). Revelan uso de documentos falsos por Jorge Torres Saravia e Isabel Cajo en el Congreso [Archivo de Video]. YouTube.",
       "YouTube. (2024, 21 de diciembre). Investigación sobre presunta red de prostitución y contrataciones irregulares en la Oficina Legal del Congreso.",
+    ],
+  },
+
+  "36-candidatos-presidenciales-elecciones-peru-2026": {
+    slug: "36-candidatos-presidenciales-elecciones-peru-2026",
+    title: "Elecciones Perú 2026 y el fenómeno de los más de 30 candidatos presidenciales",
+    publishedAt: "2026-02-21",
+    metaDescription:
+      "Elecciones Perú 2026: más de 36 fórmulas presidenciales ante el JNE. Por qué hay tantos candidatos, reforma electoral, primarias y crisis de representación.",
+    keywords: [
+      "elecciones Perú 2026",
+      "candidatos presidenciales Perú",
+      "JNE fórmulas presidenciales",
+      "fragmentación electoral Perú",
+      "reforma electoral Perú",
+      "valla electoral 5%",
+      "primarias Perú",
+      "crisis representación política Perú",
+    ],
+    sections: [
+      {
+        h2: "",
+        content: [
+          {
+            type: "p",
+            text: "Las elecciones generales de Perú 2026 podrían ser las más fragmentadas de la historia: más de 36 fórmulas presidenciales han solicitado su inscripción ante el Jurado Nacional de Elecciones (JNE). La cifra no solo supera todos los registros previos; obliga a preguntar si el país vive una democracia más abierta o un sistema político sin filtros.",
+          },
+          {
+            type: "p",
+            text: "Detrás de esta sobreoferta de candidaturas hay cambios legales, incentivos partidarios y una crisis de representación que explican por qué el Perú se acerca a una elección con niveles de fragmentación nunca vistos.",
+          },
+        ],
+      },
+      {
+        h2: "Evolución de los candidatos presidenciales en Perú",
+        content: [
+          {
+            type: "p",
+            text: "Desde el retorno a la democracia en 1980, el número de postulantes ha variado, pero durante décadas se mantuvo en un rango estable. En los últimos procesos la tendencia es clara: cada vez compiten más candidatos por el voto ciudadano.",
+          },
+          {
+            type: "chart",
+            chartId: "candidatos-presidenciales-evolucion",
+          },
+          {
+            type: "p",
+            text: "*Estimación según solicitudes de inscripción presentadas ante el JNE. Si la cifra se mantiene tras la validación, sería la elección presidencial con más candidaturas en la historia del Perú.",
+          },
+        ],
+      },
+      {
+        h2: "Reforma electoral: nuevas reglas de inscripción",
+        content: [
+          {
+            type: "p",
+            text: "Uno de los factores centrales de la proliferación de candidatos es el cambio en los requisitos para inscribir partidos. Antes, las organizaciones debían reunir cientos de miles de firmas de adherentes: un proceso largo, costoso y complejo.",
+          },
+          {
+            type: "p",
+            text: "Las reformas electorales bajaron el listón: el requisito pasó de firmas de adherentes a afiliados partidarios. Hoy un partido puede inscribirse con aproximadamente 25 288 afiliados registrados, según el JNE.",
+          },
+          {
+            type: "p",
+            text: "En la práctica, crear un partido se volvió mucho más accesible. El número de organizaciones políticas creció y, con ello, más candidatos en la papeleta.",
+          },
+        ],
+      },
+      {
+        h2: "El filtro que no llegó: primarias abiertas",
+        content: [
+          {
+            type: "p",
+            text: "Durante años se discutió implementar elecciones primarias abiertas, simultáneas y obligatorias, para que la ciudadanía eligiera a los candidatos de cada partido antes de la elección general. Eso habría actuado como un primer filtro democrático.",
+          },
+          {
+            type: "p",
+            text: "El sistema se modificó: los partidos pueden elegir a sus candidatos mediante delegados o votaciones internas entre afiliados, sin abrir el proceso a todo el electorado.",
+          },
+          {
+            type: "p",
+            text: "El resultado es que muchos candidatos llegan a la cédula electoral sin haber pasado por una competencia nacional previa.",
+          },
+        ],
+      },
+      {
+        h2: "Cuando el objetivo no es ganar la presidencia",
+        content: [
+          {
+            type: "p",
+            text: "En teoría, los partidos compiten para conquistar el poder. En la práctica, la estrategia puede ser otra. En Perú existe una valla electoral del 5% para mantener la inscripción partidaria y acceder a representación en el Congreso.",
+          },
+          {
+            type: "p",
+            text: "El nuevo sistema bicameral amplía los cargos a elegir (senadores y diputados). Eso genera un incentivo claro: algunos partidos no compiten solo para ganar la presidencia, sino para mantener inscripción, colocar congresistas, acceder a financiamiento público y fortalecer presencia política.",
+          },
+          {
+            type: "ul",
+            items: [
+              "Mantener la inscripción del partido.",
+              "Obtener escaños en el Congreso.",
+              "Acceder a financiamiento público.",
+              "Fortalecer la presencia política a futuro.",
+            ],
+          },
+          {
+            type: "p",
+            text: "La elección presidencial funciona así también como puerta de entrada al poder legislativo.",
+          },
+        ],
+      },
+      {
+        h2: "Crisis de representación política en Perú",
+        content: [
+          {
+            type: "p",
+            text: "Más allá de las normas, un factor recorre todo el sistema: la desconfianza ciudadana. En los últimos años el país ha vivido presidentes destituidos, congresos disueltos, escándalos de corrupción e inestabilidad política constante.",
+          },
+          {
+            type: "p",
+            text: "Los partidos tradicionales han perdido legitimidad. Cuando las instituciones pierden confianza, suele aparecer el fenómeno de los outsiders: figuras regionales, líderes locales o nuevos movimientos que intentan llenar el vacío. La pregunta que queda es quién representa realmente a los ciudadanos.",
+          },
+        ],
+      },
+      {
+        h2: "Democracia fragmentada: ¿más opciones o más confusión?",
+        content: [
+          {
+            type: "p",
+            text: "Tener más candidatos puede leerse como pluralismo: más voces, más ideas, más competencia. Pero cuando el voto se reparte entre demasiadas opciones, el ganador de la primera vuelta puede quedar con un apoyo muy bajo.",
+          },
+          {
+            type: "p",
+            text: "En 2021, el candidato que pasó en primer lugar a la segunda vuelta obtuvo menos del 19% de los votos válidos. Es decir, más del 80% del electorado votó por otras opciones. La fragmentación no solo afecta el resultado; también la gobernabilidad.",
+          },
+        ],
+      },
+      {
+        h2: "",
+        content: [
+          {
+            type: "p",
+            text: "El proceso de 2026 no solo elegirá presidente; pondrá a prueba al sistema político. Detrás de las cifras y las campañas queda abierta la pregunta: ¿estamos construyendo una democracia con más participación o un sistema que no logra organizar la representación? La respuesta tal vez no esté en el número de candidatos, sino en la relación entre ciudadanía y política, en la confianza perdida y en la sensación de que el poder sigue lejos.",
+          },
+        ],
+      },
+      {
+        h2: "Preguntas frecuentes",
+        content: [
+          {
+            type: "h3",
+            text: "¿Cuántos candidatos presidenciales hay en las elecciones Perú 2026?",
+          },
+          {
+            type: "p",
+            text: "Según el JNE, 36 fórmulas presidenciales solicitaron su inscripción para las elecciones generales 2026. La cifra es estimada hasta el cierre del proceso de validación y sería la más alta en la historia republicana.",
+          },
+          {
+            type: "h3",
+            text: "¿Por qué hay tantos candidatos presidenciales en Perú?",
+          },
+          {
+            type: "p",
+            text: "Influyen la reforma electoral (inscripción con unos 25 288 afiliados en lugar de cientos de miles de firmas), la no implementación de primarias abiertas, la valla del 5% que incentiva competir para mantener partido y lograr escaños, y la crisis de representación que favorece candidaturas outsiders.",
+          },
+          {
+            type: "h3",
+            text: "¿Qué es la valla electoral del 5% en Perú?",
+          },
+          {
+            type: "p",
+            text: "Es el umbral mínimo de votos que un partido debe alcanzar para mantener su inscripción y acceder a representación en el Congreso. Muchas organizaciones compiten en la elección presidencial también para superar esa valla y asegurar presencia en el Legislativo.",
+          },
+          {
+            type: "h3",
+            text: "¿Cómo se eligen los candidatos presidenciales en los partidos peruanos?",
+          },
+          {
+            type: "p",
+            text: "Los partidos pueden elegir a sus candidatos mediante delegados o votaciones internas entre afiliados. No están obligados a realizar primarias abiertas ante todo el electorado, por lo que no existe un filtro nacional previo a la elección general.",
+          },
+          {
+            type: "h3",
+            text: "¿Qué pasó en las elecciones 2021 con la fragmentación del voto?",
+          },
+          {
+            type: "p",
+            text: "El candidato que pasó en primer lugar a la segunda vuelta obtuvo menos del 19% de los votos válidos. Más del 80% del electorado votó por otras opciones, lo que ilustra el alto nivel de fragmentación y sus efectos en la gobernabilidad.",
+          },
+        ],
+      },
+      {
+        h2: "También te puede interesar",
+        content: [
+          {
+            type: "relatedLinks",
+            links: [
+              { href: "/noticias/multa-por-no-votar-elecciones-2026-peru", label: "Multa por no votar en las elecciones Perú 2026" },
+              { href: "/noticias/votar-dni-vencido-elecciones-2026-peru", label: "¿Se puede votar con DNI vencido en elecciones 2026?" },
+              { href: "/noticias/cuanto-pagan-miembro-mesa-peru-2026", label: "Cuánto pagan a los miembros de mesa en Perú 2026" },
+              { href: "/analisis/suheyn-cipriani-crisis-meritocracia-congreso-peruano", label: "Suheyn Cipriani y la crisis de meritocracia en el Congreso peruano" },
+            ],
+          },
+        ],
+      },
+    ],
+    references: [
+      "Jurado Nacional de Elecciones. (2023, 27 de marzo). Partidos políticos deben acreditar un mínimo de 25 288 afiliados para solicitar inscripción. Portal Institucional del JNE. https://portal.jne.gob.pe/Portal/Pagina/Nota/13787",
+      "Jurado Nacional de Elecciones. (2025, 24 de diciembre). JNE confirma que 36 fórmulas presidenciales solicitaron su inscripción. Portal Institucional del JNE. https://portal.jne.gob.pe/portal/Pagina/Nota/19542",
+      "Observatorio para la Gobernabilidad [INFOgob]. (2025). Reporte N° 2: Padrón de afiliados y organizaciones políticas para las Elecciones Generales 2026. Jurado Nacional de Elecciones. https://www.jne.gob.pe/dneect/2025/P_JNE_101125.pdf",
+      "Oficina Nacional de Procesos Electorales [ONPE]. (2024, 14 de junio). Ley 32058: Ley que modifica la Ley Orgánica de Elecciones y la Ley de Organizaciones Políticas. https://www.onpe.gob.pe/modFinanciamiento/LEY-32058.pdf",
     ],
   },
 };

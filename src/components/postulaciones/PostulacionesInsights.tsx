@@ -36,7 +36,7 @@ export default function PostulacionesInsights({ kpis }: PostulacionesInsightsPro
           dispersión alta (coeficiente de variación {kpis.cvTotal.toFixed(1)}%). La moda en total
           de postulaciones es {modaTotalStr}. El coeficiente de Gini ({kpis.giniTotal.toFixed(3)})
           indica una concentración moderada: un subconjunto de candidatos acumula una proporción
-          relevante de las postulaciones totales (curva de Pareto).
+          relevante de las postulaciones totales.
         </p>
         <p>
           La <strong>ambición presidencial</strong> (veces que postularon a la Presidencia) tiene
@@ -49,9 +49,9 @@ export default function PostulacionesInsights({ kpis }: PostulacionesInsightsPro
         <p>
           El <strong>Índice de Ambición Presidencial</strong> (postulaciones a presidencia / total
           de postulaciones) permite comparar, entre quienes han postulado más de una vez, qué
-          fracción de su trayectoria electoral se ha dirigido a la Presidencia. Los gráficos de
-          dispersión y Pareto facilitan identificar candidatos con alta persistencia y
-          concentración de la oferta electoral en pocos nombres.
+          fracción de su trayectoria electoral se ha dirigido a la Presidencia. Los gráficos
+          anteriores facilitan identificar candidatos con alta persistencia y concentración de la
+          oferta electoral en pocos nombres.
         </p>
         <p className="text-slate-600 text-xs sm:text-sm">
           Observa Perú presenta este análisis con fines informativos. Los datos no incluyen las
