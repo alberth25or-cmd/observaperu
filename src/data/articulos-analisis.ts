@@ -210,7 +210,7 @@ export const ARTICULOS_ANALISIS: Record<string, ArticuloAnalisis> = {
   "36-candidatos-presidenciales-elecciones-peru-2026": {
     slug: "36-candidatos-presidenciales-elecciones-peru-2026",
     title: "Elecciones Perú 2026 y el fenómeno de los más de 30 candidatos presidenciales",
-    publishedAt: "2026-02-21",
+    publishedAt: "2026-03-16",
     metaDescription:
       "Elecciones Perú 2026: más de 36 fórmulas presidenciales ante el JNE. Por qué hay tantos candidatos, reforma electoral, primarias y crisis de representación.",
     keywords: [
