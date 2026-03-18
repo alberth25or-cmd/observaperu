@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { getAllNoticiasSlugs, getNoticiaBySlug } from "@/data/articulos-noticias";
+import {
+  getAllNoticiasSlugs,
+  getNoticiaBySlug,
+} from "@/data/articulos-noticias";
 import Footer from "@/components/Footer";
 
 const Banner = ({
@@ -36,7 +39,8 @@ export default function NoticiasPage() {
       <section className="py-10 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">
           <p className="mx-auto max-w-2xl text-center text-[16px] leading-relaxed text-slate-700 sm:text-[18px]">
-            Noticias y coyuntura electoral con contexto: candidatos, partidos, JNE, ONPE y elecciones presidenciales.
+            Noticias y coyuntura electoral con contexto: candidatos, partidos,
+            JNE, ONPE y elecciones presidenciales.
           </p>
 
           {noticias.length > 0 && (
@@ -88,11 +92,10 @@ export default function NoticiasPage() {
               href="/analisis"
               className="rounded-2xl bg-white p-6 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
             >
-              <h2 className="text-[18px] font-bold text-[#0b1b3b]">
-                Análisis
-              </h2>
+              <h2 className="text-[18px] font-bold text-[#0b1b3b]">Análisis</h2>
               <p className="mt-2 text-[14px] text-slate-600">
-                Análisis y opinión crítica sobre propuestas y coyuntura electoral.
+                Análisis y opinión crítica sobre propuestas y coyuntura
+                electoral.
               </p>
               <span className="mt-4 inline-block text-[14px] font-semibold text-[#0b1b3b]">
                 Ver análisis →

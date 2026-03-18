@@ -15,16 +15,21 @@ interface RatioLimaRegionesProps {
 export default function RatioLimaRegiones({ data }: RatioLimaRegionesProps) {
   const stats = useMemo(() => {
     const candidatosPeru = data.filter((c) => c.nacimiento_pais === "PERÚ");
-    
+
     // Contar Lima y Callao por separado
-    const lima = candidatosPeru.filter((c) => c.nacimiento_departamento === "LIMA").length;
-    const callao = candidatosPeru.filter((c) => c.nacimiento_departamento === "CALLAO").length;
+    const lima = candidatosPeru.filter(
+      (c) => c.nacimiento_departamento === "LIMA",
+    ).length;
+    const callao = candidatosPeru.filter(
+      (c) => c.nacimiento_departamento === "CALLAO",
+    ).length;
     const limaMetropolitana = lima + callao;
     const regiones = candidatosPeru.length - limaMetropolitana;
-    
+
     const total = candidatosPeru.length;
-    const ratio = regiones > 0 ? (limaMetropolitana / regiones).toFixed(2) : "0";
-    
+    const ratio =
+      regiones > 0 ? (limaMetropolitana / regiones).toFixed(2) : "0";
+
     return {
       lima: lima,
       callao: callao,
@@ -60,34 +65,56 @@ export default function RatioLimaRegiones({ data }: RatioLimaRegionesProps) {
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 lg:gap-4">
         <div className="bg-gradient-to-br from-slate-50 to-white p-3 sm:p-4 lg:p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">Lima Metropolitana</div>
-          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#1b2b5a] mb-1">{stats.limaMetropolitana}</div>
-          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">{stats.porcentajeLima}% del total</div>
+          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">
+            Lima Metropolitana
+          </div>
+          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#1b2b5a] mb-1">
+            {stats.limaMetropolitana}
+          </div>
+          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">
+            {stats.porcentajeLima}% del total
+          </div>
           <div className="text-[9px] sm:text-[10px] lg:text-xs text-slate-400 mt-1.5 sm:mt-2">
             Lima: {stats.lima} | Callao: {stats.callao}
           </div>
         </div>
-        
+
         <div className="bg-gradient-to-br from-slate-50 to-white p-3 sm:p-4 lg:p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">Regiones</div>
-          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#2E7D8F] mb-1">{stats.regiones}</div>
-          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">{stats.porcentajeRegiones}% del total</div>
+          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">
+            Regiones
+          </div>
+          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#2E7D8F] mb-1">
+            {stats.regiones}
+          </div>
+          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">
+            {stats.porcentajeRegiones}% del total
+          </div>
         </div>
-        
+
         <div className="bg-gradient-to-br from-slate-50 to-white p-3 sm:p-4 lg:p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">Ratio</div>
-          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#4A90E2] mb-1">{stats.ratio}:1</div>
-          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">Lima:Regiones</div>
+          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">
+            Ratio
+          </div>
+          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#4A90E2] mb-1">
+            {stats.ratio}:1
+          </div>
+          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">
+            Lima:Regiones
+          </div>
         </div>
-        
+
         <div className="bg-gradient-to-br from-slate-50 to-white p-3 sm:p-4 lg:p-6 rounded-xl border border-slate-200 hover:shadow-md transition-shadow">
-          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">Total</div>
-          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#0f1d46] mb-1">{stats.total}</div>
-          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">Candidatos</div>
+          <div className="text-[10px] sm:text-xs lg:text-sm font-semibold text-slate-600 mb-1.5 sm:mb-2">
+            Total
+          </div>
+          <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#0f1d46] mb-1">
+            {stats.total}
+          </div>
+          <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">
+            Candidatos
+          </div>
         </div>
       </div>
     </div>
   );
 }
-
-

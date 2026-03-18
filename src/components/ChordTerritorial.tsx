@@ -55,8 +55,10 @@ function buildChordData(data: LugarRow[]) {
   }
 
   const totalByDept = new Map<string, number>();
-  for (const [d, c] of bornCount) totalByDept.set(d, (totalByDept.get(d) ?? 0) + c);
-  for (const [d, c] of resideCount) totalByDept.set(d, (totalByDept.get(d) ?? 0) + c);
+  for (const [d, c] of bornCount)
+    totalByDept.set(d, (totalByDept.get(d) ?? 0) + c);
+  for (const [d, c] of resideCount)
+    totalByDept.set(d, (totalByDept.get(d) ?? 0) + c);
 
   const sorted = Array.from(totalByDept.entries())
     .sort((a, b) => b[1] - a[1])
@@ -95,7 +97,9 @@ function buildChordData(data: LugarRow[]) {
     groupStart.push(acc);
     acc += (totalPerGroup[i] / sumTotal) * twoPi;
   }
-  const groupMid = groupStart.map((start, i) => start + (totalPerGroup[i] / sumTotal) * twoPi * 0.5);
+  const groupMid = groupStart.map(
+    (start, i) => start + (totalPerGroup[i] / sumTotal) * twoPi * 0.5,
+  );
 
   // Por cada par (i,j) reunir candidatos de todos los (nac,dom) que mapean a i,j
   const linkCandidatos = new Map<string, Array<{ nombre: string }>>();
@@ -136,13 +140,17 @@ function buildChordData(data: LugarRow[]) {
 
   const born: number[] = departments.map((d) =>
     d === "OTROS"
-      ? sorted.slice(MAX_GROUPS - 1).reduce((s, dep) => s + (bornCount.get(dep) ?? 0), 0)
-      : bornCount.get(d) ?? 0
+      ? sorted
+          .slice(MAX_GROUPS - 1)
+          .reduce((s, dep) => s + (bornCount.get(dep) ?? 0), 0)
+      : (bornCount.get(d) ?? 0),
   );
   const reside: number[] = departments.map((d) =>
     d === "OTROS"
-      ? sorted.slice(MAX_GROUPS - 1).reduce((s, dep) => s + (resideCount.get(dep) ?? 0), 0)
-      : resideCount.get(d) ?? 0
+      ? sorted
+          .slice(MAX_GROUPS - 1)
+          .reduce((s, dep) => s + (resideCount.get(dep) ?? 0), 0)
+      : (resideCount.get(d) ?? 0),
   );
 
   return {
@@ -168,7 +176,7 @@ function chordPath(
   cy: number,
   R: number,
   angleSource: number,
-  angleTarget: number
+  angleTarget: number,
 ) {
   const [x1, y1] = angleToXY(cx, cy, R, angleSource);
   const [x2, y2] = angleToXY(cx, cy, R, angleTarget);
@@ -233,7 +241,9 @@ export default function ChordTerritorial({ data }: ChordTerritorialProps) {
         <h3 className="text-lg font-bold text-slate-900 sm:text-xl">
           Flujo territorial: Nacimiento → Domicilio
         </h3>
-        <p className="mt-2 text-sm text-slate-500">No hay datos suficientes para el diagrama.</p>
+        <p className="mt-2 text-sm text-slate-500">
+          No hay datos suficientes para el diagrama.
+        </p>
       </div>
     );
   }
@@ -246,10 +256,14 @@ export default function ChordTerritorial({ data }: ChordTerritorialProps) {
         Flujo territorial: Nacimiento → Domicilio
       </h3>
       <p className="mb-4 text-sm text-slate-500 sm:mb-6">
-        De dónde nacieron a dónde residen. Pasa el cursor sobre una línea para ver los candidatos.
+        De dónde nacieron a dónde residen. Pasa el cursor sobre una línea para
+        ver los candidatos.
       </p>
 
-      <div ref={containerRef} className="flex justify-center overflow-x-auto py-2">
+      <div
+        ref={containerRef}
+        className="flex justify-center overflow-x-auto py-2"
+      >
         <svg
           width={size}
           height={size}
@@ -278,12 +292,17 @@ export default function ChordTerritorial({ data }: ChordTerritorialProps) {
             {links.map((link, idx) => {
               const isInternal = link.i === link.j;
               const isDim =
-                (hoverArc != null && link.i !== hoverArc && link.j !== hoverArc) ||
+                (hoverArc != null &&
+                  link.i !== hoverArc &&
+                  link.j !== hoverArc) ||
                 (hoverLink != null && hoverLink !== idx);
               const isHighlight =
-                hoverLink === idx || (hoverArc != null && (link.i === hoverArc || link.j === hoverArc));
-              const stroke =
-                isInternal ? INTERNAL_COLOR : COLORS[link.i % COLORS.length];
+                hoverLink === idx ||
+                (hoverArc != null &&
+                  (link.i === hoverArc || link.j === hoverArc));
+              const stroke = isInternal
+                ? INTERNAL_COLOR
+                : COLORS[link.i % COLORS.length];
               const strokeWidth = Math.min(2.5, 0.8 + link.value * 0.4);
               return (
                 <path
@@ -330,7 +349,10 @@ export default function ChordTerritorial({ data }: ChordTerritorialProps) {
                     fillOpacity={isDim ? 0.3 : 0.9}
                     stroke="#fff"
                     strokeWidth={1.5}
-                    style={{ cursor: "pointer", transition: "opacity 0.2s ease" }}
+                    style={{
+                      cursor: "pointer",
+                      transition: "opacity 0.2s ease",
+                    }}
                     onMouseEnter={(e) => {
                       setHoverArc(i);
                       setHoverLink(null);
@@ -398,7 +420,12 @@ export default function ChordTerritorial({ data }: ChordTerritorialProps) {
         <div
           className="fixed z-50 max-w-[90vw] rounded-xl border border-slate-200 bg-white px-3 py-2 shadow-lg sm:max-w-xs"
           style={{
-            left: Math.min(tooltip.x + 14, typeof window !== "undefined" ? window.innerWidth - 220 : tooltip.x + 14),
+            left: Math.min(
+              tooltip.x + 14,
+              typeof window !== "undefined"
+                ? window.innerWidth - 220
+                : tooltip.x + 14,
+            ),
             top: tooltip.y + 14,
             boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
             pointerEvents: "none",
@@ -407,8 +434,12 @@ export default function ChordTerritorial({ data }: ChordTerritorialProps) {
           {tooltip.type === "arc" && tooltip.arc && (
             <>
               <p className="font-semibold text-slate-900">{tooltip.arc.name}</p>
-              <p className="text-xs text-slate-500">Nacidos allí: {tooltip.arc.born}</p>
-              <p className="text-xs text-slate-500">Residen allí: {tooltip.arc.reside}</p>
+              <p className="text-xs text-slate-500">
+                Nacidos allí: {tooltip.arc.born}
+              </p>
+              <p className="text-xs text-slate-500">
+                Residen allí: {tooltip.arc.reside}
+              </p>
             </>
           )}
           {tooltip.type === "link" && tooltip.link && (
@@ -417,7 +448,8 @@ export default function ChordTerritorial({ data }: ChordTerritorialProps) {
                 {tooltip.link.source} → {tooltip.link.target}
               </p>
               <p className="mt-1 text-xs text-slate-600">
-                {tooltip.link.value} candidato{tooltip.link.value !== 1 ? "s" : ""}
+                {tooltip.link.value} candidato
+                {tooltip.link.value !== 1 ? "s" : ""}
               </p>
               <ul className="mt-2 max-h-32 space-y-0.5 overflow-y-auto">
                 {tooltip.link.candidatos.map((c, k) => (

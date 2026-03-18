@@ -9,7 +9,8 @@ const BASE_URL = "https://www.observaperu.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Observa Perú | Candidatos presidenciales, propuestas y elecciones",
+    default:
+      "Observa Perú | Candidatos presidenciales, propuestas y elecciones",
     template: "%s | Observa Perú",
   },
   description:
@@ -20,13 +21,22 @@ export const metadata: Metadata = {
     url: BASE_URL,
     siteName: "Observa Perú",
     title: "Observa Perú | Candidatos y elecciones",
-    description: "Conoce a los candidatos presidenciales, sus propuestas y planes de gobierno.",
-    images: [{ url: "/LogoObserva.png", width: 1200, height: 630, alt: "Observa Perú" }],
+    description:
+      "Conoce a los candidatos presidenciales, sus propuestas y planes de gobierno.",
+    images: [
+      {
+        url: "/LogoObserva.png",
+        width: 1200,
+        height: 630,
+        alt: "Observa Perú",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Observa Perú | Candidatos y elecciones",
-    description: "Conoce a los candidatos presidenciales, sus propuestas y planes de gobierno.",
+    description:
+      "Conoce a los candidatos presidenciales, sus propuestas y planes de gobierno.",
   },
   alternates: { canonical: BASE_URL },
 };
@@ -36,7 +46,8 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "Observa Perú",
   url: BASE_URL,
-  description: "Plataforma para conocer candidatos presidenciales del Perú, propuestas y planes de gobierno",
+  description:
+    "Plataforma para conocer candidatos presidenciales del Perú, propuestas y planes de gobierno",
   inLanguage: "es-PE",
 };
 

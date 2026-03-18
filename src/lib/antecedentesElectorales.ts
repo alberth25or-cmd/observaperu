@@ -38,7 +38,9 @@ function getTipoPostulacion(p: number, d: number, s: number): TipoPostulacion {
   return "Solo Presidencia";
 }
 
-export function transformarAntecedentes(rows: AntecedentesRow[]): AntecedentesRowTransformada[] {
+export function transformarAntecedentes(
+  rows: AntecedentesRow[],
+): AntecedentesRowTransformada[] {
   return rows.map((r) => {
     const p = siNoToNum(r.presidencia);
     const d = siNoToNum(r.diputado);
@@ -62,7 +64,11 @@ export interface AntecedentesKPIs {
   pctPostulanSenado: number;
   pctPostulanDiputado: number;
   promedioCargosPorCandidato: number;
-  rankingTipoPostulacion: Array<{ tipo: TipoPostulacion; cantidad: number; pct: number }>;
+  rankingTipoPostulacion: Array<{
+    tipo: TipoPostulacion;
+    cantidad: number;
+    pct: number;
+  }>;
   soloPresidencia: number;
   doblePostulacion: number;
   postulanSenado: number;
@@ -80,14 +86,16 @@ export interface AntecedentesKPIs {
 }
 
 export function computeAntecedentesKPIs(
-  rows: AntecedentesRow[]
+  rows: AntecedentesRow[],
 ): AntecedentesKPIs | null {
   if (!rows?.length) return null;
 
   const filas = transformarAntecedentes(rows);
   const total = filas.length;
 
-  const soloPresidencia = filas.filter((f) => f.tipoPostulacion === "Solo Presidencia").length;
+  const soloPresidencia = filas.filter(
+    (f) => f.tipoPostulacion === "Solo Presidencia",
+  ).length;
   const doblePostulacion = total - soloPresidencia;
   const postulanSenado = filas.filter((f) => f.senador === 1).length;
   const postulanDiputado = filas.filter((f) => f.diputado === 1).length;
@@ -97,17 +105,30 @@ export function computeAntecedentesKPIs(
 
   const tipoCount = new Map<TipoPostulacion, number>();
   for (const f of filas) {
-    tipoCount.set(f.tipoPostulacion, (tipoCount.get(f.tipoPostulacion) ?? 0) + 1);
+    tipoCount.set(
+      f.tipoPostulacion,
+      (tipoCount.get(f.tipoPostulacion) ?? 0) + 1,
+    );
   }
-  const rankingTipoPostulacion: Array<{ tipo: TipoPostulacion; cantidad: number; pct: number }> = [
+  const rankingTipoPostulacion: Array<{
+    tipo: TipoPostulacion;
+    cantidad: number;
+    pct: number;
+  }> = [
     "Solo Presidencia",
     "Presidencia + Senado",
     "Presidencia + Diputado",
     "Triple Postulación",
-  ].map((tipo) => {
-    const cantidad = tipoCount.get(tipo as TipoPostulacion) ?? 0;
-    return { tipo: tipo as TipoPostulacion, cantidad, pct: total > 0 ? (cantidad / total) * 100 : 0 };
-  }).filter((r) => r.cantidad > 0);
+  ]
+    .map((tipo) => {
+      const cantidad = tipoCount.get(tipo as TipoPostulacion) ?? 0;
+      return {
+        tipo: tipo as TipoPostulacion,
+        cantidad,
+        pct: total > 0 ? (cantidad / total) * 100 : 0,
+      };
+    })
+    .filter((r) => r.cantidad > 0);
 
   const pctTambienOtroCargo = total > 0 ? (doblePostulacion / total) * 100 : 0;
 

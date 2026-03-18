@@ -1,7 +1,10 @@
 "use client";
 
 import { useMemo } from "react";
-import { computeTerritorialKPIs, type TerritorialRow } from "@/lib/territorialAnalytics";
+import {
+  computeTerritorialKPIs,
+  type TerritorialRow,
+} from "@/lib/territorialAnalytics";
 import TerritorialKPICards from "@/components/TerritorialKPICards";
 import TerritorialComparativoChart from "@/components/TerritorialComparativoChart";
 import TerritorialMovilidadChart from "@/components/TerritorialMovilidadChart";
@@ -12,7 +15,9 @@ interface TerritorialDashboardSectionProps {
   data: TerritorialRow[] | null;
 }
 
-export default function TerritorialDashboardSection({ data }: TerritorialDashboardSectionProps) {
+export default function TerritorialDashboardSection({
+  data,
+}: TerritorialDashboardSectionProps) {
   const kpis = useMemo(() => {
     if (!data?.length) return null;
     return computeTerritorialKPIs(data);
@@ -35,8 +40,8 @@ export default function TerritorialDashboardSection({ data }: TerritorialDashboa
           Geografía de la oferta electoral
         </h2>
         <p className="text-xs sm:text-sm text-slate-600">
-          Centralización, migración interna y concentración territorial. Nacimiento y domicilio por
-          departamento.
+          Centralización, migración interna y concentración territorial.
+          Nacimiento y domicilio por departamento.
         </p>
       </div>
 

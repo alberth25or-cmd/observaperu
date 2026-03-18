@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     "Observa Perú: conoce a los candidatos presidenciales, sus propuestas, planes de gobierno y trayectoria. Compara, explora el mapa ideológico y estadísticas.",
   openGraph: {
     title: "Observa Perú | Candidatos y elecciones",
-    description: "Conoce a los candidatos presidenciales del Perú, propuestas y planes de gobierno.",
+    description:
+      "Conoce a los candidatos presidenciales del Perú, propuestas y planes de gobierno.",
     url: "https://www.observaperu.com",
   },
   alternates: { canonical: "https://www.observaperu.com" },

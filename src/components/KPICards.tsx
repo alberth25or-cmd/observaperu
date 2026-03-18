@@ -16,10 +16,12 @@ interface KPICardsProps {
 export default function KPICards({ data }: KPICardsProps) {
   const stats = useMemo(() => {
     const edades = data.map((d) => d.edad).sort((a, b) => a - b);
-    const promedio = edades.reduce((sum, edad) => sum + edad, 0) / edades.length;
-    const mediana = edades.length % 2 === 0
-      ? (edades[edades.length / 2 - 1] + edades[edades.length / 2]) / 2
-      : edades[Math.floor(edades.length / 2)];
+    const promedio =
+      edades.reduce((sum, edad) => sum + edad, 0) / edades.length;
+    const mediana =
+      edades.length % 2 === 0
+        ? (edades[edades.length / 2 - 1] + edades[edades.length / 2]) / 2
+        : edades[Math.floor(edades.length / 2)];
     const masJoven = Math.min(...edades);
     const mayor = Math.max(...edades);
     const rango = mayor - masJoven;
@@ -90,5 +92,3 @@ export default function KPICards({ data }: KPICardsProps) {
     </div>
   );
 }
-
-

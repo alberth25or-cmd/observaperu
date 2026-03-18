@@ -2,7 +2,10 @@
 
 import { useMemo } from "react";
 import { ALL_CANDIDATES } from "@/data/candidatos";
-import { computeAntecedentesKPIs, type AntecedentesRow } from "@/lib/antecedentesElectorales";
+import {
+  computeAntecedentesKPIs,
+  type AntecedentesRow,
+} from "@/lib/antecedentesElectorales";
 import AntecedentesKPICards from "./AntecedentesKPICards";
 import AntecedentesTipoPostulacionChart from "./AntecedentesTipoPostulacionChart";
 import AntecedentesDonutChart from "./AntecedentesDonutChart";
@@ -61,8 +64,8 @@ export default function AntecedentesElectoralesSection({
           ¿A cuántos cargos postulan?
         </h2>
         <p className="text-xs sm:text-sm text-slate-600">
-          Multipostulación: cuántos candidatos presidenciales postulan además a Senado o Diputado.
-          Datos basados en declaraciones de candidaturas.
+          Multipostulación: cuántos candidatos presidenciales postulan además a
+          Senado o Diputado. Datos basados en declaraciones de candidaturas.
         </p>
       </div>
 

@@ -6,41 +6,221 @@
   },
   "totalCandidatos": 36,
   "candidatos": [
-    { "candidato": "Alex Gonzales Castillo", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Alfonso López Chau Nava", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Álvaro Gonzalo Paz de la Barra Freigeiro", "presidencia": "SI", "diputado": "SI", "senador": "NO" },
-    { "candidato": "Antonio Ortiz Villano", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "Armando Joaquín Masse Fernández", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Carlos Ernesto Jaico Carranza", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Carlos Espá y Garcés-Alvear", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Carlos Gonzalo Álvarez Loayza", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "César Acuña Peralta", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Charlie Carrasco Salazar", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Fiorella Giannina Molinelli Aristondo", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Francisco Ernesto Diez-Canseco Távara", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "George Patrick Forsyth Sommer", "presidencia": "SI", "diputado": "SI", "senador": "NO" },
-    { "candidato": "Herbert Caller Gutiérrez", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "José León Luna Gálvez", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "José Williams Zapata", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Jorge Nieto Montesinos", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "Keiko Sofía Fujimori Higuchi", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "Luis Fernando Olivera Vega", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "Mario Enrique Vizcarra Cornejo", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Maria Soledad Perez Tello de Rodriguez", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Mesías Antonio Guevara Amasifuen", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "Napoleón Becerra García", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Paul Davis Jaimes Blanco", "presidencia": "SI", "diputado": "SI", "senador": "NO" },
-    { "candidato": "Pitter Enrique Valderrama Peña", "presidencia": "SI", "diputado": "SI", "senador": "NO" },
-    { "candidato": "Rafael Bernardo López Aliaga", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Rafael Jorge Belaunde Llosa", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "Ricardo Pablo Belmont Cassinelli", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Roberto Enrique Chiabra León", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Roberto Helbert Sánchez Palomino", "presidencia": "SI", "diputado": "SI", "senador": "NO" },
-    { "candidato": "Ronald Darwin Atencio Sotomayor", "presidencia": "SI", "diputado": "SI", "senador": "NO" },
-    { "candidato": "Rosario del Pilar Fernández Bazán", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Vladimir Roy Cerrón Rojas", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Walter Gilmer Chirinos Purizaga", "presidencia": "SI", "diputado": "NO", "senador": "NO" },
-    { "candidato": "Wolfgang Mario Grozo Costa", "presidencia": "SI", "diputado": "NO", "senador": "SI" },
-    { "candidato": "Yonhy Lescano Ancieta", "presidencia": "SI", "diputado": "NO", "senador": "SI" }
+    {
+      "candidato": "Alex Gonzales Castillo",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Alfonso López Chau Nava",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Álvaro Gonzalo Paz de la Barra Freigeiro",
+      "presidencia": "SI",
+      "diputado": "SI",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Antonio Ortiz Villano",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Armando Joaquín Masse Fernández",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Carlos Ernesto Jaico Carranza",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Carlos Espá y Garcés-Alvear",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Carlos Gonzalo Álvarez Loayza",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "César Acuña Peralta",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Charlie Carrasco Salazar",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Fiorella Giannina Molinelli Aristondo",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Francisco Ernesto Diez-Canseco Távara",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "George Patrick Forsyth Sommer",
+      "presidencia": "SI",
+      "diputado": "SI",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Herbert Caller Gutiérrez",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "José León Luna Gálvez",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "José Williams Zapata",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Jorge Nieto Montesinos",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Keiko Sofía Fujimori Higuchi",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Luis Fernando Olivera Vega",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Mario Enrique Vizcarra Cornejo",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Maria Soledad Perez Tello de Rodriguez",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Mesías Antonio Guevara Amasifuen",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Napoleón Becerra García",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Paul Davis Jaimes Blanco",
+      "presidencia": "SI",
+      "diputado": "SI",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Pitter Enrique Valderrama Peña",
+      "presidencia": "SI",
+      "diputado": "SI",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Rafael Bernardo López Aliaga",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Rafael Jorge Belaunde Llosa",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Ricardo Pablo Belmont Cassinelli",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Roberto Enrique Chiabra León",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Roberto Helbert Sánchez Palomino",
+      "presidencia": "SI",
+      "diputado": "SI",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Ronald Darwin Atencio Sotomayor",
+      "presidencia": "SI",
+      "diputado": "SI",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Rosario del Pilar Fernández Bazán",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Vladimir Roy Cerrón Rojas",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Walter Gilmer Chirinos Purizaga",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "NO"
+    },
+    {
+      "candidato": "Wolfgang Mario Grozo Costa",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    },
+    {
+      "candidato": "Yonhy Lescano Ancieta",
+      "presidencia": "SI",
+      "diputado": "NO",
+      "senador": "SI"
+    }
   ]
 }

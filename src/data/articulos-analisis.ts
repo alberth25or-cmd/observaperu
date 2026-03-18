@@ -14,7 +14,7 @@ export type ArticuloAnalisis = {
       | { type: "chart"; chartId: "candidatos-presidenciales-evolucion" }
       | { type: "relatedLinks"; links: { href: string; label: string }[] }
     >;
-}[];
+  }[];
   references: string[];
 };
 
@@ -209,7 +209,8 @@ export const ARTICULOS_ANALISIS: Record<string, ArticuloAnalisis> = {
 
   "36-candidatos-presidenciales-elecciones-peru-2026": {
     slug: "36-candidatos-presidenciales-elecciones-peru-2026",
-    title: "Elecciones Perú 2026 y el fenómeno de los más de 30 candidatos presidenciales",
+    title:
+      "Elecciones Perú 2026 y el fenómeno de los más de 30 candidatos presidenciales",
     publishedAt: "2026-03-16",
     metaDescription:
       "Elecciones Perú 2026: más de 36 fórmulas presidenciales ante el JNE. Por qué hay tantos candidatos, reforma electoral, primarias y crisis de representación.",
@@ -400,10 +401,23 @@ export const ARTICULOS_ANALISIS: Record<string, ArticuloAnalisis> = {
           {
             type: "relatedLinks",
             links: [
-              { href: "/noticias/multa-por-no-votar-elecciones-2026-peru", label: "Multa por no votar en las elecciones Perú 2026" },
-              { href: "/noticias/votar-dni-vencido-elecciones-2026-peru", label: "¿Se puede votar con DNI vencido en elecciones 2026?" },
-              { href: "/noticias/cuanto-pagan-miembro-mesa-peru-2026", label: "Cuánto pagan a los miembros de mesa en Perú 2026" },
-              { href: "/analisis/suheyn-cipriani-crisis-meritocracia-congreso-peruano", label: "Suheyn Cipriani y la crisis de meritocracia en el Congreso peruano" },
+              {
+                href: "/noticias/multa-por-no-votar-elecciones-2026-peru",
+                label: "Multa por no votar en las elecciones Perú 2026",
+              },
+              {
+                href: "/noticias/votar-dni-vencido-elecciones-2026-peru",
+                label: "¿Se puede votar con DNI vencido en elecciones 2026?",
+              },
+              {
+                href: "/noticias/cuanto-pagan-miembro-mesa-peru-2026",
+                label: "Cuánto pagan a los miembros de mesa en Perú 2026",
+              },
+              {
+                href: "/analisis/suheyn-cipriani-crisis-meritocracia-congreso-peruano",
+                label:
+                  "Suheyn Cipriani y la crisis de meritocracia en el Congreso peruano",
+              },
             ],
           },
         ],

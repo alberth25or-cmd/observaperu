@@ -11,7 +11,16 @@ import {
   CartesianGrid,
 } from "recharts";
 
-const COLORS = ["#1b2b5a", "#2E7D8F", "#4A90E2", "#6B9BD1", "#8B9DC3", "#0f1d46", "#5a7d6a", "#88a0a8"];
+const COLORS = [
+  "#1b2b5a",
+  "#2E7D8F",
+  "#4A90E2",
+  "#6B9BD1",
+  "#8B9DC3",
+  "#0f1d46",
+  "#5a7d6a",
+  "#88a0a8",
+];
 
 interface Item {
   area: string;
@@ -24,7 +33,13 @@ interface AreaProfesionalChartProps {
   totalConArea: number;
 }
 
-function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: Item }> }) {
+function CustomTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean;
+  payload?: Array<{ payload: Item }>;
+}) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload;
   return (
@@ -36,7 +51,10 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<
   );
 }
 
-export default function AreaProfesionalChart({ pctPorArea, totalConArea }: AreaProfesionalChartProps) {
+export default function AreaProfesionalChart({
+  pctPorArea,
+  totalConArea,
+}: AreaProfesionalChartProps) {
   const data: Item[] = Object.entries(pctPorArea || {})
     .map(([area, pct]) => ({
       area,
@@ -63,7 +81,11 @@ export default function AreaProfesionalChart({ pctPorArea, totalConArea }: AreaP
           margin={{ top: 4, right: 24, left: 4, bottom: 4 }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-          <XAxis type="number" tick={{ fontSize: 11, fill: "#64748b" }} stroke="#94a3b8" />
+          <XAxis
+            type="number"
+            tick={{ fontSize: 11, fill: "#64748b" }}
+            stroke="#94a3b8"
+          />
           <YAxis
             type="category"
             dataKey="area"
@@ -72,7 +94,12 @@ export default function AreaProfesionalChart({ pctPorArea, totalConArea }: AreaP
             stroke="#94a3b8"
           />
           <Tooltip content={<CustomTooltip />} />
-          <Bar dataKey="count" name="Candidatos" radius={[0, 4, 4, 0]} maxBarSize={24}>
+          <Bar
+            dataKey="count"
+            name="Candidatos"
+            radius={[0, 4, 4, 0]}
+            maxBarSize={24}
+          >
             {data.map((_, i) => (
               <Cell key={i} fill={COLORS[i % COLORS.length]} />
             ))}

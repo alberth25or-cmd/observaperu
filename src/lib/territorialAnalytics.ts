@@ -68,7 +68,10 @@ function hhiFromCounts(counts: Record<string, number>, total: number): number {
   return Math.round(sum * 10000);
 }
 
-function entropyFromCounts(counts: Record<string, number>, total: number): number {
+function entropyFromCounts(
+  counts: Record<string, number>,
+  total: number,
+): number {
   if (total <= 0) return 0;
   let h = 0;
   for (const c of Object.values(counts)) {
@@ -85,19 +88,18 @@ function concentracionLabel(hhi: number): "baja" | "moderada" | "alta" {
 }
 
 export function computeTerritorialKPIs(
-  data: TerritorialRow[]
+  data: TerritorialRow[],
 ): TerritorialKPIs {
   const valid = data.filter(
     (r) =>
       r.nacimiento_pais === "PERÚ" &&
       r.nacimiento_departamento &&
-      r.nacimiento_departamento !== NO_ENCONTRADO
+      r.nacimiento_departamento !== NO_ENCONTRADO,
   );
   const total = valid.length;
   const conDomicilio = valid.filter(
     (r) =>
-      r.domicilio_departamento &&
-      r.domicilio_departamento !== NO_ENCONTRADO
+      r.domicilio_departamento && r.domicilio_departamento !== NO_ENCONTRADO,
   );
   const totalConDomicilio = conDomicilio.length;
   const sinDomicilio = total - totalConDomicilio;
@@ -137,7 +139,9 @@ export function computeTerritorialKPIs(
   const regD = totalConDomicilio - limaLD;
 
   const hhiN = hhiFromCounts(countNacimiento, total);
-  const hhiD = totalConDomicilio ? hhiFromCounts(countDomicilio, totalConDomicilio) : 0;
+  const hhiD = totalConDomicilio
+    ? hhiFromCounts(countDomicilio, totalConDomicilio)
+    : 0;
 
   const topNacimiento = Object.entries(countNacimiento)
     .sort((a, b) => b[1] - a[1])
@@ -154,10 +158,13 @@ export function computeTerritorialKPIs(
     .map(([departamento, count]) => ({
       departamento,
       count,
-      pct: totalConDomicilio ? Math.round((count / totalConDomicilio) * 1000) / 10 : 0,
+      pct: totalConDomicilio
+        ? Math.round((count / totalConDomicilio) * 1000) / 10
+        : 0,
     }));
 
-  const flowList: Array<{ origen: string; destino: string; count: number }> = [];
+  const flowList: Array<{ origen: string; destino: string; count: number }> =
+    [];
   for (const [origen, dests] of Object.entries(matriz)) {
     for (const [destino, count] of Object.entries(dests)) {
       if (origen !== destino) flowList.push({ origen, destino, count });
@@ -176,23 +183,33 @@ export function computeTerritorialKPIs(
     limaMetroNacimiento: limaN,
     regionesNacimiento: regN,
     pctLimaNacimiento: total ? Math.round((limaN / total) * 1000) / 10 : 0,
-    ratioLimaRegionesNacimiento: regN > 0 ? Math.round((limaN / regN) * 100) / 100 : 0,
+    ratioLimaRegionesNacimiento:
+      regN > 0 ? Math.round((limaN / regN) * 100) / 100 : 0,
 
     limaLMetroDomicilio: limaLD,
     regionesDomicilio: regD,
-    pctLimaDomicilio: totalConDomicilio ? Math.round((limaLD / totalConDomicilio) * 1000) / 10 : 0,
-    ratioLimaRegionesDomicilio: regD > 0 ? Math.round((limaLD / regD) * 100) / 100 : 0,
+    pctLimaDomicilio: totalConDomicilio
+      ? Math.round((limaLD / totalConDomicilio) * 1000) / 10
+      : 0,
+    ratioLimaRegionesDomicilio:
+      regD > 0 ? Math.round((limaLD / regD) * 100) / 100 : 0,
 
     mismoDepartamento,
     migraron,
-    pctMismoDepto: totalConDomicilio ? Math.round((mismoDepartamento / totalConDomicilio) * 1000) / 10 : 0,
-    pctMigraron: totalConDomicilio ? Math.round((migraron / totalConDomicilio) * 1000) / 10 : 0,
+    pctMismoDepto: totalConDomicilio
+      ? Math.round((mismoDepartamento / totalConDomicilio) * 1000) / 10
+      : 0,
+    pctMigraron: totalConDomicilio
+      ? Math.round((migraron / totalConDomicilio) * 1000) / 10
+      : 0,
     flujoNetoLima: nacidosFueraResidenLima - nacidosLimaResidenFuera,
 
     hhiNacimiento: hhiN,
     hhiDomicilio: hhiD,
     entropiaNacimiento: entropyFromCounts(countNacimiento, total),
-    entropiaDomicilio: totalConDomicilio ? entropyFromCounts(countDomicilio, totalConDomicilio) : 0,
+    entropiaDomicilio: totalConDomicilio
+      ? entropyFromCounts(countDomicilio, totalConDomicilio)
+      : 0,
     deptosRepresentadosNacimiento: Object.keys(countNacimiento).length,
     deptosRepresentadosDomicilio: Object.keys(countDomicilio).length,
     concentracionNacimiento: concentracionLabel(hhiN),

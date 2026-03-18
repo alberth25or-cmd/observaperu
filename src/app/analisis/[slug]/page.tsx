@@ -48,7 +48,7 @@ export default async function AnalisisSlugPage({
               Publicado el{" "}
               {new Date(articulo.publishedAt + "T12:00:00").toLocaleDateString(
                 "es-PE",
-                { day: "numeric", month: "long", year: "numeric" }
+                { day: "numeric", month: "long", year: "numeric" },
               )}
             </p>
           ) : null}
@@ -96,12 +96,18 @@ export default async function AnalisisSlugPage({
                     }
                     if (block.type === "table") {
                       return (
-                        <div key={blockIdx} className="my-6 overflow-x-auto rounded-xl border border-slate-200">
+                        <div
+                          key={blockIdx}
+                          className="my-6 overflow-x-auto rounded-xl border border-slate-200"
+                        >
                           <table className="min-w-full text-left text-[15px]">
                             <thead>
                               <tr className="border-b border-slate-200 bg-slate-50">
                                 {block.headers.map((h, i) => (
-                                  <th key={i} className="px-4 py-3 font-semibold text-[#0b1b3b]">
+                                  <th
+                                    key={i}
+                                    className="px-4 py-3 font-semibold text-[#0b1b3b]"
+                                  >
                                     {h}
                                   </th>
                                 ))}
@@ -109,9 +115,15 @@ export default async function AnalisisSlugPage({
                             </thead>
                             <tbody>
                               {block.rows.map((row, ri) => (
-                                <tr key={ri} className="border-b border-slate-100 last:border-0">
+                                <tr
+                                  key={ri}
+                                  className="border-b border-slate-100 last:border-0"
+                                >
                                   {row.map((cell, ci) => (
-                                    <td key={ci} className="px-4 py-3 text-slate-700">
+                                    <td
+                                      key={ci}
+                                      className="px-4 py-3 text-slate-700"
+                                    >
                                       {cell}
                                     </td>
                                   ))}
@@ -122,8 +134,15 @@ export default async function AnalisisSlugPage({
                         </div>
                       );
                     }
-                    if (block.type === "chart" && block.chartId === "candidatos-presidenciales-evolucion") {
-                      return <CandidatosPresidencialesEvolucionChart key={blockIdx} />;
+                    if (
+                      block.type === "chart" &&
+                      block.chartId === "candidatos-presidenciales-evolucion"
+                    ) {
+                      return (
+                        <CandidatosPresidencialesEvolucionChart
+                          key={blockIdx}
+                        />
+                      );
                     }
                     if (block.type === "relatedLinks") {
                       return (
@@ -150,9 +169,7 @@ export default async function AnalisisSlugPage({
 
           <hr className="my-12 border-slate-200" />
 
-          <h2 className="mb-4 text-[20px] font-bold text-[#0b1b3b]">
-            Fuentes
-          </h2>
+          <h2 className="mb-4 text-[20px] font-bold text-[#0b1b3b]">Fuentes</h2>
           <p className="mb-6 text-[14px] text-slate-600">
             Referencias documentales, normativas y periodísticas.
           </p>

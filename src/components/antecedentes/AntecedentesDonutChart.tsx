@@ -1,6 +1,13 @@
 "use client";
 
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
 
 const COLORS = ["#2E7D8F", "#4A90E2"];
 
@@ -28,12 +35,16 @@ function CustomTooltip({
   return (
     <div className="bg-white p-2 sm:p-3 border border-slate-200 rounded-lg shadow-lg">
       <p className="font-semibold text-[#0b1b3b] text-sm">{p.name}</p>
-      <p className="text-xs text-slate-600">{p.value} candidatos ({pct}%)</p>
+      <p className="text-xs text-slate-600">
+        {p.value} candidatos ({pct}%)
+      </p>
     </div>
   );
 }
 
-export default function AntecedentesDonutChart({ data }: AntecedentesDonutChartProps) {
+export default function AntecedentesDonutChart({
+  data,
+}: AntecedentesDonutChartProps) {
   const total = data.reduce((s, d) => s + d.value, 0);
   if (total === 0) {
     return (

@@ -29,7 +29,9 @@ interface PerfilAcademicoSectionProps {
   data: RawEstudio[] | null;
 }
 
-export default function PerfilAcademicoSection({ data }: PerfilAcademicoSectionProps) {
+export default function PerfilAcademicoSection({
+  data,
+}: PerfilAcademicoSectionProps) {
   const { enriquecidos, kpis } = useMemo(() => {
     if (!data?.length) return { enriquecidos: [], kpis: null };
     const enriquecidos = enriquecerEstudios(data);
@@ -63,7 +65,8 @@ export default function PerfilAcademicoSection({ data }: PerfilAcademicoSectionP
           Perfil académico de los candidatos
         </h2>
         <p className="text-xs sm:text-sm text-slate-600">
-          Estudios universitarios declarados. Transparencia electoral — Observa Perú.
+          Estudios universitarios declarados. Transparencia electoral — Observa
+          Perú.
         </p>
       </div>
 

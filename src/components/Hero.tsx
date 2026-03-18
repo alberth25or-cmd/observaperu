@@ -47,11 +47,11 @@ const Hero = () => {
             </h2>
 
             <p className="mx-auto mt-4 max-w-[872px] text-[16px] font-medium leading-[145%] tracking-[-0.005em] text-black sm:text-[18px]">
-              Observa Perú es una plataforma web informativa que reúne información
-              sobre perfiles políticos, propuestas, antecedentes y etapas del
-              proceso electoral, basada en fuentes oficiales y datos contrastados,
-              para tomar decisiones informadas, sin promover ni favorecer a ninguna
-              candidatura política.
+              Observa Perú es una plataforma web informativa que reúne
+              información sobre perfiles políticos, propuestas, antecedentes y
+              etapas del proceso electoral, basada en fuentes oficiales y datos
+              contrastados, para tomar decisiones informadas, sin promover ni
+              favorecer a ninguna candidatura política.
             </p>
           </div>
         </div>

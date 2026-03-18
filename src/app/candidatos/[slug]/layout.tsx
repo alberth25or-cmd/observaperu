@@ -25,7 +25,9 @@ export async function generateMetadata({
   const title = detail.name;
   const description = `Conoce a ${detail.name}, candidato por ${detail.party}. Biografía, propuestas, ideología y plan de gobierno.`;
   const url = `${BASE_URL}/candidatos/${slug}`;
-  const image = detail.img.startsWith("http") ? detail.img : `${BASE_URL}${detail.img}`;
+  const image = detail.img.startsWith("http")
+    ? detail.img
+    : `${BASE_URL}${detail.img}`;
 
   return {
     title,
@@ -65,7 +67,9 @@ export default async function CandidateLayout({
   }
 
   const url = `${BASE_URL}/candidatos/${slug}`;
-  const imageUrl = detail.img.startsWith("http") ? detail.img : `${BASE_URL}${detail.img}`;
+  const imageUrl = detail.img.startsWith("http")
+    ? detail.img
+    : `${BASE_URL}${detail.img}`;
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -86,7 +90,12 @@ export default async function CandidateLayout({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Inicio", item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: "Candidatos", item: `${BASE_URL}/candidatos` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Candidatos",
+        item: `${BASE_URL}/candidatos`,
+      },
       { "@type": "ListItem", position: 3, name: detail.name, item: url },
     ],
   };

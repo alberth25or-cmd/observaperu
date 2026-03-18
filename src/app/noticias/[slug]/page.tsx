@@ -58,8 +58,18 @@ export default async function NoticiasSlugPage({
   function formatDate(iso: string): string {
     const [y, m, d] = iso.split("-");
     const months = [
-      "enero", "febrero", "marzo", "abril", "mayo", "junio",
-      "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre",
     ];
     const month = months[parseInt(m!, 10) - 1];
     return `${parseInt(d!, 10)} de ${month} de ${y}`;
@@ -77,7 +87,9 @@ export default async function NoticiasSlugPage({
         <div className="mx-auto max-w-3xl px-4 lg:px-16">
           <article className="prose prose-slate max-w-none">
             {noticia.datePublished && (
-              <p className={`text-[14px] text-slate-500 ${noticia.bajada ? "mb-2" : "mb-6"}`}>
+              <p
+                className={`text-[14px] text-slate-500 ${noticia.bajada ? "mb-2" : "mb-6"}`}
+              >
                 Publicado el {formatDate(noticia.datePublished)}
               </p>
             )}
@@ -127,13 +139,22 @@ export default async function NoticiasSlugPage({
                         </ul>
                       );
                     }
-                    if (block.type === "chart" && block.chartId === "electorado-2026") {
+                    if (
+                      block.type === "chart" &&
+                      block.chartId === "electorado-2026"
+                    ) {
                       return <Electorado2026Chart key={blockIdx} />;
                     }
-                    if (block.type === "chart" && block.chartId === "multas-2026") {
+                    if (
+                      block.type === "chart" &&
+                      block.chartId === "multas-2026"
+                    ) {
                       return <Multas2026Chart key={blockIdx} />;
                     }
-                    if (block.type === "chart" && block.chartId === "padron-2026") {
+                    if (
+                      block.type === "chart" &&
+                      block.chartId === "padron-2026"
+                    ) {
                       return <Padron2026Chart key={blockIdx} />;
                     }
                     if (block.type === "table") {
@@ -192,7 +213,9 @@ export default async function NoticiasSlugPage({
                             className="inline-flex items-center gap-2 rounded-lg bg-[#0b1b3b] px-4 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-[#1b2b5a]"
                           >
                             {block.label}
-                            <span className="text-white/80" aria-hidden>↗</span>
+                            <span className="text-white/80" aria-hidden>
+                              ↗
+                            </span>
                           </a>
                         </p>
                       );
@@ -220,9 +243,7 @@ export default async function NoticiasSlugPage({
 
           <hr className="my-12 border-slate-200" />
 
-          <h2 className="mb-4 text-[20px] font-bold text-[#0b1b3b]">
-            Fuentes
-          </h2>
+          <h2 className="mb-4 text-[20px] font-bold text-[#0b1b3b]">Fuentes</h2>
           <p className="mb-6 text-[14px] text-slate-600">
             Información basada en fuentes oficiales.
           </p>

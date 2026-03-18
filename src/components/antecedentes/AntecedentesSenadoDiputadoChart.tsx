@@ -50,7 +50,10 @@ export default function AntecedentesSenadoDiputadoChart({
   return (
     <div className="w-full h-[240px] sm:h-[260px]">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+        <BarChart
+          data={data}
+          margin={{ top: 8, right: 16, left: 8, bottom: 8 }}
+        >
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis
             dataKey="cargo"

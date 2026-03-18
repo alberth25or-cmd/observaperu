@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { getAllAnalisisSlugs, getArticuloBySlug } from "@/data/articulos-analisis";
+import {
+  getAllAnalisisSlugs,
+  getArticuloBySlug,
+} from "@/data/articulos-analisis";
 import Footer from "@/components/Footer";
 
 const Banner = ({
@@ -36,7 +39,8 @@ export default function AnalisisPage() {
       <section className="py-10 sm:py-14">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">
           <p className="mx-auto max-w-2xl text-center text-[16px] leading-relaxed text-slate-700 sm:text-[18px]">
-            Análisis y opinión crítica sobre candidatos presidenciales, propuestas de gobierno, encuestas y coyuntura electoral.
+            Análisis y opinión crítica sobre candidatos presidenciales,
+            propuestas de gobierno, encuestas y coyuntura electoral.
           </p>
 
           {articulos.length > 0 && (
@@ -78,7 +82,8 @@ export default function AnalisisPage() {
                 Candidatos
               </h2>
               <p className="mt-2 text-[14px] text-slate-600">
-                Conoce los perfiles, propuestas y planes de gobierno de cada candidato.
+                Conoce los perfiles, propuestas y planes de gobierno de cada
+                candidato.
               </p>
               <span className="mt-4 inline-block text-[14px] font-semibold text-[#0b1b3b]">
                 Ver candidatos →
@@ -92,7 +97,8 @@ export default function AnalisisPage() {
                 Mapa ideológico
               </h2>
               <p className="mt-2 text-[14px] text-slate-600">
-                Explora la posición de los candidatos en los ejes económico y social.
+                Explora la posición de los candidatos en los ejes económico y
+                social.
               </p>
               <span className="mt-4 inline-block text-[14px] font-semibold text-[#0b1b3b]">
                 Ver mapa →
@@ -106,7 +112,8 @@ export default function AnalisisPage() {
                 Comparación
               </h2>
               <p className="mt-2 text-[14px] text-slate-600">
-                Compara candidatos lado a lado por partido, propuestas e ideología.
+                Compara candidatos lado a lado por partido, propuestas e
+                ideología.
               </p>
               <span className="mt-4 inline-block text-[14px] font-semibold text-[#0b1b3b]">
                 Comparar →

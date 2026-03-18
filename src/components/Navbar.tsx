@@ -11,7 +11,11 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white">
       <div className="flex h-[110px] w-full items-center justify-between px-6 lg:px-16">
         {/* Logo */}
-        <Link href="/#inicio" aria-label="Inicio" className="flex h-full items-center">
+        <Link
+          href="/#inicio"
+          aria-label="Inicio"
+          className="flex h-full items-center"
+        >
           <Image
             src="/LogoObserva.png"
             alt="Observa Perú"
@@ -25,31 +29,58 @@ const Navbar = () => {
         {/* Menú Desktop */}
         <nav className="ml-auto hidden items-center md:flex">
           <div className="flex items-center gap-12">
-            <Link href="/#inicio" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/#inicio"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Inicio
             </Link>
-            <Link href="/candidatos" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/candidatos"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Candidatos
             </Link>
-            <Link href="/mapa-ideologico" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/mapa-ideologico"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Mapa ideológico
             </Link>
-            <Link href="/comparacion" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/comparacion"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Comparación
             </Link>
-            <Link href="/estadisticas" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/estadisticas"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Estadísticas
             </Link>
-            <Link href="/analisis" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/analisis"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Análisis
             </Link>
-            <Link href="/noticias" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/noticias"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Noticias
             </Link>
-            <Link href="/conocenos" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/conocenos"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Conócenos
             </Link>
-            <Link href="/contactanos" className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]">
+            <Link
+              href="/contactanos"
+              className="text-[16px] font-semibold text-[#1b2b5a] hover:text-[#0f1d46]"
+            >
               Contáctanos
             </Link>
           </div>

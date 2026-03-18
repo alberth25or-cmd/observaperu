@@ -1,18 +1,27 @@
 "use client";
 
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, CartesianGrid } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+  CartesianGrid,
+} from "recharts";
 
 const ORDER: Record<string, number> = {
   "No concluido": 0,
-  "Bachiller": 1,
+  Bachiller: 1,
   "Título profesional": 2,
-  "Especialidad": 3,
+  Especialidad: 3,
 };
 const COLORS: Record<string, string> = {
   "No concluido": "#94a3b8",
-  "Bachiller": "#6B9BD1",
+  Bachiller: "#6B9BD1",
   "Título profesional": "#4A90E2",
-  "Especialidad": "#1b2b5a",
+  Especialidad: "#1b2b5a",
 };
 
 interface Item {
@@ -26,7 +35,13 @@ interface NivelMaximoChartProps {
   total: number;
 }
 
-function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: Item }> }) {
+function CustomTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean;
+  payload?: Array<{ payload: Item }>;
+}) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload;
   return (
@@ -38,7 +53,10 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<
   );
 }
 
-export default function NivelMaximoChart({ pctPorNivel, total }: NivelMaximoChartProps) {
+export default function NivelMaximoChart({
+  pctPorNivel,
+  total,
+}: NivelMaximoChartProps) {
   const data: Item[] = Object.entries(pctPorNivel || {})
     .map(([nivel, pct]) => ({
       nivel,
@@ -58,7 +76,10 @@ export default function NivelMaximoChart({ pctPorNivel, total }: NivelMaximoChar
   return (
     <div className="w-full h-[220px] sm:h-[260px]">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
+        <BarChart
+          data={data}
+          margin={{ top: 8, right: 16, left: 8, bottom: 8 }}
+        >
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis
             dataKey="nivel"
@@ -67,7 +88,12 @@ export default function NivelMaximoChart({ pctPorNivel, total }: NivelMaximoChar
           />
           <YAxis tick={{ fontSize: 11, fill: "#64748b" }} stroke="#94a3b8" />
           <Tooltip content={<CustomTooltip />} />
-          <Bar dataKey="count" name="Candidatos" radius={[4, 4, 0, 0]} maxBarSize={48}>
+          <Bar
+            dataKey="count"
+            name="Candidatos"
+            radius={[4, 4, 0, 0]}
+            maxBarSize={48}
+          >
             {data.map((entry, i) => (
               <Cell key={i} fill={COLORS[entry.nivel] ?? "#94a3b8"} />
             ))}

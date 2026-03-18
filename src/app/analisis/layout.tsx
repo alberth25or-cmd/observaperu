@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     "Análisis y opinión crítica sobre candidatos presidenciales, propuestas, encuestas y coyuntura electoral en el Perú.",
   openGraph: {
     title: "Análisis | Observa Perú",
-    description: "Análisis y opinión sobre candidatos, propuestas y elecciones en Perú.",
+    description:
+      "Análisis y opinión sobre candidatos, propuestas y elecciones en Perú.",
     url: `${BASE_URL}/analisis`,
   },
   alternates: { canonical: `${BASE_URL}/analisis` },

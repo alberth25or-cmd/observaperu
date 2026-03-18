@@ -55,7 +55,10 @@ export default function PostulacionesHistogramChart({
   return (
     <div className="w-full h-[260px] sm:h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 24 }}>
+        <BarChart
+          data={data}
+          margin={{ top: 8, right: 16, left: 8, bottom: 24 }}
+        >
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis
             dataKey="rango"
@@ -79,7 +82,13 @@ export default function PostulacionesHistogramChart({
             }}
           />
           <Tooltip content={<CustomTooltip />} />
-          <Bar dataKey="count" name="Candidatos" fill={color} radius={[4, 4, 0, 0]} maxBarSize={36} />
+          <Bar
+            dataKey="count"
+            name="Candidatos"
+            fill={color}
+            radius={[4, 4, 0, 0]}
+            maxBarSize={36}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>

@@ -14,7 +14,9 @@ interface EstudiosUniversitariosKPIsProps {
   kpis: EstudiosKPIs | null;
 }
 
-export default function EstudiosUniversitariosKPIs({ kpis }: EstudiosUniversitariosKPIsProps) {
+export default function EstudiosUniversitariosKPIs({
+  kpis,
+}: EstudiosUniversitariosKPIsProps) {
   if (!kpis) {
     return (
       <div className="text-center py-6 text-slate-500 text-sm">
@@ -70,7 +72,9 @@ export default function EstudiosUniversitariosKPIs({ kpis }: EstudiosUniversitar
             {card.value}
           </div>
           {card.sub && (
-            <div className="text-[10px] sm:text-xs text-slate-500 mt-0.5">{card.sub}</div>
+            <div className="text-[10px] sm:text-xs text-slate-500 mt-0.5">
+              {card.sub}
+            </div>
           )}
         </div>
       ))}

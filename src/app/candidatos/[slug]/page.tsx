@@ -8,7 +8,13 @@ import { ALL_CANDIDATES, Candidate } from "@/data/candidatos";
 import { getCandidateDetail } from "@/data/candidatos-detalle";
 import Footer from "@/components/Footer";
 
-const Banner = ({ title, bg = "/hero-bg1.jpg" }: { title: string; bg?: string }) => {
+const Banner = ({
+  title,
+  bg = "/hero-bg1.jpg",
+}: {
+  title: string;
+  bg?: string;
+}) => {
   return (
     <section className="relative w-full overflow-hidden">
       <div
@@ -25,7 +31,15 @@ const Banner = ({ title, bg = "/hero-bg1.jpg" }: { title: string; bg?: string })
   );
 };
 
-type TabType = "biografia" | "historial-academico" | "controversias" | "ideologia-politica" | "ingresos" | "experiencia" | "logros" | "propuestas";
+type TabType =
+  | "biografia"
+  | "historial-academico"
+  | "controversias"
+  | "ideologia-politica"
+  | "ingresos"
+  | "experiencia"
+  | "logros"
+  | "propuestas";
 
 const TABS: { key: TabType; label: string }[] = [
   { key: "biografia", label: "Biografía" },
@@ -70,7 +84,9 @@ export default function CandidateDetailPage() {
         <Banner title="Candidato no encontrado" />
         <section className="py-14">
           <div className="mx-auto max-w-6xl px-4 text-center">
-            <p className="text-[18px] text-slate-700">El candidato que buscas no existe.</p>
+            <p className="text-[18px] text-slate-700">
+              El candidato que buscas no existe.
+            </p>
             <Link
               href="/candidatos"
               className="mt-6 inline-flex h-[44px] items-center justify-center rounded-full bg-[#0b1b3b] px-7 text-[13px] font-semibold text-white transition-transform duration-150 hover:scale-[1.03]"
@@ -158,13 +174,17 @@ export default function CandidateDetailPage() {
             </h2>
             <div className="rounded-2xl bg-[#eef2fb] p-6">
               <div className="mb-4">
-                <p className="text-[14px] font-semibold text-slate-600">Total</p>
+                <p className="text-[14px] font-semibold text-slate-600">
+                  Total
+                </p>
                 <p className="mt-1 text-[24px] font-black text-[#0b1b3b]">
                   {candidateDetail.financiamiento.total}
                 </p>
               </div>
               <div>
-                <p className="text-[14px] font-semibold text-slate-600 mb-2">Fuentes</p>
+                <p className="text-[14px] font-semibold text-slate-600 mb-2">
+                  Fuentes
+                </p>
                 <ul className="space-y-2">
                   {candidateDetail.financiamiento.sources.map((source, idx) => (
                     <li key={idx} className="text-[15px] text-slate-700">
@@ -205,10 +225,7 @@ export default function CandidateDetailPage() {
             </h2>
             <div className="grid gap-4 md:grid-cols-2">
               {candidateDetail.logros.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-xl bg-[#eef2fb] p-5"
-                >
+                <div key={idx} className="rounded-xl bg-[#eef2fb] p-5">
                   <p className="text-[15px] leading-[170%] text-slate-700">
                     {conPuntoFinal(item)}
                   </p>
@@ -307,17 +324,18 @@ export default function CandidateDetailPage() {
 
                 {/* Botones */}
                 <div className="pt-4 space-y-3">
-                  {candidateDetail.planGobiernoUrl && 
-                    candidateDetail.planGobiernoUrl !== "https://drive.google.com/file/d/PLACEHOLDER/view" && (
-                    <a
-                      href={candidateDetail.planGobiernoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex h-[50px] w-full items-center justify-center rounded-[12px] bg-[#0b1b3b] px-4 py-3 text-[16px] font-semibold text-white transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98]"
-                    >
-                      Plan de Gobierno
-                    </a>
-                  )}
+                  {candidateDetail.planGobiernoUrl &&
+                    candidateDetail.planGobiernoUrl !==
+                      "https://drive.google.com/file/d/PLACEHOLDER/view" && (
+                      <a
+                        href={candidateDetail.planGobiernoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex h-[50px] w-full items-center justify-center rounded-[12px] bg-[#0b1b3b] px-4 py-3 text-[16px] font-semibold text-white transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98]"
+                      >
+                        Plan de Gobierno
+                      </a>
+                    )}
                   <a
                     href={candidateDetail.hojaVidaUrl}
                     target="_blank"
@@ -394,16 +412,18 @@ export default function CandidateDetailPage() {
             Otros candidatos
           </p>
           <ul className="mt-2 flex flex-wrap gap-2">
-            {ALL_CANDIDATES.filter((c) => c.key !== slug).slice(0, 8).map((c) => (
-              <li key={c.key}>
-                <Link
-                  href={`/candidatos/${c.key}`}
-                  className="text-[14px] font-medium text-[#0b1b3b] underline decoration-[#0b1b3b]/40 underline-offset-2 hover:decoration-[#0b1b3b]"
-                >
-                  {c.name}
-                </Link>
-              </li>
-            ))}
+            {ALL_CANDIDATES.filter((c) => c.key !== slug)
+              .slice(0, 8)
+              .map((c) => (
+                <li key={c.key}>
+                  <Link
+                    href={`/candidatos/${c.key}`}
+                    className="text-[14px] font-medium text-[#0b1b3b] underline decoration-[#0b1b3b]/40 underline-offset-2 hover:decoration-[#0b1b3b]"
+                  >
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
       </section>
@@ -411,11 +431,11 @@ export default function CandidateDetailPage() {
       {/* Fuentes y referencias (E-E-A-T) */}
       <section className="border-t border-slate-200 bg-slate-50 py-8">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">
-          <h2 className="mb-3 text-[18px] font-bold text-[#0b1b3b]">
-            Fuentes
-          </h2>
+          <h2 className="mb-3 text-[18px] font-bold text-[#0b1b3b]">Fuentes</h2>
           <p className="text-[14px] leading-relaxed text-slate-700">
-            Toda la información de esta página (biografía, historial académico, declaraciones juradas, experiencia, propuestas y plan de gobierno) fue extraída de la plataforma oficial del{" "}
+            Toda la información de esta página (biografía, historial académico,
+            declaraciones juradas, experiencia, propuestas y plan de gobierno)
+            fue extraída de la plataforma oficial del{" "}
             <a
               href="https://www.jne.gob.pe"
               target="_blank"
@@ -424,7 +444,8 @@ export default function CandidateDetailPage() {
             >
               Jurado Nacional de Elecciones (JNE)
             </a>
-            , organismo constitucional autónomo encargado de la transparencia y supervisión de los procesos electorales en el Perú.
+            , organismo constitucional autónomo encargado de la transparencia y
+            supervisión de los procesos electorales en el Perú.
           </p>
         </div>
       </section>
@@ -433,4 +454,3 @@ export default function CandidateDetailPage() {
     </main>
   );
 }
-

@@ -119,13 +119,15 @@ export default function ContactanosPage() {
             ¿Quieres colaborar con Observa Perú?
           </h2>
 
-         <p className="mx-auto mt-5 max-w-3xl text-pretty text-[16px] leading-[175%] text-slate-700 sm:text-[18px]">
-            Somos una iniciativa independiente impulsada por un grupo de estudiantes
-            comprometidos con el acceso a información clara y responsable sobre el proceso
-            electoral peruano. Si eres estudiante, investigador, comunicador, analista de
-            datos o simplemente una persona interesada en aportar con información verificable,
-            análisis, visualización de datos o revisión de contenidos, nos encantará leerte.
-        </p>
+          <p className="mx-auto mt-5 max-w-3xl text-pretty text-[16px] leading-[175%] text-slate-700 sm:text-[18px]">
+            Somos una iniciativa independiente impulsada por un grupo de
+            estudiantes comprometidos con el acceso a información clara y
+            responsable sobre el proceso electoral peruano. Si eres estudiante,
+            investigador, comunicador, analista de datos o simplemente una
+            persona interesada en aportar con información verificable, análisis,
+            visualización de datos o revisión de contenidos, nos encantará
+            leerte.
+          </p>
 
           <a
             href="mailto:contactanos@observaperu.com"
@@ -155,12 +157,19 @@ export default function ContactanosPage() {
             />
           </div>
 
-         <ul className="mx-auto mt-6 max-w-3xl list-disc space-y-2 pl-5 text-left text-[16px] font-medium leading-[175%] text-slate-700 sm:text-[18px]">
+          <ul className="mx-auto mt-6 max-w-3xl list-disc space-y-2 pl-5 text-left text-[16px] font-medium leading-[175%] text-slate-700 sm:text-[18px]">
             <li>Una iniciativa independiente impulsada por estudiantes.</li>
-            <li>No recibimos financiamiento de partidos políticos, instituciones públicas ni organizaciones privadas.</li>
-            <li>El proyecto se sostiene gracias al tiempo, trabajo y compromiso de quienes creemos en el acceso libre a información electoral clara y verificable.</li>
+            <li>
+              No recibimos financiamiento de partidos políticos, instituciones
+              públicas ni organizaciones privadas.
+            </li>
+            <li>
+              El proyecto se sostiene gracias al tiempo, trabajo y compromiso de
+              quienes creemos en el acceso libre a información electoral clara y
+              verificable.
+            </li>
             <li>Síguenos en nuestras redes.</li>
-        </ul>
+          </ul>
         </div>
       </section>
       <Footer />

@@ -33,8 +33,11 @@ function isValid(d: string | undefined): boolean {
 }
 
 export function buildFlujosTerritoriales(
-  data: Array<{ nacimiento_departamento?: string; domicilio_departamento?: string }>,
-  minFlowCount: number = 1
+  data: Array<{
+    nacimiento_departamento?: string;
+    domicilio_departamento?: string;
+  }>,
+  minFlowCount: number = 1,
 ): FlujosTerritorialesData {
   const pairCount = new Map<string, number>();
 
@@ -76,7 +79,7 @@ export function buildFlujosTerritoriales(
       departamento,
       count,
       normalized: (count - minCount) / range,
-    })
+    }),
   );
 
   return { flows, sameDept, minCount, maxCount };
@@ -88,8 +91,7 @@ export function flowColor(normalized: number): string {
   const mid = { r: 0x3b, g: 0x82, b: 0xf6 };
   const dark = { r: 0x1e, g: 0x3a, b: 0x8a };
 
-  const lerp = (a: number, b: number, t: number) =>
-    Math.round(a + (b - a) * t);
+  const lerp = (a: number, b: number, t: number) => Math.round(a + (b - a) * t);
   const toHex = (r: number, g: number, b: number) =>
     `#${[r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("")}`;
 
@@ -98,13 +100,13 @@ export function flowColor(normalized: number): string {
     return toHex(
       lerp(light.r, mid.r, t),
       lerp(light.g, mid.g, t),
-      lerp(light.b, mid.b, t)
+      lerp(light.b, mid.b, t),
     );
   }
   const t = (normalized - 0.5) * 2;
   return toHex(
     lerp(mid.r, dark.r, t),
     lerp(mid.g, dark.g, t),
-    lerp(mid.b, dark.b, t)
+    lerp(mid.b, dark.b, t),
   );
 }

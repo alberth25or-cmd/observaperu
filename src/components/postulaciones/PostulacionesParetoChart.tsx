@@ -60,13 +60,13 @@ function CustomTickAvatar({
   const nameFromPayload =
     typeof payload === "string"
       ? payload
-      : (payload as { value?: string })?.value ?? "";
+      : ((payload as { value?: string })?.value ?? "");
 
   const tickIndex =
     typeof index === "number" && index >= 0
       ? index
       : (data?.findIndex(
-          (d) => normalizeName(d.postulante) === normalizeName(nameFromPayload)
+          (d) => normalizeName(d.postulante) === normalizeName(nameFromPayload),
         ) ?? 0);
 
   // Prefer data[index] for guaranteed correct name-to-bar mapping
@@ -101,7 +101,13 @@ function CustomTickAvatar({
           <title>{name}</title>
         </image>
       ) : (
-        <text x={0} y={TICK_SIZE / 2 + 4} textAnchor="middle" fontSize={9} fill="#475569">
+        <text
+          x={0}
+          y={TICK_SIZE / 2 + 4}
+          textAnchor="middle"
+          fontSize={9}
+          fill="#475569"
+        >
           {name.length > 8 ? name.slice(0, 7) + "…" : name}
         </text>
       )}
@@ -109,14 +115,26 @@ function CustomTickAvatar({
   );
 }
 
-function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: Item }> }) {
+function CustomTooltip({
+  active,
+  payload,
+}: {
+  active?: boolean;
+  payload?: Array<{ payload: Item }>;
+}) {
   if (!active || !payload?.[0]) return null;
   const raw = payload[0].payload;
   return (
     <div className="bg-white p-2 sm:p-3 border border-slate-200 rounded-lg shadow-lg max-w-[220px]">
-      <p className="font-semibold text-[#0b1b3b] text-sm truncate">{raw.postulante}</p>
-      <p className="text-xs text-slate-600">Postulaciones: {raw.totalPostulaciones}</p>
-      <p className="text-xs text-slate-600">Acumulado: {raw.acumulado} ({raw.pctAcumulado.toFixed(0)}%)</p>
+      <p className="font-semibold text-[#0b1b3b] text-sm truncate">
+        {raw.postulante}
+      </p>
+      <p className="text-xs text-slate-600">
+        Postulaciones: {raw.totalPostulaciones}
+      </p>
+      <p className="text-xs text-slate-600">
+        Acumulado: {raw.acumulado} ({raw.pctAcumulado.toFixed(0)}%)
+      </p>
     </div>
   );
 }
@@ -140,7 +158,10 @@ export default function PostulacionesParetoChart({
   return (
     <div className="w-full h-[300px] sm:h-[340px]">
       <ResponsiveContainer width="100%" height="100%">
-        <ComposedChart data={visible} margin={{ top: 8, right: 48, left: 8, bottom: TICK_SIZE + 8 }}>
+        <ComposedChart
+          data={visible}
+          margin={{ top: 8, right: 48, left: 8, bottom: TICK_SIZE + 8 }}
+        >
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis
             dataKey="postulante"
@@ -187,7 +208,11 @@ export default function PostulacionesParetoChart({
             }}
           />
           <Tooltip content={<CustomTooltip />} />
-          <Legend formatter={(value) => <span className="text-xs sm:text-sm text-slate-700">{value}</span>} />
+          <Legend
+            formatter={(value) => (
+              <span className="text-xs sm:text-sm text-slate-700">{value}</span>
+            )}
+          />
           <Bar
             yAxisId="left"
             dataKey="totalPostulaciones"

@@ -32,9 +32,13 @@ export default function TopFlujosTable({ flujos }: TopFlujosTableProps) {
         <tbody>
           {flujos.map((f, i) => (
             <tr key={i} className="border-b border-slate-100 hover:bg-slate-50">
-              <td className="py-2 pr-4 font-medium text-[#0b1b3b]">{f.origen}</td>
+              <td className="py-2 pr-4 font-medium text-[#0b1b3b]">
+                {f.origen}
+              </td>
               <td className="py-2 pr-4 text-slate-700">{f.destino}</td>
-              <td className="py-2 text-right font-semibold text-[#1b2b5a]">{f.count}</td>
+              <td className="py-2 text-right font-semibold text-[#1b2b5a]">
+                {f.count}
+              </td>
             </tr>
           ))}
         </tbody>

@@ -6,7 +6,9 @@ interface AntecedentesInsightsProps {
   kpis: AntecedentesKPIs | null;
 }
 
-export default function AntecedentesInsights({ kpis }: AntecedentesInsightsProps) {
+export default function AntecedentesInsights({
+  kpis,
+}: AntecedentesInsightsProps) {
   if (!kpis) return null;
 
   const pct = Math.round(kpis.pctTambienOtroCargo);
@@ -30,13 +32,22 @@ export default function AntecedentesInsights({ kpis }: AntecedentesInsightsProps
           ¿Qué muestra esta información?
         </h3>
         <p>
-          La multipostulación ocurre cuando un candidato se presenta a más de un cargo en la misma elección (por ejemplo, Presidencia y Senado, o Presidencia y Diputado). Los datos reflejan cuántos candidatos presidenciales concentran su postulación solo en la presidencia y cuántos suman además una candidatura a Congreso.
+          La multipostulación ocurre cuando un candidato se presenta a más de un
+          cargo en la misma elección (por ejemplo, Presidencia y Senado, o
+          Presidencia y Diputado). Los datos reflejan cuántos candidatos
+          presidenciales concentran su postulación solo en la presidencia y
+          cuántos suman además una candidatura a Congreso.
         </p>
         <p>
-          En esta elección, la mayoría de quienes postulan a la Presidencia también postulan a Senado; un grupo menor lo hace a Diputado. Ningún candidato en la muestra postula a los tres cargos a la vez. Estos patrones permiten a la ciudadanía ver de forma objetiva cómo se distribuye la oferta electoral entre cargos.
+          En esta elección, la mayoría de quienes postulan a la Presidencia
+          también postulan a Senado; un grupo menor lo hace a Diputado. Ningún
+          candidato en la muestra postula a los tres cargos a la vez. Estos
+          patrones permiten a la ciudadanía ver de forma objetiva cómo se
+          distribuye la oferta electoral entre cargos.
         </p>
         <p className="text-slate-600 text-xs sm:text-sm">
-          Observa Perú presenta estos datos con fines informativos. La interpretación de su significado político corresponde a la ciudadanía.
+          Observa Perú presenta estos datos con fines informativos. La
+          interpretación de su significado político corresponde a la ciudadanía.
         </p>
       </div>
     </div>

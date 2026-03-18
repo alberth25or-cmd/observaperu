@@ -1,6 +1,13 @@
 "use client";
 
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
 
 const COLORS: Record<string, string> = {
   Pública: "#1b2b5a",
@@ -37,7 +44,9 @@ function CustomTooltip({
   );
 }
 
-export default function TipoUniversidadChart({ data }: TipoUniversidadChartProps) {
+export default function TipoUniversidadChart({
+  data,
+}: TipoUniversidadChartProps) {
   const filtered = (data || []).filter((d) => d.pct > 0);
 
   if (filtered.length === 0) {
@@ -61,7 +70,9 @@ export default function TipoUniversidadChart({ data }: TipoUniversidadChartProps
             innerRadius={56}
             outerRadius={88}
             paddingAngle={2}
-            label={({ name, payload }) => `${name} ${(payload as Item).pct.toFixed(0)}%`}
+            label={({ name, payload }) =>
+              `${name} ${(payload as Item).pct.toFixed(0)}%`
+            }
           >
             {filtered.map((entry, i) => (
               <Cell key={i} fill={COLORS[entry.name] ?? "#94a3b8"} />

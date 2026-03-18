@@ -45,51 +45,84 @@ export default function ConocenosPage() {
     {
       name: "Luis Alberth",
       last: "Ortiz Huamantalla",
-      linkedin: "https://www.linkedin.com/in/luis-alberth-ortiz-huamantalla-b1236b275",
+      linkedin:
+        "https://www.linkedin.com/in/luis-alberth-ortiz-huamantalla-b1236b275",
       key: "team-1",
       img: "/team/luisalberthortiz.jpg",
     },
     {
       name: "Loreley Yesel Audrey",
       last: "Rojas Berrios",
-      linkedin: "https://www.linkedin.com/in/loreley-yesel-audrey-rojas-berrios-985372274",
+      linkedin:
+        "https://www.linkedin.com/in/loreley-yesel-audrey-rojas-berrios-985372274",
       key: "team-2",
       img: "/team/Loreley%20Yesel%20Audrey%20Rojas%20Berrios%20.png",
     },
     {
       name: "Patrick Paolo",
       last: "Santa Cruz Moncada",
-      linkedin: "https://www.linkedin.com/in/patrick-paolo-santa-cruz-moncada-ba3a86396",
+      linkedin:
+        "https://www.linkedin.com/in/patrick-paolo-santa-cruz-moncada-ba3a86396",
       key: "team-3",
       img: "/team/Santa%20Cruz%20Moncada%20Patrick%20Paolo%20.png",
     },
     {
       name: "Gabriela Alessandra",
       last: "Azaña Quispe",
-      linkedin: "https://www.linkedin.com/in/gabriela-aza%C3%B1a-quispe-32b304379",
+      linkedin:
+        "https://www.linkedin.com/in/gabriela-aza%C3%B1a-quispe-32b304379",
       key: "team-4",
       img: "/team/Gabriela-Alessandra-Aza%C3%B1a.PNG",
     },
-      ];
+  ];
 
   const services = [
     {
       title: "Reportes estadísticos",
       text: "Análisis de datos utilizando metodologías distintas para identificar tendencias, patrones y relaciones relevantes. Nuestros reportes están diseñados para comunicar resultados de forma clara, comprensible y fundamentada.",
       icon: (
-        <svg className="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="200" height="200" rx="16" fill="url(#grad1)"/>
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="200" height="200" rx="16" fill="url(#grad1)" />
           <defs>
-            <linearGradient id="grad1" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#1b2b5a" stopOpacity="0.1"/>
-              <stop offset="100%" stopColor="#4A90E2" stopOpacity="0.1"/>
+            <linearGradient
+              id="grad1"
+              x1="0"
+              y1="0"
+              x2="200"
+              y2="200"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="#1b2b5a" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="#4A90E2" stopOpacity="0.1" />
             </linearGradient>
           </defs>
-          <path d="M50 60 L150 60 L150 80 L50 80 Z" fill="#1b2b5a" fillOpacity="0.3"/>
-          <path d="M50 100 L120 100 L120 120 L50 120 Z" fill="#1b2b5a" fillOpacity="0.3"/>
-          <path d="M50 140 L140 140 L140 160 L50 160 Z" fill="#1b2b5a" fillOpacity="0.3"/>
-          <circle cx="170" cy="50" r="15" fill="#4A90E2" fillOpacity="0.4"/>
-          <path d="M170 35 L170 65 M160 50 L180 50" stroke="#1b2b5a" strokeWidth="2" strokeOpacity="0.5"/>
+          <path
+            d="M50 60 L150 60 L150 80 L50 80 Z"
+            fill="#1b2b5a"
+            fillOpacity="0.3"
+          />
+          <path
+            d="M50 100 L120 100 L120 120 L50 120 Z"
+            fill="#1b2b5a"
+            fillOpacity="0.3"
+          />
+          <path
+            d="M50 140 L140 140 L140 160 L50 160 Z"
+            fill="#1b2b5a"
+            fillOpacity="0.3"
+          />
+          <circle cx="170" cy="50" r="15" fill="#4A90E2" fillOpacity="0.4" />
+          <path
+            d="M170 35 L170 65 M160 50 L180 50"
+            stroke="#1b2b5a"
+            strokeWidth="2"
+            strokeOpacity="0.5"
+          />
         </svg>
       ),
     },
@@ -97,19 +130,74 @@ export default function ConocenosPage() {
       title: "Desarrollo de páginas web",
       text: "Diseñamos y desarrollamos páginas web informativas y funcionales, enfocadas en la organización eficiente de contenidos y una experiencia de usuario intuitiva.",
       icon: (
-        <svg className="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="200" height="200" rx="16" fill="url(#grad2)"/>
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="200" height="200" rx="16" fill="url(#grad2)" />
           <defs>
-            <linearGradient id="grad2" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#2E7D8F" stopOpacity="0.1"/>
-              <stop offset="100%" stopColor="#1b2b5a" stopOpacity="0.1"/>
+            <linearGradient
+              id="grad2"
+              x1="0"
+              y1="0"
+              x2="200"
+              y2="200"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="#2E7D8F" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="#1b2b5a" stopOpacity="0.1" />
             </linearGradient>
           </defs>
-          <rect x="40" y="50" width="120" height="100" rx="8" fill="#2E7D8F" fillOpacity="0.2" stroke="#1b2b5a" strokeWidth="2" strokeOpacity="0.3"/>
-          <rect x="50" y="60" width="100" height="15" rx="4" fill="#1b2b5a" fillOpacity="0.3"/>
-          <rect x="50" y="85" width="60" height="10" rx="4" fill="#2E7D8F" fillOpacity="0.3"/>
-          <rect x="50" y="105" width="80" height="10" rx="4" fill="#2E7D8F" fillOpacity="0.3"/>
-          <rect x="50" y="125" width="70" height="10" rx="4" fill="#2E7D8F" fillOpacity="0.3"/>
+          <rect
+            x="40"
+            y="50"
+            width="120"
+            height="100"
+            rx="8"
+            fill="#2E7D8F"
+            fillOpacity="0.2"
+            stroke="#1b2b5a"
+            strokeWidth="2"
+            strokeOpacity="0.3"
+          />
+          <rect
+            x="50"
+            y="60"
+            width="100"
+            height="15"
+            rx="4"
+            fill="#1b2b5a"
+            fillOpacity="0.3"
+          />
+          <rect
+            x="50"
+            y="85"
+            width="60"
+            height="10"
+            rx="4"
+            fill="#2E7D8F"
+            fillOpacity="0.3"
+          />
+          <rect
+            x="50"
+            y="105"
+            width="80"
+            height="10"
+            rx="4"
+            fill="#2E7D8F"
+            fillOpacity="0.3"
+          />
+          <rect
+            x="50"
+            y="125"
+            width="70"
+            height="10"
+            rx="4"
+            fill="#2E7D8F"
+            fillOpacity="0.3"
+          />
         </svg>
       ),
     },
@@ -117,20 +205,56 @@ export default function ConocenosPage() {
       title: "Dashboards estadísticos",
       text: "Creamos dashboards interactivos que permiten explorar datos de forma dinámica, monitorear indicadores y realizar análisis en tiempo real.",
       icon: (
-        <svg className="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="200" height="200" rx="16" fill="url(#grad3)"/>
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="200" height="200" rx="16" fill="url(#grad3)" />
           <defs>
-            <linearGradient id="grad3" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#4A90E2" stopOpacity="0.1"/>
-              <stop offset="100%" stopColor="#2E7D8F" stopOpacity="0.1"/>
+            <linearGradient
+              id="grad3"
+              x1="0"
+              y1="0"
+              x2="200"
+              y2="200"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="#4A90E2" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="#2E7D8F" stopOpacity="0.1" />
             </linearGradient>
           </defs>
-          <rect x="40" y="50" width="50" height="100" rx="4" fill="#4A90E2" fillOpacity="0.4"/>
-          <rect x="100" y="80" width="50" height="70" rx="4" fill="#2E7D8F" fillOpacity="0.4"/>
-          <rect x="160" y="60" width="30" height="90" rx="4" fill="#1b2b5a" fillOpacity="0.4"/>
-          <circle cx="50" cy="40" r="8" fill="#4A90E2" fillOpacity="0.5"/>
-          <circle cx="110" cy="40" r="8" fill="#2E7D8F" fillOpacity="0.5"/>
-          <circle cx="170" cy="40" r="8" fill="#1b2b5a" fillOpacity="0.5"/>
+          <rect
+            x="40"
+            y="50"
+            width="50"
+            height="100"
+            rx="4"
+            fill="#4A90E2"
+            fillOpacity="0.4"
+          />
+          <rect
+            x="100"
+            y="80"
+            width="50"
+            height="70"
+            rx="4"
+            fill="#2E7D8F"
+            fillOpacity="0.4"
+          />
+          <rect
+            x="160"
+            y="60"
+            width="30"
+            height="90"
+            rx="4"
+            fill="#1b2b5a"
+            fillOpacity="0.4"
+          />
+          <circle cx="50" cy="40" r="8" fill="#4A90E2" fillOpacity="0.5" />
+          <circle cx="110" cy="40" r="8" fill="#2E7D8F" fillOpacity="0.5" />
+          <circle cx="170" cy="40" r="8" fill="#1b2b5a" fillOpacity="0.5" />
         </svg>
       ),
     },
@@ -138,21 +262,44 @@ export default function ConocenosPage() {
       title: "Visualización de datos",
       text: "Convertimos datos en gráficos, mapas y recursos visuales que facilitan la comprensión de información compleja y mejoran su comunicación.",
       icon: (
-        <svg className="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="200" height="200" rx="16" fill="url(#grad4)"/>
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="200" height="200" rx="16" fill="url(#grad4)" />
           <defs>
-            <linearGradient id="grad4" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#1b2b5a" stopOpacity="0.1"/>
-              <stop offset="100%" stopColor="#4A90E2" stopOpacity="0.1"/>
+            <linearGradient
+              id="grad4"
+              x1="0"
+              y1="0"
+              x2="200"
+              y2="200"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="#1b2b5a" stopOpacity="0.1" />
+              <stop offset="100%" stopColor="#4A90E2" stopOpacity="0.1" />
             </linearGradient>
           </defs>
-          <path d="M40 140 L70 120 L100 100 L130 80 L160 60" stroke="#1b2b5a" strokeWidth="3" strokeOpacity="0.5" fill="none"/>
-          <circle cx="40" cy="140" r="5" fill="#1b2b5a" fillOpacity="0.6"/>
-          <circle cx="70" cy="120" r="5" fill="#2E7D8F" fillOpacity="0.6"/>
-          <circle cx="100" cy="100" r="5" fill="#4A90E2" fillOpacity="0.6"/>
-          <circle cx="130" cy="80" r="5" fill="#2E7D8F" fillOpacity="0.6"/>
-          <circle cx="160" cy="60" r="5" fill="#1b2b5a" fillOpacity="0.6"/>
-          <path d="M50 50 L50 150 M50 150 L150 150" stroke="#1b2b5a" strokeWidth="2" strokeOpacity="0.3"/>
+          <path
+            d="M40 140 L70 120 L100 100 L130 80 L160 60"
+            stroke="#1b2b5a"
+            strokeWidth="3"
+            strokeOpacity="0.5"
+            fill="none"
+          />
+          <circle cx="40" cy="140" r="5" fill="#1b2b5a" fillOpacity="0.6" />
+          <circle cx="70" cy="120" r="5" fill="#2E7D8F" fillOpacity="0.6" />
+          <circle cx="100" cy="100" r="5" fill="#4A90E2" fillOpacity="0.6" />
+          <circle cx="130" cy="80" r="5" fill="#2E7D8F" fillOpacity="0.6" />
+          <circle cx="160" cy="60" r="5" fill="#1b2b5a" fillOpacity="0.6" />
+          <path
+            d="M50 50 L50 150 M50 150 L150 150"
+            stroke="#1b2b5a"
+            strokeWidth="2"
+            strokeOpacity="0.3"
+          />
         </svg>
       ),
     },
@@ -217,7 +364,8 @@ export default function ConocenosPage() {
                     />
                   ) : (
                     <span className="text-4xl font-bold text-white">
-                      {p.name.charAt(0)}{p.last.charAt(0)}
+                      {p.name.charAt(0)}
+                      {p.last.charAt(0)}
                     </span>
                   )}
                 </div>
