@@ -13,7 +13,10 @@ export type ArticuloNoticia = {
       | { type: "p"; text: string }
       | { type: "h3"; text: string }
       | { type: "ul"; items: string[] }
-      | { type: "chart"; chartId: "electorado-2026" | "multas-2026" | "padron-2026" }
+      | {
+          type: "chart";
+          chartId: "electorado-2026" | "multas-2026" | "padron-2026";
+        }
       | { type: "link"; href: string; label: string }
       | { type: "pdf"; href: string; label: string }
       | { type: "internalLink"; href: string; label: string }
@@ -134,10 +137,7 @@ export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
           },
           {
             type: "ul",
-            items: [
-              "13 119 593 mujeres",
-              "12 995 026 hombres",
-            ],
+            items: ["13 119 593 mujeres", "12 995 026 hombres"],
           },
           {
             type: "chart",
@@ -236,7 +236,11 @@ export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
           },
           {
             type: "table",
-            headers: ["Clasificación del distrito", "Porcentaje de la UIT", "Multa"],
+            headers: [
+              "Clasificación del distrito",
+              "Porcentaje de la UIT",
+              "Multa",
+            ],
             rows: [
               ["Distrito no pobre", "2% de la UIT", "S/ 110"],
               ["Distrito pobre", "1% de la UIT", "S/ 55"],
@@ -317,7 +321,8 @@ export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
           {
             type: "internalLink",
             href: "/noticias/votar-dni-vencido-elecciones-2026-peru",
-            label: "¿Se puede votar con DNI vencido en las Elecciones 2026 en Perú?",
+            label:
+              "¿Se puede votar con DNI vencido en las Elecciones 2026 en Perú?",
           },
           {
             type: "p",
@@ -416,7 +421,8 @@ export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
 
   "cuanto-pagan-miembro-mesa-peru-2026": {
     slug: "cuanto-pagan-miembro-mesa-peru-2026",
-    title: "¿Cuánto pagan por ser miembro de mesa en Perú? Pago, beneficios y multas en las Elecciones 2026",
+    title:
+      "¿Cuánto pagan por ser miembro de mesa en Perú? Pago, beneficios y multas en las Elecciones 2026",
     datePublished: "2026-02-15",
     metaDescription:
       "Cuánto pagan por ser miembro de mesa en Perú 2026: S/ 165 por jornada. Beneficios, multa por no asistir (S/ 275) y cómo ser voluntario.",
@@ -479,7 +485,8 @@ export const ARTICULOS_NOTICIAS: Record<string, ArticuloNoticia> = {
           {
             type: "internalLink",
             href: "/noticias/votar-dni-vencido-elecciones-2026-peru",
-            label: "¿Se puede votar con DNI vencido en las Elecciones 2026 en Perú?",
+            label:
+              "¿Se puede votar con DNI vencido en las Elecciones 2026 en Perú?",
           },
         ],
       },

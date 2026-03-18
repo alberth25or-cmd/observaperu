@@ -132,10 +132,23 @@ export interface PostulacionesKPIs {
   correlacionPearson: number;
   outliersTotal: number[];
   outliersPresidencia: number[];
-  pareto: Array<{ postulante: string; totalPostulaciones: number; acumulado: number; pctAcumulado: number }>;
-  ranking: Array<{ postulante: string; totalPostulaciones: number; postulacionesPresidencia: number }>;
+  pareto: Array<{
+    postulante: string;
+    totalPostulaciones: number;
+    acumulado: number;
+    pctAcumulado: number;
+  }>;
+  ranking: Array<{
+    postulante: string;
+    totalPostulaciones: number;
+    postulacionesPresidencia: number;
+  }>;
   /** Ranking ordenado por postulaciones a Presidencia (desc) */
-  rankingPresidencia: Array<{ postulante: string; totalPostulaciones: number; postulacionesPresidencia: number }>;
+  rankingPresidencia: Array<{
+    postulante: string;
+    totalPostulaciones: number;
+    postulacionesPresidencia: number;
+  }>;
   /** Ranking por índice de ambición (presidencia/total), solo candidatos con total ≥ 1, ordenado desc */
   rankingAmbicion: Array<{
     postulante: string;
@@ -143,18 +156,37 @@ export interface PostulacionesKPIs {
     postulacionesPresidencia: number;
     indiceAmbicion: number;
   }>;
-  scatterData: Array<{ postulante: string; total: number; presidencia: number; indiceAmbicion: number }>;
+  scatterData: Array<{
+    postulante: string;
+    total: number;
+    presidencia: number;
+    indiceAmbicion: number;
+  }>;
   histogramTotal: Array<{ rango: string; valor: string; count: number }>;
   histogramPresidencia: Array<{ rango: string; valor: string; count: number }>;
-  boxplotTotal: { min: number; q1: number; mediana: number; q3: number; max: number };
-  boxplotPresidencia: { min: number; q1: number; mediana: number; q3: number; max: number };
+  boxplotTotal: {
+    min: number;
+    q1: number;
+    mediana: number;
+    q3: number;
+    max: number;
+  };
+  boxplotPresidencia: {
+    min: number;
+    q1: number;
+    mediana: number;
+    q3: number;
+    max: number;
+  };
   /** Índice de Persistencia Política: media de total postulaciones */
   indicePersistenciaMedia: number;
   /** Índice de Ambición Presidencial (media): promedio de presidencia/total entre quienes tienen total > 0 */
   indiceAmbicionMedia: number;
 }
 
-export function computePostulacionesKPIs(rows: PostulacionRow[]): PostulacionesKPIs | null {
+export function computePostulacionesKPIs(
+  rows: PostulacionRow[],
+): PostulacionesKPIs | null {
   if (!rows?.length) return null;
 
   const totalPostulaciones = rows.map((r) => r.totalPostulaciones);
@@ -176,27 +208,38 @@ export function computePostulacionesKPIs(rows: PostulacionRow[]): PostulacionesK
   const medianaPresidencia = percentile(postulacionesPresidencia, 50);
   const modaPresidencia = mode(postulacionesPresidencia);
   const stdPresidencia = std(postulacionesPresidencia, mediaPresidencia);
-  const cvPresidencia = mediaPresidencia === 0 ? 0 : (stdPresidencia / mediaPresidencia) * 100;
+  const cvPresidencia =
+    mediaPresidencia === 0 ? 0 : (stdPresidencia / mediaPresidencia) * 100;
   const minPresidencia = Math.min(...postulacionesPresidencia);
   const maxPresidencia = Math.max(...postulacionesPresidencia);
   const p25Presidencia = percentile(postulacionesPresidencia, 25);
   const p50Presidencia = percentile(postulacionesPresidencia, 50);
   const p75Presidencia = percentile(postulacionesPresidencia, 75);
 
-  const conAlMenosUnaPresidencia = rows.filter((r) => r.postulacionesPresidencia >= 1).length;
-  const proporcionAlMenosUnaPresidencia = n > 0 ? (conAlMenosUnaPresidencia / n) * 100 : 0;
+  const conAlMenosUnaPresidencia = rows.filter(
+    (r) => r.postulacionesPresidencia >= 1,
+  ).length;
+  const proporcionAlMenosUnaPresidencia =
+    n > 0 ? (conAlMenosUnaPresidencia / n) * 100 : 0;
 
   const giniTotal = gini(totalPostulaciones);
   const giniPresidencia = gini(postulacionesPresidencia);
   const covarianza = covariance(totalPostulaciones, postulacionesPresidencia);
-  const correlacionPearson = pearson(totalPostulaciones, postulacionesPresidencia);
+  const correlacionPearson = pearson(
+    totalPostulaciones,
+    postulacionesPresidencia,
+  );
 
   const outlierIdxTotal = outlierIndices(totalPostulaciones);
   const outlierIdxPresidencia = outlierIndices(postulacionesPresidencia);
   const outliersTotal = outlierIdxTotal.map((i) => totalPostulaciones[i]);
-  const outliersPresidencia = outlierIdxPresidencia.map((i) => postulacionesPresidencia[i]);
+  const outliersPresidencia = outlierIdxPresidencia.map(
+    (i) => postulacionesPresidencia[i],
+  );
 
-  const sortedByTotal = [...rows].sort((a, b) => b.totalPostulaciones - a.totalPostulaciones);
+  const sortedByTotal = [...rows].sort(
+    (a, b) => b.totalPostulaciones - a.totalPostulaciones,
+  );
   const sumaTotal = sum(totalPostulaciones);
   let cum = 0;
   const pareto = sortedByTotal.map((r) => {
@@ -215,7 +258,9 @@ export function computePostulacionesKPIs(rows: PostulacionRow[]): PostulacionesK
     postulacionesPresidencia: r.postulacionesPresidencia,
   }));
 
-  const sortedByPresidencia = [...rows].sort((a, b) => b.postulacionesPresidencia - a.postulacionesPresidencia);
+  const sortedByPresidencia = [...rows].sort(
+    (a, b) => b.postulacionesPresidencia - a.postulacionesPresidencia,
+  );
   const rankingPresidencia = sortedByPresidencia.map((r) => ({
     postulante: r.postulante,
     totalPostulaciones: r.totalPostulaciones,
@@ -230,26 +275,41 @@ export function computePostulacionesKPIs(rows: PostulacionRow[]): PostulacionesK
       postulacionesPresidencia: r.postulacionesPresidencia,
       indiceAmbicion: r.postulacionesPresidencia / r.totalPostulaciones,
     }));
-  const rankingAmbicion = [...withAmbicion].sort((a, b) => b.indiceAmbicion - a.indiceAmbicion);
+  const rankingAmbicion = [...withAmbicion].sort(
+    (a, b) => b.indiceAmbicion - a.indiceAmbicion,
+  );
 
   const scatterData = rows.map((r) => ({
     postulante: r.postulante,
     total: r.totalPostulaciones,
     presidencia: r.postulacionesPresidencia,
-    indiceAmbicion: r.totalPostulaciones > 0 ? r.postulacionesPresidencia / r.totalPostulaciones : 0,
+    indiceAmbicion:
+      r.totalPostulaciones > 0
+        ? r.postulacionesPresidencia / r.totalPostulaciones
+        : 0,
   }));
 
-  const histogramTotal: Array<{ rango: string; valor: string; count: number }> = [];
+  const histogramTotal: Array<{ rango: string; valor: string; count: number }> =
+    [];
   for (let i = 0; i <= maxTotal; i++) {
     const count = totalPostulaciones.filter((x) => x === i).length;
     histogramTotal.push({ rango: `${i}`, valor: `${i} postulaciones`, count });
   }
-  if (histogramTotal.length === 0) histogramTotal.push({ rango: "0", valor: "0", count: n });
+  if (histogramTotal.length === 0)
+    histogramTotal.push({ rango: "0", valor: "0", count: n });
 
-  const histogramPresidencia: Array<{ rango: string; valor: string; count: number }> = [];
+  const histogramPresidencia: Array<{
+    rango: string;
+    valor: string;
+    count: number;
+  }> = [];
   for (let i = 0; i <= maxPresidencia; i++) {
     const count = postulacionesPresidencia.filter((x) => x === i).length;
-    histogramPresidencia.push({ rango: `${i}`, valor: `${i} a presidencia`, count });
+    histogramPresidencia.push({
+      rango: `${i}`,
+      valor: `${i} a presidencia`,
+      count,
+    });
   }
 
   const boxplotTotal = {
@@ -270,7 +330,11 @@ export function computePostulacionesKPIs(rows: PostulacionRow[]): PostulacionesK
   const conPostulaciones = rows.filter((r) => r.totalPostulaciones > 0);
   const indiceAmbicionMedia =
     conPostulaciones.length > 0
-      ? mean(conPostulaciones.map((r) => r.postulacionesPresidencia / r.totalPostulaciones))
+      ? mean(
+          conPostulaciones.map(
+            (r) => r.postulacionesPresidencia / r.totalPostulaciones,
+          ),
+        )
       : 0;
 
   return {

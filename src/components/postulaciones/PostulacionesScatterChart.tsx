@@ -33,14 +33,22 @@ function CustomTooltip({
   const p = payload[0].payload;
   return (
     <div className="bg-white p-2 sm:p-3 border border-slate-200 rounded-lg shadow-lg max-w-[220px]">
-      <p className="font-semibold text-[#0b1b3b] text-sm truncate">{p.postulante}</p>
-      <p className="text-xs text-slate-600">Total: {p.total} · Presidencia: {p.presidencia}</p>
-      <p className="text-xs text-slate-500">Índice ambición: {(p.indiceAmbicion * 100).toFixed(0)}%</p>
+      <p className="font-semibold text-[#0b1b3b] text-sm truncate">
+        {p.postulante}
+      </p>
+      <p className="text-xs text-slate-600">
+        Total: {p.total} · Presidencia: {p.presidencia}
+      </p>
+      <p className="text-xs text-slate-500">
+        Índice ambición: {(p.indiceAmbicion * 100).toFixed(0)}%
+      </p>
     </div>
   );
 }
 
-export default function PostulacionesScatterChart({ data }: PostulacionesScatterChartProps) {
+export default function PostulacionesScatterChart({
+  data,
+}: PostulacionesScatterChartProps) {
   if (!data?.length) {
     return (
       <div className="h-[280px] flex items-center justify-center text-slate-500 text-sm">
@@ -79,8 +87,16 @@ export default function PostulacionesScatterChart({ data }: PostulacionesScatter
             }}
           />
           <ZAxis type="number" dataKey="indiceAmbicion" range={[80, 400]} />
-          <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: "3 3" }} />
-          <Scatter name="Candidatos" data={data} fill="#1b2b5a" fillOpacity={0.85} />
+          <Tooltip
+            content={<CustomTooltip />}
+            cursor={{ strokeDasharray: "3 3" }}
+          />
+          <Scatter
+            name="Candidatos"
+            data={data}
+            fill="#1b2b5a"
+            fillOpacity={0.85}
+          />
         </ScatterChart>
       </ResponsiveContainer>
     </div>

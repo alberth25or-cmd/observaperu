@@ -14,7 +14,9 @@ interface PostulacionesSectionProps {
   data: PostulacionRow[] | null;
 }
 
-export default function PostulacionesSection({ data }: PostulacionesSectionProps) {
+export default function PostulacionesSection({
+  data,
+}: PostulacionesSectionProps) {
   const kpis = useMemo(() => {
     if (!data?.length) return null;
     return computePostulacionesKPIs(data);
@@ -37,9 +39,10 @@ export default function PostulacionesSection({ data }: PostulacionesSectionProps
           Persistencia política y postulaciones
         </h2>
         <p className="text-xs sm:text-sm text-slate-600">
-          Análisis estadístico del número de veces que los candidatos han postulado a cargos
-          (incluye Presidencia y otros). Los datos corresponden únicamente a procesos electorales
-          anteriores a las elecciones actuales.
+          Análisis estadístico del número de veces que los candidatos han
+          postulado a cargos (incluye Presidencia y otros). Los datos
+          corresponden únicamente a procesos electorales anteriores a las
+          elecciones actuales.
         </p>
       </div>
 
@@ -56,14 +59,20 @@ export default function PostulacionesSection({ data }: PostulacionesSectionProps
           <h3 className="text-base sm:text-lg font-bold text-[#0b1b3b] mb-3 sm:mb-4">
             Ranking por total de postulaciones
           </h3>
-          <PostulacionesRankingChart data={kpis?.ranking ?? []} maxBars={14} variant="total" />
+          <PostulacionesRankingChart
+            data={kpis?.ranking ?? []}
+            maxBars={14}
+            variant="total"
+          />
         </div>
         <div>
           <h3 className="text-base sm:text-lg font-bold text-[#0b1b3b] mb-3 sm:mb-4">
             Ranking por postulaciones a Presidencia
           </h3>
           <PostulacionesRankingChart
-            data={(kpis?.rankingPresidencia ?? []).filter((r) => r.postulacionesPresidencia >= 1)}
+            data={(kpis?.rankingPresidencia ?? []).filter(
+              (r) => r.postulacionesPresidencia >= 1,
+            )}
             maxBars={14}
             variant="presidencia"
           />
@@ -75,10 +84,13 @@ export default function PostulacionesSection({ data }: PostulacionesSectionProps
           Ranking por Índice de Ambición Presidencial
         </h3>
         <p className="text-xs text-slate-600 mb-3">
-          Proporción de postulaciones que fueron a Presidencia (solo candidatos con al menos una postulación).
+          Proporción de postulaciones que fueron a Presidencia (solo candidatos
+          con al menos una postulación).
         </p>
         <PostulacionesRankingChart
-          data={(kpis?.rankingAmbicion ?? []).filter((r) => r.indiceAmbicion > 0)}
+          data={(kpis?.rankingAmbicion ?? []).filter(
+            (r) => r.indiceAmbicion > 0,
+          )}
           maxBars={14}
           variant="ambicion"
         />

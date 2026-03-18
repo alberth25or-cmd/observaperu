@@ -57,7 +57,13 @@ export default function EstadisticasPage() {
         setLoading(true);
         setError(null);
 
-        const [edadesResponse, lugaresResponse, estudiosResponse, antecedentesResponse, postulacionesResponse] = await Promise.all([
+        const [
+          edadesResponse,
+          lugaresResponse,
+          estudiosResponse,
+          antecedentesResponse,
+          postulacionesResponse,
+        ] = await Promise.all([
           fetch("/data/candidatos_edades.json"),
           fetch("/data/candidatos_lugares_detalle.json"),
           fetch("/data/candidatos_estudios_universitarios.json"),
@@ -66,10 +72,14 @@ export default function EstadisticasPage() {
         ]);
 
         if (!edadesResponse.ok) {
-          throw new Error(`Error al cargar edades: ${edadesResponse.status} ${edadesResponse.statusText}`);
+          throw new Error(
+            `Error al cargar edades: ${edadesResponse.status} ${edadesResponse.statusText}`,
+          );
         }
         if (!lugaresResponse.ok) {
-          throw new Error(`Error al cargar lugares: ${lugaresResponse.status} ${lugaresResponse.statusText}`);
+          throw new Error(
+            `Error al cargar lugares: ${lugaresResponse.status} ${lugaresResponse.statusText}`,
+          );
         }
 
         const [edades, lugares] = await Promise.all([
@@ -110,7 +120,11 @@ export default function EstadisticasPage() {
         setLoading(false);
       } catch (err) {
         console.error("Error cargando datos:", err);
-        setError(err instanceof Error ? err.message : "Error desconocido al cargar los datos");
+        setError(
+          err instanceof Error
+            ? err.message
+            : "Error desconocido al cargar los datos",
+        );
         setLoading(false);
       }
     };
@@ -133,7 +147,9 @@ export default function EstadisticasPage() {
               </div>
             ) : error ? (
               <div className="text-center py-20">
-                <p className="text-red-600 font-semibold mb-2">Error al cargar los datos</p>
+                <p className="text-red-600 font-semibold mb-2">
+                  Error al cargar los datos
+                </p>
                 <p className="text-sm text-slate-600 mb-4">{error}</p>
                 <p className="text-xs text-slate-500">
                   Verifica que los archivos JSON estén en /public/data/
@@ -149,7 +165,7 @@ export default function EstadisticasPage() {
 
                 {/* Línea de tiempo generacional */}
                 <TimelineGeneracional data={edadesData} />
-                
+
                 {/* Ratio Lima vs Regiones */}
                 <RatioLimaRegiones data={lugaresData} />
 
@@ -176,4 +192,3 @@ export default function EstadisticasPage() {
     </div>
   );
 }
-

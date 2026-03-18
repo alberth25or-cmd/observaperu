@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     "Compara a los candidatos presidenciales del Perú: propuestas, partidos, ideología y planes de gobierno lado a lado.",
   openGraph: {
     title: "Comparar candidatos | Observa Perú",
-    description: "Compara candidatos presidenciales: propuestas, partidos e ideología.",
+    description:
+      "Compara candidatos presidenciales: propuestas, partidos e ideología.",
     url: `${BASE_URL}/comparacion`,
   },
   alternates: { canonical: `${BASE_URL}/comparacion` },

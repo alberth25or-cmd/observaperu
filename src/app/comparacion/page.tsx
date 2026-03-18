@@ -6,7 +6,13 @@ import { ALL_CANDIDATES, Candidate } from "@/data/candidatos";
 import { getCandidateDetail, CandidateDetail } from "@/data/candidatos-detalle";
 import Footer from "@/components/Footer";
 
-const Banner = ({ title, bg = "/hero-bg1.jpg" }: { title: string; bg?: string }) => {
+const Banner = ({
+  title,
+  bg = "/hero-bg1.jpg",
+}: {
+  title: string;
+  bg?: string;
+}) => {
   return (
     <section className="relative w-full overflow-hidden">
       <div
@@ -23,7 +29,15 @@ const Banner = ({ title, bg = "/hero-bg1.jpg" }: { title: string; bg?: string })
   );
 };
 
-type TabType = "biografia" | "historial-academico" | "controversias" | "ideologia-politica" | "financiamiento" | "experiencia" | "logros" | "propuestas";
+type TabType =
+  | "biografia"
+  | "historial-academico"
+  | "controversias"
+  | "ideologia-politica"
+  | "financiamiento"
+  | "experiencia"
+  | "logros"
+  | "propuestas";
 
 const TABS: { key: TabType; label: string }[] = [
   { key: "biografia", label: "Biografía" },
@@ -57,19 +71,33 @@ const CandidateSelector = ({
   // Filtrar candidatos según el término de búsqueda
   const filteredCandidates = useMemo(() => {
     if (!searchTerm.trim()) return [];
-    const term = searchTerm.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const term = searchTerm
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
     return ALL_CANDIDATES.filter(
       (c) =>
         c.key !== excludeKey &&
-        (c.name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(term) ||
-          c.party.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(term))
+        (c.name
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .includes(term) ||
+          c.party
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .includes(term)),
     ).slice(0, 10);
   }, [searchTerm, excludeKey]);
 
   // Cerrar dropdown al hacer clic fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
         setFocusedIndex(-1);
       }
@@ -97,12 +125,18 @@ const CandidateSelector = ({
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      setFocusedIndex((prev) => (prev < filteredCandidates.length - 1 ? prev + 1 : prev));
+      setFocusedIndex((prev) =>
+        prev < filteredCandidates.length - 1 ? prev + 1 : prev,
+      );
       setIsOpen(true);
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       setFocusedIndex((prev) => (prev > 0 ? prev - 1 : -1));
-    } else if (e.key === "Enter" && focusedIndex >= 0 && focusedCandidates[focusedIndex]) {
+    } else if (
+      e.key === "Enter" &&
+      focusedIndex >= 0 &&
+      focusedCandidates[focusedIndex]
+    ) {
       e.preventDefault();
       handleSelect(filteredCandidates[focusedIndex]);
     } else if (e.key === "Escape") {
@@ -115,7 +149,9 @@ const CandidateSelector = ({
 
   return (
     <div className="relative w-full" ref={containerRef}>
-      <label className="mb-2 block text-[16px] font-bold text-[#0b1b3b]">{label}</label>
+      <label className="mb-2 block text-[16px] font-bold text-[#0b1b3b]">
+        {label}
+      </label>
       <div className="relative">
         <input
           ref={inputRef}
@@ -154,7 +190,9 @@ const CandidateSelector = ({
                 }`}
               >
                 <div className="font-semibold">{candidate.name}</div>
-                <div className="text-[12px] text-slate-600">{candidate.party}</div>
+                <div className="text-[12px] text-slate-600">
+                  {candidate.party}
+                </div>
               </button>
             ))}
           </div>
@@ -225,7 +263,9 @@ const renderTabContent = (candidateDetail: CandidateDetail, tab: TabType) => {
             </p>
           </div>
           <div>
-            <p className="text-[12px] font-semibold text-slate-600 mb-2">Fuentes</p>
+            <p className="text-[12px] font-semibold text-slate-600 mb-2">
+              Fuentes
+            </p>
             <ul className="space-y-1">
               {candidateDetail.financiamiento.sources.map((source, idx) => (
                 <li key={idx} className="text-[13px] text-slate-700">
@@ -256,10 +296,7 @@ const renderTabContent = (candidateDetail: CandidateDetail, tab: TabType) => {
       return (
         <div className="grid gap-3 sm:grid-cols-2">
           {candidateDetail.logros.map((item, idx) => (
-            <div
-              key={idx}
-              className="rounded-xl bg-[#eef2fb] p-3"
-            >
+            <div key={idx} className="rounded-xl bg-[#eef2fb] p-3">
               <p className="text-[13px] leading-[170%] text-slate-700">
                 {item}
               </p>
@@ -312,7 +349,10 @@ export default function ComparacionPage() {
       setTimeout(() => {
         const comparisonSection = document.getElementById("comparison-results");
         if (comparisonSection) {
-          comparisonSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          comparisonSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       }, 100);
     }
@@ -327,7 +367,8 @@ export default function ComparacionPage() {
         <section className="bg-white py-14">
           <div className="mx-auto max-w-6xl px-4 lg:px-16">
             <p className="mb-8 text-center text-[18px] font-semibold text-[#0b1b3b] sm:text-[20px]">
-              Selecciona dos candidatos para ver una comparación lado a lado de su información clave.
+              Selecciona dos candidatos para ver una comparación lado a lado de
+              su información clave.
             </p>
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -383,7 +424,9 @@ export default function ComparacionPage() {
                 {/* Candidato 1 */}
                 <div className="flex flex-col">
                   <div className="mb-4">
-                    <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">Candidato 1</h3>
+                    <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">
+                      Candidato 1
+                    </h3>
                     <div className="rounded-[12px] bg-[#0b1b3b] px-4 py-2">
                       <p className="text-[16px] font-bold uppercase text-white">
                         {candidate1Detail.name}
@@ -406,7 +449,9 @@ export default function ComparacionPage() {
                 {/* Candidato 2 */}
                 <div className="flex flex-col">
                   <div className="mb-4">
-                    <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">Candidato 2</h3>
+                    <h3 className="mb-2 text-[16px] font-bold text-[#0b1b3b]">
+                      Candidato 2
+                    </h3>
                     <div className="rounded-[12px] bg-[#0b1b3b] px-4 py-2">
                       <p className="text-[16px] font-bold uppercase text-white">
                         {candidate2Detail.name}
@@ -434,5 +479,3 @@ export default function ComparacionPage() {
     </div>
   );
 }
-
-

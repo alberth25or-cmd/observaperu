@@ -2,13 +2,22 @@
 
 import type { TerritorialKPIs } from "@/lib/territorialAnalytics";
 
-const COLORS = ["#1b2b5a", "#2E7D8F", "#4A90E2", "#8B9DC3", "#0f1d46", "#6B9BD1"];
+const COLORS = [
+  "#1b2b5a",
+  "#2E7D8F",
+  "#4A90E2",
+  "#8B9DC3",
+  "#0f1d46",
+  "#6B9BD1",
+];
 
 interface TerritorialKPICardsProps {
   kpis: TerritorialKPIs | null;
 }
 
-export default function TerritorialKPICards({ kpis }: TerritorialKPICardsProps) {
+export default function TerritorialKPICards({
+  kpis,
+}: TerritorialKPICardsProps) {
   if (!kpis) {
     return (
       <div className="text-center py-6 text-slate-500 text-sm">
@@ -38,8 +47,14 @@ export default function TerritorialKPICards({ kpis }: TerritorialKPICardsProps) 
     },
     {
       label: "Flujo neto a Lima",
-      value: kpis.flujoNetoLima >= 0 ? `+${kpis.flujoNetoLima}` : `${kpis.flujoNetoLima}`,
-      sub: kpis.flujoNetoLima >= 0 ? "Más llegan que se van" : "Más se van que llegan",
+      value:
+        kpis.flujoNetoLima >= 0
+          ? `+${kpis.flujoNetoLima}`
+          : `${kpis.flujoNetoLima}`,
+      sub:
+        kpis.flujoNetoLima >= 0
+          ? "Más llegan que se van"
+          : "Más se van que llegan",
       color: COLORS[3],
     },
     {
@@ -73,7 +88,9 @@ export default function TerritorialKPICards({ kpis }: TerritorialKPICardsProps) 
             {card.value}
           </div>
           {card.sub && (
-            <div className="text-[10px] sm:text-xs text-slate-500 mt-0.5">{card.sub}</div>
+            <div className="text-[10px] sm:text-xs text-slate-500 mt-0.5">
+              {card.sub}
+            </div>
           )}
         </div>
       ))}

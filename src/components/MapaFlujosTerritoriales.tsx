@@ -90,7 +90,7 @@ function curvedPath(
   projection: (pos: [number, number]) => [number, number],
   from: [number, number],
   to: [number, number],
-  curvature: number = 0.15
+  curvature: number = 0.15,
 ): string {
   const [x0, y0] = projection(from);
   const [x2, y2] = projection(to);
@@ -129,9 +129,7 @@ function FlowArcs({
         if (!from || !to) return null;
 
         const isHighlight =
-          !hoveredDept ||
-          f.origen === hoveredDept ||
-          f.destino === hoveredDept;
+          !hoveredDept || f.origen === hoveredDept || f.destino === hoveredDept;
         const isTooltip = tooltipFlow === f;
         const opacity = isHighlight ? 1 : 0.25;
         const color = flowColor(f.normalized);
@@ -157,14 +155,16 @@ function FlowArcs({
   );
 }
 
-export default function MapaFlujosTerritoriales({ data }: MapaFlujosTerritorialesProps) {
+export default function MapaFlujosTerritoriales({
+  data,
+}: MapaFlujosTerritorialesProps) {
   const [hoveredDept, setHoveredDept] = useState<string | null>(null);
   const [tooltipFlow, setTooltipFlow] = useState<FlowRow | null>(null);
   const [filter, setFilter] = useState<FlujoFilter>("todos");
 
   const { flows, sameDept, minCount, maxCount } = useMemo(
     () => buildFlujosTerritoriales(data, 1),
-    [data]
+    [data],
   );
 
   const filteredFlows = useMemo(() => {
@@ -177,15 +177,12 @@ export default function MapaFlujosTerritoriales({ data }: MapaFlujosTerritoriale
     return flows;
   }, [flows, filter]);
 
-  const handleGeographyHover = useCallback(
-    (geoDeptName: string) => {
-      const match = Object.entries(DEPARTAMENTOS_MAP).find(
-        ([_, name]) => name === geoDeptName
-      )?.[0];
-      setHoveredDept(match ?? null);
-    },
-    []
-  );
+  const handleGeographyHover = useCallback((geoDeptName: string) => {
+    const match = Object.entries(DEPARTAMENTOS_MAP).find(
+      ([_, name]) => name === geoDeptName,
+    )?.[0];
+    setHoveredDept(match ?? null);
+  }, []);
 
   if (!data?.length) {
     return (
@@ -204,7 +201,8 @@ export default function MapaFlujosTerritoriales({ data }: MapaFlujosTerritoriale
           Movilidad territorial: nacimiento y residencia
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 mb-3 sm:mb-4">
-          Flujos entre departamento de nacimiento y domicilio. Intensidad por conteo global.
+          Flujos entre departamento de nacimiento y domicilio. Intensidad por
+          conteo global.
         </p>
 
         <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-1 sm:mb-2">
@@ -239,7 +237,7 @@ export default function MapaFlujosTerritoriales({ data }: MapaFlujosTerritoriale
                   const geoDeptName = geo.properties.NAME_1 || "";
                   const isLima = geoDeptName === "Lima";
                   const match = Object.entries(DEPARTAMENTOS_MAP).find(
-                    ([_, name]) => name === geoDeptName
+                    ([_, name]) => name === geoDeptName,
                   )?.[0];
                   const isHovered = hoveredDept === match;
 

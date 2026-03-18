@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
-  } from "recharts";
+} from "recharts";
 
 interface Item {
   postulante: string;
@@ -41,9 +41,15 @@ function CustomTooltipTotal({
   const p = payload[0].payload;
   return (
     <div className="bg-white p-2 sm:p-3 border border-slate-200 rounded-lg shadow-lg max-w-[240px]">
-      <p className="font-semibold text-[#0b1b3b] text-sm truncate">{p.postulante}</p>
-      <p className="text-xs text-slate-600">Total postulaciones: {p.totalPostulaciones}</p>
-      <p className="text-xs text-slate-600">A presidencia: {p.postulacionesPresidencia}</p>
+      <p className="font-semibold text-[#0b1b3b] text-sm truncate">
+        {p.postulante}
+      </p>
+      <p className="text-xs text-slate-600">
+        Total postulaciones: {p.totalPostulaciones}
+      </p>
+      <p className="text-xs text-slate-600">
+        A presidencia: {p.postulacionesPresidencia}
+      </p>
     </div>
   );
 }
@@ -59,9 +65,15 @@ function CustomTooltipPresidencia({
   const p = payload[0].payload;
   return (
     <div className="bg-white p-2 sm:p-3 border border-slate-200 rounded-lg shadow-lg max-w-[240px]">
-      <p className="font-semibold text-[#0b1b3b] text-sm truncate">{p.postulante}</p>
-      <p className="text-xs text-slate-600">Postulaciones a Presidencia: {p.postulacionesPresidencia}</p>
-      <p className="text-xs text-slate-500">Total postulaciones: {p.totalPostulaciones}</p>
+      <p className="font-semibold text-[#0b1b3b] text-sm truncate">
+        {p.postulante}
+      </p>
+      <p className="text-xs text-slate-600">
+        Postulaciones a Presidencia: {p.postulacionesPresidencia}
+      </p>
+      <p className="text-xs text-slate-500">
+        Total postulaciones: {p.totalPostulaciones}
+      </p>
     </div>
   );
 }
@@ -78,10 +90,13 @@ function CustomTooltipAmbicion({
   const pct = (p.indiceAmbicion * 100).toFixed(1);
   return (
     <div className="bg-white p-2 sm:p-3 border border-slate-200 rounded-lg shadow-lg max-w-[240px]">
-      <p className="font-semibold text-[#0b1b3b] text-sm truncate">{p.postulante}</p>
+      <p className="font-semibold text-[#0b1b3b] text-sm truncate">
+        {p.postulante}
+      </p>
       <p className="text-xs text-slate-600">Índice de ambición: {pct}%</p>
       <p className="text-xs text-slate-500">
-        {p.postulacionesPresidencia} de {p.totalPostulaciones} postulaciones a Presidencia
+        {p.postulacionesPresidencia} de {p.totalPostulaciones} postulaciones a
+        Presidencia
       </p>
     </div>
   );
@@ -128,7 +143,9 @@ export default function PostulacionesRankingChart({
               offset: -4,
               style: { fontSize: 12, fill: "#475569", fontWeight: 500 },
             }}
-            tickFormatter={isAmbicion ? (v: number) => `${(v * 100).toFixed(0)}%` : undefined}
+            tickFormatter={
+              isAmbicion ? (v: number) => `${(v * 100).toFixed(0)}%` : undefined
+            }
           />
           <YAxis
             type="category"
@@ -146,16 +163,22 @@ export default function PostulacionesRankingChart({
           />
           <Tooltip
             content={
-              isAmbicion
-                ? <CustomTooltipAmbicion />
-                : isPresidencia
-                  ? <CustomTooltipPresidencia />
-                  : <CustomTooltipTotal />
+              isAmbicion ? (
+                <CustomTooltipAmbicion />
+              ) : isPresidencia ? (
+                <CustomTooltipPresidencia />
+              ) : (
+                <CustomTooltipTotal />
+              )
             }
           />
           <Bar
             dataKey={
-              isAmbicion ? "indiceAmbicion" : isPresidencia ? "postulacionesPresidencia" : "totalPostulaciones"
+              isAmbicion
+                ? "indiceAmbicion"
+                : isPresidencia
+                  ? "postulacionesPresidencia"
+                  : "totalPostulaciones"
             }
             name={
               isAmbicion
@@ -166,7 +189,13 @@ export default function PostulacionesRankingChart({
             }
             radius={[0, 4, 4, 0]}
             maxBarSize={20}
-            fill={isAmbicion ? "#6B9BD1" : isPresidencia ? BAR_COLOR_PRES : BAR_COLOR_TOTAL}
+            fill={
+              isAmbicion
+                ? "#6B9BD1"
+                : isPresidencia
+                  ? BAR_COLOR_PRES
+                  : BAR_COLOR_TOTAL
+            }
           />
         </BarChart>
       </ResponsiveContainer>

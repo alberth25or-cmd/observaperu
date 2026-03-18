@@ -482,5 +482,5 @@ export const ALL_CANDIDATES: Candidate[] = [
     econLabel: "Centro-izquierda",
     socialLabel: "Moderado-conservador",
     confidence: "Alta",
-  }
+  },
 ];

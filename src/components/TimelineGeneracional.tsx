@@ -42,13 +42,13 @@ const GENERATIONS = {
     color: "#2E7D8F",
     lightColor: "#2E7D8F40",
   },
-  "Millennials": {
+  Millennials: {
     start: 1981,
     end: 1996,
     color: "#4A90E2",
     lightColor: "#4A90E240",
   },
-  "Silent": {
+  Silent: {
     start: 1928,
     end: 1945,
     color: "#8B9DC3",
@@ -68,10 +68,22 @@ const CustomTooltip = ({ active, payload }: any) => {
     const data = payload[0].payload as TimelineData;
     return (
       <div className="bg-white p-2 sm:p-3 lg:p-4 border border-slate-200 rounded-lg shadow-xl z-50">
-        <p className="font-bold text-[#0b1b3b] text-xs sm:text-sm lg:text-base mb-1">{data.nombre}</p>
-        <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600">Nacido en el año {data.year}</p>
-        <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600">{data.edad} años</p>
-        <p className="text-[10px] sm:text-xs lg:text-sm font-semibold mt-1" style={{ color: GENERATIONS[data.generacion as keyof typeof GENERATIONS]?.color }}>
+        <p className="font-bold text-[#0b1b3b] text-xs sm:text-sm lg:text-base mb-1">
+          {data.nombre}
+        </p>
+        <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600">
+          Nacido en el año {data.year}
+        </p>
+        <p className="text-[10px] sm:text-xs lg:text-sm text-slate-600">
+          {data.edad} años
+        </p>
+        <p
+          className="text-[10px] sm:text-xs lg:text-sm font-semibold mt-1"
+          style={{
+            color:
+              GENERATIONS[data.generacion as keyof typeof GENERATIONS]?.color,
+          }}
+        >
           {data.generacion}
         </p>
       </div>
@@ -84,7 +96,9 @@ interface TimelineGeneracionalProps {
   data: CandidatoEdad[];
 }
 
-export default function TimelineGeneracional({ data }: TimelineGeneracionalProps) {
+export default function TimelineGeneracional({
+  data,
+}: TimelineGeneracionalProps) {
   const router = useRouter();
   const [hoveredPoint, setHoveredPoint] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -94,8 +108,8 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
       setIsMobile(window.innerWidth < 640);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const processedData = useMemo(() => {
@@ -158,7 +172,8 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
           ¿De qué generaciones vienen?
         </h2>
         <p className="text-[11px] sm:text-sm lg:text-base text-slate-600">
-          Distribución de candidatos por año de nacimiento. Cada punto representa un candidato.
+          Distribución de candidatos por año de nacimiento. Cada punto
+          representa un candidato.
         </p>
       </div>
 
@@ -178,7 +193,10 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
                 {stat.generacion}
               </span>
             </div>
-            <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-1" style={{ color: stat.color }}>
+            <div
+              className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold mb-1"
+              style={{ color: stat.color }}
+            >
               {stat.count}
             </div>
             <div className="text-[10px] sm:text-xs lg:text-sm text-slate-500">
@@ -190,85 +208,98 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
 
       {/* Gráfico */}
       <div className="w-full">
-        <div style={{ height: isMobile ? '300px' : '450px', width: '100%' }} className="lg:h-[500px]">
+        <div
+          style={{ height: isMobile ? "300px" : "450px", width: "100%" }}
+          className="lg:h-[500px]"
+        >
           <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart
-            margin={isMobile ? { top: 10, right: 5, bottom: 40, left: 5 } : { top: 20, right: 10, bottom: 50, left: 10 }}
-          >
-            {/* Líneas de referencia para generaciones */}
-            {!isMobile && referenceLines.map((line, idx) => (
-              <ReferenceLine
-                key={idx}
-                x={line.x}
-                stroke="#cbd5e1"
-                strokeWidth={1}
-                strokeDasharray="5 5"
-                label={{
-                  value: line.label,
-                  position: "top",
-                  fill: "#64748b",
-                  fontSize: 11,
-                  fontWeight: 600,
-                }}
-              />
-            ))}
-
-            <XAxis
-              type="number"
-              dataKey="year"
-              domain={[1940, 1990]}
-              tick={{ fill: "#64748b", fontSize: isMobile ? 8 : 10, fontWeight: 500 }}
-              tickFormatter={(value) => value.toString()}
-              label={!isMobile ? {
-                value: "Año de nacimiento",
-                position: "insideBottom",
-                offset: -10,
-                fill: "#475569",
-                fontSize: 12,
-                fontWeight: 600,
-              } : {
-                value: "Año",
-                position: "insideBottom",
-                offset: -5,
-                fill: "#475569",
-                fontSize: 10,
-                fontWeight: 600,
-              }}
-              stroke="#e2e8f0"
-            />
-            <YAxis
-              type="number"
-              dataKey="y"
-              domain={[35, 55]}
-              hide
-            />
-            <Tooltip content={<CustomTooltip />} />
-            <Scatter
-              data={processedData}
-              fill="#1b2b5a"
-              onClick={(data: any) => handlePointClick(data)}
-              onMouseEnter={(data: any) => setHoveredPoint(data.slug)}
-              onMouseLeave={() => setHoveredPoint(null)}
+            <ScatterChart
+              margin={
+                isMobile
+                  ? { top: 10, right: 5, bottom: 40, left: 5 }
+                  : { top: 20, right: 10, bottom: 50, left: 10 }
+              }
             >
-              {processedData.map((entry, index) => {
-                const gen = GENERATIONS[entry.generacion as keyof typeof GENERATIONS];
-                const isHovered = hoveredPoint === entry.slug;
-                return (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={gen?.color || "#1b2b5a"}
-                    r={isMobile ? (isHovered ? 6 : 4) : (isHovered ? 8 : 6)}
-                    style={{
-                      cursor: "pointer",
-                      transition: "all 0.2s ease",
-                      opacity: hoveredPoint && hoveredPoint !== entry.slug ? 0.3 : 1,
+              {/* Líneas de referencia para generaciones */}
+              {!isMobile &&
+                referenceLines.map((line, idx) => (
+                  <ReferenceLine
+                    key={idx}
+                    x={line.x}
+                    stroke="#cbd5e1"
+                    strokeWidth={1}
+                    strokeDasharray="5 5"
+                    label={{
+                      value: line.label,
+                      position: "top",
+                      fill: "#64748b",
+                      fontSize: 11,
+                      fontWeight: 600,
                     }}
                   />
-                );
-              })}
-            </Scatter>
-          </ScatterChart>
-        </ResponsiveContainer>
+                ))}
+
+              <XAxis
+                type="number"
+                dataKey="year"
+                domain={[1940, 1990]}
+                tick={{
+                  fill: "#64748b",
+                  fontSize: isMobile ? 8 : 10,
+                  fontWeight: 500,
+                }}
+                tickFormatter={(value) => value.toString()}
+                label={
+                  !isMobile
+                    ? {
+                        value: "Año de nacimiento",
+                        position: "insideBottom",
+                        offset: -10,
+                        fill: "#475569",
+                        fontSize: 12,
+                        fontWeight: 600,
+                      }
+                    : {
+                        value: "Año",
+                        position: "insideBottom",
+                        offset: -5,
+                        fill: "#475569",
+                        fontSize: 10,
+                        fontWeight: 600,
+                      }
+                }
+                stroke="#e2e8f0"
+              />
+              <YAxis type="number" dataKey="y" domain={[35, 55]} hide />
+              <Tooltip content={<CustomTooltip />} />
+              <Scatter
+                data={processedData}
+                fill="#1b2b5a"
+                onClick={(data: any) => handlePointClick(data)}
+                onMouseEnter={(data: any) => setHoveredPoint(data.slug)}
+                onMouseLeave={() => setHoveredPoint(null)}
+              >
+                {processedData.map((entry, index) => {
+                  const gen =
+                    GENERATIONS[entry.generacion as keyof typeof GENERATIONS];
+                  const isHovered = hoveredPoint === entry.slug;
+                  return (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={gen?.color || "#1b2b5a"}
+                      r={isMobile ? (isHovered ? 6 : 4) : isHovered ? 8 : 6}
+                      style={{
+                        cursor: "pointer",
+                        transition: "all 0.2s ease",
+                        opacity:
+                          hoveredPoint && hoveredPoint !== entry.slug ? 0.3 : 1,
+                      }}
+                    />
+                  );
+                })}
+              </Scatter>
+            </ScatterChart>
+          </ResponsiveContainer>
         </div>
       </div>
 
@@ -281,7 +312,9 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
                 className="w-2.5 sm:w-3 h-2.5 sm:h-3 rounded-full"
                 style={{ backgroundColor: config.color }}
               />
-              <span className="text-[10px] sm:text-xs lg:text-sm text-slate-600">{name}</span>
+              <span className="text-[10px] sm:text-xs lg:text-sm text-slate-600">
+                {name}
+              </span>
             </div>
           ))}
         </div>
@@ -292,4 +325,3 @@ export default function TimelineGeneracional({ data }: TimelineGeneracionalProps
     </div>
   );
 }
-

@@ -18,7 +18,7 @@ export default function PostulacionesIndicesChart({
   const ambicionPct = kpis.indiceAmbicionMedia * 100;
   const persistenciaBarPct = Math.min(
     100,
-    (persistencia / PERSISTENCIA_SCALE) * 100
+    (persistencia / PERSISTENCIA_SCALE) * 100,
   );
 
   return (
@@ -41,7 +41,8 @@ export default function PostulacionesIndicesChart({
             </span>
           </div>
           <p className="text-[10px] text-slate-500 mb-1">
-            Promedio de postulaciones por candidato (escala 0–{PERSISTENCIA_SCALE})
+            Promedio de postulaciones por candidato (escala 0–
+            {PERSISTENCIA_SCALE})
           </p>
           <div className="h-2.5 w-full rounded-full bg-slate-100 overflow-hidden">
             <div

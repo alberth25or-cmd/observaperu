@@ -2,7 +2,6 @@
 import { useRouter } from "next/navigation";
 
 const AboutSection = () => {
-
   const router = useRouter();
   return (
     <section id="conocenos" className="bg-white py-14 sm:py-16 lg:py-20">
@@ -22,12 +21,20 @@ const AboutSection = () => {
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {/* Botón azul (mismo tamaño de letra) */}
-          <button  type="button" onClick={() => router.push("/conocenos")} className="rounded-full bg-[#0b1b3b] px-6 py-2.5 text-sm font-semibold text-white shadow transition-transform duration-150 hover:scale-105 active:border active:border-[#0b1b3b] active:bg-white active:text-[#0b1b3b]">
+          <button
+            type="button"
+            onClick={() => router.push("/conocenos")}
+            className="rounded-full bg-[#0b1b3b] px-6 py-2.5 text-sm font-semibold text-white shadow transition-transform duration-150 hover:scale-105 active:border active:border-[#0b1b3b] active:bg-white active:text-[#0b1b3b]"
+          >
             Saber más sobre nosotros
           </button>
 
           {/* Botón blanco (mismo tamaño de letra) */}
-          <button type="button" onClick={() => router.push("/contactanos")} className="rounded-full border border-[#0b1b3b] px-6 py-2.5 text-sm font-semibold text-[#0b1b3b] transition-transform duration-150 hover:scale-105 active:bg-[#0b1b3b] active:text-white">
+          <button
+            type="button"
+            onClick={() => router.push("/contactanos")}
+            className="rounded-full border border-[#0b1b3b] px-6 py-2.5 text-sm font-semibold text-[#0b1b3b] transition-transform duration-150 hover:scale-105 active:bg-[#0b1b3b] active:text-white"
+          >
             Contáctanos
           </button>
         </div>

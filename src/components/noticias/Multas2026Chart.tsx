@@ -61,7 +61,12 @@ export default function Multas2026Chart() {
               tickLine={false}
             />
             <Tooltip content={<CustomTooltip />} />
-            <Bar dataKey="value" radius={[0, 6, 6, 0]} barSize={36} isAnimationActive>
+            <Bar
+              dataKey="value"
+              radius={[0, 6, 6, 0]}
+              barSize={36}
+              isAnimationActive
+            >
               {data.map((entry, i) => (
                 <Cell key={i} fill={entry.fill} />
               ))}

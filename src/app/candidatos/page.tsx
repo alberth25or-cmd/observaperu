@@ -83,8 +83,8 @@ export default function CandidatosPage() {
         congreso === "ALL"
           ? true
           : congreso === "YES"
-          ? inCongress
-          : !inCongress;
+            ? inCongress
+            : !inCongress;
 
       return matchText && matchSex && matchCongress;
     });
@@ -105,7 +105,10 @@ export default function CandidatosPage() {
 
   return (
     <main className="min-h-screen bg-[#eef2fb]">
-      <Banner title="Conoce los perfiles de los candidatos" bg="/hero-bg1.jpg" />
+      <Banner
+        title="Conoce los perfiles de los candidatos"
+        bg="/hero-bg1.jpg"
+      />
 
       {/* Barra de búsqueda + filtros */}
       <section className="py-10 sm:py-12">
@@ -136,7 +139,9 @@ export default function CandidatosPage() {
 
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-xl bg-white p-4 shadow-sm">
-                <label className="block text-[12px] font-semibold text-[#0b1b3b]">Sexo</label>
+                <label className="block text-[12px] font-semibold text-[#0b1b3b]">
+                  Sexo
+                </label>
                 <select
                   value={sex}
                   onChange={(e) => setSex(e.target.value as SexFilter)}
@@ -149,10 +154,14 @@ export default function CandidatosPage() {
               </div>
 
               <div className="rounded-xl bg-white p-4 shadow-sm">
-                <label className="block text-[12px] font-semibold text-[#0b1b3b]">En el Congreso</label>
+                <label className="block text-[12px] font-semibold text-[#0b1b3b]">
+                  En el Congreso
+                </label>
                 <select
                   value={congreso}
-                  onChange={(e) => setCongreso(e.target.value as CongressFilter)}
+                  onChange={(e) =>
+                    setCongreso(e.target.value as CongressFilter)
+                  }
                   className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-[14px] text-[#0b1b3b] outline-none focus:ring-2 focus:ring-[#6fb6ff]"
                 >
                   <option value="ALL">Por defecto</option>
@@ -162,9 +171,15 @@ export default function CandidatosPage() {
               </div>
 
               <div className="rounded-xl bg-white p-4 shadow-sm text-center">
-                <div className="text-[12px] font-semibold text-[#0b1b3b]">Resultados</div>
-                <div className="mt-2 text-[34px] font-black leading-none text-[#0b1b3b]">{filtered.length}</div>
-                <div className="mt-1 text-[12px] text-slate-500">candidatos mostrados</div>
+                <div className="text-[12px] font-semibold text-[#0b1b3b]">
+                  Resultados
+                </div>
+                <div className="mt-2 text-[34px] font-black leading-none text-[#0b1b3b]">
+                  {filtered.length}
+                </div>
+                <div className="mt-1 text-[12px] text-slate-500">
+                  candidatos mostrados
+                </div>
               </div>
             </div>
           </div>
@@ -209,7 +224,11 @@ export default function CandidatosPage() {
 
                     <div className="mt-4 flex justify-center">
                       <span className="rounded-full bg-[#0b1b3b]/5 px-4 py-1 text-[12px] font-semibold text-[#0b1b3b]">
-                        {c.sex === "M" ? "Masculino" : c.sex === "F" ? "Femenino" : "Sin dato"}
+                        {c.sex === "M"
+                          ? "Masculino"
+                          : c.sex === "F"
+                            ? "Femenino"
+                            : "Sin dato"}
                       </span>
                     </div>
 
@@ -233,7 +252,9 @@ export default function CandidatosPage() {
       <button
         onClick={scrollToTop}
         className={`fixed bottom-6 left-6 z-50 h-12 w-12 rounded-full bg-white shadow-lg border border-slate-200 flex items-center justify-center text-[#0b1b3b] text-[18px] font-black transition-all duration-200 ${
-          showTop ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          showTop
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
         ↑

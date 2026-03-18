@@ -36,7 +36,9 @@ function CustomTooltip({
   return (
     <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-lg">
       <p className="font-semibold text-[#0b1b3b]">Elecciones {p.year}</p>
-      <p className="text-sm text-slate-600">{p.candidatos} fórmulas presidenciales</p>
+      <p className="text-sm text-slate-600">
+        {p.candidatos} fórmulas presidenciales
+      </p>
     </div>
   );
 }

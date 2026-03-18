@@ -2,13 +2,22 @@
 
 import type { AntecedentesKPIs } from "@/lib/antecedentesElectorales";
 
-const COLORS = ["#1b2b5a", "#2E7D8F", "#4A90E2", "#8B9DC3", "#0f1d46", "#6B9BD1"];
+const COLORS = [
+  "#1b2b5a",
+  "#2E7D8F",
+  "#4A90E2",
+  "#8B9DC3",
+  "#0f1d46",
+  "#6B9BD1",
+];
 
 interface AntecedentesKPICardsProps {
   kpis: AntecedentesKPIs | null;
 }
 
-export default function AntecedentesKPICards({ kpis }: AntecedentesKPICardsProps) {
+export default function AntecedentesKPICards({
+  kpis,
+}: AntecedentesKPICardsProps) {
   if (!kpis) {
     return (
       <div className="text-center py-6 text-slate-500 text-sm">

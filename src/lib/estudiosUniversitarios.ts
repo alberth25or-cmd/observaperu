@@ -4,8 +4,7 @@
  */
 
 const NO_ENCONTRADO = "No se encontró";
-const INVALID_GRADO =
-  /¿CUENTA CON ESTUDIOS|SÍ NO|^\s*$/i;
+const INVALID_GRADO = /¿CUENTA CON ESTUDIOS|SÍ NO|^\s*$/i;
 
 // ─── Normalización de universidades ─────────────────────────────────────────
 function normalizeUniversidad(name: string): string {
@@ -33,14 +32,15 @@ function normalizeGrado(grado: string): string {
 // ─── Tipo de universidad ────────────────────────────────────────────────────
 const PUBLICAS =
   /NACIONAL|MAYOR DE SAN MARCOS|DEL CALLAO|UNIVERSIDAD NACIONAL/i;
-const MILITAR =
-  /MILITAR|CHORRILLOS|FUERZA AÉREA|OFICIALES.*PERÚ|BOLOGNESI/i;
+const MILITAR = /MILITAR|CHORRILLOS|FUERZA AÉREA|OFICIALES.*PERÚ|BOLOGNESI/i;
 const EXTRANJERA_LIST = [
   "BOSTON UNIVERSITY",
   "INSTITUTO SUPERIOR DE CIENCIAS MÉDICAS DE CAMAGUEY",
 ];
 
-function getTipoUniversidad(normalizedName: string): "Pública" | "Privada" | "Militar" | "Extranjera" {
+function getTipoUniversidad(
+  normalizedName: string,
+): "Pública" | "Privada" | "Militar" | "Extranjera" {
   if (!normalizedName) return "Privada"; // fallback para evitar vacío
   const upper = normalizedName.toUpperCase();
   if (MILITAR.test(upper)) return "Militar";
@@ -56,7 +56,8 @@ function getAreaProfesional(grado: string): string {
   if (/\bECONOM[ÍI]A|ECONOMISTA/.test(g)) return "Economía";
   if (/\bINGENIER[ÍI]A|INGENIERO|INGENIERA/.test(g)) return "Ingeniería";
   if (/\bADMINISTRACI[OÓ]N|ADMIN\b/.test(g)) return "Administración";
-  if (/\bMEDICINA|MÉDICO|NEUROCIRUGÍA|DOCTOR EN MEDICINA/.test(g)) return "Medicina";
+  if (/\bMEDICINA|MÉDICO|NEUROCIRUGÍA|DOCTOR EN MEDICINA/.test(g))
+    return "Medicina";
   if (/\bMILITAR|AEROESPACIAL|CHORRILLOS/.test(g)) return "Militar";
   if (/\bEDUCACI[OÓ]N|EDUCADOR/.test(g)) return "Educación";
   if (/\bPSICOLOG[ÍI]A|PSICÓLOGO|PSICOLOGO/.test(g)) return "Psicología";
@@ -69,7 +70,12 @@ function getAreaProfesional(grado: string): string {
 // ─── Nivel máximo (por concluidos + grado) ───────────────────────────────────
 function nivelOrden(nivel: string): number {
   if (/ESPECIALISTA|MAESTR[ÍI]A|DOCTOR|POSGRADO/i.test(nivel)) return 4;
-  if (/TÍTULO|TITULO|ABOGADO|INGENIERO|LICENCIADO|ECONOMISTA|CONTADOR|PSICÓLOGO|MÉDICO/i.test(nivel)) return 3;
+  if (
+    /TÍTULO|TITULO|ABOGADO|INGENIERO|LICENCIADO|ECONOMISTA|CONTADOR|PSICÓLOGO|MÉDICO/i.test(
+      nivel,
+    )
+  )
+    return 3;
   if (/BACHILLER/i.test(nivel)) return 2;
   return 1; // No concluido
 }
@@ -78,7 +84,7 @@ function getNivelMaximo(
   c1: string,
   g1: string,
   c2: string,
-  g2: string
+  g2: string,
 ): "No concluido" | "Bachiller" | "Título profesional" | "Especialidad" {
   const concluidos = [c1, c2].filter((c) => c === "Concluido");
   const grados = [normalizeGrado(g1), normalizeGrado(g2)].filter(Boolean);
@@ -101,7 +107,11 @@ export interface EstudioEnriquecido {
   universidad_principal: string;
   tipo_universidad: "Pública" | "Privada" | "Militar" | "Extranjera";
   area_profesional: string;
-  nivel_maximo: "No concluido" | "Bachiller" | "Título profesional" | "Especialidad";
+  nivel_maximo:
+    | "No concluido"
+    | "Bachiller"
+    | "Título profesional"
+    | "Especialidad";
   tiene_estudios_concluidos: 0 | 1;
   sin_datos: boolean;
 }
@@ -133,27 +143,33 @@ export function enriquecerEstudios(
     estudio2_grado_titulo?: string;
     estudio2_concluidos?: string;
     estudio2_egresado?: string;
-  }>
+  }>,
 ): EstudioEnriquecido[] {
   return data.map((row) => {
     const u1 = (row.estudio1_universidad ?? "").trim();
     const u2 = (row.estudio2_universidad ?? "").trim();
-    const noEncontrado = u1 === NO_ENCONTRADO || (row.tiene_estudios ?? "") === NO_ENCONTRADO;
+    const noEncontrado =
+      u1 === NO_ENCONTRADO || (row.tiene_estudios ?? "") === NO_ENCONTRADO;
     const univ1Norm = normalizeUniversidad(u1);
     const universidad_principal = univ1Norm || normalizeUniversidad(u2) || "";
     const tipo_universidad = getTipoUniversidad(universidad_principal);
     const g1 = row.estudio1_grado_titulo ?? "";
     const g2 = row.estudio2_grado_titulo ?? "";
-    const area_profesional = getAreaProfesional(g1) || getAreaProfesional(g2) || "";
+    const area_profesional =
+      getAreaProfesional(g1) || getAreaProfesional(g2) || "";
     const nivel_maximo = getNivelMaximo(
       row.estudio1_concluidos ?? "",
       g1,
       row.estudio2_concluidos ?? "",
-      g2
+      g2,
     );
     const concluido1 = (row.estudio1_concluidos ?? "") === "Concluido";
     const concluido2 = (row.estudio2_concluidos ?? "") === "Concluido";
-    const tiene_estudios_concluidos = noEncontrado ? 0 : (concluido1 || concluido2 ? 1 : 0);
+    const tiene_estudios_concluidos = noEncontrado
+      ? 0
+      : concluido1 || concluido2
+        ? 1
+        : 0;
 
     return {
       slug: row.slug ?? "",
@@ -172,7 +188,9 @@ export function calcularKPIs(enriquecidos: EstudioEnriquecido[]): EstudiosKPIs {
   const total = enriquecidos.length;
   const conDatos = enriquecidos.filter((e) => !e.sin_datos).length;
   const sinDatos = enriquecidos.filter((e) => e.sin_datos).length;
-  const conConcluidos = enriquecidos.filter((e) => e.tiene_estudios_concluidos === 1).length;
+  const conConcluidos = enriquecidos.filter(
+    (e) => e.tiene_estudios_concluidos === 1,
+  ).length;
 
   const conUniv = enriquecidos.filter((e) => e.universidad_principal).length;
   const countByUniv: Record<string, number> = {};
@@ -182,12 +200,15 @@ export function calcularKPIs(enriquecidos: EstudioEnriquecido[]): EstudiosKPIs {
 
   for (const e of enriquecidos) {
     if (e.universidad_principal) {
-      countByUniv[e.universidad_principal] = (countByUniv[e.universidad_principal] ?? 0) + 1;
+      countByUniv[e.universidad_principal] =
+        (countByUniv[e.universidad_principal] ?? 0) + 1;
     }
     if (!e.sin_datos) {
-      countByTipo[e.tipo_universidad] = (countByTipo[e.tipo_universidad] ?? 0) + 1;
+      countByTipo[e.tipo_universidad] =
+        (countByTipo[e.tipo_universidad] ?? 0) + 1;
       if (e.area_profesional) {
-        countByArea[e.area_profesional] = (countByArea[e.area_profesional] ?? 0) + 1;
+        countByArea[e.area_profesional] =
+          (countByArea[e.area_profesional] ?? 0) + 1;
       }
     }
     countByNivel[e.nivel_maximo] = (countByNivel[e.nivel_maximo] ?? 0) + 1;
@@ -197,7 +218,9 @@ export function calcularKPIs(enriquecidos: EstudioEnriquecido[]): EstudiosKPIs {
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10)
     .map(([nombre, count]) => ({
-      nombre: nombre.replace(/^UNIVERSIDAD\s+/, "U. ").replace(/PONTIFICIA\s+/, "PUCP / "),
+      nombre: nombre
+        .replace(/^UNIVERSIDAD\s+/, "U. ")
+        .replace(/PONTIFICIA\s+/, "PUCP / "),
       count,
       pct: conUniv ? (count / conUniv) * 100 : 0,
     }));

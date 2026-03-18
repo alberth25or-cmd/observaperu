@@ -59,7 +59,11 @@ export default function AntecedentesTipoPostulacionChart({
           margin={{ top: 8, right: 24, left: 8, bottom: 8 }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-          <XAxis type="number" tick={{ fontSize: 11, fill: "#64748b" }} stroke="#94a3b8" />
+          <XAxis
+            type="number"
+            tick={{ fontSize: 11, fill: "#64748b" }}
+            stroke="#94a3b8"
+          />
           <YAxis
             type="category"
             dataKey="tipo"
@@ -68,7 +72,13 @@ export default function AntecedentesTipoPostulacionChart({
             stroke="#94a3b8"
           />
           <Tooltip content={<CustomTooltip />} />
-          <Bar dataKey="cantidad" name="Candidatos" radius={[0, 4, 4, 0]} maxBarSize={28} fill="#1b2b5a">
+          <Bar
+            dataKey="cantidad"
+            name="Candidatos"
+            radius={[0, 4, 4, 0]}
+            maxBarSize={28}
+            fill="#1b2b5a"
+          >
             {data.map((_, i) => (
               <Cell key={i} fill={BAR_COLORS[i % BAR_COLORS.length]} />
             ))}

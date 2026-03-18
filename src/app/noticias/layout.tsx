@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     "Noticias y coyuntura electoral del Perú: candidatos, partidos, JNE y elecciones presidenciales con contexto y análisis.",
   openGraph: {
     title: "Noticias | Observa Perú",
-    description: "Noticias y coyuntura sobre elecciones y candidatos presidenciales en Perú.",
+    description:
+      "Noticias y coyuntura sobre elecciones y candidatos presidenciales en Perú.",
     url: `${BASE_URL}/noticias`,
   },
   alternates: { canonical: `${BASE_URL}/noticias` },

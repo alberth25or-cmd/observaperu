@@ -60,7 +60,11 @@ export default function TerritorialComparativoChart({
   const data: Item[] = Array.from(byDepto.entries())
     .map(([departamento, v]) => ({ departamento, ...v }))
     .filter((d) => d.nacimiento > 0 || d.domicilio > 0)
-    .sort((a, b) => Math.max(b.nacimiento, b.domicilio) - Math.max(a.nacimiento, a.domicilio))
+    .sort(
+      (a, b) =>
+        Math.max(b.nacimiento, b.domicilio) -
+        Math.max(a.nacimiento, a.domicilio),
+    )
     .slice(0, 10);
 
   if (data.length === 0) {
@@ -91,8 +95,20 @@ export default function TerritorialComparativoChart({
               <span className="text-xs sm:text-sm text-slate-700">{value}</span>
             )}
           />
-          <Bar dataKey="nacimiento" name="Nacimiento" fill="#1b2b5a" radius={[4, 4, 0, 0]} maxBarSize={32} />
-          <Bar dataKey="domicilio" name="Domicilio" fill="#4A90E2" radius={[4, 4, 0, 0]} maxBarSize={32} />
+          <Bar
+            dataKey="nacimiento"
+            name="Nacimiento"
+            fill="#1b2b5a"
+            radius={[4, 4, 0, 0]}
+            maxBarSize={32}
+          />
+          <Bar
+            dataKey="domicilio"
+            name="Domicilio"
+            fill="#4A90E2"
+            radius={[4, 4, 0, 0]}
+            maxBarSize={32}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>
