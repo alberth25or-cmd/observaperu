@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import FeatureCards from "@/components/FeatureCards";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
+import AIChatPopup from "@/components/AIChatPopup";
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -24,6 +25,7 @@ export default function HomePage() {
       <FeatureCards />
       <AboutSection />
       <Footer />
+      <AIChatPopup />
     </main>
   );
 }
