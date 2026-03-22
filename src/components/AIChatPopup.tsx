@@ -127,10 +127,10 @@ function useChats() {
   const updateChatMeta = useCallback(
     (id: string, patch: Partial<Pick<ChatMeta, "title" | "lastMessageAt">>) => {
       setChats((prev) =>
-        prev.map((c) => (c.id === id ? { ...c, ...patch } : c))
+        prev.map((c) => (c.id === id ? { ...c, ...patch } : c)),
       );
     },
-    []
+    [],
   );
 
   return { chats, createChat, deleteChat, updateChatMeta };
@@ -171,13 +171,13 @@ function useChatMessages(chatId: string) {
         try {
           localStorage.setItem(
             messagesStorageKey(chatId),
-            JSON.stringify(updated)
+            JSON.stringify(updated),
           );
         } catch {}
         return updated;
       });
     },
-    [chatId]
+    [chatId],
   );
 
   return { messages, appendMessages };
@@ -230,7 +230,7 @@ function ChatPopup() {
         goToChat(createChat());
       }
     },
-    [chatId, deleteChat, createChat, goToChat]
+    [chatId, deleteChat, createChat, goToChat],
   );
 
   return (
@@ -308,7 +308,7 @@ function Chat({
   chatId: string;
   onUpdateMeta: (
     id: string,
-    patch: Partial<Pick<ChatMeta, "title" | "lastMessageAt">>
+    patch: Partial<Pick<ChatMeta, "title" | "lastMessageAt">>,
   ) => void;
 }) {
   const { messages, appendMessages } = useChatMessages(chatId);
@@ -397,7 +397,7 @@ function Chat({
         setIsLoading(false);
       }
     },
-    [chatId, messages, isLoading, appendMessages, onUpdateMeta]
+    [chatId, messages, isLoading, appendMessages, onUpdateMeta],
   );
 
   const handleSubmit = (e: FormEvent) => {
@@ -537,13 +537,14 @@ function ChatListing({
                 {chat.title || "Sin título"}
               </button>
               <div className="text-xs text-neutral-500">
-                {new Date(
-                  chat.lastMessageAt ?? chat.createdAt
-                ).toLocaleString("es-PE", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
+                {new Date(chat.lastMessageAt ?? chat.createdAt).toLocaleString(
+                  "es-PE",
+                  {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  },
+                )}
               </div>
             </div>
             <button
