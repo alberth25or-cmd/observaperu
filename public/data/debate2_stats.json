@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "fecha": "2026-03-24",
+    "jornada": "Segunda jornada",
+    "candidatos": 11,
+    "segmentos": 165,
+    "duracionSegundos": 10845,
+    "duracionLabel": "180m 45s"
+  },
+  "candidatos": [
+    {
+      "key": "fiorela_molineli",
+      "nombre": "Fiorela Molineli",
+      "partido": "Fuerza y Libertad",
+      "tiempoSegundos": 699,
+      "tiempoLabel": "11m 39s",
+      "palabrasTotales": 1516,
+      "intervenciones": 24,
+      "promSegPorInterv": 29.1,
+      "porcentajeAtaque": 42,
+      "porcentajePropuesta": 4,
+      "porcentajeNeutro": 54,
+      "temas": {
+        "seguridad": 0.208,
+        "economia": 0.167,
+        "corrupcion": 0.417,
+        "educacion": 0.125,
+        "salud": 0.208,
+        "estado": 0.542
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    },
+    {
+      "key": "alvaro_paz_barra",
+      "nombre": "Álvaro Paz de la Barra",
+      "partido": "Fe en el Perú",
+      "tiempoSegundos": 625,
+      "tiempoLabel": "10m 25s",
+      "palabrasTotales": 1567,
+      "intervenciones": 23,
+      "promSegPorInterv": 27.2,
+      "porcentajeAtaque": 39,
+      "porcentajePropuesta": 13,
+      "porcentajeNeutro": 48,
+      "temas": {
+        "seguridad": 0.174,
+        "economia": 0.087,
+        "corrupcion": 0.391,
+        "educacion": 0.174,
+        "salud": 0.087,
+        "estado": 0.435
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "walter_chirinos",
+      "nombre": "Walter Chirinos",
+      "partido": "PRIM",
+      "tiempoSegundos": 613,
+      "tiempoLabel": "10m 13s",
+      "palabrasTotales": 1577,
+      "intervenciones": 18,
+      "promSegPorInterv": 34.1,
+      "porcentajeAtaque": 56,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 44,
+      "temas": {
+        "seguridad": 0.444,
+        "economia": 0.111,
+        "corrupcion": 0.333,
+        "educacion": 0.278,
+        "salud": 0.167,
+        "estado": 0.556
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "george_fors",
+      "nombre": "George Forsyth",
+      "partido": "Somos Perú",
+      "tiempoSegundos": 597,
+      "tiempoLabel": "9m 57s",
+      "palabrasTotales": 1766,
+      "intervenciones": 14,
+      "promSegPorInterv": 42.6,
+      "porcentajeAtaque": 64,
+      "porcentajePropuesta": 7,
+      "porcentajeNeutro": 29,
+      "temas": {
+        "seguridad": 0.357,
+        "economia": 0.286,
+        "corrupcion": 0.5,
+        "educacion": 0.071,
+        "salud": 0.214,
+        "estado": 0.286
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    },
+    {
+      "key": "alfonso_spa",
+      "nombre": "Alfonso Spa Garcés",
+      "partido": "Sí Creo",
+      "tiempoSegundos": 584,
+      "tiempoLabel": "9m 44s",
+      "palabrasTotales": 1676,
+      "intervenciones": 14,
+      "promSegPorInterv": 41.7,
+      "porcentajeAtaque": 64,
+      "porcentajePropuesta": 21,
+      "porcentajeNeutro": 15,
+      "temas": {
+        "seguridad": 0.214,
+        "economia": 0.429,
+        "corrupcion": 0.643,
+        "educacion": 0.143,
+        "salud": 0.286,
+        "estado": 0.643
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    },
+    {
+      "key": "armando_mae",
+      "nombre": "Armando Maé",
+      "partido": "Democrático Federal",
+      "tiempoSegundos": 576,
+      "tiempoLabel": "9m 36s",
+      "palabrasTotales": 1347,
+      "intervenciones": 12,
+      "promSegPorInterv": 48,
+      "porcentajeAtaque": 50,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 50,
+      "temas": {
+        "seguridad": 0.25,
+        "economia": 0.25,
+        "corrupcion": 0.417,
+        "educacion": 0.25,
+        "salud": 0.333,
+        "estado": 0.417
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "francisco_dizcanseco",
+      "nombre": "Francisco Dizcanseco",
+      "partido": "Perú Acción",
+      "tiempoSegundos": 574,
+      "tiempoLabel": "9m 34s",
+      "palabrasTotales": 1674,
+      "intervenciones": 13,
+      "promSegPorInterv": 44.2,
+      "porcentajeAtaque": 69,
+      "porcentajePropuesta": 8,
+      "porcentajeNeutro": 23,
+      "temas": {
+        "seguridad": 0.308,
+        "economia": 0.077,
+        "corrupcion": 0.692,
+        "educacion": 0.077,
+        "salud": 0.077,
+        "estado": 0.692
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "carlos_jaiko",
+      "nombre": "Carlos Jaiko",
+      "partido": "Perú Moderno",
+      "tiempoSegundos": 573,
+      "tiempoLabel": "9m 33s",
+      "palabrasTotales": 1416,
+      "intervenciones": 10,
+      "promSegPorInterv": 57.3,
+      "porcentajeAtaque": 70,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 30,
+      "temas": {
+        "seguridad": 0.5,
+        "economia": 0.4,
+        "corrupcion": 0.6,
+        "educacion": 0.2,
+        "salud": 0.1,
+        "estado": 0.8
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "ricardo_belmont",
+      "nombre": "Ricardo Belmont",
+      "partido": "Cívico Obras",
+      "tiempoSegundos": 566,
+      "tiempoLabel": "9m 26s",
+      "palabrasTotales": 1288,
+      "intervenciones": 14,
+      "promSegPorInterv": 40.4,
+      "porcentajeAtaque": 50,
+      "porcentajePropuesta": 14,
+      "porcentajeNeutro": 36,
+      "temas": {
+        "seguridad": 0.214,
+        "economia": 0.143,
+        "corrupcion": 0.357,
+        "educacion": 0.143,
+        "salud": 0.286,
+        "estado": 0.571
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    },
+    {
+      "key": "roberto_sanchez",
+      "nombre": "Roberto Sánchez",
+      "partido": "Juntos por el Perú",
+      "tiempoSegundos": 566,
+      "tiempoLabel": "9m 26s",
+      "palabrasTotales": 1228,
+      "intervenciones": 11,
+      "promSegPorInterv": 51.5,
+      "porcentajeAtaque": 73,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 27,
+      "temas": {
+        "seguridad": 0.545,
+        "economia": 0.545,
+        "corrupcion": 0.636,
+        "educacion": 0.182,
+        "salud": 0.636,
+        "estado": 0.727
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "charlie_carrasco",
+      "nombre": "Charlie Carrasco",
+      "partido": "Demócrata Unido",
+      "tiempoSegundos": 559,
+      "tiempoLabel": "9m 19s",
+      "palabrasTotales": 1170,
+      "intervenciones": 12,
+      "promSegPorInterv": 46.6,
+      "porcentajeAtaque": 67,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 33,
+      "temas": {
+        "seguridad": 0.333,
+        "economia": 0.417,
+        "corrupcion": 0.5,
+        "educacion": 0.25,
+        "salud": 0.25,
+        "estado": 0.583
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    }
+  ],
+  "redAtaques": [
+    {
+      "from": "george_fors",
+      "to": "charlie_carrasco",
+      "count": 1
+    },
+    {
+      "from": "armando_mae",
+      "to": "george_fors",
+      "count": 1
+    },
+    {
+      "from": "ricardo_belmont",
+      "to": "alfonso_spa",
+      "count": 1
+    },
+    {
+      "from": "alfonso_spa",
+      "to": "ricardo_belmont",
+      "count": 1
+    },
+    {
+      "from": "roberto_sanchez",
+      "to": "fiorela_molineli",
+      "count": 1
+    }
+  ]
+}

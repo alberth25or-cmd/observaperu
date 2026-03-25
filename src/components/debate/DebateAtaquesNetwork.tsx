@@ -5,6 +5,7 @@ import type { DebateCandidato, AtaqueEdge } from "@/lib/debateAnalytics";
 import { CANDIDATE_COLORS } from "@/lib/debateAnalytics";
 
 const SHORT: Record<string, string> = {
+  // Debate 1
   alex_gonzalez:     "Alex González",
   carlos_alvarez:    "C. Álvarez",
   cesar_acuna:       "César Acuña",
@@ -16,6 +17,18 @@ const SHORT: Record<string, string> = {
   pablo_lopez:       "P. López",
   lopez_aliaga:      "L. Aliaga",
   wolfgang_grosso:   "Wolfgang",
+  // Debate 2
+  fiorela_molineli:    "F. Molineli",
+  alvaro_paz_barra:    "Paz de la Barra",
+  george_fors:         "G. Forsyth",
+  carlos_jaiko:        "C. Jaiko",
+  walter_chirinos:     "Chirinos",
+  charlie_carrasco:    "Carrasco",
+  ricardo_belmont:     "Belmont",
+  francisco_dizcanseco:"Dizcanseco",
+  armando_mae:         "Armando Maé",
+  alfonso_spa:         "A. Spa",
+  roberto_sanchez:     "R. Sánchez",
 };
 
 interface Props {

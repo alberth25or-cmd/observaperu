@@ -8,6 +8,7 @@ import { DebateCandidato, CANDIDATE_COLORS } from "@/lib/debateAnalytics";
 
 // Very short labels that fit inside a small bubble
 const BUBBLE: Record<string, string> = {
+  // Debate 1
   alex_gonzalez:     "Alex",
   carlos_alvarez:    "Álv.",
   cesar_acuna:       "Acuña",
@@ -19,6 +20,18 @@ const BUBBLE: Record<string, string> = {
   pablo_lopez:       "Pab.",
   lopez_aliaga:      "Ali.",
   wolfgang_grosso:   "Wolf",
+  // Debate 2
+  fiorela_molineli:    "Fior.",
+  alvaro_paz_barra:    "Paz",
+  george_fors:         "Fors.",
+  carlos_jaiko:        "Jaiko",
+  walter_chirinos:     "Chir.",
+  charlie_carrasco:    "Carr.",
+  ricardo_belmont:     "Bel.",
+  francisco_dizcanseco:"Dizc.",
+  armando_mae:         "Maé",
+  alfonso_spa:         "Spa",
+  roberto_sanchez:     "Sánch.",
 };
 
 interface Props {

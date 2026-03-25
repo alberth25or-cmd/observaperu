@@ -11,6 +11,7 @@ import PerfilAcademicoSection from "@/components/PerfilAcademicoSection";
 import AntecedentesElectoralesSection from "@/components/antecedentes/AntecedentesElectoralesSection";
 import PostulacionesSection from "@/components/postulaciones/PostulacionesSection";
 import DebateSection from "@/components/debate/DebateSection";
+import Debate2Section from "@/components/debate/Debate2Section";
 import { DebateStats } from "@/lib/debateAnalytics";
 import Footer from "@/components/Footer";
 
@@ -51,6 +52,7 @@ export default function EstadisticasPage() {
   const [antecedentesData, setAntecedentesData] = useState<any[]>([]);
   const [postulacionesData, setPostulacionesData] = useState<any[]>([]);
   const [debateData, setDebateData] = useState<DebateStats | null>(null);
+  const [debate2Data, setDebate2Data] = useState<DebateStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -60,13 +62,14 @@ export default function EstadisticasPage() {
         setLoading(true);
         setError(null);
 
-        const [edadesResponse, lugaresResponse, estudiosResponse, antecedentesResponse, postulacionesResponse, debateResponse] = await Promise.all([
+        const [edadesResponse, lugaresResponse, estudiosResponse, antecedentesResponse, postulacionesResponse, debateResponse, debate2Response] = await Promise.all([
           fetch("/data/candidatos_edades.json"),
           fetch("/data/candidatos_lugares_detalle.json"),
           fetch("/data/candidatos_estudios_universitarios.json"),
           fetch("/data/candidatos_antecedentes_electorales.json"),
           fetch("/data/numerode_postulaciones.json"),
           fetch("/data/debate_stats.json"),
+          fetch("/data/debate2_stats.json"),
         ]);
 
         if (!edadesResponse.ok) {
@@ -114,6 +117,10 @@ export default function EstadisticasPage() {
         if (debateResponse.ok) {
           const debate = await debateResponse.json();
           setDebateData(debate);
+        }
+        if (debate2Response.ok) {
+          const debate2 = await debate2Response.json();
+          setDebate2Data(debate2);
         }
         setLoading(false);
       } catch (err) {
@@ -176,8 +183,15 @@ export default function EstadisticasPage() {
                 {/* Persistencia política: KPIs, ranking, Pareto, histogramas, scatter, boxplot, índices */}
                 <PostulacionesSection data={postulacionesData} />
 
-                {/* Debate Presidencial 2026 */}
+                {/* Debate Presidencial 2026 — Jornada 1 */}
                 {debateData && <DebateSection data={debateData} />}
+
+                {/* Debate Presidencial 2026 — Jornada 2 */}
+                {debate2Data && (
+                  <div className="pt-6 border-t border-slate-200">
+                    <Debate2Section data={debate2Data} />
+                  </div>
+                )}
               </div>
             )}
           </div>
