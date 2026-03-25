@@ -10,6 +10,8 @@ import TerritorialDashboardSection from "@/components/TerritorialDashboardSectio
 import PerfilAcademicoSection from "@/components/PerfilAcademicoSection";
 import AntecedentesElectoralesSection from "@/components/antecedentes/AntecedentesElectoralesSection";
 import PostulacionesSection from "@/components/postulaciones/PostulacionesSection";
+import DebateSection from "@/components/debate/DebateSection";
+import { DebateStats } from "@/lib/debateAnalytics";
 import Footer from "@/components/Footer";
 
 const Banner = ({
@@ -48,6 +50,7 @@ export default function EstadisticasPage() {
   const [estudiosData, setEstudiosData] = useState<any[]>([]);
   const [antecedentesData, setAntecedentesData] = useState<any[]>([]);
   const [postulacionesData, setPostulacionesData] = useState<any[]>([]);
+  const [debateData, setDebateData] = useState<DebateStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -57,29 +60,20 @@ export default function EstadisticasPage() {
         setLoading(true);
         setError(null);
 
-        const [
-          edadesResponse,
-          lugaresResponse,
-          estudiosResponse,
-          antecedentesResponse,
-          postulacionesResponse,
-        ] = await Promise.all([
+        const [edadesResponse, lugaresResponse, estudiosResponse, antecedentesResponse, postulacionesResponse, debateResponse] = await Promise.all([
           fetch("/data/candidatos_edades.json"),
           fetch("/data/candidatos_lugares_detalle.json"),
           fetch("/data/candidatos_estudios_universitarios.json"),
           fetch("/data/candidatos_antecedentes_electorales.json"),
           fetch("/data/numerode_postulaciones.json"),
+          fetch("/data/debate_stats.json"),
         ]);
 
         if (!edadesResponse.ok) {
-          throw new Error(
-            `Error al cargar edades: ${edadesResponse.status} ${edadesResponse.statusText}`,
-          );
+          throw new Error(`Error al cargar edades: ${edadesResponse.status} ${edadesResponse.statusText}`);
         }
         if (!lugaresResponse.ok) {
-          throw new Error(
-            `Error al cargar lugares: ${lugaresResponse.status} ${lugaresResponse.statusText}`,
-          );
+          throw new Error(`Error al cargar lugares: ${lugaresResponse.status} ${lugaresResponse.statusText}`);
         }
 
         const [edades, lugares] = await Promise.all([
@@ -117,14 +111,14 @@ export default function EstadisticasPage() {
         } else {
           setPostulacionesData([]);
         }
+        if (debateResponse.ok) {
+          const debate = await debateResponse.json();
+          setDebateData(debate);
+        }
         setLoading(false);
       } catch (err) {
         console.error("Error cargando datos:", err);
-        setError(
-          err instanceof Error
-            ? err.message
-            : "Error desconocido al cargar los datos",
-        );
+        setError(err instanceof Error ? err.message : "Error desconocido al cargar los datos");
         setLoading(false);
       }
     };
@@ -147,9 +141,7 @@ export default function EstadisticasPage() {
               </div>
             ) : error ? (
               <div className="text-center py-20">
-                <p className="text-red-600 font-semibold mb-2">
-                  Error al cargar los datos
-                </p>
+                <p className="text-red-600 font-semibold mb-2">Error al cargar los datos</p>
                 <p className="text-sm text-slate-600 mb-4">{error}</p>
                 <p className="text-xs text-slate-500">
                   Verifica que los archivos JSON estén en /public/data/
@@ -165,7 +157,7 @@ export default function EstadisticasPage() {
 
                 {/* Línea de tiempo generacional */}
                 <TimelineGeneracional data={edadesData} />
-
+                
                 {/* Ratio Lima vs Regiones */}
                 <RatioLimaRegiones data={lugaresData} />
 
@@ -183,6 +175,9 @@ export default function EstadisticasPage() {
 
                 {/* Persistencia política: KPIs, ranking, Pareto, histogramas, scatter, boxplot, índices */}
                 <PostulacionesSection data={postulacionesData} />
+
+                {/* Debate Presidencial 2026 */}
+                {debateData && <DebateSection data={debateData} />}
               </div>
             )}
           </div>
@@ -192,3 +187,4 @@ export default function EstadisticasPage() {
     </div>
   );
 }
+

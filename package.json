@@ -10,11 +10,14 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "^15.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-markdown": "^10.1.0",
     "react-simple-maps": "^3.0.0",
-    "recharts": "^3.7.0"
+    "recharts": "^3.7.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
