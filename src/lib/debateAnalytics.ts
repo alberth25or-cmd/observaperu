@@ -74,4 +74,17 @@ export const CANDIDATE_COLORS: Record<string, string> = {
   armando_mae:         "#be185d",
   alfonso_spa:         "#4f46e5",
   roberto_sanchez:     "#15803d",
+  // Debate 3 — 25 mar 2026
+  keiko_fujimori:      "#e11d48",
+  rafael_belaunde:     "#1d4ed8",
+  peter_valderrama:    "#b45309",
+  jorge_nieto:         "#0ea5e9",
+  mesias_guevara:      "#7c3aed",
+  gerber_caler:        "#065f46",
+  mario_vizcarra:      "#0f172a",
+  paul_jaimes:         "#0891b2",
+  antonio_ortiz:       "#dc2626",
+  rosario_fernandez:   "#be185d",
+  roberto_quiabra:     "#15803d",
+  ronald_atencio:      "#d97706",
 };

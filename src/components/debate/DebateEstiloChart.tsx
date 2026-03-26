@@ -32,6 +32,19 @@ const BUBBLE: Record<string, string> = {
   armando_mae:         "Maé",
   alfonso_spa:         "Spa",
   roberto_sanchez:     "Sánch.",
+  // Debate 3
+  keiko_fujimori:      "Keiko",
+  rafael_belaunde:     "Bel.",
+  peter_valderrama:    "Vald.",
+  jorge_nieto:         "Nieto",
+  mesias_guevara:      "Guev.",
+  gerber_caler:        "Caler",
+  mario_vizcarra:      "Vizc.",
+  paul_jaimes:         "Jaim.",
+  antonio_ortiz:       "Ortiz",
+  rosario_fernandez:   "Fern.",
+  roberto_quiabra:     "Quiab.",
+  ronald_atencio:      "Aten.",
 };
 
 interface Props {
@@ -112,15 +125,40 @@ export default function DebateEstiloChart({ candidatos }: Props) {
     candidatos.reduce((s, c) => s + c.intervenciones, 0) / candidatos.length
   );
 
-  const data = candidatos.map(c => ({
+  const xs = candidatos.map(c => c.promSegPorInterv);
+  const ys = candidatos.map(c => c.intervenciones);
+  const xMin = Math.floor(Math.min(...xs) / 5) * 5 - 5;
+  const xMax = Math.ceil(Math.max(...xs) / 5) * 5 + 8;
+  const yMin = Math.max(0, Math.min(...ys) - 2);
+  const yMax = Math.max(...ys) + 3;
+
+  const rawData = candidatos.map(c => ({
     key: c.key,
-    x: c.promSegPorInterv,       // avg seconds/intervention
-    y: c.intervenciones,          // number of interventions
-    z: c.palabrasTotales,         // bubble size
+    x: c.promSegPorInterv,
+    y: c.intervenciones,
+    z: c.palabrasTotales,
     nombre: c.nombre,
     tiempoLabel: c.tiempoLabel,
     interrupciones: c.interrupciones,
   }));
+
+  // Spread overlapping points so no bubble is hidden behind another
+  const data = rawData.map((d, i) => {
+    const clones = rawData.filter(o => o.x === d.x && o.y === d.y);
+    if (clones.length <= 1) return d;
+    const idx = clones.indexOf(d);
+    const offset = (idx - (clones.length - 1) / 2) * 3;
+    return { ...d, x: Math.round((d.x + offset) * 10) / 10 };
+  });
+
+  // Find most representative candidate per quadrant using jittered positions
+  // (so ties in promSegPorInterv are broken by the same offset used in the chart)
+  const ejActivoFragmentado = data
+    .filter(d => d.x < avgX && d.y >= avgY)
+    .sort((a, b) => b.y - a.y || a.x - b.x)[0]?.nombre ?? null;
+  const ejPasivoConcentrado = data
+    .filter(d => d.x >= avgX && d.y < avgY)
+    .sort((a, b) => b.x - a.x || a.y - b.y)[0]?.nombre ?? null;
 
   return (
     <div>
@@ -143,7 +181,7 @@ export default function DebateEstiloChart({ candidatos }: Props) {
             type="number"
             dataKey="x"
             name="Prom. seg/interv"
-            domain={[24, 65]}
+            domain={[xMin, xMax]}
             tick={{ fontSize: 10, fill: "#64748b" }}
             tickLine={false}
             axisLine={{ stroke: "#dde3f0" }}
@@ -160,7 +198,7 @@ export default function DebateEstiloChart({ candidatos }: Props) {
             type="number"
             dataKey="y"
             name="Intervenciones"
-            domain={[9, 23]}
+            domain={[yMin, yMax]}
             tick={{ fontSize: 10, fill: "#64748b" }}
             tickLine={false}
             axisLine={false}
@@ -196,7 +234,7 @@ export default function DebateEstiloChart({ candidatos }: Props) {
           <span className="font-bold text-[#1b2b5a]">↖ Activo y fragmentado</span>
           <p className="text-slate-500 mt-0.5">
             Muchas intervenciones cortas. El debate lo domina en frecuencia pero no en profundidad.
-            <strong className="text-slate-600"> Ej: Alex González</strong>
+            {ejActivoFragmentado && <strong className="text-slate-600"> Ej: {ejActivoFragmentado}</strong>}
           </p>
         </div>
         <div className="bg-[#eef2fb] rounded-lg p-2.5">
@@ -215,7 +253,7 @@ export default function DebateEstiloChart({ candidatos }: Props) {
           <span className="font-bold text-slate-500">↘ Pasivo y concentrado</span>
           <p className="text-slate-400 mt-0.5">
             Pocas pero largas intervenciones. Discurso denso y elaborado.
-            <strong className="text-slate-600"> Ej: César Acuña</strong>
+            {ejPasivoConcentrado && <strong className="text-slate-600"> Ej: {ejPasivoConcentrado}</strong>}
           </p>
         </div>
       </div>

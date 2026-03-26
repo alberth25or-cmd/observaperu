@@ -1,0 +1,380 @@
+{
+  "metadata": {
+    "fecha": "2026-03-25",
+    "jornada": "Tercera jornada",
+    "candidatos": 12,
+    "segmentos": 169,
+    "duracionSegundos": 11344,
+    "duracionLabel": "189m 04s"
+  },
+  "candidatos": [
+    {
+      "key": "ronald_atencio",
+      "nombre": "Ronald Atencio",
+      "partido": "Alianza Venceremos",
+      "tiempoSegundos": 690,
+      "tiempoLabel": "11m 30s",
+      "palabrasTotales": 1667,
+      "intervenciones": 17,
+      "promSegPorInterv": 40.6,
+      "porcentajeAtaque": 35,
+      "porcentajePropuesta": 24,
+      "porcentajeNeutro": 41,
+      "temas": {
+        "seguridad": 0.294,
+        "economia": 0.235,
+        "corrupcion": 0.176,
+        "educacion": 0.059,
+        "salud": 0.235,
+        "estado": 0.588
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "rosario_fernandez",
+      "nombre": "Rosario Fernández Bazán",
+      "partido": "Un Camino Diferente",
+      "tiempoSegundos": 670,
+      "tiempoLabel": "11m 10s",
+      "palabrasTotales": 1565,
+      "intervenciones": 20,
+      "promSegPorInterv": 33.5,
+      "porcentajeAtaque": 45,
+      "porcentajePropuesta": 10,
+      "porcentajeNeutro": 45,
+      "temas": {
+        "seguridad": 0.35,
+        "economia": 0.3,
+        "corrupcion": 0.4,
+        "educacion": 0.05,
+        "salud": 0.25,
+        "estado": 0.75
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "antonio_ortiz",
+      "nombre": "Antonio Ortiz Villano",
+      "partido": "Salvemos al Perú",
+      "tiempoSegundos": 591,
+      "tiempoLabel": "9m 51s",
+      "palabrasTotales": 1184,
+      "intervenciones": 14,
+      "promSegPorInterv": 42.2,
+      "porcentajeAtaque": 57,
+      "porcentajePropuesta": 14,
+      "porcentajeNeutro": 29,
+      "temas": {
+        "seguridad": 0.286,
+        "economia": 0.714,
+        "corrupcion": 0.214,
+        "educacion": 0.071,
+        "salud": 0.357,
+        "estado": 0.643
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "rafael_belaunde",
+      "nombre": "Rafael Belaúnde Llosa",
+      "partido": "Libertad Popular",
+      "tiempoSegundos": 589,
+      "tiempoLabel": "9m 49s",
+      "palabrasTotales": 1287,
+      "intervenciones": 13,
+      "promSegPorInterv": 45.3,
+      "porcentajeAtaque": 62,
+      "porcentajePropuesta": 8,
+      "porcentajeNeutro": 30,
+      "temas": {
+        "seguridad": 0.615,
+        "economia": 0.462,
+        "corrupcion": 0.538,
+        "educacion": 0,
+        "salud": 0.308,
+        "estado": 0.385
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    },
+    {
+      "key": "gerber_caler",
+      "nombre": "Gerber Caler Gutiérrez",
+      "partido": "Patriótico del Perú",
+      "tiempoSegundos": 583,
+      "tiempoLabel": "9m 43s",
+      "palabrasTotales": 1457,
+      "intervenciones": 13,
+      "promSegPorInterv": 44.8,
+      "porcentajeAtaque": 62,
+      "porcentajePropuesta": 15,
+      "porcentajeNeutro": 23,
+      "temas": {
+        "seguridad": 0.462,
+        "economia": 0.385,
+        "corrupcion": 0.308,
+        "educacion": 0.308,
+        "salud": 0.308,
+        "estado": 0.538
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "paul_jaimes",
+      "nombre": "Paul Jaimes Blanco",
+      "partido": "Progresemos",
+      "tiempoSegundos": 576,
+      "tiempoLabel": "9m 36s",
+      "palabrasTotales": 1379,
+      "intervenciones": 16,
+      "promSegPorInterv": 36,
+      "porcentajeAtaque": 50,
+      "porcentajePropuesta": 19,
+      "porcentajeNeutro": 31,
+      "temas": {
+        "seguridad": 0.313,
+        "economia": 0.313,
+        "corrupcion": 0.188,
+        "educacion": 0.063,
+        "salud": 0.125,
+        "estado": 0.438
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "roberto_quiabra",
+      "nombre": "Roberto Quiabra León",
+      "partido": "Unidad Nacional",
+      "tiempoSegundos": 574,
+      "tiempoLabel": "9m 34s",
+      "palabrasTotales": 1503,
+      "intervenciones": 11,
+      "promSegPorInterv": 52.2,
+      "porcentajeAtaque": 82,
+      "porcentajePropuesta": 9,
+      "porcentajeNeutro": 9,
+      "temas": {
+        "seguridad": 0.455,
+        "economia": 0.545,
+        "corrupcion": 0.636,
+        "educacion": 0.091,
+        "salud": 0.091,
+        "estado": 0.545
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    },
+    {
+      "key": "jorge_nieto",
+      "nombre": "Jorge Nieto Montesinos",
+      "partido": "Partido del Buen Gobierno",
+      "tiempoSegundos": 574,
+      "tiempoLabel": "9m 34s",
+      "palabrasTotales": 1356,
+      "intervenciones": 11,
+      "promSegPorInterv": 52.2,
+      "porcentajeAtaque": 91,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 9,
+      "temas": {
+        "seguridad": 0.364,
+        "economia": 0.091,
+        "corrupcion": 0.909,
+        "educacion": 0,
+        "salud": 0.364,
+        "estado": 0.818
+      },
+      "mencionadoPor": 4,
+      "interrupciones": 0
+    },
+    {
+      "key": "mario_vizcarra",
+      "nombre": "Mario Vizcarra",
+      "partido": "Perú Primero",
+      "tiempoSegundos": 573,
+      "tiempoLabel": "9m 33s",
+      "palabrasTotales": 1307,
+      "intervenciones": 13,
+      "promSegPorInterv": 44.1,
+      "porcentajeAtaque": 62,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 38,
+      "temas": {
+        "seguridad": 0.462,
+        "economia": 0.077,
+        "corrupcion": 0.462,
+        "educacion": 0.154,
+        "salud": 0.231,
+        "estado": 0.462
+      },
+      "mencionadoPor": 2,
+      "interrupciones": 0
+    },
+    {
+      "key": "keiko_fujimori",
+      "nombre": "Keiko Fujimori",
+      "partido": "Fuerza Popular",
+      "tiempoSegundos": 569,
+      "tiempoLabel": "9m 29s",
+      "palabrasTotales": 1284,
+      "intervenciones": 14,
+      "promSegPorInterv": 40.6,
+      "porcentajeAtaque": 43,
+      "porcentajePropuesta": 14,
+      "porcentajeNeutro": 43,
+      "temas": {
+        "seguridad": 0.357,
+        "economia": 0,
+        "corrupcion": 0.286,
+        "educacion": 0.143,
+        "salud": 0.214,
+        "estado": 0.357
+      },
+      "mencionadoPor": 7,
+      "interrupciones": 0
+    },
+    {
+      "key": "mesias_guevara",
+      "nombre": "Mesías Guevara",
+      "partido": "Partido Morado",
+      "tiempoSegundos": 568,
+      "tiempoLabel": "9m 28s",
+      "palabrasTotales": 1556,
+      "intervenciones": 14,
+      "promSegPorInterv": 40.6,
+      "porcentajeAtaque": 64,
+      "porcentajePropuesta": 7,
+      "porcentajeNeutro": 29,
+      "temas": {
+        "seguridad": 0.357,
+        "economia": 0.214,
+        "corrupcion": 0.643,
+        "educacion": 0,
+        "salud": 0.357,
+        "estado": 0.643
+      },
+      "mencionadoPor": 2,
+      "interrupciones": 0
+    },
+    {
+      "key": "peter_valderrama",
+      "nombre": "Peter Valderrama",
+      "partido": "Partido Aprista Peruano",
+      "tiempoSegundos": 552,
+      "tiempoLabel": "9m 12s",
+      "palabrasTotales": 1584,
+      "intervenciones": 13,
+      "promSegPorInterv": 42.5,
+      "porcentajeAtaque": 85,
+      "porcentajePropuesta": 0,
+      "porcentajeNeutro": 15,
+      "temas": {
+        "seguridad": 0.385,
+        "economia": 0.308,
+        "corrupcion": 0.538,
+        "educacion": 0.308,
+        "salud": 0.462,
+        "estado": 0.769
+      },
+      "mencionadoPor": 1,
+      "interrupciones": 0
+    }
+  ],
+  "redAtaques": [
+    {
+      "from": "mesias_guevara",
+      "to": "keiko_fujimori",
+      "count": 5
+    },
+    {
+      "from": "ronald_atencio",
+      "to": "keiko_fujimori",
+      "count": 3
+    },
+    {
+      "from": "rosario_fernandez",
+      "to": "keiko_fujimori",
+      "count": 3
+    },
+    {
+      "from": "peter_valderrama",
+      "to": "mario_vizcarra",
+      "count": 2
+    },
+    {
+      "from": "keiko_fujimori",
+      "to": "mesias_guevara",
+      "count": 2
+    },
+    {
+      "from": "mario_vizcarra",
+      "to": "keiko_fujimori",
+      "count": 2
+    },
+    {
+      "from": "mesias_guevara",
+      "to": "jorge_nieto",
+      "count": 1
+    },
+    {
+      "from": "jorge_nieto",
+      "to": "keiko_fujimori",
+      "count": 1
+    },
+    {
+      "from": "rosario_fernandez",
+      "to": "mesias_guevara",
+      "count": 1
+    },
+    {
+      "from": "keiko_fujimori",
+      "to": "mario_vizcarra",
+      "count": 1
+    },
+    {
+      "from": "peter_valderrama",
+      "to": "roberto_quiabra",
+      "count": 1
+    },
+    {
+      "from": "peter_valderrama",
+      "to": "jorge_nieto",
+      "count": 1
+    },
+    {
+      "from": "paul_jaimes",
+      "to": "keiko_fujimori",
+      "count": 1
+    },
+    {
+      "from": "paul_jaimes",
+      "to": "rafael_belaunde",
+      "count": 1
+    },
+    {
+      "from": "ronald_atencio",
+      "to": "jorge_nieto",
+      "count": 1
+    },
+    {
+      "from": "jorge_nieto",
+      "to": "peter_valderrama",
+      "count": 1
+    },
+    {
+      "from": "gerber_caler",
+      "to": "keiko_fujimori",
+      "count": 1
+    },
+    {
+      "from": "paul_jaimes",
+      "to": "jorge_nieto",
+      "count": 1
+    }
+  ]
+}
