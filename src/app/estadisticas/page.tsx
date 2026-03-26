@@ -163,15 +163,34 @@ export default function EstadisticasPage() {
               </div>
             ) : (
               <div className="space-y-8 sm:space-y-12">
+                {/* Debate Presidencial 2026 — Jornada 3 (más reciente) */}
+                {debate3Data && <Debate3Section data={debate3Data} />}
+
+                {/* Debate Presidencial 2026 — Jornada 2 */}
+                {debate2Data && (
+                  <div className="pt-6 border-t border-slate-200">
+                    <Debate2Section data={debate2Data} />
+                  </div>
+                )}
+
+                {/* Debate Presidencial 2026 — Jornada 1 */}
+                {debateData && (
+                  <div className="pt-6 border-t border-slate-200">
+                    <DebateSection data={debateData} />
+                  </div>
+                )}
+
                 {/* KPI Cards */}
-                <KPICards data={edadesData} />
+                <div className="pt-6 border-t border-slate-200">
+                  <KPICards data={edadesData} />
+                </div>
 
                 {/* Pirámide poblacional */}
                 <PiramidePoblacional data={edadesData} />
 
                 {/* Línea de tiempo generacional */}
                 <TimelineGeneracional data={edadesData} />
-                
+
                 {/* Ratio Lima vs Regiones */}
                 <RatioLimaRegiones data={lugaresData} />
 
@@ -189,23 +208,6 @@ export default function EstadisticasPage() {
 
                 {/* Persistencia política: KPIs, ranking, Pareto, histogramas, scatter, boxplot, índices */}
                 <PostulacionesSection data={postulacionesData} />
-
-                {/* Debate Presidencial 2026 — Jornada 1 */}
-                {debateData && <DebateSection data={debateData} />}
-
-                {/* Debate Presidencial 2026 — Jornada 2 */}
-                {debate2Data && (
-                  <div className="pt-6 border-t border-slate-200">
-                    <Debate2Section data={debate2Data} />
-                  </div>
-                )}
-
-                {/* Debate Presidencial 2026 — Jornada 3 */}
-                {debate3Data && (
-                  <div className="pt-6 border-t border-slate-200">
-                    <Debate3Section data={debate3Data} />
-                  </div>
-                )}
               </div>
             )}
           </div>
