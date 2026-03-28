@@ -14,6 +14,7 @@ import DebateSection from "@/components/debate/DebateSection";
 import Debate2Section from "@/components/debate/Debate2Section";
 import Debate3Section from "@/components/debate/Debate3Section";
 import { DebateStats } from "@/lib/debateAnalytics";
+import EncuestaSection from "@/components/encuesta/EncuestaSection";
 import Footer from "@/components/Footer";
 
 const Banner = ({
@@ -179,6 +180,11 @@ export default function EstadisticasPage() {
                     <DebateSection data={debateData} />
                   </div>
                 )}
+
+                {/* Encuesta & Simulacro Ipsos marzo 2026 */}
+                <div className="pt-6 border-t border-slate-200">
+                  <EncuestaSection />
+                </div>
 
                 {/* KPI Cards */}
                 <div className="pt-6 border-t border-slate-200">
