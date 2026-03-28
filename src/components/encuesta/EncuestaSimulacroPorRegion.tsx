@@ -141,6 +141,18 @@ export default function EncuestaSimulacroPorRegion() {
         ))}
       </div>
 
+      {/* Resumen textual regional SEO */}
+      <div className="bg-[#eef2fb] rounded-xl px-4 py-3 text-sm text-slate-700 mb-4">
+        <p>
+          En Lima, <strong className="text-[#1b2b5a]">Rafael López Aliaga lidera con 28.2%</strong>{" "}
+          de los votos válidos, muy por encima de Keiko Fujimori (17.6%). En el Norte, Keiko toma
+          ventaja con 19.6% frente al 9.8% de Aliaga. En el Sur destaca{" "}
+          <strong className="text-[#1b2b5a]">Alfonso López Chau con 24.2%</strong>. En el Oriente,
+          Keiko alcanza su mejor resultado (35.1%), mientras que en el ámbito Rural Roberto Sánchez
+          sube a 19.7%.
+        </p>
+      </div>
+
       <ResponsiveContainer width="100%" height={340}>
         <BarChart
           data={chartData}

@@ -5,24 +5,24 @@ import { getAllArticles } from "@/lib/mdx";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.observaperu.com";
 
-  const staticPaths = [
-    "",
-    "/comparacion",
-    "/mapa-ideologico",
-    "/candidatos",
-    "/estadisticas",
-    "/analisis",
-    "/noticias",
-    "/conocenos",
-    "/contactanos",
-  ];
+  type SitemapEntry = {
+    url: string;
+    lastModified: Date;
+    changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+    priority: number;
+  };
 
-  const staticUrls = staticPaths.map((path) => ({
-    url: path ? `${baseUrl}${path}` : baseUrl,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: path === "" ? 1 : 0.8,
-  }));
+  const staticUrls: SitemapEntry[] = [
+    { url: baseUrl,                        lastModified: new Date(), changeFrequency: "daily",   priority: 1.0 },
+    { url: `${baseUrl}/estadisticas`,      lastModified: new Date(), changeFrequency: "daily",   priority: 0.95 },
+    { url: `${baseUrl}/candidatos`,        lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${baseUrl}/noticias`,          lastModified: new Date(), changeFrequency: "daily",   priority: 0.9 },
+    { url: `${baseUrl}/analisis`,          lastModified: new Date(), changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${baseUrl}/mapa-ideologico`,   lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${baseUrl}/comparacion`,       lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${baseUrl}/conocenos`,         lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${baseUrl}/contactanos`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
+  ];
 
   const candidateUrls = ALL_CANDIDATES.map((c) => ({
     url: `${baseUrl}/candidatos/${c.key}`,

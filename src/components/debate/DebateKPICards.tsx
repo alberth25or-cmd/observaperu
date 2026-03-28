@@ -4,9 +4,10 @@ import { DebateStats } from "@/lib/debateAnalytics";
 
 interface Props {
   data: DebateStats;
+  jornada?: string;
 }
 
-export default function DebateKPICards({ data }: Props) {
+export default function DebateKPICards({ data, jornada = "Primera jornada" }: Props) {
   const { metadata, candidatos } = data;
 
   const masAgresivo = [...candidatos].sort(
@@ -25,7 +26,7 @@ export default function DebateKPICards({ data }: Props) {
     {
       label: "Candidatos",
       value: `${metadata.candidatos}`,
-      sub: "Primera jornada",
+      sub: jornada,
       color: "#1b2b5a",
     },
     {
