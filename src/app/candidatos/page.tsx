@@ -191,16 +191,20 @@ export default function CandidatosPage() {
               return (
                 <article
                   key={c.key}
-                  className="group relative overflow-hidden rounded-3xl bg-white shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+                  className={`group relative overflow-hidden rounded-3xl bg-white shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-xl ${c.fallecido ? "opacity-80" : ""}`}
                 >
-                  {sticker && (
+                  {c.fallecido ? (
+                    <div className="pointer-events-none absolute right-[-46px] top-[18px] z-10 rotate-45 bg-slate-600 px-14 py-1.5 text-center text-[11px] font-extrabold uppercase tracking-[0.06em] text-white shadow">
+                      In memoriam
+                    </div>
+                  ) : sticker ? (
                     <div className="pointer-events-none absolute right-[-52px] top-[18px] z-10 rotate-45 bg-[#c61b1b] px-16 py-1.5 text-center text-[11px] font-extrabold uppercase tracking-[0.06em] text-white shadow">
                       En el Congreso actual
                     </div>
-                  )}
+                  ) : null}
 
                   <div className="p-7">
-                    <div className="relative mx-auto h-[140px] w-[140px] overflow-hidden rounded-2xl bg-slate-100">
+                    <div className={`relative mx-auto h-[140px] w-[140px] overflow-hidden rounded-2xl bg-slate-100 ${c.fallecido ? "grayscale" : ""}`}>
                       <Image
                         src={c.img}
                         alt={c.name}
@@ -221,6 +225,12 @@ export default function CandidatosPage() {
                     <p className="mt-2 text-center text-[15px] font-medium text-slate-600">
                       {c.party}
                     </p>
+
+                    {c.fallecido && (
+                      <p className="mt-1 text-center text-[12px] text-slate-400 italic">
+                        Falleció el 15 de marzo de 2026
+                      </p>
+                    )}
 
                     <div className="mt-4 flex justify-center">
                       <span className="rounded-full bg-[#0b1b3b]/5 px-4 py-1 text-[12px] font-semibold text-[#0b1b3b]">
