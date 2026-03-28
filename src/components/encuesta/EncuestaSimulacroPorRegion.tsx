@@ -2,39 +2,35 @@
 
 import { useState } from "react";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
-  type ChartOptions,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
-
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip);
+  ResponsiveContainer,
+} from "recharts";
 
 const REGIONS = ["Lima", "Norte", "Centro", "Sur", "Oriente", "Rural"];
-const CANDIDATES = [
-  "Keiko Fujimori",
-  "R. López Aliaga",
-  "A. López Chau",
-  "Roberto Sánchez",
-  "Carlos Álvarez",
-  "Jorge Nieto",
-  "César Acuña",
+const CANDIDATE_LABELS = [
+  "Keiko",
+  "R. Aliaga",
+  "A. Chau",
+  "R. Sánchez",
+  "C. Álvarez",
+  "J. Nieto",
+  "C. Acuña",
 ];
-
-// rows = candidatos, cols = regiones [Lima, Norte, Centro, Sur, Oriente, Rural]
+// Same order as CANDIDATE_LABELS: rows = candidatos, cols = [Lima, Norte, Centro, Sur, Oriente, Rural]
 const DATA_BY_CANDIDATE = [
-  [17.6, 19.6, 17.1,  1.0, 35.1, 16.6], // Keiko
-  [28.2,  9.8, 14.4, 14.1,  8.4, 14.0], // López Aliaga
-  [ 4.5,  3.0, 11.8, 24.2,  1.5, 12.9], // A. López Chau
-  [ 1.7, 15.8,  8.8,  7.4,  5.7, 19.7], // Roberto Sánchez
-  [ 6.4, 11.6,  6.5,  3.3,  7.9,  4.8], // Carlos Álvarez
-  [ 9.9,  2.2,  4.9,  4.0,  1.6,  1.1], // Jorge Nieto
-  [ 2.4, 12.7,  1.9,  1.3,  6.3, 10.8], // César Acuña
+  [17.6, 19.6, 17.1,  1.0, 35.1, 16.6],
+  [28.2,  9.8, 14.4, 14.1,  8.4, 14.0],
+  [ 4.5,  3.0, 11.8, 24.2,  1.5, 12.9],
+  [ 1.7, 15.8,  8.8,  7.4,  5.7, 19.7],
+  [ 6.4, 11.6,  6.5,  3.3,  7.9,  4.8],
+  [ 9.9,  2.2,  4.9,  4.0,  1.6,  1.1],
+  [ 2.4, 12.7,  1.9,  1.3,  6.3, 10.8],
 ];
-
 const CANDIDATE_COLORS = [
   "#185FA5", "#0F6E56", "#854F0B", "#993C1D",
   "#534AB7", "#888780", "#1D9E75",
@@ -46,76 +42,56 @@ const REGION_COLORS = [
 
 type View = "candidate" | "region";
 
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  return (
+    <div className="bg-white border border-slate-200 rounded-xl shadow-xl p-3 text-xs min-w-[160px]">
+      <p className="font-bold text-[#1b2b5a] mb-2 pb-1 border-b border-slate-100">
+        {label}
+      </p>
+      {payload.map((p: any) => (
+        <div key={p.dataKey} className="flex justify-between gap-3 py-0.5">
+          <span className="flex items-center gap-1.5">
+            <span
+              className="w-2 h-2 rounded-sm inline-block"
+              style={{ backgroundColor: p.fill }}
+            />
+            <span className="text-slate-600">{p.name}</span>
+          </span>
+          <span className="font-bold text-[#1b2b5a]">
+            {(p.value as number).toFixed(1)}%
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default function EncuestaSimulacroPorRegion() {
   const [view, setView] = useState<View>("candidate");
 
+  // Build Recharts-compatible flat data
   const chartData =
     view === "candidate"
-      ? {
-          labels: REGIONS,
-          datasets: CANDIDATES.map((c, ci) => ({
-            label: c,
-            data: DATA_BY_CANDIDATE[ci],
-            backgroundColor: CANDIDATE_COLORS[ci],
-            borderRadius: 3,
-            borderWidth: 0,
-          })),
-        }
-      : {
-          labels: CANDIDATES,
-          datasets: REGIONS.map((r, ri) => ({
-            label: r,
-            data: DATA_BY_CANDIDATE.map((row) => row[ri]),
-            backgroundColor: REGION_COLORS[ri],
-            borderRadius: 3,
-            borderWidth: 0,
-          })),
-        };
+      ? // X = regions, each Bar = one candidate
+        REGIONS.map((r, ri) => {
+          const row: Record<string, string | number> = { name: r };
+          CANDIDATE_LABELS.forEach((c, ci) => {
+            row[c] = DATA_BY_CANDIDATE[ci][ri];
+          });
+          return row;
+        })
+      : // X = candidates, each Bar = one region
+        CANDIDATE_LABELS.map((c, ci) => {
+          const row: Record<string, string | number> = { name: c };
+          REGIONS.forEach((r, ri) => {
+            row[r] = DATA_BY_CANDIDATE[ci][ri];
+          });
+          return row;
+        });
 
-  const options: ChartOptions<"bar"> = {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        grid: { display: false },
-        ticks: {
-          color: "#1b2b5a",
-          font: { size: 10, weight: "600" },
-          maxRotation: 30,
-        },
-      },
-      y: {
-        min: 0,
-        max: 42,
-        grid: { color: "#e2e8f0" },
-        border: { dash: [4, 4] },
-        ticks: {
-          callback: (v) => `${v}%`,
-          color: "#64748b",
-          font: { size: 11 },
-        },
-      },
-    },
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: (ctx) =>
-            `${ctx.dataset.label}: ${(ctx.parsed.y as number).toFixed(1)}%`,
-        },
-        backgroundColor: "#0b1b3b",
-        titleColor: "#fff",
-        bodyColor: "#cbd5e1",
-        padding: 10,
-        cornerRadius: 8,
-      },
-    },
-  };
-
-  const legendItems =
-    view === "candidate"
-      ? CANDIDATES.map((c, i) => ({ label: c, color: CANDIDATE_COLORS[i] }))
-      : REGIONS.map((r, i) => ({ label: r, color: REGION_COLORS[i] }));
+  const keys = view === "candidate" ? CANDIDATE_LABELS : REGIONS;
+  const colors = view === "candidate" ? CANDIDATE_COLORS : REGION_COLORS;
 
   return (
     <div>
@@ -154,23 +130,55 @@ export default function EncuestaSimulacroPorRegion() {
 
       {/* Leyenda dinámica */}
       <div className="flex flex-wrap gap-3 mb-4">
-        {legendItems.map((item) => (
-          <span
-            key={item.label}
-            className="flex items-center gap-1.5 text-xs text-slate-600"
-          >
+        {keys.map((k, i) => (
+          <span key={k} className="flex items-center gap-1.5 text-xs text-slate-600">
             <span
               className="w-2.5 h-2.5 rounded-sm inline-block"
-              style={{ backgroundColor: item.color }}
+              style={{ backgroundColor: colors[i] }}
             />
-            {item.label}
+            {k}
           </span>
         ))}
       </div>
 
-      <div style={{ height: 340 }}>
-        <Bar data={chartData} options={options} />
-      </div>
+      <ResponsiveContainer width="100%" height={340}>
+        <BarChart
+          data={chartData}
+          margin={{ top: 8, right: 16, left: 0, bottom: 8 }}
+          barCategoryGap="22%"
+          barGap={2}
+        >
+          <CartesianGrid
+            strokeDasharray="3 3"
+            vertical={false}
+            stroke="#dde3f0"
+          />
+          <XAxis
+            dataKey="name"
+            tick={{ fontSize: 10, fill: "#1b2b5a", fontWeight: 600 }}
+            tickLine={false}
+            axisLine={{ stroke: "#dde3f0" }}
+          />
+          <YAxis
+            domain={[0, 42]}
+            tickFormatter={(v) => `${v}%`}
+            tick={{ fontSize: 11, fill: "#64748b" }}
+            tickLine={false}
+            axisLine={false}
+          />
+          <Tooltip content={<CustomTooltip />} cursor={{ fill: "#eef2fb" }} />
+          {keys.map((k, i) => (
+            <Bar
+              key={k}
+              dataKey={k}
+              name={k}
+              fill={colors[i]}
+              radius={[3, 3, 0, 0]}
+              maxBarSize={18}
+            />
+          ))}
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 }

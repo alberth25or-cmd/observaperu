@@ -2,32 +2,21 @@
 
 import { useState, useMemo } from "react";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
+  ComposedChart,
+  Area,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
-  Filler,
-  type ChartOptions,
-  type ChartDataset,
-} from "chart.js";
-import { Line } from "react-chartjs-2";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip,
-  Filler
-);
+  ResponsiveContainer,
+} from "recharts";
 
 const ME = 2.8;
 
 const LABELS = [
-  "Ene-25","Abr-25","Jul-25","Ago-25","Set-25","Oct-25",
-  "Nov-25","Dic-25","Ene-26","Feb1-26","Feb2-26","Mar1-26","Mar2-26",
+  "Ene-25", "Abr-25", "Jul-25", "Ago-25", "Set-25", "Oct-25",
+  "Nov-25", "Dic-25", "Ene-26", "Feb1-26", "Feb2-26", "Mar1-26", "Mar2-26",
 ];
 
 const ALL_SERIES = [
@@ -71,6 +60,41 @@ const ALL_SERIES = [
 
 const DEFAULT_ACTIVE = new Set(["keiko", "aliaga", "alvarez"]);
 
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (!active || !payload?.length) return null;
+  const lines = payload.filter(
+    (p: any) =>
+      typeof p.dataKey === "string" &&
+      p.dataKey.endsWith("_val") &&
+      p.value != null
+  );
+  if (!lines.length) return null;
+  return (
+    <div className="bg-white border border-slate-200 rounded-xl shadow-xl p-3 text-xs min-w-[200px]">
+      <p className="font-bold text-[#1b2b5a] mb-2 pb-1 border-b border-slate-100">
+        {label}
+      </p>
+      {lines.map((p: any) => {
+        const v = p.value as number;
+        const s = ALL_SERIES.find((s) => `${s.key}_val` === p.dataKey);
+        if (!s) return null;
+        return (
+          <div key={p.dataKey} className="flex justify-between gap-4 py-0.5">
+            <span className="flex items-center gap-1.5">
+              <span
+                className="w-2 h-2 rounded-full inline-block"
+                style={{ backgroundColor: s.color }}
+              />
+              <span className="text-slate-600">{s.label}</span>
+            </span>
+            <span className="font-bold text-[#1b2b5a]">{v}%</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 export default function EncuestaEvolucionTemporal() {
   const [active, setActive] = useState<Set<string>>(new Set(DEFAULT_ACTIVE));
 
@@ -83,104 +107,25 @@ export default function EncuestaEvolucionTemporal() {
     });
   }
 
-  const datasets = useMemo(() => {
-    const result: ChartDataset<"line">[] = [];
-    ALL_SERIES.filter((s) => active.has(s.key)).forEach((s) => {
-      const topData = s.data.map((v) => (v != null ? v + ME : null));
-      const botData = s.data.map((v) => (v != null ? Math.max(0, v - ME) : null));
+  // Build flat data array: one row per label
+  const chartData = useMemo(
+    () =>
+      LABELS.map((label, i) => {
+        const row: Record<string, number | null | string> = { label };
+        ALL_SERIES.forEach((s) => {
+          const v = s.data[i];
+          row[`${s.key}_val`] = v ?? null;
+          // band: stacked area = transparent base + visible height
+          row[`${s.key}_bot`] = v != null ? Math.max(0, v - ME) : null;
+          row[`${s.key}_size`] =
+            v != null ? v + ME - Math.max(0, v - ME) : null;
+        });
+        return row;
+      }),
+    []
+  );
 
-      // Banda superior — fill to next dataset (banda inferior)
-      result.push({
-        label: `${s.key}_top`,
-        data: topData as number[],
-        borderWidth: 0,
-        pointRadius: 0,
-        backgroundColor: s.color + "28",
-        fill: "+1" as any,
-        spanGaps: true,
-        tension: 0.35,
-      });
-
-      // Banda inferior — no fill
-      result.push({
-        label: `${s.key}_bot`,
-        data: botData as number[],
-        borderWidth: 0,
-        pointRadius: 0,
-        backgroundColor: "transparent",
-        fill: false,
-        spanGaps: true,
-        tension: 0.35,
-      });
-
-      // Línea principal
-      result.push({
-        label: s.label,
-        data: s.data as number[],
-        borderColor: s.color,
-        backgroundColor: s.color,
-        borderWidth: 2.5,
-        pointRadius: 4,
-        pointHoverRadius: 6,
-        tension: 0.35,
-        spanGaps: true,
-        fill: false,
-      });
-    });
-    return result;
-  }, [active]);
-
-  const options: ChartOptions<"line"> = {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        grid: { color: "#e2e8f0" },
-        ticks: {
-          color: "#64748b",
-          font: { size: 10 },
-          maxRotation: 35,
-          minRotation: 0,
-        },
-      },
-      y: {
-        min: 0,
-        max: 18,
-        grid: { color: "#e2e8f0" },
-        border: { dash: [4, 4] },
-        ticks: {
-          callback: (v) => `${v}%`,
-          color: "#64748b",
-          font: { size: 11 },
-        },
-      },
-    },
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        filter: (item) => {
-          const lbl = item.dataset.label ?? "";
-          return !lbl.endsWith("_top") && !lbl.endsWith("_bot");
-        },
-        callbacks: {
-          label: (ctx) => {
-            const v = ctx.parsed.y;
-            if (v == null) return "";
-            const lo = Math.max(0, v - ME).toFixed(1);
-            const hi = (v + ME).toFixed(1);
-            return `${ctx.dataset.label}: ${v}% [IC: ${lo}–${hi}%]`;
-          },
-        },
-        backgroundColor: "#0b1b3b",
-        titleColor: "#fff",
-        bodyColor: "#cbd5e1",
-        padding: 10,
-        cornerRadius: 8,
-        mode: "index",
-        intersect: false,
-      },
-    },
-  };
+  const activeSeries = ALL_SERIES.filter((s) => active.has(s.key));
 
   return (
     <div>
@@ -189,8 +134,9 @@ export default function EncuestaEvolucionTemporal() {
           Evolución temporal con bandas de incertidumbre
         </h3>
         <p className="text-xs text-slate-500">
-          Las bandas sombreadas representan el IC 95% (±2.8 pp). Enero 2025 – Marzo 2026.
-          Por defecto se muestran los tres candidatos con mayor intención de voto.
+          Bandas sombreadas = IC 95% (±2.8 pp) · Enero 2025 – Marzo 2026.
+          Por defecto se muestran los tres candidatos con mayor intención de
+          voto.
         </p>
       </div>
 
@@ -209,16 +155,81 @@ export default function EncuestaEvolucionTemporal() {
           >
             <span
               className="w-2 h-2 rounded-full inline-block"
-              style={{ backgroundColor: active.has(s.key) ? "#fff" : s.color }}
+              style={{
+                backgroundColor: active.has(s.key) ? "#fff" : s.color,
+              }}
             />
             {s.label}
           </button>
         ))}
       </div>
 
-      <div style={{ height: 340 }}>
-        <Line data={{ labels: LABELS, datasets }} options={options} />
-      </div>
+      <ResponsiveContainer width="100%" height={340}>
+        <ComposedChart
+          data={chartData}
+          margin={{ top: 8, right: 16, left: 0, bottom: 8 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" stroke="#dde3f0" />
+          <XAxis
+            dataKey="label"
+            tick={{ fontSize: 10, fill: "#64748b" }}
+            tickLine={false}
+            axisLine={{ stroke: "#dde3f0" }}
+          />
+          <YAxis
+            domain={[0, 18]}
+            tickFormatter={(v) => `${v}%`}
+            tick={{ fontSize: 11, fill: "#64748b" }}
+            tickLine={false}
+            axisLine={false}
+          />
+          <Tooltip content={<CustomTooltip />} />
+          {activeSeries.map((s) => [
+            /* Invisible base of the band */
+            <Area
+              key={`${s.key}_bot`}
+              type="monotone"
+              dataKey={`${s.key}_bot`}
+              stackId={`band_${s.key}`}
+              stroke="none"
+              fill="transparent"
+              fillOpacity={0}
+              legendType="none"
+              dot={false}
+              activeDot={false}
+              connectNulls
+              isAnimationActive={false}
+            />,
+            /* Visible band height */
+            <Area
+              key={`${s.key}_size`}
+              type="monotone"
+              dataKey={`${s.key}_size`}
+              stackId={`band_${s.key}`}
+              stroke="none"
+              fill={s.color}
+              fillOpacity={0.15}
+              legendType="none"
+              dot={false}
+              activeDot={false}
+              connectNulls
+              isAnimationActive={false}
+            />,
+            /* Main line */
+            <Line
+              key={`${s.key}_val`}
+              type="monotone"
+              dataKey={`${s.key}_val`}
+              stroke={s.color}
+              strokeWidth={2.5}
+              dot={{ fill: s.color, r: 3.5, strokeWidth: 0 }}
+              activeDot={{ r: 5 }}
+              connectNulls
+              legendType="none"
+            />,
+          ])}
+        </ComposedChart>
+      </ResponsiveContainer>
     </div>
   );
 }
