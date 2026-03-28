@@ -47,7 +47,6 @@ const errorBarsPlugin: Plugin<"bar"> = {
         const val = (dataset.data[i] as number) ?? 0;
         const xHi = scales.x.getPixelForValue(val + ME);
         const xLo = scales.x.getPixelForValue(Math.max(0, val - ME));
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const y = (element as any).y;
         ctx.save();
         ctx.strokeStyle = "#334155";

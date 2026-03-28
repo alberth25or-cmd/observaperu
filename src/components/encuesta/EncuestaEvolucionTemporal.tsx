@@ -96,7 +96,6 @@ export default function EncuestaEvolucionTemporal() {
         borderWidth: 0,
         pointRadius: 0,
         backgroundColor: s.color + "28",
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         fill: "+1" as any,
         spanGaps: true,
         tension: 0.35,
