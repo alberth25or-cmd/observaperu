@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import EncuestaIntencionVoto from "./EncuestaIntencionVoto";
 import EncuestaEvolucionTemporal from "./EncuestaEvolucionTemporal";
 import EncuestaSimulacroPorRegion from "./EncuestaSimulacroPorRegion";
@@ -24,18 +25,18 @@ export default function EncuestaSection() {
           <strong className="text-[#1b2b5a]">elecciones presidenciales del Perú 2026</strong>.
           Según la{" "}
           <strong className="text-[#1b2b5a]">encuesta Ipsos</strong> (21–22 mar 2026, n=1,203),{" "}
-          <a href="/candidatos/keiko-sofia-fujimori-higuchi" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">
+          <Link href="/candidatos/keiko-sofia-fujimori-higuchi" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">
             Keiko Fujimori lidera con 11%
-          </a>{" "}
+          </Link>{" "}
           seguida de{" "}
-          <a href="/candidatos/rafael-bernardo-lopez-aliaga" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">
+          <Link href="/candidatos/rafael-bernardo-lopez-aliaga" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">
             Rafael López Aliaga con 10%
-          </a>
+          </Link>
           , ambos dentro del margen de error (±2.8 pp). Un segundo grupo de cuatro candidatos —{" "}
-          <a href="/candidatos/alfonso-lopez-chau-nava" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">A. López Chau</a>,{" "}
-          <a href="/candidatos/roberto-helbert-sanchez-palomino" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">R. Sánchez</a>,{" "}
-          <a href="/candidatos/carlos-gonzalo-alvarez-loayza" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">C. Álvarez</a> y{" "}
-          <a href="/candidatos/jorge-nieto-montesinos" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">J. Nieto</a>{" "}
+          <Link href="/candidatos/alfonso-lopez-chau-nava" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">A. López Chau</Link>,{" "}
+          <Link href="/candidatos/roberto-helbert-sanchez-palomino" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">R. Sánchez</Link>,{" "}
+          <Link href="/candidatos/carlos-gonzalo-alvarez-loayza" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">C. Álvarez</Link> y{" "}
+          <Link href="/candidatos/jorge-nieto-montesinos" className="font-bold text-[#1b2b5a] underline decoration-[#1b2b5a]/30 hover:decoration-[#1b2b5a]">J. Nieto</Link>{" "}
           — se ubica en torno al 5%, también dentro del margen de error. En el simulacro, López
           Aliaga concentra el 28% de votos válidos en Lima frente al 18% de Keiko. Análisis completo
           de los tres{" "}
