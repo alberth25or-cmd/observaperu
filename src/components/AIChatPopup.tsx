@@ -53,7 +53,13 @@ export default function AIChatPopup() {
           >
             <div className="relative flex h-full w-full flex-col gap-1">
               {/* Header */}
-              <div className="flex h-11 shrink-0 items-center justify-end px-4 pt-4">
+              <div className="flex h-11 shrink-0 items-center justify-between px-4 pt-4">
+                <div className="flex items-center gap-2">
+                  <SparklesIcon className="fill-[#0b1b3b] size-4" />
+                  <span className="text-sm font-semibold text-[#0b1b3b]">
+                    Asistente de Observa Perú
+                  </span>
+                </div>
                 <PopoverPrimitives.Close className="bg-neutral-50 hover:bg-neutral-100 flex size-8 items-center justify-center rounded-full">
                   <span className="sr-only">Cerrar</span>
                   <CloseIcon className="size-4 opacity-70" />
