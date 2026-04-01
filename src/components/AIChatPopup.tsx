@@ -3,6 +3,7 @@
 import * as PopoverPrimitives from "@radix-ui/react-popover";
 import { useChat } from "@ai-sdk/react";
 import { ComponentProps, FormEvent, useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 // ─── Suggestion pills ─────────────────────────────────────────────────────────
 
@@ -103,14 +104,17 @@ function Chat() {
     handleSend(input);
   };
 
-  // Extract text content from message parts
+  // Extract text content from message parts.
+  // For assistant messages with tool calls, only the last text part contains
+  // the final answer — earlier parts are pre-tool preambles.
   const getMessageContent = (msg: (typeof messages)[number]): string => {
-    return msg.parts
-      .filter(
-        (part): part is { type: "text"; text: string } => part.type === "text",
-      )
-      .map((part) => part.text)
-      .join("");
+    const textParts = msg.parts.filter(
+      (part): part is { type: "text"; text: string } => part.type === "text",
+    );
+    if (msg.role === "assistant" && textParts.length > 1) {
+      return textParts[textParts.length - 1].text;
+    }
+    return textParts.map((p) => p.text).join("");
   };
 
   return (
@@ -135,13 +139,13 @@ function Chat() {
           </div>
         ) : (
           <div className="flex flex-col gap-4">
-            {messages.map((msg) => (
-              <MessageBubble
-                key={msg.id}
-                role={msg.role}
-                content={getMessageContent(msg)}
-              />
-            ))}
+            {messages.map((msg) => {
+              const content = getMessageContent(msg);
+              if (!content) return null;
+              return (
+                <MessageBubble key={msg.id} role={msg.role} content={content} />
+              );
+            })}
             {status === "submitted" && (
               <div className="flex justify-start">
                 <div className="bg-white border border-neutral-200 rounded-2xl rounded-bl-sm px-4 py-2.5 text-sm text-neutral-500">
@@ -201,7 +205,7 @@ function MessageBubble({ role, content }: { role: string; content: string }) {
             : "bg-white border border-neutral-200 text-neutral-900 rounded-bl-sm"
         }`}
       >
-        {content}
+        {isUser ? content : <ReactMarkdown>{content}</ReactMarkdown>}
       </div>
     </div>
   );
