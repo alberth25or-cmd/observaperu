@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "fecha": "2026-03-23",
+    "jornada": "Primera jornada",
+    "candidatos": 11,
+    "segmentos": 480,
+    "duracionSegundos": 11564,
+    "duracionLabel": "192m 44s"
+  },
+  "candidatos": [
+    {
+      "key": "carlos_alvarez",
+      "nombre": "Carlos Alvarez Loaiza",
+      "partido": "Pais para Todos",
+      "tiempoSegundos": 715.0,
+      "tiempoLabel": "11m 55s",
+      "palabrasTotales": 1957,
+      "intervenciones": 17,
+      "promSegPorInterv": 42.1,
+      "porcentajeAtaque": 52.9,
+      "porcentajePropuesta": 0.0,
+      "porcentajeNeutro": 47.1,
+      "temas": {
+        "seguridad": 0.294,
+        "economia": 0.176,
+        "corrupcion": 0.529,
+        "educacion": 0.235,
+        "salud": 0.294,
+        "estado": 0.412
+      },
+      "mencionadoPor": 4,
+      "interrupciones": 2
+    },
+    {
+      "key": "johnny_lescano",
+      "nombre": "Johnny Lescano",
+      "partido": "Cooperacion Popular",
+      "tiempoSegundos": 599.0,
+      "tiempoLabel": "9m 59s",
+      "palabrasTotales": 1456,
+      "intervenciones": 16,
+      "promSegPorInterv": 37.4,
+      "porcentajeAtaque": 68.8,
+      "porcentajePropuesta": 0.0,
+      "porcentajeNeutro": 31.2,
+      "temas": {
+        "seguridad": 0.312,
+        "economia": 0.125,
+        "corrupcion": 0.562,
+        "educacion": 0.062,
+        "salud": 0.375,
+        "estado": 0.5
+      },
+      "mencionadoPor": 3,
+      "interrupciones": 2
+    },
+    {
+      "key": "marisol_perez",
+      "nombre": "Marisol Perez Tello",
+      "partido": "Primero la Gente",
+      "tiempoSegundos": 593.0,
+      "tiempoLabel": "9m 53s",
+      "palabrasTotales": 1890,
+      "intervenciones": 17,
+      "promSegPorInterv": 34.9,
+      "porcentajeAtaque": 64.7,
+      "porcentajePropuesta": 5.9,
+      "porcentajeNeutro": 29.4,
+      "temas": {
+        "seguridad": 0.588,
+        "economia": 0.176,
+        "corrupcion": 0.588,
+        "educacion": 0.059,
+        "salud": 0.118,
+        "estado": 0.588
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 1
+    },
+    {
+      "key": "cesar_acuna",
+      "nombre": "Cesar Acuna Peralta",
+      "partido": "Alianza para el Progreso",
+      "tiempoSegundos": 586.0,
+      "tiempoLabel": "9m 46s",
+      "palabrasTotales": 984,
+      "intervenciones": 11,
+      "promSegPorInterv": 53.3,
+      "porcentajeAtaque": 63.6,
+      "porcentajePropuesta": 9.1,
+      "porcentajeNeutro": 27.3,
+      "temas": {
+        "seguridad": 0.455,
+        "economia": 0.273,
+        "corrupcion": 0.545,
+        "educacion": 0.091,
+        "salud": 0.364,
+        "estado": 0.636
+      },
+      "mencionadoPor": 2,
+      "interrupciones": 1
+    },
+    {
+      "key": "fernando_oliveira",
+      "nombre": "Fernando Oliveira Vega",
+      "partido": "Frente de la Esperanza",
+      "tiempoSegundos": 584.0,
+      "tiempoLabel": "9m 44s",
+      "palabrasTotales": 1128,
+      "intervenciones": 12,
+      "promSegPorInterv": 48.7,
+      "porcentajeAtaque": 91.7,
+      "porcentajePropuesta": 0.0,
+      "porcentajeNeutro": 8.3,
+      "temas": {
+        "seguridad": 0.667,
+        "economia": 0.167,
+        "corrupcion": 0.667,
+        "educacion": 0.083,
+        "salud": 0.333,
+        "estado": 0.667
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "alex_gonzalez",
+      "nombre": "Alex Gonzalez Castillo",
+      "partido": "Partido Democrata Verde",
+      "tiempoSegundos": 581.0,
+      "tiempoLabel": "9m 41s",
+      "palabrasTotales": 1232,
+      "intervenciones": 20,
+      "promSegPorInterv": 29.1,
+      "porcentajeAtaque": 40.0,
+      "porcentajePropuesta": 10.0,
+      "porcentajeNeutro": 50.0,
+      "temas": {
+        "seguridad": 0.25,
+        "economia": 0.2,
+        "corrupcion": 0.35,
+        "educacion": 0.2,
+        "salud": 0.25,
+        "estado": 0.45
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 1
+    },
+    {
+      "key": "jose_luna",
+      "nombre": "Jose Luna Galvez",
+      "partido": "Podemos Peru",
+      "tiempoSegundos": 579.0,
+      "tiempoLabel": "9m 39s",
+      "palabrasTotales": 1366,
+      "intervenciones": 17,
+      "promSegPorInterv": 34.1,
+      "porcentajeAtaque": 35.3,
+      "porcentajePropuesta": 11.8,
+      "porcentajeNeutro": 52.9,
+      "temas": {
+        "seguridad": 0.471,
+        "economia": 0.412,
+        "corrupcion": 0.353,
+        "educacion": 0.0,
+        "salud": 0.176,
+        "estado": 0.412
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "wolfgang_grosso",
+      "nombre": "Wolfgang Grosso",
+      "partido": "Integridad Democratica",
+      "tiempoSegundos": 579.0,
+      "tiempoLabel": "9m 39s",
+      "palabrasTotales": 1381,
+      "intervenciones": 15,
+      "promSegPorInterv": 38.6,
+      "porcentajeAtaque": 80.0,
+      "porcentajePropuesta": 0.0,
+      "porcentajeNeutro": 20.0,
+      "temas": {
+        "seguridad": 0.267,
+        "economia": 0.2,
+        "corrupcion": 0.6,
+        "educacion": 0.133,
+        "salud": 0.267,
+        "estado": 0.6
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 3
+    },
+    {
+      "key": "lopez_aliaga",
+      "nombre": "Rafael Lopez Aliaga",
+      "partido": "Renovacion Popular",
+      "tiempoSegundos": 570.0,
+      "tiempoLabel": "9m 30s",
+      "palabrasTotales": 1222,
+      "intervenciones": 12,
+      "promSegPorInterv": 47.5,
+      "porcentajeAtaque": 50.0,
+      "porcentajePropuesta": 16.7,
+      "porcentajeNeutro": 33.3,
+      "temas": {
+        "seguridad": 0.333,
+        "economia": 0.5,
+        "corrupcion": 0.417,
+        "educacion": 0.167,
+        "salud": 0.167,
+        "estado": 0.583
+      },
+      "mencionadoPor": 3,
+      "interrupciones": 0
+    },
+    {
+      "key": "jose_williams",
+      "nombre": "Jose Williams Zapata",
+      "partido": "Avanza Pais",
+      "tiempoSegundos": 563.0,
+      "tiempoLabel": "9m 23s",
+      "palabrasTotales": 1366,
+      "intervenciones": 15,
+      "promSegPorInterv": 37.5,
+      "porcentajeAtaque": 40.0,
+      "porcentajePropuesta": 20.0,
+      "porcentajeNeutro": 40.0,
+      "temas": {
+        "seguridad": 0.467,
+        "economia": 0.2,
+        "corrupcion": 0.333,
+        "educacion": 0.333,
+        "salud": 0.2,
+        "estado": 0.533
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "pablo_lopez",
+      "nombre": "Pablo Alfonso Lopez Chao",
+      "partido": "Ahora Nacion",
+      "tiempoSegundos": 522.0,
+      "tiempoLabel": "8m 42s",
+      "palabrasTotales": 1144,
+      "intervenciones": 16,
+      "promSegPorInterv": 32.6,
+      "porcentajeAtaque": 25.0,
+      "porcentajePropuesta": 12.5,
+      "porcentajeNeutro": 62.5,
+      "temas": {
+        "seguridad": 0.125,
+        "economia": 0.188,
+        "corrupcion": 0.25,
+        "educacion": 0.375,
+        "salud": 0.125,
+        "estado": 0.562
+      },
+      "mencionadoPor": 3,
+      "interrupciones": 2
+    }
+  ],
+  "redAtaques": [
+    {
+      "from": "johnny_lescano",
+      "to": "carlos_alvarez",
+      "count": 1
+    },
+    {
+      "from": "johnny_lescano",
+      "to": "pablo_lopez",
+      "count": 2
+    },
+    {
+      "from": "johnny_lescano",
+      "to": "lopez_aliaga",
+      "count": 2
+    },
+    {
+      "from": "carlos_alvarez",
+      "to": "johnny_lescano",
+      "count": 1
+    },
+    {
+      "from": "carlos_alvarez",
+      "to": "cesar_acuna",
+      "count": 1
+    },
+    {
+      "from": "pablo_lopez",
+      "to": "johnny_lescano",
+      "count": 1
+    },
+    {
+      "from": "fernando_oliveira",
+      "to": "cesar_acuna",
+      "count": 1
+    },
+    {
+      "from": "fernando_oliveira",
+      "to": "carlos_alvarez",
+      "count": 2
+    },
+    {
+      "from": "fernando_oliveira",
+      "to": "pablo_lopez",
+      "count": 1
+    },
+    {
+      "from": "alex_gonzalez",
+      "to": "lopez_aliaga",
+      "count": 2
+    },
+    {
+      "from": "alex_gonzalez",
+      "to": "johnny_lescano",
+      "count": 1
+    },
+    {
+      "from": "jose_williams",
+      "to": "lopez_aliaga",
+      "count": 1
+    },
+    {
+      "from": "jose_williams",
+      "to": "pablo_lopez",
+      "count": 2
+    },
+    {
+      "from": "marisol_perez",
+      "to": "carlos_alvarez",
+      "count": 1
+    },
+    {
+      "from": "wolfgang_grosso",
+      "to": "carlos_alvarez",
+      "count": 1
+    },
+    {
+      "from": "cesar_acuna",
+      "to": "sistema",
+      "count": 7
+    },
+    {
+      "from": "jose_luna",
+      "to": "sistema",
+      "count": 6
+    },
+    {
+      "from": "lopez_aliaga",
+      "to": "sistema",
+      "count": 6
+    }
+  ]
+}

@@ -12,6 +12,8 @@ export type Candidate = {
   econLabel: string;
   socialLabel: string;
   confidence: "Alta" | "Media" | "Baja";
+  fallecido?: boolean;
+  fechaFallecimiento?: string;
 };
 
 export const ALL_CANDIDATES: Candidate[] = [
@@ -313,6 +315,8 @@ export const ALL_CANDIDATES: Candidate[] = [
     econLabel: "Izquierda",
     socialLabel: "Moderado-conservador",
     confidence: "Baja",
+    fallecido: true,
+    fechaFallecimiento: "2026-03-15",
   },
   {
     key: "paul-davis-jaimes-blanco",

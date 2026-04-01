@@ -1,0 +1,265 @@
+{
+  "fuente": "Ipsos Perú para Perú21",
+  "titulo": "Encuesta y Simulacro Nacional Urbano Rural al 22 de marzo 2026",
+  "url_fuente": "ipsos.com/es-pe",
+  "encuesta": {
+    "ficha_tecnica": {
+      "muestra": 1203,
+      "fechas": "21 y 22 de marzo 2026",
+      "margen_error": 2.8,
+      "nivel_confianza": 95,
+      "universo": "Población mayor de 18 años urbano rural",
+      "cobertura": "24 departamentos y Provincia Constitucional del Callao",
+      "metodologia": "Muestreo por conglomerados estratificado, entrevista presencial con dispositivos móviles",
+      "registro_jne": "001-REE/JNE"
+    },
+    "intencion_voto_actual": [
+      {
+        "candidato": "Keiko Fujimori",
+        "partido": "Fuerza Popular",
+        "total": 11,
+        "nse": { "A": 4, "B": 8, "C": 12, "D": 11, "E": 13 },
+        "genero": { "masculino": 11, "femenino": 12 },
+        "edad": { "18_25": 9, "26_42": 14, "43_mas": 10 }
+      },
+      {
+        "candidato": "Rafael López Aliaga",
+        "partido": "Renovación Popular",
+        "total": 10,
+        "nse": { "A": 50, "B": 22, "C": 12, "D": 6, "E": 2 },
+        "genero": { "masculino": 13, "femenino": 7 },
+        "edad": { "18_25": 12, "26_42": 9, "43_mas": 10 }
+      },
+      {
+        "candidato": "Alfonso López Chau",
+        "partido": "Ahora Nación",
+        "total": 5,
+        "nse": { "A": 6, "B": 7, "C": 4, "D": 7, "E": 4 },
+        "genero": { "masculino": 8, "femenino": 3 },
+        "edad": { "18_25": 4, "26_42": 4, "43_mas": 7 }
+      },
+      {
+        "candidato": "Roberto Sánchez",
+        "partido": "Juntos por el Perú",
+        "total": 5,
+        "nse": { "A": 0, "B": 2, "C": 3, "D": 4, "E": 9 },
+        "genero": { "masculino": 6, "femenino": 4 },
+        "edad": { "18_25": 4, "26_42": 4, "43_mas": 6 }
+      },
+      {
+        "candidato": "Carlos Álvarez",
+        "partido": "País para Todos",
+        "total": 5,
+        "nse": { "A": 3, "B": 5, "C": 6, "D": 3, "E": 5 },
+        "genero": { "masculino": 6, "femenino": 3 },
+        "edad": { "18_25": 2, "26_42": 8, "43_mas": 2 }
+      },
+      {
+        "candidato": "Jorge Nieto",
+        "partido": "Partido del Buen Gobierno",
+        "total": 5,
+        "nse": { "A": 5, "B": 7, "C": 4, "D": 7, "E": 3 },
+        "genero": { "masculino": 3, "femenino": 6 },
+        "edad": { "18_25": 10, "26_42": 5, "43_mas": 2 }
+      },
+      {
+        "candidato": "César Acuña",
+        "partido": "Alianza para el Progreso",
+        "total": 3,
+        "nse": { "A": 0, "B": 0, "C": 4, "D": 3, "E": 5 },
+        "genero": { "masculino": 3, "femenino": 4 },
+        "edad": { "18_25": 3, "26_42": 4, "43_mas": 3 }
+      },
+      {
+        "candidato": "Yonhy Lescano",
+        "partido": "Cooperación Popular",
+        "total": 2,
+        "nse": { "A": 2, "B": 2, "C": 2, "D": 1, "E": 4 },
+        "genero": { "masculino": 3, "femenino": 2 },
+        "edad": { "18_25": 0, "26_42": 2, "43_mas": 4 }
+      },
+      {
+        "candidato": "Mario Vizcarra",
+        "partido": "Perú Primero",
+        "total": 2,
+        "nse": { "A": 0, "B": 1, "C": 2, "D": 3, "E": 2 },
+        "genero": { "masculino": 2, "femenino": 2 },
+        "edad": { "18_25": 2, "26_42": 2, "43_mas": 2 }
+      },
+      {
+        "candidato": "José Luna Gálvez",
+        "partido": "Podemos Perú",
+        "total": 2,
+        "nse": { "A": 0, "B": 0, "C": 2, "D": 2, "E": 2 },
+        "genero": { "masculino": 2, "femenino": 2 },
+        "edad": { "18_25": 2, "26_42": 2, "43_mas": 2 }
+      },
+      {
+        "candidato": "George Forsyth",
+        "partido": "Somos Perú",
+        "total": 2,
+        "nse": { "A": 0, "B": 2, "C": 1, "D": 2, "E": 2 },
+        "genero": { "masculino": 1, "femenino": 2 },
+        "edad": { "18_25": 1, "26_42": 2, "43_mas": 2 }
+      },
+      {
+        "candidato": "Ricardo Belmont",
+        "partido": "Partido Cívico Obras",
+        "total": 2,
+        "nse": { "A": 0, "B": 3, "C": 1, "D": 3, "E": 1 },
+        "genero": { "masculino": 2, "femenino": 1 },
+        "edad": { "18_25": 2, "26_42": 2, "43_mas": 1 }
+      },
+      {
+        "candidato": "Otros",
+        "partido": "Varios",
+        "total": 10,
+        "nse": { "A": 20, "B": 15, "C": 16, "D": 7, "E": 5 },
+        "genero": { "masculino": 12, "femenino": 9 },
+        "edad": { "18_25": 20, "26_42": 8, "43_mas": 8 }
+      },
+      {
+        "candidato": "Blanco / Viciado / Ninguno",
+        "partido": null,
+        "total": 21,
+        "nse": { "A": 7, "B": 18, "C": 20, "D": 19, "E": 27 },
+        "genero": { "masculino": 18, "femenino": 24 },
+        "edad": { "18_25": 14, "26_42": 21, "43_mas": 25 }
+      },
+      {
+        "candidato": "No precisa",
+        "partido": null,
+        "total": 15,
+        "nse": { "A": 38, "B": 11, "C": 22, "D": 16, "E": 10 },
+        "genero": { "masculino": 19, "femenino": 15 },
+        "edad": { "18_25": 13, "26_42": 16, "43_mas": 16 }
+      }
+    ],
+    "tendencia_historica": {
+      "periodos": [
+        "Ene 2025", "Abr 2025", "Jul 2025", "Ago 2025", "Set 2025",
+        "Oct 2025", "Nov 2025", "Dic 2025",
+        "Ene 2026", "Feb1 2026", "Feb2 2026", "Mar1 2026", "Mar2 2026"
+      ],
+      "nota": "Valores en porcentaje. null = candidato no rastreado ese período",
+      "series": [
+        {
+          "candidato": "Keiko Fujimori",
+          "partido": "Fuerza Popular",
+          "valores": [12, 11, 9, 8, 8, 6, 8, 8, 7, 8, 9, 10, 11]
+        },
+        {
+          "candidato": "Rafael López Aliaga",
+          "partido": "Renovación Popular",
+          "valores": [4, 6, 7, 10, 10, 10, 9, 10, 10, 12, 10, 11, 10]
+        },
+        {
+          "candidato": "Carlos Álvarez",
+          "partido": "País para Todos",
+          "valores": [4, 6, 6, 6, 4, 5, 4, 4, 4, 4, 3, 6, 5]
+        },
+        {
+          "candidato": "César Acuña",
+          "partido": "Alianza para el Progreso",
+          "valores": [2, 3, 2, 3, 3, 3, 3, 3, 2, 4, 4, 4, 3]
+        },
+        {
+          "candidato": "Alfonso López Chau",
+          "partido": "Ahora Nación",
+          "valores": [2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5]
+        },
+        {
+          "candidato": "Jorge Nieto",
+          "partido": "Partido del Buen Gobierno",
+          "valores": [null, null, null, null, null, 1, 2, 5, 2, 2, 2, 2, 5]
+        },
+        {
+          "candidato": "Roberto Sánchez",
+          "partido": "Juntos por el Perú",
+          "valores": [null, null, null, null, null, null, null, null, null, null, null, null, 4]
+        }
+      ],
+      "blanco_viciado_ninguno": [30, 32, 37, 38, 37, 39, 30, 29, 29, 27, 28, 20, 21]
+    }
+  },
+  "simulacro": {
+    "ficha_tecnica": {
+      "muestra": 1189,
+      "fechas": "21 y 22 de marzo 2026",
+      "margen_error": 2.8,
+      "nivel_confianza": 95,
+      "universo": "Población mayor de 18 años urbano rural",
+      "cobertura": "24 departamentos y Provincia Constitucional del Callao",
+      "registro_jne": "001-REE/JNE"
+    },
+    "columnas_regionales": ["total_nacional", "total_lima", "total_interior", "norte", "centro", "sur", "oriente", "otras_ciudades", "rural"],
+    "votos_emitidos": [
+      { "candidato": "Keiko Fujimori", "partido": "Fuerza Popular", "total_nacional": 12.3, "total_lima": 12.5, "total_interior": 12.2, "norte": 12.0, "centro": 12.5, "sur": 14.5, "oriente": 12.9, "otras_ciudades": 0.7, "rural": 23.1 },
+      { "candidato": "Rafael López Aliaga", "partido": "Renovación Popular", "total_nacional": 12.2, "total_lima": 20.0, "total_interior": 8.2, "norte": 7.1, "centro": 10.5, "sur": 7.2, "oriente": 10.8, "otras_ciudades": 9.5, "rural": 5.5 },
+      { "candidato": "Alfonso López Chau", "partido": "Ahora Nación", "total_nacional": 5.6, "total_lima": 3.2, "total_interior": 6.9, "norte": 5.7, "centro": 9.7, "sur": 2.2, "oriente": 8.9, "otras_ciudades": 16.2, "rural": 1.0 },
+      { "candidato": "Roberto Sánchez", "partido": "Juntos por el Perú", "total_nacional": 5.4, "total_lima": 1.2, "total_interior": 7.5, "norte": 4.3, "centro": 14.9, "sur": 11.7, "oriente": 6.7, "otras_ciudades": 5.0, "rural": 3.8 },
+      { "candidato": "Carlos Álvarez", "partido": "País para Todos", "total_nacional": 5.2, "total_lima": 4.5, "total_interior": 5.6, "norte": 6.4, "centro": 3.6, "sur": 8.6, "oriente": 4.9, "otras_ciudades": 2.2, "rural": 5.2 },
+      { "candidato": "Jorge Nieto", "partido": "Partido del Buen Gobierno", "total_nacional": 3.8, "total_lima": 7.0, "total_interior": 2.2, "norte": 2.8, "centro": 0.9, "sur": 1.7, "oriente": 3.7, "otras_ciudades": 2.7, "rural": 1.1 },
+      { "candidato": "César Acuña", "partido": "Alianza para el Progreso", "total_nacional": 3.7, "total_lima": 1.7, "total_interior": 4.7, "norte": 3.2, "centro": 8.1, "sur": 9.4, "oriente": 1.5, "otras_ciudades": 0.9, "rural": 4.2 },
+      { "candidato": "Ricardo Belmont", "partido": "Partido Cívico Obras", "total_nacional": 2.2, "total_lima": 2.1, "total_interior": 2.2, "norte": 2.0, "centro": 2.7, "sur": 3.0, "oriente": 5.2, "otras_ciudades": 0.4, "rural": 0.0 },
+      { "candidato": "George Forsyth", "partido": "Somos Perú", "total_nacional": 2.1, "total_lima": 2.5, "total_interior": 1.9, "norte": 2.3, "centro": 1.1, "sur": 1.0, "oriente": 1.6, "otras_ciudades": 1.2, "rural": 4.9 },
+      { "candidato": "Yonhy Lescano", "partido": "Cooperación Popular", "total_nacional": 1.9, "total_lima": 1.1, "total_interior": 2.3, "norte": 2.7, "centro": 1.5, "sur": 0.6, "oriente": 1.2, "otras_ciudades": 6.8, "rural": 0.6 },
+      { "candidato": "José Luna Gálvez", "partido": "Podemos Perú", "total_nacional": 1.8, "total_lima": 1.4, "total_interior": 2.1, "norte": 2.3, "centro": 1.4, "sur": 2.4, "oriente": 3.4, "otras_ciudades": 0.5, "rural": 2.4 },
+      { "candidato": "Ronald Atencio", "partido": "Alianza Venceremos", "total_nacional": 1.6, "total_lima": 0.9, "total_interior": 2.0, "norte": 2.9, "centro": 0.0, "sur": 0.5, "oriente": 8.3, "otras_ciudades": 0.4, "rural": 0.5 },
+      { "candidato": "Wolfgang Grozo", "partido": "Integridad Democrática", "total_nacional": 1.6, "total_lima": 1.4, "total_interior": 1.7, "norte": 1.6, "centro": 2.0, "sur": 2.0, "oriente": 1.4, "otras_ciudades": 2.4, "rural": 0.5 },
+      { "candidato": "Mario Vizcarra", "partido": "Perú Primero", "total_nacional": 1.3, "total_lima": 0.8, "total_interior": 1.5, "norte": 1.6, "centro": 1.4, "sur": 1.5, "oriente": 0.0, "otras_ciudades": 3.3, "rural": 0.5 },
+      { "candidato": "Otros", "partido": "Varios", "total_nacional": 10.3, "total_lima": 10.7, "total_interior": 10.1, "norte": 12.3, "centro": 5.0, "sur": 7.9, "oriente": 5.0, "otras_ciudades": 15.1, "rural": 12.6 },
+      { "candidato": "Blanco", "partido": null, "total_nacional": 23.9, "total_lima": 24.0, "total_interior": 23.7, "norte": 24.2, "centro": 22.8, "sur": 22.1, "oriente": 24.5, "otras_ciudades": 24.3, "rural": 25.4 },
+      { "candidato": "Viciado", "partido": null, "total_nacional": 5.1, "total_lima": 5.0, "total_interior": 5.2, "norte": 6.6, "centro": 1.9, "sur": 3.7, "oriente": 0.0, "otras_ciudades": 8.4, "rural": 8.7 }
+    ],
+    "votos_validos": [
+      { "candidato": "Keiko Fujimori", "partido": "Fuerza Popular", "total_nacional": 17.3, "total_lima": 17.6, "total_interior": 17.2, "norte": 17.4, "centro": 16.6, "sur": 19.6, "oriente": 17.1, "otras_ciudades": 13.0, "rural": 5.1 },
+      { "candidato": "Rafael López Aliaga", "partido": "Renovación Popular", "total_nacional": 17.2, "total_lima": 28.2, "total_interior": 11.5, "norte": 10.3, "centro": 14.0, "sur": 9.8, "oriente": 14.4, "otras_ciudades": 14.1, "rural": 8.4 },
+      { "candidato": "Alfonso López Chau", "partido": "Ahora Nación", "total_nacional": 7.9, "total_lima": 4.5, "total_interior": 9.7, "norte": 8.2, "centro": 12.9, "sur": 3.0, "oriente": 11.8, "otras_ciudades": 24.2, "rural": 1.5 },
+      { "candidato": "Roberto Sánchez", "partido": "Juntos por el Perú", "total_nacional": 7.5, "total_lima": 1.7, "total_interior": 10.6, "norte": 6.2, "centro": 19.7, "sur": 15.8, "oriente": 8.8, "otras_ciudades": 7.4, "rural": 5.7 },
+      { "candidato": "Carlos Álvarez", "partido": "País para Todos", "total_nacional": 7.4, "total_lima": 6.4, "total_interior": 7.8, "norte": 9.3, "centro": 4.8, "sur": 11.6, "oriente": 6.5, "otras_ciudades": 3.3, "rural": 7.9 },
+      { "candidato": "Jorge Nieto", "partido": "Partido del Buen Gobierno", "total_nacional": 5.4, "total_lima": 9.9, "total_interior": 3.1, "norte": 4.0, "centro": 1.1, "sur": 2.2, "oriente": 4.9, "otras_ciudades": 4.0, "rural": 1.6 },
+      { "candidato": "César Acuña", "partido": "Alianza para el Progreso", "total_nacional": 5.2, "total_lima": 2.4, "total_interior": 6.6, "norte": 4.6, "centro": 10.8, "sur": 12.7, "oriente": 1.9, "otras_ciudades": 1.3, "rural": 6.3 },
+      { "candidato": "Ricardo Belmont", "partido": "Partido Cívico Obras", "total_nacional": 3.0, "total_lima": 2.9, "total_interior": 3.1, "norte": 2.9, "centro": 3.6, "sur": 4.1, "oriente": 6.9, "otras_ciudades": 0.6, "rural": 0.0 },
+      { "candidato": "George Forsyth", "partido": "Somos Perú", "total_nacional": 3.0, "total_lima": 3.5, "total_interior": 2.7, "norte": 3.3, "centro": 1.5, "sur": 1.3, "oriente": 2.2, "otras_ciudades": 1.0, "rural": 0.0 },
+      { "candidato": "Yonhy Lescano", "partido": "Cooperación Popular", "total_nacional": 2.7, "total_lima": 1.5, "total_interior": 3.3, "norte": 3.9, "centro": 2.0, "sur": 0.8, "oriente": 1.6, "otras_ciudades": 10.2, "rural": 1.0 },
+      { "candidato": "José Luna Gálvez", "partido": "Podemos Perú", "total_nacional": 2.6, "total_lima": 1.9, "total_interior": 2.9, "norte": 3.4, "centro": 1.9, "sur": 3.2, "oriente": 4.5, "otras_ciudades": 0.7, "rural": 3.6 },
+      { "candidato": "Ronald Atencio", "partido": "Alianza Venceremos", "total_nacional": 2.3, "total_lima": 1.3, "total_interior": 2.8, "norte": 4.1, "centro": 0.0, "sur": 0.7, "oriente": 11.0, "otras_ciudades": 0.6, "rural": 0.8 },
+      { "candidato": "Wolfgang Grozo", "partido": "Integridad Democrática", "total_nacional": 2.2, "total_lima": 1.9, "total_interior": 2.4, "norte": 2.3, "centro": 2.6, "sur": 2.6, "oriente": 1.8, "otras_ciudades": 3.5, "rural": 0.8 },
+      { "candidato": "Mario Vizcarra", "partido": "Perú Primero", "total_nacional": 1.8, "total_lima": 1.2, "total_interior": 2.1, "norte": 2.3, "centro": 1.8, "sur": 2.0, "oriente": 0.0, "otras_ciudades": 4.8, "rural": 0.8 },
+      { "candidato": "Otros", "partido": "Varios", "total_nacional": 14.5, "total_lima": 15.1, "total_interior": 14.2, "norte": 17.8, "centro": 6.7, "sur": 10.6, "oriente": 6.6, "otras_ciudades": 22.4, "rural": 19.1 }
+    ],
+    "comparativo_simulacros": {
+      "nota": "Comparativo entre simulacro del 6 de marzo y del 22 de marzo de 2026",
+      "candidatos": [
+        { "candidato": "Keiko Fujimori", "partido": "Fuerza Popular", "emitidos_6mar": 9.2, "emitidos_22mar": 12.3, "validos_6mar": 14.2, "validos_22mar": 17.3, "variacion_emitidos": 3.1, "variacion_validos": 3.1 },
+        { "candidato": "Rafael López Aliaga", "partido": "Renovación Popular", "emitidos_6mar": 11.2, "emitidos_22mar": 12.2, "validos_6mar": 17.2, "validos_22mar": 17.2, "variacion_emitidos": 1.0, "variacion_validos": 0.0 },
+        { "candidato": "Alfonso López Chau", "partido": "Ahora Nación", "emitidos_6mar": 4.1, "emitidos_22mar": 5.6, "validos_6mar": 6.4, "validos_22mar": 7.9, "variacion_emitidos": 1.5, "variacion_validos": 1.5 },
+        { "candidato": "Roberto Sánchez", "partido": "Juntos por el Perú", "emitidos_6mar": 2.0, "emitidos_22mar": 5.4, "validos_6mar": 3.2, "validos_22mar": 7.5, "variacion_emitidos": 3.4, "variacion_validos": 4.3 },
+        { "candidato": "Carlos Álvarez", "partido": "País para Todos", "emitidos_6mar": 5.8, "emitidos_22mar": 5.2, "validos_6mar": 8.9, "validos_22mar": 7.4, "variacion_emitidos": -0.6, "variacion_validos": -1.5 },
+        { "candidato": "Jorge Nieto", "partido": "Partido del Buen Gobierno", "emitidos_6mar": 1.5, "emitidos_22mar": 3.8, "validos_6mar": 2.2, "validos_22mar": 5.4, "variacion_emitidos": 2.3, "variacion_validos": 3.2 },
+        { "candidato": "César Acuña", "partido": "Alianza para el Progreso", "emitidos_6mar": 5.3, "emitidos_22mar": 3.7, "validos_6mar": 8.1, "validos_22mar": 5.2, "variacion_emitidos": -1.6, "variacion_validos": -2.9 },
+        { "candidato": "Ricardo Belmont", "partido": "Partido Cívico Obras", "emitidos_6mar": 1.8, "emitidos_22mar": 2.2, "validos_6mar": 2.7, "validos_22mar": 3.0, "variacion_emitidos": 0.4, "variacion_validos": 0.3 },
+        { "candidato": "George Forsyth", "partido": "Somos Perú", "emitidos_6mar": 1.9, "emitidos_22mar": 2.1, "validos_6mar": 2.9, "validos_22mar": 3.0, "variacion_emitidos": 0.2, "variacion_validos": 0.1 },
+        { "candidato": "Yonhy Lescano", "partido": "Cooperación Popular", "emitidos_6mar": 2.0, "emitidos_22mar": 1.9, "validos_6mar": 3.1, "validos_22mar": 2.7, "variacion_emitidos": -0.1, "variacion_validos": -0.4 },
+        { "candidato": "José Luna Gálvez", "partido": "Podemos Perú", "emitidos_6mar": 1.2, "emitidos_22mar": 1.8, "validos_6mar": 1.8, "validos_22mar": 2.6, "variacion_emitidos": 0.6, "variacion_validos": 0.8 },
+        { "candidato": "Ronald Atencio", "partido": "Alianza Venceremos", "emitidos_6mar": 1.1, "emitidos_22mar": 1.6, "validos_6mar": 1.6, "validos_22mar": 2.3, "variacion_emitidos": 0.5, "variacion_validos": 0.7 },
+        { "candidato": "Wolfgang Grozo", "partido": "Integridad Democrática", "emitidos_6mar": 3.3, "emitidos_22mar": 1.6, "validos_6mar": 5.1, "validos_22mar": 2.2, "variacion_emitidos": -1.7, "variacion_validos": -2.9 },
+        { "candidato": "Mario Vizcarra", "partido": "Perú Primero", "emitidos_6mar": 1.5, "emitidos_22mar": 1.3, "validos_6mar": 2.3, "validos_22mar": 1.8, "variacion_emitidos": -0.2, "variacion_validos": -0.5 },
+        { "candidato": "Otros", "partido": "Varios", "emitidos_6mar": 13.3, "emitidos_22mar": 10.3, "validos_6mar": 20.3, "validos_22mar": 14.5, "variacion_emitidos": -3.0, "variacion_validos": -5.8 },
+        { "candidato": "En blanco", "partido": null, "emitidos_6mar": 27.3, "emitidos_22mar": 23.9, "validos_6mar": null, "validos_22mar": null, "variacion_emitidos": -3.4, "variacion_validos": null },
+        { "candidato": "Viciado", "partido": null, "emitidos_6mar": 7.5, "emitidos_22mar": 5.1, "validos_6mar": null, "validos_22mar": null, "variacion_emitidos": -2.4, "variacion_validos": null }
+      ]
+    }
+  },
+  "insights_clave": {
+    "empate_tecnico_primer_lugar": "Keiko Fujimori (17.3%) y Rafael López Aliaga (17.2%) en virtual empate técnico en votos válidos, dentro del margen de error de ±2.8%",
+    "mayor_crecimiento": "Roberto Sánchez subió de 3.2% a 7.5% en votos válidos entre el 6 y el 22 de marzo (+4.3 puntos)",
+    "mayor_caida": "César Acuña bajó de 8.1% a 5.2% en votos válidos (-2.9 puntos). Wolfgang Grozo también bajó de 5.1% a 2.2% (-2.9 puntos)",
+    "nieto_destacado": "Jorge Nieto creció de 2.2% a 5.4% en votos válidos (+3.2 puntos), el segundo mayor crecimiento",
+    "lopez_aliaga_lima": "Rafael López Aliaga concentra su voto en Lima (20% emitidos / 28.2% válidos) vs 8.2% en el interior",
+    "sanchez_sur": "Roberto Sánchez es el candidato más fuerte en el Centro (19.7% válidos) y Sur (15.8% válidos)",
+    "atencio_oriente": "Ronald Atencio tiene su mayor fortaleza en el Oriente (11% válidos), coherente con su origen huanuqueño",
+    "voto_en_blanco": "23.9% de votos en blanco, alta fragmentación del electorado"
+  }
+}

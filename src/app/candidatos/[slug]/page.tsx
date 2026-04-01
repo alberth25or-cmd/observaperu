@@ -276,6 +276,28 @@ export default function CandidateDetailPage() {
         </div>
       </section>
 
+      {/* Aviso de fallecimiento */}
+      {candidate.fallecido && (
+        <section className="bg-slate-100 border-b border-slate-200 py-5">
+          <div className="mx-auto max-w-6xl px-4 lg:px-16">
+            <div className="flex items-start gap-4 rounded-xl border border-slate-300 bg-white px-5 py-4">
+              <span className="text-2xl mt-0.5 select-none">🕊️</span>
+              <div>
+                <p className="text-[15px] font-bold text-[#0b1b3b]">
+                  Napoleón Becerra García — In memoriam
+                </p>
+                <p className="mt-1 text-[14px] leading-relaxed text-slate-600">
+                  El candidato presidencial Napoleón Becerra García falleció el{" "}
+                  <strong>15 de marzo de 2026</strong> en un accidente de tránsito
+                  en la carretera de Rumichaca, Ayacucho. Observa Perú mantiene
+                  esta página como registro histórico de su candidatura y propuestas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Contenido principal */}
       <section className="bg-white py-10">
         <div className="mx-auto max-w-6xl px-4 lg:px-16">

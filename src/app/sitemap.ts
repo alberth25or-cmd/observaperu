@@ -1,44 +1,49 @@
 import type { MetadataRoute } from "next";
 import { ALL_CANDIDATES } from "@/data/candidatos";
-import { getAllAnalisisSlugs } from "@/data/articulos-analisis";
-import { getAllNoticiasSlugs } from "@/data/articulos-noticias";
+import { getAllArticles } from "@/lib/mdx";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.observaperu.com";
-  const staticPaths = [
-    "",
-    "/comparacion",
-    "/mapa-ideologico",
-    "/candidatos",
-    "/estadisticas",
-    "/analisis",
-    "/noticias",
-    "/conocenos",
-    "/contactanos",
+
+  type SitemapEntry = {
+    url: string;
+    lastModified: Date;
+    changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+    priority: number;
+  };
+
+  const staticUrls: SitemapEntry[] = [
+    { url: baseUrl,                        lastModified: new Date(), changeFrequency: "daily",   priority: 1.0 },
+    { url: `${baseUrl}/estadisticas`,      lastModified: new Date(), changeFrequency: "daily",   priority: 0.95 },
+    { url: `${baseUrl}/candidatos`,        lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
+    { url: `${baseUrl}/noticias`,          lastModified: new Date(), changeFrequency: "daily",   priority: 0.9 },
+    { url: `${baseUrl}/analisis`,          lastModified: new Date(), changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${baseUrl}/mapa-ideologico`,   lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${baseUrl}/comparacion`,       lastModified: new Date(), changeFrequency: "weekly",  priority: 0.8 },
+    { url: `${baseUrl}/conocenos`,         lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${baseUrl}/contactanos`,       lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
   ];
-  const staticUrls = staticPaths.map((path) => ({
-    url: path ? `${baseUrl}${path}` : baseUrl,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: path === "" ? 1 : 0.8,
-  }));
+
   const candidateUrls = ALL_CANDIDATES.map((c) => ({
     url: `${baseUrl}/candidatos/${c.key}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
-  const analisisUrls = getAllAnalisisSlugs().map((slug) => ({
-    url: `${baseUrl}/analisis/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
+
+  const analisisUrls = getAllArticles("analisis").map((a) => ({
+    url: `${baseUrl}/analisis/${a.slug}`,
+    lastModified: a.date ? new Date(a.date) : new Date(),
+    changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
-  const noticiasUrls = getAllNoticiasSlugs().map((slug) => ({
-    url: `${baseUrl}/noticias/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
+
+  const noticiasUrls = getAllArticles("noticias").map((n) => ({
+    url: `${baseUrl}/noticias/${n.slug}`,
+    lastModified: n.date ? new Date(n.date) : new Date(),
+    changeFrequency: "daily" as const,
+    priority: 0.8,
   }));
+
   return [...staticUrls, ...candidateUrls, ...analisisUrls, ...noticiasUrls];
 }

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@ai-sdk/deepseek": "^2.0.26",
@@ -14,12 +15,15 @@
     "@ai-sdk/react": "^3.0.136",
     "@radix-ui/react-popover": "^1.1.15",
     "ai": "^6.0.134",
+    "gray-matter": "^4.0.3",
     "next": "^15.2.5",
+    "pdf-parse": "^1.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-markdown": "^10.1.0",
     "react-simple-maps": "^3.0.0",
-    "recharts": "^3.7.0"
+    "recharts": "^3.7.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
