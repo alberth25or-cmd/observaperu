@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@ai-sdk/deepseek": "^2.0.26",
     "@ai-sdk/openai": "^3.0.47",
     "@ai-sdk/react": "^3.0.136",
     "@higgsfield/client": "^0.2.6",
