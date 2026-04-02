@@ -10,6 +10,11 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@ai-sdk/deepseek": "^2.0.26",
+    "@ai-sdk/openai": "^3.0.47",
+    "@ai-sdk/react": "^3.0.136",
+    "@radix-ui/react-popover": "^1.1.15",
+    "ai": "^6.0.134",
     "gray-matter": "^4.0.3",
     "next": "^15.2.5",
     "pdf-parse": "^1.1.1",
