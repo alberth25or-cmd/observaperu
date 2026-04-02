@@ -5,8 +5,6 @@ import { useChat } from "@ai-sdk/react";
 import { ComponentProps, FormEvent, useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-// ─── Suggestion pills ─────────────────────────────────────────────────────────
-
 const SUGGESTIONS = [
   {
     label: "Candidatos 2026",
@@ -29,8 +27,6 @@ const SUGGESTIONS = [
       "Resume los puntos más importantes de los planes de gobierno disponibles",
   },
 ];
-
-// ─── Root export ──────────────────────────────────────────────────────────────
 
 export default function AIChatPopup() {
   return (
@@ -78,8 +74,6 @@ export default function AIChatPopup() {
     </div>
   );
 }
-
-// ─── Chat ─────────────────────────────────────────────────────────────────────
 
 function Chat() {
   const { messages, status, sendMessage } = useChat();
@@ -192,8 +186,6 @@ function Chat() {
   );
 }
 
-// ─── MessageBubble ────────────────────────────────────────────────────────────
-
 function MessageBubble({ role, content }: { role: string; content: string }) {
   const isUser = role === "user";
   return (
@@ -210,8 +202,6 @@ function MessageBubble({ role, content }: { role: string; content: string }) {
     </div>
   );
 }
-
-// ─── Icons ────────────────────────────────────────────────────────────────────
 
 function CloseIcon(props: ComponentProps<"svg">) {
   return (
