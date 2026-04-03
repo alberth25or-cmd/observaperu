@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.101.1",
     "gray-matter": "^4.0.3",
     "next": "^15.2.5",
     "pdf-parse": "^1.1.1",

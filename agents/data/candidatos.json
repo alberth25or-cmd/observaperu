@@ -1,0 +1,196 @@
+{
+  "candidatos": [
+    {
+      "nombre": "Keiko Fujimori",
+      "partido": "Fuerza Popular",
+      "slug": "keiko-sofia-fujimori-higuchi",
+      "cargo_previo": "Congresista, candidata presidencial 2011 y 2016",
+      "edad": 51,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Rafael López Aliaga",
+      "partido": "Renovación Popular",
+      "slug": "rafael-bernardo-lopez-aliaga",
+      "cargo_previo": "Congresista, candidato presidencial 2021",
+      "edad": 59,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "César Acuña",
+      "partido": "Alianza para el Progreso",
+      "slug": "cesar-acuna",
+      "cargo_previo": "Gobernador regional La Libertad, congresista",
+      "edad": 67,
+      "region_nacimiento": "La Libertad"
+    },
+    {
+      "nombre": "Marisol Pérez Tello",
+      "partido": "Primero La Gente",
+      "slug": "marisol-perez-tello",
+      "cargo_previo": "Ministra de Justicia, congresista",
+      "edad": 55,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Roberto Sánchez",
+      "partido": "Juntos por el Perú",
+      "slug": "roberto-sanchez",
+      "cargo_previo": "Ministro de Comercio Exterior y Turismo",
+      "edad": 54,
+      "region_nacimiento": "Amazonas"
+    },
+    {
+      "nombre": "Mesías Guevara",
+      "partido": "Partido Morado",
+      "slug": "mesias-guevara",
+      "cargo_previo": "Gobernador regional Cajamarca, congresista",
+      "edad": 57,
+      "region_nacimiento": "Cajamarca"
+    },
+    {
+      "nombre": "Jorge Nieto",
+      "partido": "Partido del Buen Gobierno",
+      "slug": "jorge-nieto",
+      "cargo_previo": "Ministro de Defensa",
+      "edad": 66,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "José Williams",
+      "partido": "Avanza País",
+      "slug": "jose-williams",
+      "cargo_previo": "Presidente del Congreso, general retirado",
+      "edad": 66,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "José Luna",
+      "partido": "Podemos Perú",
+      "slug": "jose-luna",
+      "cargo_previo": "Congresista",
+      "edad": 60,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Rosario Fernández",
+      "partido": "Un Camino Diferente",
+      "slug": "rosario-fernandez",
+      "cargo_previo": "Ministra de Justicia y presidenta del Consejo de Ministros",
+      "edad": 62,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Wolfgang Grosso",
+      "partido": "Integridad Democrática",
+      "slug": "wolfgang-grosso",
+      "cargo_previo": "Empresario y político",
+      "edad": 55,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Rafael Belaúnde",
+      "partido": "Libertad Popular",
+      "slug": "rafael-belaunde",
+      "cargo_previo": "Abogado constitucionalista",
+      "edad": 53,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Antonio Ortiz",
+      "partido": "Salvemos al Perú",
+      "slug": "antonio-ortiz",
+      "cargo_previo": "Economista y político",
+      "edad": 57,
+      "region_nacimiento": "Junín"
+    },
+    {
+      "nombre": "Armando Macé",
+      "partido": "Partido Democrático Federal",
+      "slug": "armando-mace",
+      "cargo_previo": "Empresario",
+      "edad": 60,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Alfonso López Chau",
+      "partido": "Ahora Nación",
+      "slug": "alfonso-lopez-chau",
+      "cargo_previo": "Economista",
+      "edad": 58,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Ricardo Belmont",
+      "partido": "Partido Cívico Obras",
+      "slug": "ricardo-belmont",
+      "cargo_previo": "Alcalde de Lima 1990-1995, empresario",
+      "edad": 77,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "George Forsyth",
+      "partido": "Somos Perú",
+      "slug": "george-forsyth",
+      "cargo_previo": "Alcalde de La Victoria, futbolista",
+      "edad": 39,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Yonhy Lescano",
+      "partido": "Cooperación Popular",
+      "slug": "yonhy-lescano",
+      "cargo_previo": "Congresista, candidato presidencial 2021",
+      "edad": 62,
+      "region_nacimiento": "Puno"
+    },
+    {
+      "nombre": "Herbert Caller",
+      "partido": "Partido Patriótico del Perú",
+      "slug": "herbert-caller",
+      "cargo_previo": "General retirado del Ejército",
+      "edad": 63,
+      "region_nacimiento": "Cajamarca"
+    },
+    {
+      "nombre": "Francisco Diez-Canseco",
+      "partido": "Perú Acción",
+      "slug": "francisco-diez-canseco",
+      "cargo_previo": "Empresario y político",
+      "edad": 65,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Paul Jaimes",
+      "partido": "Progresemos",
+      "slug": "paul-jaimes",
+      "cargo_previo": "Economista",
+      "edad": 47,
+      "region_nacimiento": "Áncash"
+    },
+    {
+      "nombre": "Charlie Carrasco",
+      "partido": "Partido Demócrata Unido Perú",
+      "slug": "charlie-carrasco",
+      "cargo_previo": "Empresario",
+      "edad": 50,
+      "region_nacimiento": "Lima"
+    },
+    {
+      "nombre": "Mario Vizcarra",
+      "partido": "Perú Primero",
+      "slug": "mario-vizcarra",
+      "cargo_previo": "Gobernador regional Moquegua",
+      "edad": 64,
+      "region_nacimiento": "Moquegua"
+    },
+    {
+      "nombre": "Roberto Chiabra",
+      "partido": "Unidad Nacional",
+      "slug": "roberto-chiabra",
+      "cargo_previo": "General retirado, congresista",
+      "edad": 70,
+      "region_nacimiento": "Lima"
+    }
+  ]
+}

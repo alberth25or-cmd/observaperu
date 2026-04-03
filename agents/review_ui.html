@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Observa Perú — Revisión Editorial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root { --brand: #0b1b3b; --brand-light: #1a3060; }
+    body { background: #f1f5fb; font-family: 'Segoe UI', system-ui, sans-serif; }
+    .brand-bg { background: var(--brand); }
+    .brand-border { border-color: var(--brand); }
+
+    /* Cards */
+    .card { transition: box-shadow .15s, transform .15s; }
+    .card:hover { box-shadow: 0 8px 24px rgba(11,27,59,.12); transform: translateY(-1px); }
+
+    /* Badge colores por categoría */
+    .badge-perfiles  { background:#dbeafe; color:#1e40af; }
+    .badge-debates   { background:#ede9fe; color:#6d28d9; }
+    .badge-noticias  { background:#dcfce7; color:#166534; }
+    .badge-analisis  { background:#fff7ed; color:#9a3412; }
+    .badge-faq       { background:#fef9c3; color:#854d0e; }
+
+    /* Riesgo */
+    .risk-bajo  { background:#dcfce7; color:#166534; }
+    .risk-medio { background:#fef9c3; color:#854d0e; }
+    .risk-alto  { background:#fee2e2; color:#991b1b; }
+
+    /* Modal */
+    #modal-overlay { display:none; }
+    #modal-overlay.open { display:flex; }
+    .prose h1,h2,h3 { font-weight:700; margin:.75rem 0 .4rem; }
+    .prose h1 { font-size:1.4rem; }
+    .prose h2 { font-size:1.15rem; }
+    .prose p  { margin:.5rem 0; line-height:1.7; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin:.5rem 0; }
+    .prose li { margin:.2rem 0; }
+    .prose strong { font-weight:600; }
+    .prose blockquote { border-left:3px solid #cbd5e1; padding-left:1rem; color:#475569; margin:.75rem 0; }
+    .prose code { background:#f1f5f9; padding:.1rem .35rem; border-radius:3px; font-size:.85em; }
+
+    /* Toast */
+    #toast { position:fixed; bottom:1.5rem; right:1.5rem; z-index:9999; display:none; }
+    #toast.show { display:block; animation: slideUp .3s ease; }
+    @keyframes slideUp { from { opacity:0; transform:translateY(1rem); } to { opacity:1; transform:translateY(0); } }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:3px; }
+
+    /* Editor */
+    #editor-titulo { font-size:1.05rem; font-weight:700; resize:none; }
+    #editor-contenido { font-family: 'Cascadia Code', 'Consolas', monospace; font-size:.82rem; line-height:1.7; resize:none; }
+    .editor-panel { display:none; }
+    .editor-panel.active { display:flex; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- HEADER -->
+  <header class="brand-bg text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center text-sm font-bold">O</div>
+        <div>
+          <div class="font-bold text-lg leading-tight">Observa Perú</div>
+          <div class="text-blue-300 text-xs">Cola de Revisión Editorial</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="openCrear()" class="bg-blue-500 hover:bg-blue-400 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
+          + Nuevo artículo
+        </button>
+        <button onclick="publishApproved()" class="bg-green-500 hover:bg-green-400 text-white text-sm font-medium px-4 py-2 rounded-lg transition">
+          Publicar aprobados
+        </button>
+        <button onclick="loadAll()" class="bg-white/10 hover:bg-white/20 text-white text-sm px-4 py-2 rounded-lg transition">
+          Actualizar
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="max-w-7xl mx-auto px-6 py-5">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6" id="stats-bar">
+      <div class="bg-white rounded-xl p-4 shadow-sm text-center">
+        <div class="text-3xl font-bold text-yellow-600" id="stat-pending">—</div>
+        <div class="text-xs text-slate-500 mt-1">Pendientes</div>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm text-center">
+        <div class="text-3xl font-bold text-green-600" id="stat-approved">—</div>
+        <div class="text-xs text-slate-500 mt-1">Aprobados</div>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm text-center">
+        <div class="text-3xl font-bold text-red-500" id="stat-rejected">—</div>
+        <div class="text-xs text-slate-500 mt-1">Rechazados</div>
+      </div>
+      <div class="bg-white rounded-xl p-4 shadow-sm text-center">
+        <div class="text-3xl font-bold text-blue-600" id="stat-published">—</div>
+        <div class="text-xs text-slate-500 mt-1">Publicados hoy</div>
+      </div>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="flex flex-wrap gap-2 mb-5">
+      <div class="flex bg-white rounded-xl shadow-sm p-1 gap-1">
+        <button onclick="setFiltroEstado('pending')"   id="f-pending"   class="filtro-estado active-estado px-4 py-1.5 rounded-lg text-sm font-medium transition">Pendientes</button>
+        <button onclick="setFiltroEstado('approved')"  id="f-approved"  class="filtro-estado px-4 py-1.5 rounded-lg text-sm font-medium transition text-slate-500 hover:bg-slate-100">Aprobados</button>
+        <button onclick="setFiltroEstado('rejected')"  id="f-rejected"  class="filtro-estado px-4 py-1.5 rounded-lg text-sm font-medium transition text-slate-500 hover:bg-slate-100">Rechazados</button>
+        <button onclick="setFiltroEstado('all')"       id="f-all"       class="filtro-estado px-4 py-1.5 rounded-lg text-sm font-medium transition text-slate-500 hover:bg-slate-100">Todos</button>
+      </div>
+      <div class="flex bg-white rounded-xl shadow-sm p-1 gap-1 flex-wrap">
+        <button onclick="setFiltroCat('')"          id="fc-all"       class="filtro-cat active-cat px-3 py-1.5 rounded-lg text-xs font-medium transition">Todas</button>
+        <button onclick="setFiltroCat('perfiles')"  id="fc-perfiles"  class="filtro-cat px-3 py-1.5 rounded-lg text-xs font-medium transition text-slate-500 hover:bg-slate-100">Perfiles</button>
+        <button onclick="setFiltroCat('debates')"   id="fc-debates"   class="filtro-cat px-3 py-1.5 rounded-lg text-xs font-medium transition text-slate-500 hover:bg-slate-100">Debates</button>
+        <button onclick="setFiltroCat('noticias')"  id="fc-noticias"  class="filtro-cat px-3 py-1.5 rounded-lg text-xs font-medium transition text-slate-500 hover:bg-slate-100">Noticias</button>
+        <button onclick="setFiltroCat('analisis')"  id="fc-analisis"  class="filtro-cat px-3 py-1.5 rounded-lg text-xs font-medium transition text-slate-500 hover:bg-slate-100">Análisis</button>
+        <button onclick="setFiltroCat('faq')"       id="fc-faq"       class="filtro-cat px-3 py-1.5 rounded-lg text-xs font-medium transition text-slate-500 hover:bg-slate-100">FAQ</button>
+      </div>
+    </div>
+
+    <!-- CONTADOR -->
+    <div class="text-sm text-slate-400 mb-4" id="count-label">Cargando artículos...</div>
+
+    <!-- GRID DE CARDS -->
+    <div id="cards-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"></div>
+
+    <!-- EMPTY STATE -->
+    <div id="empty-state" class="hidden text-center py-20 text-slate-400">
+      <div class="text-5xl mb-3">📭</div>
+      <div class="text-lg font-medium">No hay artículos en esta vista</div>
+      <div class="text-sm mt-1">Cambia el filtro o genera nuevos artículos</div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal-overlay" class="fixed inset-0 bg-black/50 z-50 items-start justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full my-8 overflow-hidden">
+      <!-- Modal Header -->
+      <div class="brand-bg text-white px-6 py-4 flex items-start justify-between gap-4">
+        <div class="flex-1 min-w-0">
+          <div class="flex gap-2 mb-2" id="modal-badges"></div>
+          <h2 class="text-lg font-bold leading-tight" id="modal-titulo">—</h2>
+          <div class="text-blue-300 text-sm mt-1" id="modal-meta">—</div>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="toggleEdit()" id="btn-edit"
+            class="bg-white/15 hover:bg-white/25 text-white text-sm px-3 py-1.5 rounded-lg transition flex items-center gap-1.5">
+            <span id="btn-edit-icon">✏️</span> <span id="btn-edit-label">Editar</span>
+          </button>
+          <button onclick="closeModal()" class="text-white/70 hover:text-white text-2xl leading-none">✕</button>
+        </div>
+      </div>
+
+      <!-- Verificación -->
+      <div id="modal-verificacion" class="border-b px-6 py-3 bg-slate-50 hidden">
+        <div class="text-xs font-semibold text-slate-500 uppercase mb-2">Observaciones del verificador</div>
+        <ul id="modal-obs" class="space-y-1 text-sm text-slate-700"></ul>
+      </div>
+
+      <!-- VISTA: Contenido renderizado -->
+      <div id="panel-vista" class="px-6 py-5 overflow-y-auto max-h-[60vh] prose text-slate-800 text-sm leading-relaxed">
+        <div class="text-center py-10 text-slate-400">Cargando contenido...</div>
+      </div>
+
+      <!-- EDITOR: Markdown editable -->
+      <div id="panel-editor" class="editor-panel flex-col overflow-hidden max-h-[60vh]">
+        <div class="px-6 pt-4 pb-2 border-b bg-slate-50">
+          <label class="text-xs font-semibold text-slate-500 uppercase block mb-1">Título</label>
+          <textarea id="editor-titulo"
+            class="w-full border border-slate-200 rounded-lg px-3 py-2 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            rows="2"></textarea>
+        </div>
+        <div class="px-6 pt-3 pb-4 flex-1 flex flex-col overflow-hidden">
+          <div class="flex items-center justify-between mb-1">
+            <label class="text-xs font-semibold text-slate-500 uppercase">Contenido (Markdown)</label>
+            <span class="text-xs text-slate-400" id="editor-wordcount"></span>
+          </div>
+          <textarea id="editor-contenido"
+            class="flex-1 w-full border border-slate-200 rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-400 overflow-y-auto"
+            style="min-height:320px;"
+            oninput="updateWordCount()"></textarea>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="border-t px-6 py-4 flex items-center justify-between bg-slate-50">
+        <div class="text-xs text-slate-400" id="modal-slug">—</div>
+        <div class="flex gap-3" id="modal-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="bg-slate-800 text-white text-sm px-5 py-3 rounded-xl shadow-xl"></div>
+
+  <!-- MODAL CREAR ARTÍCULO -->
+  <div id="crear-overlay" class="fixed inset-0 bg-black/50 z-50 hidden items-start justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full my-8 overflow-hidden">
+      <!-- Header -->
+      <div class="brand-bg text-white px-6 py-4 flex items-center justify-between">
+        <div>
+          <div class="font-bold text-lg">Nuevo artículo</div>
+          <div class="text-blue-300 text-sm">Se añadirá a la cola como "Pendiente"</div>
+        </div>
+        <button onclick="closeCrear()" class="text-white/70 hover:text-white text-2xl leading-none">✕</button>
+      </div>
+
+      <!-- Formulario -->
+      <div class="px-6 py-5 space-y-4 overflow-y-auto max-h-[75vh]">
+
+        <!-- Título -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Título <span class="text-red-400">*</span></label>
+          <input id="crear-titulo" type="text" placeholder="Ej: Keiko Fujimori propone plan económico para 2026"
+            class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm" />
+        </div>
+
+        <!-- Categoría + Keyword -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Categoría</label>
+            <select id="crear-categoria"
+              class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm bg-white">
+              <option value="noticias">Noticias</option>
+              <option value="perfiles">Perfiles</option>
+              <option value="debates">Debates</option>
+              <option value="analisis">Análisis</option>
+              <option value="faq">FAQ</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Keyword SEO</label>
+            <input id="crear-keyword" type="text" placeholder="Ej: Keiko Fujimori propuestas 2026"
+              class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm" />
+          </div>
+        </div>
+
+        <!-- Excerpt -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-500 uppercase mb-1">Resumen / Excerpt <span class="text-slate-400 font-normal">(máx. 150 caracteres)</span></label>
+          <input id="crear-excerpt" type="text" maxlength="150" placeholder="Breve descripción del artículo para la vista previa"
+            class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm" />
+        </div>
+
+        <!-- Contenido -->
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label class="block text-xs font-semibold text-slate-500 uppercase">Contenido en Markdown <span class="text-red-400">*</span></label>
+            <span class="text-xs text-slate-400" id="crear-wordcount">0 palabras</span>
+          </div>
+          <textarea id="crear-contenido" rows="18"
+            placeholder="## Título del artículo&#10;&#10;Escribe el contenido aquí en formato Markdown...&#10;&#10;### Sección 1&#10;&#10;Texto del artículo."
+            class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm font-mono leading-relaxed"
+            oninput="document.getElementById('crear-wordcount').textContent = (this.value.trim().split(/\s+/).filter(Boolean).length).toLocaleString() + ' palabras'"></textarea>
+          <div class="mt-1.5 text-xs text-slate-400">
+            Usa **negrita**, *cursiva*, ## encabezados, - listas. El artículo se guardará tal cual.
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="border-t px-6 py-4 flex items-center justify-between bg-slate-50">
+        <button onclick="closeCrear()" class="px-5 py-2 rounded-lg text-slate-500 hover:bg-slate-100 text-sm transition">Cancelar</button>
+        <button onclick="crearArticulo()" id="btn-crear-submit"
+          class="px-6 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 font-medium text-sm transition">
+          Añadir a la cola
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script>
+const API = 'http://localhost:8001';
+let todosArticulos = [];
+let filtroEstado = 'pending';
+let filtroCat = '';
+let articuloActual = null;
+let modoEdicion = false;
+
+// ---- ESTILOS DE FILTROS ----
+const ACTIVE_ESTADO = 'bg-slate-800 text-white';
+const ACTIVE_CAT    = 'bg-slate-800 text-white';
+
+function setFiltroEstado(est) {
+  filtroEstado = est;
+  document.querySelectorAll('.filtro-estado').forEach(b => {
+    b.className = b.className.replace(ACTIVE_ESTADO, '').trim();
+    if (!b.className.includes('text-slate')) b.className += ' text-slate-500 hover:bg-slate-100';
+  });
+  const el = document.getElementById('f-' + est);
+  el.className = el.className.replace('text-slate-500 hover:bg-slate-100', '').trim() + ' ' + ACTIVE_ESTADO;
+  loadAll();
+}
+
+function setFiltroCat(cat) {
+  filtroCat = cat;
+  document.querySelectorAll('.filtro-cat').forEach(b => {
+    b.className = b.className.replace(ACTIVE_CAT, '').trim();
+    if (!b.className.includes('text-slate')) b.className += ' text-slate-500 hover:bg-slate-100';
+  });
+  const key = cat === '' ? 'fc-all' : 'fc-' + cat;
+  const el = document.getElementById(key);
+  el.className = el.className.replace('text-slate-500 hover:bg-slate-100', '').trim() + ' ' + ACTIVE_CAT;
+  renderCards();
+}
+
+// ---- STATS ----
+async function loadStats() {
+  try {
+    const r = await fetch(API + '/queue/stats');
+    const d = await r.json();
+    document.getElementById('stat-pending').textContent   = d.pending   ?? 0;
+    document.getElementById('stat-approved').textContent  = d.approved  ?? 0;
+    document.getElementById('stat-rejected').textContent  = d.rejected  ?? 0;
+    document.getElementById('stat-published').textContent = d.published_hoy ?? 0;
+  } catch(e) {}
+}
+
+// ---- CARGAR ARTÍCULOS ----
+async function loadAll() {
+  document.getElementById('count-label').textContent = 'Cargando...';
+  try {
+    const r = await fetch(API + '/queue?estado=' + filtroEstado);
+    todosArticulos = await r.json();
+  } catch(e) {
+    toast('No se pudo conectar con la API', 'error');
+    todosArticulos = [];
+  }
+  loadStats();
+  renderCards();
+}
+
+// ---- RENDER CARDS ----
+function renderCards() {
+  const filtered = filtroCat
+    ? todosArticulos.filter(a => a.categoria === filtroCat)
+    : todosArticulos;
+
+  const grid = document.getElementById('cards-grid');
+  const empty = document.getElementById('empty-state');
+  const label = document.getElementById('count-label');
+
+  label.textContent = filtered.length + ' artículo' + (filtered.length !== 1 ? 's' : '');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    empty.classList.remove('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+  grid.innerHTML = filtered.map(a => cardHTML(a)).join('');
+}
+
+function catBadge(cat) {
+  const cls = { perfiles:'badge-perfiles', debates:'badge-debates', noticias:'badge-noticias', analisis:'badge-analisis', faq:'badge-faq' }[cat] || 'bg-slate-100 text-slate-600';
+  return `<span class="px-2 py-0.5 rounded-full text-xs font-semibold ${cls}">${cat}</span>`;
+}
+
+function riskBadge(risk) {
+  if (!risk) return '';
+  const cls = { bajo:'risk-bajo', medio:'risk-medio', alto:'risk-alto' }[risk] || 'bg-slate-100 text-slate-600';
+  return `<span class="px-2 py-0.5 rounded-full text-xs font-semibold ${cls}">riesgo ${risk}</span>`;
+}
+
+function estadoBadge(estado) {
+  const map = { pending:'bg-yellow-100 text-yellow-700', approved:'bg-green-100 text-green-700', rejected:'bg-red-100 text-red-700', published:'bg-blue-100 text-blue-700' };
+  const labels = { pending:'Pendiente', approved:'Aprobado', rejected:'Rechazado', published:'Publicado' };
+  const cls = map[estado] || 'bg-slate-100 text-slate-600';
+  return `<span class="px-2 py-0.5 rounded-full text-xs font-semibold ${cls}">${labels[estado] || estado}</span>`;
+}
+
+function cardHTML(a) {
+  const nivel = a.verificacion?.nivel_riesgo || '';
+  const extendida = a.requiere_revision_extendida
+    ? '<span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-700">revisión ext.</span>' : '';
+
+  const btnsPending = a.estado === 'pending' ? `
+    <button onclick="event.stopPropagation();accion(${a.id},'approve')" class="flex-1 bg-green-500 hover:bg-green-600 text-white text-sm font-medium py-2 rounded-lg transition">Aprobar</button>
+    <button onclick="event.stopPropagation();accion(${a.id},'reject')"  class="flex-1 bg-red-400  hover:bg-red-500  text-white text-sm font-medium py-2 rounded-lg transition">Rechazar</button>
+  ` : `<div class="text-sm text-slate-400 italic">${a.estado === 'approved' ? '✓ Aprobado' : a.estado === 'rejected' ? '✗ Rechazado' : a.estado}</div>`;
+
+  return `
+  <div class="card bg-white rounded-2xl shadow-sm overflow-hidden cursor-pointer border border-transparent hover:border-blue-200"
+       onclick="openModal(${a.id})">
+    <div class="px-5 pt-5 pb-3">
+      <div class="flex flex-wrap gap-1.5 mb-3">
+        ${catBadge(a.categoria)} ${riskBadge(nivel)} ${extendida} ${filtroEstado === 'all' ? estadoBadge(a.estado) : ''}
+      </div>
+      <h3 class="font-semibold text-slate-800 text-sm leading-snug mb-2 line-clamp-2">${a.titulo}</h3>
+      <p class="text-slate-500 text-xs leading-relaxed line-clamp-3">${a.excerpt || ''}</p>
+    </div>
+    <div class="px-5 pb-2 text-xs text-slate-400 flex gap-3">
+      <span>${a.tiempo_lectura || '?'} min lectura</span>
+      <span class="truncate max-w-[200px]">${a.keyword}</span>
+    </div>
+    <div class="px-5 pb-5 pt-2 flex gap-2 border-t border-slate-100 mt-2 pt-3">
+      ${btnsPending}
+    </div>
+  </div>`;
+}
+
+// ---- MODAL ----
+async function openModal(id) {
+  articuloActual = id;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal-titulo').textContent = 'Cargando...';
+  document.getElementById('panel-vista').innerHTML = '<div class="text-center py-10 text-slate-400">Cargando contenido...</div>';
+  document.getElementById('modal-verificacion').classList.add('hidden');
+
+  try {
+    const r = await fetch(API + '/queue/' + id);
+    const a = await r.json();
+
+    const nivel = a.verificacion?.nivel_riesgo || '';
+    document.getElementById('modal-badges').innerHTML = catBadge(a.categoria) + ' ' + riskBadge(nivel) + (a.requiere_revision_extendida ? ' <span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-700">revisión ext.</span>' : '');
+    document.getElementById('modal-titulo').textContent = a.titulo;
+    document.getElementById('modal-meta').textContent = `${a.keyword} · ${a.tiempo_lectura || '?'} min lectura · ${a.tipo}`;
+    document.getElementById('modal-slug').textContent = '/noticias/' + a.slug;
+
+    // Verificación
+    const obs = a.verificacion?.observaciones || [];
+    const sugerencias = a.verificacion?.sugerencias || [];
+    if (obs.length) {
+      document.getElementById('modal-verificacion').classList.remove('hidden');
+      const obsHTML = obs.map(o => {
+        if (typeof o === 'string') {
+          return `<li class="flex gap-2"><span class="text-orange-400 mt-0.5">⚠</span><span>${o}</span></li>`;
+        }
+        // objeto {frase, problema}
+        return `<li class="mb-2">
+          <div class="flex gap-2 items-start">
+            <span class="text-orange-400 mt-0.5 shrink-0">⚠</span>
+            <div>
+              ${o.frase ? `<div class="text-slate-500 text-xs italic mb-0.5">"${o.frase}"</div>` : ''}
+              <div class="text-slate-700">${o.problema || o}</div>
+            </div>
+          </div>
+        </li>`;
+      }).join('');
+      const sugHTML = sugerencias.length ? `
+        <div class="mt-3 pt-3 border-t border-slate-200">
+          <div class="text-xs font-semibold text-slate-500 uppercase mb-2">Sugerencias</div>
+          <ul class="space-y-1">${sugerencias.map(s => `<li class="flex gap-2 text-xs text-slate-600"><span class="text-blue-400 shrink-0">→</span><span>${s}</span></li>`).join('')}</ul>
+        </div>` : '';
+      document.getElementById('modal-obs').innerHTML = obsHTML + sugHTML;
+    }
+
+    // Contenido markdown
+    const raw = a.contenido || '';
+    const sinComments = raw.replace(/<!--[\s\S]*?-->/g, '').trim();
+    document.getElementById('panel-vista').innerHTML = marked.parse(sinComments);
+
+    // Cargar datos en el editor
+    document.getElementById('editor-titulo').value = a.titulo || '';
+    document.getElementById('editor-contenido').value = a.contenido || '';
+    updateWordCount();
+
+    // Resetear a modo vista
+    if (modoEdicion) toggleEdit();
+
+    // Botones según estado
+    let btns = '';
+    if (a.estado === 'pending') {
+      btns = `
+        <button onclick="accionModal(${a.id},'reject')"  class="px-5 py-2 rounded-lg bg-red-100 text-red-700 hover:bg-red-200 font-medium text-sm transition">Rechazar</button>
+        <button onclick="accionModal(${a.id},'approve')" class="px-5 py-2 rounded-lg bg-green-500 text-white hover:bg-green-600 font-medium text-sm transition">Aprobar</button>`;
+    } else if (a.estado === 'approved') {
+      btns = `<span class="text-green-600 font-medium text-sm">✓ Aprobado</span>
+        <button onclick="accionModal(${a.id},'reject')" class="px-5 py-2 rounded-lg bg-red-100 text-red-700 hover:bg-red-200 font-medium text-sm transition">Rechazar</button>`;
+    } else if (a.estado === 'rejected') {
+      btns = `<span class="text-red-500 font-medium text-sm">✗ Rechazado</span>
+        <button onclick="accionModal(${a.id},'approve')" class="px-5 py-2 rounded-lg bg-green-500 text-white hover:bg-green-600 font-medium text-sm transition">Aprobar</button>`;
+    }
+    document.getElementById('modal-actions').innerHTML = btns;
+  } catch(e) {
+    document.getElementById('panel-vista').innerHTML = '<div class="text-red-500">Error cargando artículo</div>';
+  }
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  articuloActual = null;
+  if (modoEdicion) toggleEdit();
+}
+
+function toggleEdit() {
+  modoEdicion = !modoEdicion;
+  const vista   = document.getElementById('panel-vista');
+  const editor  = document.getElementById('panel-editor');
+  const btnIcon  = document.getElementById('btn-edit-icon');
+  const btnLabel = document.getElementById('btn-edit-label');
+  const footerActions = document.getElementById('modal-actions');
+
+  if (modoEdicion) {
+    vista.style.display  = 'none';
+    editor.classList.add('active');
+    btnIcon.textContent  = '👁️';
+    btnLabel.textContent = 'Vista previa';
+    // Añadir botón guardar al footer
+    const saveBtn = document.createElement('button');
+    saveBtn.id = 'btn-guardar';
+    saveBtn.className = 'px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 font-medium text-sm transition';
+    saveBtn.textContent = 'Guardar cambios';
+    saveBtn.onclick = guardarEdicion;
+    footerActions.prepend(saveBtn);
+  } else {
+    // Actualizar vista previa con el contenido del editor
+    const raw = document.getElementById('editor-contenido').value || '';
+    const sinComments = raw.replace(/<!--[\s\S]*?-->/g, '').trim();
+    document.getElementById('panel-vista').innerHTML = marked.parse(sinComments);
+    // Actualizar título visible
+    document.getElementById('modal-titulo').textContent = document.getElementById('editor-titulo').value;
+
+    vista.style.display  = '';
+    editor.classList.remove('active');
+    btnIcon.textContent  = '✏️';
+    btnLabel.textContent = 'Editar';
+    const saveBtn = document.getElementById('btn-guardar');
+    if (saveBtn) saveBtn.remove();
+  }
+}
+
+async function guardarEdicion() {
+  if (!articuloActual) return;
+  const titulo   = document.getElementById('editor-titulo').value.trim();
+  const contenido = document.getElementById('editor-contenido').value;
+  if (!titulo) { toast('El título no puede estar vacío', 'error'); return; }
+
+  const btn = document.getElementById('btn-guardar');
+  btn.textContent = 'Guardando...';
+  btn.disabled = true;
+
+  try {
+    const r = await fetch(API + '/queue/' + articuloActual, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ titulo, contenido }),
+    });
+    const d = await r.json();
+    if (d.ok) {
+      toast('Cambios guardados', 'success');
+      // Actualizar card en la lista
+      const idx = todosArticulos.findIndex(a => a.id === articuloActual);
+      if (idx !== -1) { todosArticulos[idx].titulo = titulo; renderCards(); }
+      toggleEdit(); // volver a vista previa
+    } else {
+      toast('Error al guardar', 'error');
+    }
+  } catch(e) {
+    toast('No se pudo conectar con la API', 'error');
+  } finally {
+    btn.textContent = 'Guardar cambios';
+    btn.disabled = false;
+  }
+}
+
+function updateWordCount() {
+  const txt = document.getElementById('editor-contenido').value || '';
+  const words = txt.trim().split(/\s+/).filter(Boolean).length;
+  document.getElementById('editor-wordcount').textContent = words.toLocaleString() + ' palabras';
+}
+
+// Cerrar modal al clicar fuera
+document.getElementById('modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+// ---- ACCIONES ----
+async function accion(id, tipo) {
+  const endpoint = tipo === 'approve' ? 'approve' : 'reject';
+  try {
+    const r = await fetch(API + '/queue/' + id + '/' + endpoint, { method: 'POST' });
+    const d = await r.json();
+    if (d.ok) {
+      toast(tipo === 'approve' ? 'Artículo aprobado' : 'Artículo rechazado', tipo === 'approve' ? 'success' : 'error');
+      await loadAll();
+    }
+  } catch(e) {
+    toast('Error al procesar la acción', 'error');
+  }
+}
+
+async function accionModal(id, tipo) {
+  await accion(id, tipo);
+  closeModal();
+}
+
+// ---- CREAR ARTÍCULO ----
+function openCrear() {
+  document.getElementById('crear-overlay').style.display = 'flex';
+  document.getElementById('crear-titulo').value    = '';
+  document.getElementById('crear-keyword').value   = '';
+  document.getElementById('crear-excerpt').value   = '';
+  document.getElementById('crear-contenido').value = '';
+  document.getElementById('crear-wordcount').textContent = '0 palabras';
+  document.getElementById('crear-categoria').value = 'noticias';
+  setTimeout(() => document.getElementById('crear-titulo').focus(), 100);
+}
+
+function closeCrear() {
+  document.getElementById('crear-overlay').style.display = 'none';
+}
+
+async function crearArticulo() {
+  const titulo    = document.getElementById('crear-titulo').value.trim();
+  const contenido = document.getElementById('crear-contenido').value.trim();
+  if (!titulo)    { toast('El título es obligatorio', 'error'); return; }
+  if (!contenido) { toast('El contenido es obligatorio', 'error'); return; }
+
+  const btn = document.getElementById('btn-crear-submit');
+  btn.textContent = 'Guardando...';
+  btn.disabled = true;
+
+  try {
+    const r = await fetch(API + '/queue', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        titulo,
+        contenido,
+        keyword:   document.getElementById('crear-keyword').value.trim(),
+        categoria: document.getElementById('crear-categoria').value,
+        excerpt:   document.getElementById('crear-excerpt').value.trim(),
+      }),
+    });
+    const d = await r.json();
+    if (d.ok) {
+      toast('Artículo añadido a la cola (id=' + d.id + ')', 'success', 3500);
+      closeCrear();
+      // Cambiar filtro a pendientes y recargar
+      if (filtroEstado !== 'pending') setFiltroEstado('pending');
+      else await loadAll();
+    } else {
+      toast(d.detail || 'Error al crear el artículo', 'error');
+    }
+  } catch(e) {
+    toast('No se pudo conectar con la API', 'error');
+  } finally {
+    btn.textContent = 'Añadir a la cola';
+    btn.disabled = false;
+  }
+}
+
+// Cerrar modal crear al clicar fuera
+document.getElementById('crear-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeCrear();
+});
+
+async function publishApproved() {
+  toast('Para publicar: ejecuta  python run.py --publish-approved  en la terminal', 'info', 5000);
+}
+
+// ---- TOAST ----
+function toast(msg, type='success', dur=2500) {
+  const el = document.getElementById('toast');
+  const colors = { success:'bg-green-700', error:'bg-red-700', info:'bg-slate-700' };
+  el.className = `${colors[type] || 'bg-slate-800'} text-white text-sm px-5 py-3 rounded-xl shadow-xl show`;
+  el.textContent = msg;
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => { el.classList.remove('show'); }, dur);
+}
+
+// ---- INIT ----
+loadAll();
+// Auto-refresh cada 60s
+setInterval(loadAll, 60000);
+</script>
+</body>
+</html>
