@@ -45,6 +45,21 @@ const BUBBLE: Record<string, string> = {
   rosario_fernandez:   "Fern.",
   roberto_quiabra:     "Quiab.",
   ronald_atencio:      "Aten.",
+  // Debate 4
+  yonhy_lescano:       "Les.",
+  fiorella_molinelli:  "Fior.",
+  george_forsyth:      "Fors.",
+  carlos_jaico:        "Jaico",
+  carlos_espa:         "Espá",
+  enrique_valderrama:  "Vald.",
+  fernando_olivera:    "Oliv.",
+  // Debate 5 (solo claves nuevas)
+  roberto_chiabra:     "Chiab.",
+  francisco_diez:      "Diez",
+  herbert_caller:      "Call.",
+  // Debate 6 (solo claves nuevas)
+  armando_mace:        "Macé",
+  alfonso_lopez_chau:  "Chau",
 };
 
 interface Props {

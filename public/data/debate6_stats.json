@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "fecha": "2026-04-01",
+    "jornada": "Sexta jornada",
+    "candidatos": 11,
+    "segmentos": 486,
+    "duracionSegundos": 13947,
+    "duracionLabel": "232m 27s"
+  },
+  "candidatos": [
+    {
+      "key": "armando_mace",
+      "nombre": "Armando Macé",
+      "partido": "Partido Democrático Federal",
+      "tiempoSegundos": 773,
+      "tiempoLabel": "12m 53s",
+      "palabrasTotales": 1881,
+      "intervenciones": 21,
+      "promSegPorInterv": 36.8,
+      "porcentajeAtaque": 10,
+      "porcentajePropuesta": 24,
+      "porcentajeNeutro": 66,
+      "temas": {
+        "educacion": 0.238,
+        "economia": 0.19,
+        "corrupcion": 0.143,
+        "seguridad": 0,
+        "salud": 0.429,
+        "estado": 0.333
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "rosario_fernandez",
+      "nombre": "Rosario Fernández",
+      "partido": "Un Camino Diferente",
+      "tiempoSegundos": 706,
+      "tiempoLabel": "11m 46s",
+      "palabrasTotales": 1454,
+      "intervenciones": 20,
+      "promSegPorInterv": 35.3,
+      "porcentajeAtaque": 10,
+      "porcentajePropuesta": 40,
+      "porcentajeNeutro": 50,
+      "temas": {
+        "educacion": 0.3,
+        "economia": 0.55,
+        "corrupcion": 0.05,
+        "seguridad": 0.1,
+        "salud": 0.3,
+        "estado": 0.45
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "rafael_belaunde",
+      "nombre": "Rafael Belaúnde",
+      "partido": "Libertad Popular",
+      "tiempoSegundos": 655,
+      "tiempoLabel": "10m 55s",
+      "palabrasTotales": 1461,
+      "intervenciones": 18,
+      "promSegPorInterv": 36.4,
+      "porcentajeAtaque": 0,
+      "porcentajePropuesta": 28,
+      "porcentajeNeutro": 72,
+      "temas": {
+        "educacion": 0.278,
+        "economia": 0.333,
+        "corrupcion": 0.056,
+        "seguridad": 0.167,
+        "salud": 0.222,
+        "estado": 0.278
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "jose_williams",
+      "nombre": "José Williams",
+      "partido": "Avanza País",
+      "tiempoSegundos": 612,
+      "tiempoLabel": "10m 12s",
+      "palabrasTotales": 1286,
+      "intervenciones": 13,
+      "promSegPorInterv": 47.1,
+      "porcentajeAtaque": 8,
+      "porcentajePropuesta": 23,
+      "porcentajeNeutro": 69,
+      "temas": {
+        "educacion": 0.846,
+        "economia": 0.615,
+        "corrupcion": 0.077,
+        "seguridad": 0.231,
+        "salud": 0.308,
+        "estado": 0.308
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "jose_luna",
+      "nombre": "José Luna",
+      "partido": "Podemos Perú",
+      "tiempoSegundos": 582,
+      "tiempoLabel": "9m 42s",
+      "palabrasTotales": 1213,
+      "intervenciones": 18,
+      "promSegPorInterv": 32.3,
+      "porcentajeAtaque": 17,
+      "porcentajePropuesta": 22,
+      "porcentajeNeutro": 61,
+      "temas": {
+        "educacion": 0.333,
+        "economia": 0.333,
+        "corrupcion": 0.167,
+        "seguridad": 0.111,
+        "salud": 0.167,
+        "estado": 0.333
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "cesar_acuna",
+      "nombre": "César Acuña",
+      "partido": "Alianza para el Progreso",
+      "tiempoSegundos": 579,
+      "tiempoLabel": "9m 39s",
+      "palabrasTotales": 1055,
+      "intervenciones": 12,
+      "promSegPorInterv": 48.3,
+      "porcentajeAtaque": 0,
+      "porcentajePropuesta": 58,
+      "porcentajeNeutro": 42,
+      "temas": {
+        "educacion": 0.417,
+        "economia": 0.583,
+        "corrupcion": 0,
+        "seguridad": 0,
+        "salud": 0,
+        "estado": 0.5
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "ricardo_belmont",
+      "nombre": "Ricardo Belmont",
+      "partido": "Partido Cívico Obras",
+      "tiempoSegundos": 571,
+      "tiempoLabel": "9m 31s",
+      "palabrasTotales": 1334,
+      "intervenciones": 13,
+      "promSegPorInterv": 43.9,
+      "porcentajeAtaque": 15,
+      "porcentajePropuesta": 15,
+      "porcentajeNeutro": 70,
+      "temas": {
+        "educacion": 0.308,
+        "economia": 0.231,
+        "corrupcion": 0.154,
+        "seguridad": 0.077,
+        "salud": 0,
+        "estado": 0.308
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "wolfgang_grosso",
+      "nombre": "Wolfgang Grosso",
+      "partido": "Integridad Democrática",
+      "tiempoSegundos": 567,
+      "tiempoLabel": "9m 27s",
+      "palabrasTotales": 1397,
+      "intervenciones": 13,
+      "promSegPorInterv": 43.6,
+      "porcentajeAtaque": 31,
+      "porcentajePropuesta": 31,
+      "porcentajeNeutro": 38,
+      "temas": {
+        "educacion": 0.538,
+        "economia": 0.462,
+        "corrupcion": 0.385,
+        "seguridad": 0.462,
+        "salud": 0,
+        "estado": 0.538
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "antonio_ortiz",
+      "nombre": "Antonio Ortiz",
+      "partido": "Salvemos al Perú",
+      "tiempoSegundos": 562,
+      "tiempoLabel": "9m 22s",
+      "palabrasTotales": 1098,
+      "intervenciones": 18,
+      "promSegPorInterv": 31.2,
+      "porcentajeAtaque": 6,
+      "porcentajePropuesta": 39,
+      "porcentajeNeutro": 55,
+      "temas": {
+        "educacion": 0.556,
+        "economia": 0.611,
+        "corrupcion": 0.167,
+        "seguridad": 0.111,
+        "salud": 0.167,
+        "estado": 0.333
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "alfonso_lopez_chau",
+      "nombre": "Alfonso López Chau",
+      "partido": "Ahora Nación",
+      "tiempoSegundos": 525,
+      "tiempoLabel": "8m 45s",
+      "palabrasTotales": 944,
+      "intervenciones": 14,
+      "promSegPorInterv": 37.5,
+      "porcentajeAtaque": 7,
+      "porcentajePropuesta": 21,
+      "porcentajeNeutro": 72,
+      "temas": {
+        "educacion": 0.5,
+        "economia": 0.357,
+        "corrupcion": 0.071,
+        "seguridad": 0.214,
+        "salud": 0.286,
+        "estado": 0.357
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "jorge_nieto",
+      "nombre": "Jorge Nieto",
+      "partido": "Partido del Buen Gobierno",
+      "tiempoSegundos": 427,
+      "tiempoLabel": "7m 07s",
+      "palabrasTotales": 1012,
+      "intervenciones": 9,
+      "promSegPorInterv": 47.4,
+      "porcentajeAtaque": 11,
+      "porcentajePropuesta": 56,
+      "porcentajeNeutro": 33,
+      "temas": {
+        "educacion": 0.111,
+        "economia": 0.333,
+        "corrupcion": 0.222,
+        "seguridad": 0,
+        "salud": 0.111,
+        "estado": 0.444
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    }
+  ],
+  "redAtaques": [
+    {
+      "from": "antonio_ortiz",
+      "to": "cesar_acuna",
+      "count": 1
+    },
+    {
+      "from": "rosario_fernandez",
+      "to": "cesar_acuna",
+      "count": 1
+    },
+    {
+      "from": "rosario_fernandez",
+      "to": "jose_luna",
+      "count": 2
+    },
+    {
+      "from": "jorge_nieto",
+      "to": "jose_williams",
+      "count": 1
+    },
+    {
+      "from": "wolfgang_grosso",
+      "to": "sistema",
+      "count": 3
+    },
+    {
+      "from": "jose_luna",
+      "to": "sistema",
+      "count": 2
+    },
+    {
+      "from": "alfonso_lopez_chau",
+      "to": "sistema",
+      "count": 2
+    }
+  ]
+}

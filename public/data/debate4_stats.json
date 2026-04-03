@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "fecha": "2026-03-30",
+    "jornada": "Cuarta jornada",
+    "candidatos": 12,
+    "segmentos": 549,
+    "duracionSegundos": 15341,
+    "duracionLabel": "255m 41s"
+  },
+  "candidatos": [
+    {
+      "key": "fiorella_molinelli",
+      "nombre": "Fiorella Molinelli",
+      "partido": "Fuerza y Libertad",
+      "tiempoSegundos": 1038,
+      "tiempoLabel": "17m 18s",
+      "palabrasTotales": 2339,
+      "intervenciones": 29,
+      "promSegPorInterv": 35.8,
+      "porcentajeAtaque": 3,
+      "porcentajePropuesta": 31,
+      "porcentajeNeutro": 66,
+      "temas": {
+        "educacion": 0.276,
+        "economia": 0.483,
+        "corrupcion": 0.069,
+        "seguridad": 0.069,
+        "salud": 0.172,
+        "estado": 0.448
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "yonhy_lescano",
+      "nombre": "Yonhy Lescano",
+      "partido": "Cooperación Popular",
+      "tiempoSegundos": 724,
+      "tiempoLabel": "12m 04s",
+      "palabrasTotales": 1590,
+      "intervenciones": 15,
+      "promSegPorInterv": 48.3,
+      "porcentajeAtaque": 40,
+      "porcentajePropuesta": 33,
+      "porcentajeNeutro": 27,
+      "temas": {
+        "educacion": 0.4,
+        "economia": 0.733,
+        "corrupcion": 0.4,
+        "seguridad": 0.133,
+        "salud": 0.2,
+        "estado": 0.733
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "ronald_atencio",
+      "nombre": "Ronald Atencio",
+      "partido": "Alianza Electoral Venceremos",
+      "tiempoSegundos": 644,
+      "tiempoLabel": "10m 44s",
+      "palabrasTotales": 1548,
+      "intervenciones": 13,
+      "promSegPorInterv": 49.5,
+      "porcentajeAtaque": 31,
+      "porcentajePropuesta": 23,
+      "porcentajeNeutro": 46,
+      "temas": {
+        "educacion": 0.615,
+        "economia": 0.846,
+        "corrupcion": 0.154,
+        "seguridad": 0.154,
+        "salud": 0.308,
+        "estado": 0.308
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "alex_gonzalez",
+      "nombre": "Álex González",
+      "partido": "Partido Demócrata Verde",
+      "tiempoSegundos": 628,
+      "tiempoLabel": "10m 28s",
+      "palabrasTotales": 1278,
+      "intervenciones": 15,
+      "promSegPorInterv": 41.9,
+      "porcentajeAtaque": 47,
+      "porcentajePropuesta": 7,
+      "porcentajeNeutro": 46,
+      "temas": {
+        "educacion": 0.4,
+        "economia": 0.333,
+        "corrupcion": 0.067,
+        "seguridad": 0.267,
+        "salud": 0.067,
+        "estado": 0.4
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "carlos_jaico",
+      "nombre": "Carlos Jaico",
+      "partido": "Perú Moderno",
+      "tiempoSegundos": 591,
+      "tiempoLabel": "9m 51s",
+      "palabrasTotales": 1474,
+      "intervenciones": 15,
+      "promSegPorInterv": 39.4,
+      "porcentajeAtaque": 0,
+      "porcentajePropuesta": 40,
+      "porcentajeNeutro": 60,
+      "temas": {
+        "educacion": 0.333,
+        "economia": 0.6,
+        "corrupcion": 0.067,
+        "seguridad": 0.2,
+        "salud": 0.333,
+        "estado": 0.267
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "walter_chirinos",
+      "nombre": "Walter Chirinos",
+      "partido": "Partido Político PRIM",
+      "tiempoSegundos": 585,
+      "tiempoLabel": "9m 45s",
+      "palabrasTotales": 1492,
+      "intervenciones": 12,
+      "promSegPorInterv": 48.8,
+      "porcentajeAtaque": 25,
+      "porcentajePropuesta": 50,
+      "porcentajeNeutro": 25,
+      "temas": {
+        "educacion": 0.583,
+        "economia": 0.833,
+        "corrupcion": 0,
+        "seguridad": 0.417,
+        "salud": 0.583,
+        "estado": 0.25
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "carlos_alvarez",
+      "nombre": "Carlos Álvarez",
+      "partido": "País para Todos",
+      "tiempoSegundos": 575,
+      "tiempoLabel": "9m 35s",
+      "palabrasTotales": 1659,
+      "intervenciones": 14,
+      "promSegPorInterv": 41.1,
+      "porcentajeAtaque": 36,
+      "porcentajePropuesta": 7,
+      "porcentajeNeutro": 57,
+      "temas": {
+        "educacion": 0.571,
+        "economia": 0.571,
+        "corrupcion": 0.214,
+        "seguridad": 0.429,
+        "salud": 0.214,
+        "estado": 0.357
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "carlos_espa",
+      "nombre": "Carlos Espá",
+      "partido": "Partido Sí Creo",
+      "tiempoSegundos": 574,
+      "tiempoLabel": "9m 34s",
+      "palabrasTotales": 1614,
+      "intervenciones": 12,
+      "promSegPorInterv": 47.8,
+      "porcentajeAtaque": 42,
+      "porcentajePropuesta": 17,
+      "porcentajeNeutro": 41,
+      "temas": {
+        "educacion": 0.5,
+        "economia": 0.5,
+        "corrupcion": 0.25,
+        "seguridad": 0.25,
+        "salud": 0.417,
+        "estado": 0.75
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "george_forsyth",
+      "nombre": "George Forsyth",
+      "partido": "Somos Perú",
+      "tiempoSegundos": 571,
+      "tiempoLabel": "9m 31s",
+      "palabrasTotales": 1638,
+      "intervenciones": 14,
+      "promSegPorInterv": 40.8,
+      "porcentajeAtaque": 14,
+      "porcentajePropuesta": 36,
+      "porcentajeNeutro": 50,
+      "temas": {
+        "educacion": 0.5,
+        "economia": 0.5,
+        "corrupcion": 0.071,
+        "seguridad": 0.214,
+        "salud": 0.286,
+        "estado": 0.286
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "alvaro_paz_barra",
+      "nombre": "Álvaro Paz de la Barra",
+      "partido": "Fe en el Perú",
+      "tiempoSegundos": 564,
+      "tiempoLabel": "9m 24s",
+      "palabrasTotales": 1321,
+      "intervenciones": 12,
+      "promSegPorInterv": 47,
+      "porcentajeAtaque": 25,
+      "porcentajePropuesta": 17,
+      "porcentajeNeutro": 58,
+      "temas": {
+        "educacion": 0.5,
+        "economia": 0.5,
+        "corrupcion": 0.167,
+        "seguridad": 0.083,
+        "salud": 0.25,
+        "estado": 0.417
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "enrique_valderrama",
+      "nombre": "Enrique Valderrama",
+      "partido": "Partido Aprista Peruano",
+      "tiempoSegundos": 523,
+      "tiempoLabel": "8m 43s",
+      "palabrasTotales": 1292,
+      "intervenciones": 15,
+      "promSegPorInterv": 34.9,
+      "porcentajeAtaque": 7,
+      "porcentajePropuesta": 67,
+      "porcentajeNeutro": 26,
+      "temas": {
+        "educacion": 0.4,
+        "economia": 0.333,
+        "corrupcion": 0.067,
+        "seguridad": 0.067,
+        "salud": 0.2,
+        "estado": 0.467
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "fernando_olivera",
+      "nombre": "Fernando Olivera",
+      "partido": "Frente de la Esperanza 2021",
+      "tiempoSegundos": 425,
+      "tiempoLabel": "7m 05s",
+      "palabrasTotales": 755,
+      "intervenciones": 7,
+      "promSegPorInterv": 60.7,
+      "porcentajeAtaque": 14,
+      "porcentajePropuesta": 57,
+      "porcentajeNeutro": 29,
+      "temas": {
+        "educacion": 0.714,
+        "economia": 0.429,
+        "corrupcion": 0.286,
+        "seguridad": 0,
+        "salud": 0.429,
+        "estado": 0.429
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    }
+  ],
+  "redAtaques": [
+    {
+      "from": "carlos_espa",
+      "to": "yonhy_lescano",
+      "count": 2
+    },
+    {
+      "from": "yonhy_lescano",
+      "to": "carlos_espa",
+      "count": 2
+    },
+    {
+      "from": "alex_gonzalez",
+      "to": "enrique_valderrama",
+      "count": 1
+    },
+    {
+      "from": "enrique_valderrama",
+      "to": "fernando_olivera",
+      "count": 2
+    },
+    {
+      "from": "yonhy_lescano",
+      "to": "sistema",
+      "count": 2
+    },
+    {
+      "from": "alvaro_paz_barra",
+      "to": "sistema",
+      "count": 2
+    },
+    {
+      "from": "ronald_atencio",
+      "to": "sistema",
+      "count": 3
+    },
+    {
+      "from": "fernando_olivera",
+      "to": "sistema",
+      "count": 3
+    }
+  ]
+}

@@ -87,4 +87,19 @@ export const CANDIDATE_COLORS: Record<string, string> = {
   rosario_fernandez:   "#be185d",
   roberto_quiabra:     "#15803d",
   ronald_atencio:      "#d97706",
+  // Debate 4 — 30 mar 2026
+  yonhy_lescano:       "#059669",
+  fiorella_molinelli:  "#e11d48",
+  george_forsyth:      "#16a34a",
+  carlos_jaico:        "#0ea5e9",
+  carlos_espa:         "#f97316",
+  enrique_valderrama:  "#b45309",
+  fernando_olivera:    "#7c3aed",
+  // Debate 5 — 31 mar 2026
+  roberto_chiabra:     "#1d4ed8",
+  francisco_diez:      "#14b8a6",
+  herbert_caller:      "#f59e0b",
+  // Debate 6 — 01 abr 2026
+  armando_mace:        "#8b5cf6",
+  alfonso_lopez_chau:  "#16a34a",
 };

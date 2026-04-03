@@ -42,6 +42,21 @@ const SHORT: Record<string, string> = {
   rosario_fernandez:   "R. Fernández",
   roberto_quiabra:     "Quiabra",
   ronald_atencio:      "Atencio",
+  // Debate 4
+  yonhy_lescano:       "Y. Lescano",
+  fiorella_molinelli:  "Molinelli",
+  george_forsyth:      "Forsyth",
+  carlos_jaico:        "Jaico",
+  carlos_espa:         "Espá",
+  enrique_valderrama:  "Valderrama",
+  fernando_olivera:    "F. Olivera",
+  // Debate 5 (solo claves nuevas)
+  roberto_chiabra:     "Chiabra",
+  francisco_diez:      "Diez-Canseco",
+  herbert_caller:      "Caller",
+  // Debate 6 (solo claves nuevas)
+  armando_mace:        "A. Macé",
+  alfonso_lopez_chau:  "López Chau",
 };
 
 interface Props {

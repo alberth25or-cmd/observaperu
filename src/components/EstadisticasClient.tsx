@@ -13,6 +13,9 @@ import PostulacionesSection from "@/components/postulaciones/PostulacionesSectio
 import DebateSection from "@/components/debate/DebateSection";
 import Debate2Section from "@/components/debate/Debate2Section";
 import Debate3Section from "@/components/debate/Debate3Section";
+import Debate4Section from "@/components/debate/Debate4Section";
+import Debate5Section from "@/components/debate/Debate5Section";
+import Debate6Section from "@/components/debate/Debate6Section";
 import { DebateStats } from "@/lib/debateAnalytics";
 import EncuestaSection from "@/components/encuesta/EncuestaSection";
 
@@ -32,6 +35,9 @@ export default function EstadisticasClient() {
   const [debateData, setDebateData] = useState<DebateStats | null>(null);
   const [debate2Data, setDebate2Data] = useState<DebateStats | null>(null);
   const [debate3Data, setDebate3Data] = useState<DebateStats | null>(null);
+  const [debate4Data, setDebate4Data] = useState<DebateStats | null>(null);
+  const [debate5Data, setDebate5Data] = useState<DebateStats | null>(null);
+  const [debate6Data, setDebate6Data] = useState<DebateStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -43,7 +49,7 @@ export default function EstadisticasClient() {
 
         const [
           edadesRes, lugaresRes, estudiosRes, antecedentesRes,
-          postulacionesRes, debateRes, debate2Res, debate3Res,
+          postulacionesRes, debateRes, debate2Res, debate3Res, debate4Res, debate5Res, debate6Res,
         ] = await Promise.all([
           fetch("/data/candidatos_edades.json"),
           fetch("/data/candidatos_lugares_detalle.json"),
@@ -53,6 +59,9 @@ export default function EstadisticasClient() {
           fetch("/data/debate_stats.json"),
           fetch("/data/debate2_stats.json"),
           fetch("/data/debate3_stats.json"),
+          fetch("/data/debate4_stats.json"),
+          fetch("/data/debate5_stats.json"),
+          fetch("/data/debate6_stats.json"),
         ]);
 
         if (!edadesRes.ok)
@@ -88,6 +97,9 @@ export default function EstadisticasClient() {
         if (debateRes.ok)   setDebateData(await debateRes.json());
         if (debate2Res.ok)  setDebate2Data(await debate2Res.json());
         if (debate3Res.ok)  setDebate3Data(await debate3Res.json());
+        if (debate4Res.ok)  setDebate4Data(await debate4Res.json());
+        if (debate5Res.ok)  setDebate5Data(await debate5Res.json());
+        if (debate6Res.ok)  setDebate6Data(await debate6Res.json());
 
         setLoading(false);
       } catch (err) {
@@ -124,7 +136,25 @@ export default function EstadisticasClient() {
 
   return (
     <div className="space-y-8 sm:space-y-12">
-      {debate3Data && <Debate3Section data={debate3Data} />}
+      {debate6Data && <Debate6Section data={debate6Data} />}
+
+      {debate5Data && (
+        <div className="pt-6 border-t border-slate-200">
+          <Debate5Section data={debate5Data} />
+        </div>
+      )}
+
+      {debate4Data && (
+        <div className="pt-6 border-t border-slate-200">
+          <Debate4Section data={debate4Data} />
+        </div>
+      )}
+
+      {debate3Data && (
+        <div className="pt-6 border-t border-slate-200">
+          <Debate3Section data={debate3Data} />
+        </div>
+      )}
 
       {debate2Data && (
         <div className="pt-6 border-t border-slate-200">
@@ -137,6 +167,7 @@ export default function EstadisticasClient() {
           <DebateSection data={debateData} />
         </div>
       )}
+
 
       <div className="pt-6 border-t border-slate-200">
         <EncuestaSection />

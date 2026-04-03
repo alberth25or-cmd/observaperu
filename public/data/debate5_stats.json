@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "fecha": "2026-03-31",
+    "jornada": "Quinta jornada",
+    "candidatos": 11,
+    "segmentos": 592,
+    "duracionSegundos": 15446,
+    "duracionLabel": "257m 26s"
+  },
+  "candidatos": [
+    {
+      "key": "herbert_caller",
+      "nombre": "Herbert Caller",
+      "partido": "Partido Patriótico del Perú",
+      "tiempoSegundos": 739,
+      "tiempoLabel": "12m 19s",
+      "palabrasTotales": 1924,
+      "intervenciones": 16,
+      "promSegPorInterv": 46.2,
+      "porcentajeAtaque": 38,
+      "porcentajePropuesta": 25,
+      "porcentajeNeutro": 37,
+      "temas": {
+        "educacion": 0.438,
+        "economia": 0.438,
+        "corrupcion": 0.25,
+        "seguridad": 0.063,
+        "salud": 0.125,
+        "estado": 0.438
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "paul_jaimes",
+      "nombre": "Paul Jaimes",
+      "partido": "Progresemos",
+      "tiempoSegundos": 620,
+      "tiempoLabel": "10m 20s",
+      "palabrasTotales": 1472,
+      "intervenciones": 15,
+      "promSegPorInterv": 41.3,
+      "porcentajeAtaque": 27,
+      "porcentajePropuesta": 27,
+      "porcentajeNeutro": 46,
+      "temas": {
+        "educacion": 0.133,
+        "economia": 0.267,
+        "corrupcion": 0.067,
+        "seguridad": 0.067,
+        "salud": 0.133,
+        "estado": 0.4
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "mesias_guevara",
+      "nombre": "Mesías Guevara",
+      "partido": "Partido Morado",
+      "tiempoSegundos": 610,
+      "tiempoLabel": "10m 10s",
+      "palabrasTotales": 1698,
+      "intervenciones": 18,
+      "promSegPorInterv": 33.9,
+      "porcentajeAtaque": 39,
+      "porcentajePropuesta": 11,
+      "porcentajeNeutro": 50,
+      "temas": {
+        "educacion": 0.444,
+        "economia": 0.5,
+        "corrupcion": 0.333,
+        "seguridad": 0.111,
+        "salud": 0.278,
+        "estado": 0.111
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "keiko_fujimori",
+      "nombre": "Keiko Fujimori",
+      "partido": "Fuerza Popular",
+      "tiempoSegundos": 592,
+      "tiempoLabel": "9m 52s",
+      "palabrasTotales": 1308,
+      "intervenciones": 16,
+      "promSegPorInterv": 37,
+      "porcentajeAtaque": 6,
+      "porcentajePropuesta": 25,
+      "porcentajeNeutro": 69,
+      "temas": {
+        "educacion": 0.375,
+        "economia": 0.313,
+        "corrupcion": 0,
+        "seguridad": 0.125,
+        "salud": 0.188,
+        "estado": 0.375
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "charlie_carrasco",
+      "nombre": "Charlie Carrasco",
+      "partido": "Partido Demócrata Unido Perú",
+      "tiempoSegundos": 588,
+      "tiempoLabel": "9m 48s",
+      "palabrasTotales": 1131,
+      "intervenciones": 15,
+      "promSegPorInterv": 39.2,
+      "porcentajeAtaque": 20,
+      "porcentajePropuesta": 40,
+      "porcentajeNeutro": 40,
+      "temas": {
+        "educacion": 0.4,
+        "economia": 0.4,
+        "corrupcion": 0.267,
+        "seguridad": 0.133,
+        "salud": 0.2,
+        "estado": 0.2
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "roberto_chiabra",
+      "nombre": "Roberto Chiabra",
+      "partido": "Unidad Nacional",
+      "tiempoSegundos": 587,
+      "tiempoLabel": "9m 47s",
+      "palabrasTotales": 1419,
+      "intervenciones": 14,
+      "promSegPorInterv": 41.9,
+      "porcentajeAtaque": 21,
+      "porcentajePropuesta": 36,
+      "porcentajeNeutro": 43,
+      "temas": {
+        "educacion": 0.429,
+        "economia": 0.429,
+        "corrupcion": 0.143,
+        "seguridad": 0.214,
+        "salud": 0.214,
+        "estado": 0.357
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "lopez_aliaga",
+      "nombre": "Rafael López Aliaga",
+      "partido": "Renovación Popular",
+      "tiempoSegundos": 580,
+      "tiempoLabel": "9m 40s",
+      "palabrasTotales": 1283,
+      "intervenciones": 14,
+      "promSegPorInterv": 41.4,
+      "porcentajeAtaque": 36,
+      "porcentajePropuesta": 21,
+      "porcentajeNeutro": 43,
+      "temas": {
+        "educacion": 0.429,
+        "economia": 0.643,
+        "corrupcion": 0.5,
+        "seguridad": 0.214,
+        "salud": 0.286,
+        "estado": 0.5
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "marisol_perez",
+      "nombre": "Marisol Pérez Tello",
+      "partido": "Primero La Gente",
+      "tiempoSegundos": 578,
+      "tiempoLabel": "9m 38s",
+      "palabrasTotales": 1613,
+      "intervenciones": 16,
+      "promSegPorInterv": 36.1,
+      "porcentajeAtaque": 31,
+      "porcentajePropuesta": 13,
+      "porcentajeNeutro": 56,
+      "temas": {
+        "educacion": 0.5,
+        "economia": 0.313,
+        "corrupcion": 0.25,
+        "seguridad": 0.188,
+        "salud": 0.188,
+        "estado": 0.313
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "francisco_diez",
+      "nombre": "Francisco Diez-Canseco",
+      "partido": "Perú Acción",
+      "tiempoSegundos": 574,
+      "tiempoLabel": "9m 34s",
+      "palabrasTotales": 1612,
+      "intervenciones": 11,
+      "promSegPorInterv": 52.2,
+      "porcentajeAtaque": 45,
+      "porcentajePropuesta": 27,
+      "porcentajeNeutro": 28,
+      "temas": {
+        "educacion": 0.273,
+        "economia": 0.636,
+        "corrupcion": 0.727,
+        "seguridad": 0.091,
+        "salud": 0.091,
+        "estado": 0.727
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "mario_vizcarra",
+      "nombre": "Mario Vizcarra",
+      "partido": "Perú Primero",
+      "tiempoSegundos": 574,
+      "tiempoLabel": "9m 34s",
+      "palabrasTotales": 1344,
+      "intervenciones": 12,
+      "promSegPorInterv": 47.8,
+      "porcentajeAtaque": 33,
+      "porcentajePropuesta": 8,
+      "porcentajeNeutro": 59,
+      "temas": {
+        "educacion": 0.417,
+        "economia": 0.417,
+        "corrupcion": 0.25,
+        "seguridad": 0,
+        "salud": 0.25,
+        "estado": 0.583
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    },
+    {
+      "key": "roberto_sanchez",
+      "nombre": "Roberto Sánchez",
+      "partido": "Juntos por el Perú",
+      "tiempoSegundos": 571,
+      "tiempoLabel": "9m 31s",
+      "palabrasTotales": 1368,
+      "intervenciones": 15,
+      "promSegPorInterv": 38.1,
+      "porcentajeAtaque": 27,
+      "porcentajePropuesta": 7,
+      "porcentajeNeutro": 66,
+      "temas": {
+        "educacion": 0.333,
+        "economia": 0.6,
+        "corrupcion": 0.267,
+        "seguridad": 0.133,
+        "salud": 0.267,
+        "estado": 0.4
+      },
+      "mencionadoPor": 0,
+      "interrupciones": 0
+    }
+  ],
+  "redAtaques": [
+    {
+      "from": "lopez_aliaga",
+      "to": "marisol_perez",
+      "count": 2
+    },
+    {
+      "from": "marisol_perez",
+      "to": "lopez_aliaga",
+      "count": 2
+    },
+    {
+      "from": "keiko_fujimori",
+      "to": "marisol_perez",
+      "count": 1
+    },
+    {
+      "from": "roberto_sanchez",
+      "to": "keiko_fujimori",
+      "count": 2
+    },
+    {
+      "from": "mesias_guevara",
+      "to": "keiko_fujimori",
+      "count": 2
+    },
+    {
+      "from": "francisco_diez",
+      "to": "roberto_sanchez",
+      "count": 2
+    },
+    {
+      "from": "roberto_chiabra",
+      "to": "roberto_sanchez",
+      "count": 2
+    },
+    {
+      "from": "charlie_carrasco",
+      "to": "sistema",
+      "count": 3
+    },
+    {
+      "from": "mario_vizcarra",
+      "to": "sistema",
+      "count": 2
+    },
+    {
+      "from": "lopez_aliaga",
+      "to": "sistema",
+      "count": 2
+    },
+    {
+      "from": "mesias_guevara",
+      "to": "sistema",
+      "count": 2
+    }
+  ]
+}
