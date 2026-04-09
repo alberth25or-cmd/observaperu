@@ -16,7 +16,7 @@ const ME = 2.8;
 
 const LABELS = [
   "Ene-25", "Abr-25", "Jul-25", "Ago-25", "Set-25", "Oct-25",
-  "Nov-25", "Dic-25", "Ene-26", "Feb1-26", "Feb2-26", "Mar1-26", "Mar2-26",
+  "Nov-25", "Dic-25", "Ene-26", "Feb1-26", "Feb2-26", "Mar1-26", "Mar2-26", "02abr-26",
 ];
 
 const ALL_SERIES = [
@@ -24,37 +24,43 @@ const ALL_SERIES = [
     key: "keiko",
     label: "Keiko Fujimori",
     color: "#185FA5",
-    data: [12, 11, 9, 8, 8, 6, 8, 8, 7, 8, 9, 11, 11] as (number | null)[],
+    data: [12, 11, 9, 8, 8, 6, 8, 8, 7, 8, 9, 10, 11, 13] as (number | null)[],
   },
   {
     key: "aliaga",
     label: "R. López Aliaga",
     color: "#0F6E56",
-    data: [4, 6, 7, 10, 10, 10, 9, 10, 10, 12, 10, 10, 10] as (number | null)[],
+    data: [4, 6, 7, 10, 10, 10, 9, 10, 10, 12, 10, 11, 10, 8] as (number | null)[],
   },
   {
     key: "alvarez",
     label: "Carlos Álvarez",
     color: "#854F0B",
-    data: [4, 6, 6, 6, 4, 5, 4, 4, 4, 4, 3, 6, 5] as (number | null)[],
+    data: [4, 6, 6, 6, 4, 5, 4, 4, 4, 4, 3, 6, 5, 9] as (number | null)[],
   },
   {
     key: "acuna",
     label: "César Acuña",
     color: "#7F77DD",
-    data: [2, 3, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 3] as (number | null)[],
+    data: [2, 3, 2, 2, 3, 3, 3, 3, 2, 4, 4, 4, 3, 3] as (number | null)[],
   },
   {
     key: "lopezc",
     label: "A. López Chau",
     color: "#D85A30",
-    data: [2, 2, 2, 3, 3, 3, 3, 2, 4, 4, 4, 3, 5] as (number | null)[],
+    data: [2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 4] as (number | null)[],
   },
   {
     key: "nieto",
     label: "Jorge Nieto",
     color: "#888780",
-    data: [1, 2, 5, 2, 2, 2, 2, 5, null, null, null, 2, 5] as (number | null)[],
+    data: [null, null, null, null, null, 1, 2, 5, 2, 2, 2, 2, 5, 5] as (number | null)[],
+  },
+  {
+    key: "sanchez",
+    label: "Roberto Sánchez",
+    color: "#993C1D",
+    data: [null, null, null, null, null, null, null, null, null, null, null, null, 4, 6] as (number | null)[],
   },
 ];
 
@@ -134,7 +140,7 @@ export default function EncuestaEvolucionTemporal() {
           Evolución temporal con bandas de incertidumbre
         </h3>
         <p className="text-xs text-slate-500">
-          Bandas sombreadas = IC 95% (±2.8 pp) · Enero 2025 – Marzo 2026.
+          Bandas sombreadas = IC 95% (±2.8 pp) · Enero 2025 – Abril 2026.
           Por defecto se muestran los tres candidatos con mayor intención de
           voto.
         </p>

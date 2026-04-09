@@ -18,6 +18,7 @@ import Debate5Section from "@/components/debate/Debate5Section";
 import Debate6Section from "@/components/debate/Debate6Section";
 import { DebateStats } from "@/lib/debateAnalytics";
 import EncuestaSection from "@/components/encuesta/EncuestaSection";
+import EncuestaAbril2026Section from "@/components/encuesta/EncuestaAbril2026Section";
 
 interface CandidatoEdad {
   slug: string;
@@ -136,7 +137,17 @@ export default function EstadisticasClient() {
 
   return (
     <div className="space-y-8 sm:space-y-12">
-      {debate6Data && <Debate6Section data={debate6Data} />}
+      <EncuestaAbril2026Section />
+
+      <div className="pt-6 border-t border-slate-200">
+        <EncuestaSection />
+      </div>
+
+      {debate6Data && (
+        <div className="pt-6 border-t border-slate-200">
+          <Debate6Section data={debate6Data} />
+        </div>
+      )}
 
       {debate5Data && (
         <div className="pt-6 border-t border-slate-200">
@@ -167,11 +178,6 @@ export default function EstadisticasClient() {
           <DebateSection data={debateData} />
         </div>
       )}
-
-
-      <div className="pt-6 border-t border-slate-200">
-        <EncuestaSection />
-      </div>
 
       <div className="pt-6 border-t border-slate-200">
         <div className="mb-6">
