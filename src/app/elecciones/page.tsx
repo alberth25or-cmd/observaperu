@@ -52,15 +52,6 @@ export default function EleccionesPage() {
   return (
     <main>
       <section className="relative isolate overflow-hidden bg-navy text-white">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-cover bg-right opacity-30 lg:opacity-70"
-          style={{ backgroundImage: "url('/images/capa-elecciones.webp')" }}
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/30"
-        />
         <div className="relative mx-auto max-w-6xl px-6 py-20 lg:px-10 lg:py-24">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-gold">
             Trabajo realizado
