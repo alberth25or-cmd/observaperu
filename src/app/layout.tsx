@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Analytics from "@/components/Analytics";
+import SuavizarScroll from "@/components/SuavizarScroll";
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-sora",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const BASE_URL = "https://www.observaperu.com";
 
@@ -10,33 +25,25 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default:
-      "Observa Perú | Candidatos presidenciales, propuestas y elecciones",
+      "Observa Perú | Encuestas y estudios de mercado con rigor estadístico",
     template: "%s | Observa Perú",
   },
   description:
-    "Plataforma independiente para conocer a los candidatos presidenciales del Perú: biografía, propuestas, trayectoria y planes de gobierno.",
+    "Encuestas, estudios de mercado y asesoría estadística para empresas e investigadores. Trabajo de campo en Lima y, según el estudio, en otras regiones. Cada estudio con su ficha técnica.",
   openGraph: {
     type: "website",
     locale: "es_PE",
     url: BASE_URL,
     siteName: "Observa Perú",
-    title: "Observa Perú | Candidatos y elecciones",
+    title: "Observa Perú | Estudios de mercado hechos por estadísticos",
     description:
-      "Conoce a los candidatos presidenciales, sus propuestas y planes de gobierno.",
-    images: [
-      {
-        url: "/LogoObserva.png",
-        width: 1200,
-        height: 630,
-        alt: "Observa Perú",
-      },
-    ],
+      "Encuestas y estudios de mercado con rigor estadístico. Te mostramos cómo medimos, no solo el resultado.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Observa Perú | Candidatos y elecciones",
+    title: "Observa Perú | Estudios de mercado hechos por estadísticos",
     description:
-      "Conoce a los candidatos presidenciales, sus propuestas y planes de gobierno.",
+      "Encuestas, estudios de mercado y asesoría estadística con rigor. Trabajo de campo en Lima y, según el estudio, en otras regiones.",
   },
   alternates: { canonical: BASE_URL },
 };
@@ -47,7 +54,7 @@ const websiteSchema = {
   name: "Observa Perú",
   url: BASE_URL,
   description:
-    "Plataforma para conocer candidatos presidenciales del Perú, propuestas y planes de gobierno",
+    "Encuestas, estudios de mercado y asesoría estadística en el Perú",
   inLanguage: "es-PE",
 };
 
@@ -57,8 +64,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className="min-h-screen bg-[#f5f7fb] text-[#0b1b3b] antialiased">
+    <html lang="es" className={`${sora.variable} ${inter.variable}`}>
+      <body className="min-h-screen antialiased">
         <Script
           id="gtm"
           strategy="beforeInteractive"
@@ -84,6 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <SuavizarScroll />
         <Analytics />
         <Navbar />
         {children}

@@ -216,8 +216,8 @@ export default function EstadisticasClient() {
               a: "Según la encuesta Ipsos de marzo 2026 (n=1,203), Keiko Fujimori lidera con 11% de intención de voto, seguida de Rafael López Aliaga con 10%. Ambos se encuentran dentro del margen de error de ±2.8 pp, lo que configura un empate técnico.",
             },
             {
-              q: "¿Cuándo son las elecciones presidenciales en Perú 2026?",
-              a: "Las elecciones generales del Perú 2026 están programadas para el 11 de abril de 2026. Si ningún candidato supera el 50% de los votos válidos, se realizará una segunda vuelta el 7 de junio de 2026.",
+              q: "¿Cuándo fueron las elecciones presidenciales en Perú 2026?",
+              a: "La primera vuelta de las elecciones generales del Perú 2026 fue el 12 de abril de 2026 y la segunda vuelta, el 7 de junio de 2026.",
             },
             {
               q: "¿Quiénes son los candidatos presidenciales del Perú 2026?",
@@ -225,7 +225,7 @@ export default function EstadisticasClient() {
             },
             {
               q: "¿Cuántos debates presidenciales JNE hubo en 2026?",
-              a: "El JNE organizó tres jornadas de debate presidencial los días 23, 24 y 25 de marzo de 2026, transmitidas por TV Perú. Participaron candidatos inscritos con partido político y cumplimiento de los requisitos del JNE.",
+              a: "Para la primera vuelta, el JNE organizó seis jornadas de debate presidencial: 23, 24, 25, 30 y 31 de marzo y 1 de abril de 2026, transmitidas por TV Perú. Participaron candidatos inscritos con partido político y cumplimiento de los requisitos del JNE.",
             },
             {
               q: "¿Cómo se mide el tiempo de habla en los debates JNE?",

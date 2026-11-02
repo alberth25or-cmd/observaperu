@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-[#0b1b3b] py-8 sm:py-10">
+    <footer className="bg-navy py-12 sm:py-14">
       <div className="mx-auto max-w-6xl px-4 lg:px-16">
         <div className="flex flex-col items-center justify-center gap-6">
           {/* Logo o título */}
@@ -9,7 +9,8 @@ const Footer = () => {
               Observa Perú
             </h3>
             <p className="mt-2 text-[14px] text-white/70">
-              Información clara y verificable sobre el proceso electoral.
+              Encuestas, estudios de mercado y asesoría estadística con rigor.
+              Trabajo de campo en Lima y, según el estudio, en otras regiones.
             </p>
           </div>
 

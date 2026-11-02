@@ -1,9 +1,30 @@
 @import "tailwindcss";
 
-/* Tu sitio SIEMPRE en modo claro, sin depender del sistema del usuario */
-:root {
-  --background: #eef2fb; /* color de tu página */
-  --foreground: #0b1b3b; /* tu color de texto principal */
+/* ───────────────────────────────────────────────────────────
+   Sistema de diseño Observa Perú
+   Fuente: Plan de marca y página web (sep 2026)
+   Los colores se declaran aquí una sola vez y Tailwind v4
+   genera las utilidades: bg-navy, text-gold, border-hueso, etc.
+   ─────────────────────────────────────────────────────────── */
+@theme {
+  /* Marca */
+  --color-navy: #0f1e4a;
+  --color-navy-900: #0a1533;
+  --color-gold: #c9a84c;
+  --color-gold-dark: #8a6d2b;
+  --color-hueso: #f7f5f0;
+  --color-gris: #d9d9d9;
+
+  /* Paleta de gráficos — única para todo el sitio */
+  --color-chart-1: #0f1e4a;
+  --color-chart-2: #3b5ba5;
+  --color-chart-3: #2a9d8f;
+  --color-chart-4: #c9a84c;
+  --color-chart-5: #c8664b;
+
+  /* Tipografía */
+  --font-display: var(--font-sora), "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-inter), "Helvetica Neue", Arial, sans-serif;
 }
 
 html,
@@ -12,13 +33,129 @@ body {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-hueso);
+  color: var(--color-navy);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Next.js root */
-#__next {
-  min-height: 100vh;
-  background: var(--background);
+/* Títulos en la display, con tracking cerrado */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Las cifras son el producto: siempre alineadas en columna */
+table,
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Entrada del hero: se escalona con animation-delay desde el componente */
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animar-entrada {
+  animation: entrada 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Paneles del cierre del hero: las fotos respiran, de ida y vuelta */
+@keyframes deriva {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.12) translate3d(0, -1.5%, 0);
+  }
+}
+
+.deriva {
+  animation: deriva 18s ease-in-out infinite alternate;
+}
+
+/* Indicador de scroll: una gota de luz que baja por la línea */
+@keyframes gota {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(260%);
+  }
+}
+
+.gota {
+  animation: gota 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* Revelado al entrar en pantalla */
+.revelar {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.revelar.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Requisito del plan: respetar movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Sin esto el contenido con .revelar se quedaría invisible */
+  .revelar {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Las escenas fijadas miden varias pantallas porque el scroll las
+     recorre. Sin movimiento no hay nada que recorrer, así que colapsan
+     a su altura natural: si no, serían pantallas vacías. */
+  [data-escena] {
+    height: auto !important;
+  }
+  [data-escena] > * {
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* El riel viaja en horizontal con el scroll. Sin movimiento se apila,
+     o desbordaría el ancho del documento. */
+  [data-riel] {
+    flex-direction: column !important;
+    transform: none !important;
+    padding-right: 1.5rem !important;
+  }
+  [data-riel] > * {
+    width: 100% !important;
+  }
+
+  /* Los planos de paralaje son decorativos y viven en posición absoluta.
+     Al colapsar la escena se escaparían y estirarían el documento, así que
+     sin movimiento simplemente no se pintan. */
+  [data-plano] {
+    display: none !important;
+  }
 }

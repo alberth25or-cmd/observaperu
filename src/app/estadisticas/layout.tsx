@@ -60,7 +60,7 @@ const pageSchema = {
   about: {
     "@type": "Event",
     name: "Elecciones Generales del Perú 2026",
-    startDate: "2026-04-05",
+    startDate: "2026-04-12",
     location: { "@type": "Country", name: "Perú" },
   },
   breadcrumb: {
@@ -96,10 +96,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Cuándo son las elecciones presidenciales en Perú 2026?",
+      name: "¿Cuándo fueron las elecciones presidenciales en Perú 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Las elecciones generales del Perú 2026 están programadas para el 11 de abril de 2026. Si ningún candidato supera el 50% de los votos válidos, se realizará una segunda vuelta el 7 de junio de 2026.",
+        text: "La primera vuelta de las elecciones generales del Perú 2026 fue el 12 de abril de 2026 y la segunda vuelta, el 7 de junio de 2026.",
       },
     },
     {
@@ -115,7 +115,7 @@ const faqSchema = {
       name: "¿Cuántos debates presidenciales JNE hubo en 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El JNE organizó tres jornadas de debate presidencial los días 23, 24 y 25 de marzo de 2026, transmitidas por TV Perú.",
+        text: "Para la primera vuelta, el JNE organizó seis jornadas de debate presidencial: 23, 24, 25, 30 y 31 de marzo y 1 de abril de 2026, transmitidas por TV Perú.",
       },
     },
     {
