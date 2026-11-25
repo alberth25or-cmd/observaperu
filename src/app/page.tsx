@@ -8,6 +8,7 @@ import Contador from "@/components/Contador";
 import EscenarioServicios from "@/components/secciones/EscenarioServicios";
 import RielProceso from "@/components/secciones/RielProceso";
 import FichaProgresiva from "@/components/secciones/FichaProgresiva";
+import AIChatPopup from "@/components/AIChatPopup";
 
 export const metadata: Metadata = {
   title: "Estudios de mercado hechos por estadísticos",
@@ -139,6 +140,7 @@ export default function HomePage() {
       </section>
 
       <Footer />
+      <AIChatPopup />
     </main>
   );
 }
